@@ -1,10 +1,21 @@
 {
-  "version": "1.0.0",
   "name": "@xiankq/openapi-typescript-expand",
+  "version": "1.0.0",
   "type": "module",
+  "keywords": [
+    "openapi",
+    "swagger",
+    "codegen",
+    "typescript"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/xiankq/unplugin-copy#readme",
+  "bugs": {
+    "url": "https://github.com/xiankq/unplugin-copy/issues"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/xiankq/openapi-typescript-expand.git"
+    "url": "git+https://github.com/xiankq/unplugin-copy.git"
   },
   "author": {
     "name": "Xiankq"
