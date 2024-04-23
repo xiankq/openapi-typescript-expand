@@ -41,7 +41,7 @@ devDependencies:
     specifier: ^3.2.5
     version: 3.2.5
   taze:
-    specifier: ^0.13.5
+    specifier: ^0.13.6
     version: 0.13.6
   tsx:
     specifier: ^4.7.2
