@@ -1,0 +1,36 @@
+{
+  "tpl-component-vue": {
+    "scope": "vue",
+    "prefix": "tpl-component-vue",
+    "description": "新建setup-script组件",
+
+    "body": [
+      "<script lang=\"ts\" setup>",
+      "import type { W${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)index)*.vue/${3:/pascalcase}/g}Emits, W${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)index)*.vue/${3:/pascalcase}/g}Props } from './meta';",
+
+      "defineOptions({ name: 'WW${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)index)*.vue/${3:/pascalcase}/g}' });",
+      "defineProps<W${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)index)*.vue/${3:/pascalcase}/g}Props>();",
+      "defineEmits<W${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)index)*.vue/${3:/pascalcase}/g}Emits>();",
+      "</script>",
+
+      "<template>",
+      "  <div class=\"w-${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)index)*.vue/${3:/downcase}/g}\">",
+      "    w-${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)index)*.vue/${3:/downcase}/g}",
+      "  </div>",
+      "</template>",
+    ],
+  },
+  "tpl-component-props": {
+    "scope": "typescript",
+    "prefix": "tpl-component-props",
+
+    "body": [
+      "export interface W${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)props)\\.ts/${3:/pascalcase}/g}Props {",
+      " modelValue?: unknown;",
+      "}",
+      "export interface W${RELATIVE_FILEPATH/(.+?(\\\\|\\/))((-|\\w)+)((\\\\|\\/)props)\\.ts/${3:/pascalcase}/g}Emits {",
+      "  (event: 'update:modelValue', data?: unknown): void;",
+      "}",
+    ],
+  },
+}

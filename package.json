@@ -1,0 +1,48 @@
+{
+  "name": "@xiankq/openapi-typescript-expand",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiankq/openapi-typescript-expand.git"
+  },
+  "author": {
+    "name": "Xiankq"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "scripts": {
+    "test": "tsx demo/index",
+    "build": "unbuild",
+    "bumpp": "bumpp -r",
+    "publish": "pnpm publish -r",
+    "taze": "taze -w -r major minor patch"
+  },
+  "dependencies": {
+    "openapi-typescript": "^7.0.0-next.8",
+    "pinyin-pro": "^3.20.2",
+    "swagger2openapi": "^7.0.8"
+  },
+  "devDependencies": {
+    "@sxzz/eslint-config": "^3.9.1",
+    "@sxzz/prettier-config": "^2.0.2",
+    "@types/node": "^20.12.7",
+    "@types/swagger2openapi": "^7.0.4",
+    "axios": "^1.6.8",
+    "bumpp": "^9.4.0",
+    "eslint-plugin-simple-import-sort": "^12.1.0",
+    "prettier": "^3.2.5",
+    "taze": "^0.13.6",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0"
+  }
+}
