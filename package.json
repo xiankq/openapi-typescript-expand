@@ -9,13 +9,13 @@
     "typescript"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/xiankq/unplugin-copy#readme",
+  "homepage": "https://github.com/xiankq/openapi-typescript-expand#readme",
   "bugs": {
-    "url": "https://github.com/xiankq/unplugin-copy/issues"
+    "url": "https://github.com/xiankq/openapi-typescript-expand/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xiankq/unplugin-copy.git"
+    "url": "git+https://github.com/xiankq/openapi-typescript-expand.git"
   },
   "author": {
     "name": "Xiankq"
