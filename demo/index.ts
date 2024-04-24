@@ -14,6 +14,6 @@ import { openapiTypescriptExpand } from '../src';
   openapiTypescriptExpand(data, {
     output: './demo/genapi/haikang.ts',
     requestName: 'request',
-    headerCode: "import request from './request';",
+    headerCode: "import request from './request';\n",
   });
 })();
