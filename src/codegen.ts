@@ -102,7 +102,7 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
         moduleItem.push(
           `export type Body = Required<Operation>['requestBody']['content']['${contentType}']`,
         );
-        optionItem.push(`body: Body`);
+        optionItem.push(`data: Body`);
       }
       if (hasHeader) {
         moduleItem.push(`export type Header = Operation['parameters']['header']`);
@@ -110,11 +110,11 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
       }
       if (hasPath) {
         moduleItem.push(`export type Path = Operation['parameters']['path']`);
-        optionItem.push(`path: Body`);
+        optionItem.push(`path: Path`);
       }
       if (hasQuery) {
         moduleItem.push(`export type Query = Operation['parameters']['query']`);
-        optionItem.push(`query: Query`);
+        optionItem.push(`params: Query`);
       }
 
       moduleItem.push(

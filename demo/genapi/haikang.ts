@@ -34,9 +34,9 @@ export module ApiV1EstateSystemCommunitiesCommunityIdUsingDelete {
   export type Path = Operation['parameters']['path'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -107,7 +107,7 @@ export module OauthTokenUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -182,7 +182,7 @@ export module ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -249,7 +249,7 @@ export module ApiV1EstateSystemCommunitiesUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -309,7 +309,7 @@ export module ApiV1EstateSystemCommunitiesActionsListUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -366,7 +366,7 @@ export module ApiV1EstateSystemBuildingsUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -427,7 +427,7 @@ export module ApiV1EstateSystemUnitsUnitIdUsingDelete {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -487,9 +487,9 @@ export module ApiV1EstateSystemBuildingsBuildingIdUsingDelete {
   export type Path = Operation['parameters']['path'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -549,7 +549,7 @@ export module ApiV1EstateSystemUnitsUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -613,7 +613,7 @@ export module ApiV1EstateSystemRoomsUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -673,7 +673,7 @@ export module ApiV1EstateSystemRoomsActionsInfoUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -730,7 +730,7 @@ export module ApiV1EstateSystemRoomsRoomIdUsingDelete {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -786,9 +786,9 @@ export module ApiV1EstateSystemPersonPersonIdUsingDelete {
   export type Path = Operation['parameters']['path'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -842,7 +842,7 @@ export module ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -898,7 +898,7 @@ export module ApiV1EstateSystemRoomsActionsInfoByIdUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -955,7 +955,7 @@ export module ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1007,7 +1007,7 @@ export module ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1059,7 +1059,7 @@ export module ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1158,7 +1158,7 @@ export module ApiV1EstateSystemPersonUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1260,7 +1260,7 @@ export module ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1321,7 +1321,7 @@ export module ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1387,7 +1387,7 @@ export module ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1451,7 +1451,7 @@ export module ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1523,7 +1523,7 @@ export module ApiV1EstateSystemPersonActionsUpdatePersonUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1602,7 +1602,7 @@ export module ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1667,7 +1667,7 @@ export module ApiV1EstateSystemPersonActionsPersonInfoListUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1725,7 +1725,7 @@ export module ApiV1EstateSystemPersonActionsRoomListUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1781,7 +1781,7 @@ export module ApiV1EstateSystemPersonActionsLabelListUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1845,7 +1845,7 @@ export module ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost 
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1913,7 +1913,7 @@ export module ApiV1EstateSystemPropertyUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -1974,7 +1974,7 @@ export module ApiV1EstateSystemCardsActionsRefundCardUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2032,7 +2032,7 @@ export module ApiV1EstateSystemCardsActionsCancelLossCardUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2090,7 +2090,7 @@ export module ApiV1EstateSystemCardsActionsLossCardUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2140,7 +2140,7 @@ export module ApiV1EstateSystemCardsUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2194,7 +2194,7 @@ export module ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2261,7 +2261,7 @@ export module ApiV1EstateSystemCardsActionsOpenCardUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2329,7 +2329,7 @@ export module ApiV1EstateSystemCardsActionsChangeCardUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2392,7 +2392,7 @@ export module ApiV1EstateSystemCardsCardIdUsingDelete {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -2457,7 +2457,7 @@ export module ApiV1EstateSystemPropertyPersonIdUsingDelete {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -2514,7 +2514,7 @@ export module ApiV1EstateDevicesActionsDeleteDeviceUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2564,7 +2564,7 @@ export module ApiV1EstateDevicesActionsUpdateDeviceUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2619,7 +2619,7 @@ export module ApiV1EstateDevicesUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2686,7 +2686,7 @@ export module ApiV1EstateDevicesUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2759,7 +2759,7 @@ export module ApiV1EstateSystemCardsActionsReissueCardUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2821,7 +2821,7 @@ export module ApiV1EstateDevicesActionsListByCommunityIdUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2877,7 +2877,7 @@ export module ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -2929,7 +2929,7 @@ export module V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    query: Query;
+    params: Query;
   }
 }
 
@@ -2979,7 +2979,7 @@ export module V1ChannelsChannelIdCaptureUsingPost {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -3029,7 +3029,7 @@ export module V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    query: Query;
+    params: Query;
   }
 }
 
@@ -3077,7 +3077,7 @@ export module V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    query: Query;
+    params: Query;
   }
 }
 
@@ -3139,7 +3139,7 @@ export module ApiV1EstatePublishActionsPublishProgramUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3207,7 +3207,7 @@ export module ApiV1EstatePublishActionsDeleteProgramUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3265,7 +3265,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3325,7 +3325,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3383,7 +3383,7 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3441,7 +3441,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPos
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3521,7 +3521,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3608,7 +3608,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3675,7 +3675,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsListUsingGet {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3734,7 +3734,7 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3796,7 +3796,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3859,7 +3859,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3917,7 +3917,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -3984,7 +3984,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -4052,7 +4052,7 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPo
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -4124,7 +4124,7 @@ export module ApiV1EstateVisitorsUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -4207,7 +4207,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsin
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -4273,7 +4273,7 @@ export module ApiV1MqConsumerGroup1UsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -4327,7 +4327,7 @@ export module ApiV1EstateVisitorsReservationIdUsingDelete {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    path: Body;
+    path: Path;
   }
 }
 
@@ -4401,7 +4401,7 @@ export module UsingGet {
   export interface Options {
     [key: string]: unknown;
     header?: Header;
-    query: Query;
+    params: Query;
   }
 }
 
@@ -4477,7 +4477,7 @@ export module ApiV1MqConsumerMessagesUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
@@ -4533,7 +4533,7 @@ export module ApiV1MqConsumerOffsetsUsingPost {
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
-    body: Body;
+    data: Body;
     header?: Header;
   }
 }
