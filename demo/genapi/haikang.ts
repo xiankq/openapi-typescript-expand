@@ -100,8 +100,7 @@ export function apiV1EstateSystemCommunitiesCommunityIdUsingDelete(
  */
 export module OauthTokenUsingPost {
   export type Operation = paths['/oauth/token']['post'];
-  export type Result =
-    Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body =
     Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];
@@ -421,7 +420,7 @@ export function apiV1EstateSystemBuildingsUsingPost(
  */
 export module ApiV1EstateSystemUnitsUnitIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/units/{unitId}']['delete'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Path = Operation['parameters']['path'];
   export interface Options {
@@ -724,7 +723,7 @@ export function apiV1EstateSystemRoomsActionsInfoUsingGet(
  */
 export module ApiV1EstateSystemRoomsRoomIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/rooms/{roomId}']['delete'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Path = Operation['parameters']['path'];
   export interface Options {
@@ -2386,7 +2385,7 @@ export function apiV1EstateSystemCardsActionsChangeCardUsingGet(
  */
 export module ApiV1EstateSystemCardsCardIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/cards/{cardId}']['delete'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Path = Operation['parameters']['path'];
   export interface Options {
@@ -2451,7 +2450,7 @@ export function apiV1EstateSystemCardsCardIdUsingDelete(
  */
 export module ApiV1EstateSystemPropertyPersonIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/property/{personId}']['delete'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Path = Operation['parameters']['path'];
   export interface Options {
@@ -2923,7 +2922,7 @@ export function apiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet(
  */
 export module V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet {
   export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/autoconfirm']['get'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Query = Operation['parameters']['query'];
   export interface Options {
@@ -2973,7 +2972,7 @@ export function v1CarrierWingEndpointConfirmRightAutoconfirmUsingGet(
  */
 export module V1ChannelsChannelIdCaptureUsingPost {
   export type Operation = paths['/v1/channels/{channelId}/capture']['post'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Path = Operation['parameters']['path'];
   export interface Options {
@@ -3023,7 +3022,7 @@ export function v1ChannelsChannelIdCaptureUsingPost(
  */
 export module V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet {
   export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/offlineconfirm']['get'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Query = Operation['parameters']['query'];
   export interface Options {
@@ -3071,7 +3070,7 @@ export function v1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet(
  */
 export module V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet {
   export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/onlineconfirm']['get'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Query = Operation['parameters']['query'];
   export interface Options {
@@ -4266,8 +4265,7 @@ export function apiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUs
  */
 export module ApiV1MqConsumerGroup1UsingPost {
   export type Operation = paths['/api/v1/mq/consumer/group1']['post'];
-  export type Result =
-    Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body =
     Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];
@@ -4321,7 +4319,7 @@ export function apiV1MqConsumerGroup1UsingPost(
  */
 export module ApiV1EstateVisitorsReservationIdUsingDelete {
   export type Operation = paths['/api/v1/estate/visitors/{reservationId}']['delete'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Path = Operation['parameters']['path'];
   export interface Options {
@@ -4395,7 +4393,7 @@ export function apiV1EstateVisitorsReservationIdUsingDelete(
  */
 export module UsingGet {
   export type Operation = paths['/']['get'];
-  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
   export type Query = Operation['parameters']['query'];
   export interface Options {
@@ -4470,8 +4468,7 @@ export function UsingGet(options: UsingGet.Options): Promise<UsingGet.Result> {
  */
 export module ApiV1MqConsumerMessagesUsingPost {
   export type Operation = paths['/api/v1/mq/consumer/messages']['post'];
-  export type Result =
-    Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body =
     Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];
@@ -4526,8 +4523,7 @@ export function apiV1MqConsumerMessagesUsingPost(
  */
 export module ApiV1MqConsumerOffsetsUsingPost {
   export type Operation = paths['/api/v1/mq/consumer/offsets']['post'];
-  export type Result =
-    Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body =
     Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];

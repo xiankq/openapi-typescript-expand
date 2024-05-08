@@ -93,7 +93,7 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
       moduleItem.push(
         `export type Operation = paths['${path}']['${method}']`,
         hasResult
-          ? `export type Result = Required<Operation>['responses']['${statusType}']['content']['${contentType}']`
+          ? `export type Result = Required<Operation>['responses']['${statusType}']['content']['${responseType}']`
           : `export type Result = any`,
       );
       optionItem.push(`[key: string]: unknown`);
