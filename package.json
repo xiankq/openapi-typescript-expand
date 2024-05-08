@@ -1,6 +1,6 @@
 {
   "name": "@xiankq/openapi-typescript-expand",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "type": "module",
   "keywords": [
     "openapi",
