@@ -1,3 +1,4 @@
+/* eslint-disable prefer-template */
 import fs from 'node:fs';
 import { posix } from 'node:path';
 
@@ -20,7 +21,7 @@ const HEADER_CODE = `
  */
 export interface OpenapiCodegenOptions {
   /**
-   * 生成代码的路径文件
+   * 生成代码的路径文件夹
    */
   output: string;
 
@@ -45,104 +46,100 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
     alphabetize: true,
     additionalProperties: true,
   });
-  let content = astToString(ast);
+  const openapiCode = astToString(ast);
 
-  (() => {
-    let ts = '';
-    const pathKeys = Object.keys(schema.paths ?? {});
-    pathKeys?.forEach((path) => {
-      const data = resolveObjectOrRef(schema, schema.paths![path]).object;
-      let dts = '';
-      const methods = Object.keys(data) as HttpMethod[];
-      methods.forEach((method) => {
-        const operation = resolveObjectOrRef(schema, data[method]).object;
-        if (!operation) {
-          return;
-        }
-        const PATH_NAME = `${strHump(path, 'lower')}Using${strHump(method, 'upper')}`;
-        const PATH_NAME_UPPER = strHump(PATH_NAME, 'upper');
-        const TYPE_OPERATION = `${PATH_NAME_UPPER}Operation`;
+  let mainCode = '';
+  const pathKeys = Object.keys(schema.paths ?? {});
+  pathKeys?.forEach((path) => {
+    const data = resolveObjectOrRef(schema, schema.paths![path]).object;
+    const methods = Object.keys(data) as HttpMethod[];
+    methods.forEach((method) => {
+      const operation = resolveObjectOrRef(schema, data[method]).object;
+      if (!operation) {
+        return;
+      }
+      const PATH_NAME = `${strHump(path, 'lower')}Using${strHump(method, 'upper')}`;
+      const PATH_NAME_UPPER = strHump(PATH_NAME, 'upper');
 
-        dts += `\n\nexport type ${TYPE_OPERATION} = paths['${path}']['${method}'];`;
+      //评论
+      const comment =
+        `\n\n/**` +
+        `\n${operation.tags?.map((e) => ` * @tag ${e}`).join('\n')}` +
+        `\n * @summary ${operation.summary}` +
+        `\n * @url ${path}` +
+        `\n * @method ${method}` +
+        `\n * @description ${operation.description ?? ''}` +
+        `\n */` +
+        '\n';
 
-        const parameters = operation.parameters?.map((e) => resolveObjectOrRef(schema, e).object);
+      const requestBody = resolveObjectOrRef(schema, operation.requestBody).object;
+      const contentType = Object.keys(requestBody?.content ?? {})[0];
+      const statusType = Object.keys(operation.responses ?? {})[0];
+      const responses = resolveObjectOrRef(
+        schema,
+        Object.values(operation.responses ?? {})?.[0],
+      ).object;
 
-        const headerParameters = parameters?.filter((e) => e.in === 'header');
-        const pathParameters = parameters?.filter((e) => e.in === 'path');
-        const queryParameters = parameters?.filter((e) => e.in === 'query');
+      const responseType = Object.keys(responses.content ?? {})[0];
+      const parameters = operation.parameters?.map((e) => resolveObjectOrRef(schema, e).object);
+      const hasHeader = !!parameters?.filter((e) => e.in === 'header')?.length;
+      const hasPath = !!parameters?.filter((e) => e.in === 'path')?.length;
+      const hasQuery = !!parameters?.filter((e) => e.in === 'query')?.length;
+      const hasBody = !!contentType;
+      const hasResult = !!statusType && !!responseType;
 
-        //header
-        if (headerParameters?.length) {
-          dts += `\n\nexport type ${PATH_NAME_UPPER}Header = ${TYPE_OPERATION}['parameters']['header']`;
-        }
+      const moduleItem: string[] = [];
+      const optionItem: string[] = [];
+      moduleItem.push(
+        `export type Operation = paths['${path}']['${method}']`,
+        hasResult
+          ? `export type Result = Required<Operation>['responses']['${statusType}']['content']['${contentType}']`
+          : `export type Result = any`,
+      );
+      optionItem.push(`[key: string]: unknown`);
 
-        //path
-        if (pathParameters?.length) {
-          dts += `\n\nexport type ${PATH_NAME_UPPER}Path = ${TYPE_OPERATION}['parameters']['path']`;
-        }
+      if (hasBody) {
+        moduleItem.push(
+          `export type Body = Required<Operation>['requestBody']['content']['${contentType}']`,
+        );
+        optionItem.push(`body: Body`);
+      }
+      if (hasHeader) {
+        moduleItem.push(`export type Header = Operation['parameters']['header']`);
+        optionItem.push(`header?: Header`);
+      }
+      if (hasPath) {
+        moduleItem.push(`export type Path = Operation['parameters']['path']`);
+        optionItem.push(`path: Body`);
+      }
+      if (hasQuery) {
+        moduleItem.push(`export type Query = Operation['parameters']['query']`);
+        optionItem.push(`query: Query`);
+      }
 
-        //query
-        if (queryParameters?.length) {
-          dts += `\n\nexport type ${PATH_NAME_UPPER}Query = ${TYPE_OPERATION}['parameters']['query']`;
-        }
+      moduleItem.push(
+        `export interface Options {\n` + optionItem.map((e) => `    ${e};`).join('\n') + `\n  }`,
+      );
 
-        const requestBody = resolveObjectOrRef(schema, operation.requestBody).object;
-        const contentType = Object.keys(requestBody?.content ?? {})[0];
+      mainCode +=
+        `${comment}` +
+        `export module ${PATH_NAME_UPPER} {\n` +
+        moduleItem.map((e) => `  ${e};`).join('\n') +
+        `\n}`;
 
-        //body
-        if (contentType) {
-          dts += `\n\nexport type ${PATH_NAME_UPPER}Body = Required<${TYPE_OPERATION}>['requestBody']['content']['${contentType}']`;
-        }
-
-        dts +=
-          `\n\n` +
-          `export interface ${PATH_NAME_UPPER}Options {` +
-          `\n  [key: string]: unknown;` +
-          `${headerParameters?.length ? `\n  header?: ${PATH_NAME_UPPER}Header;` : ''}` +
-          `${pathParameters?.length ? `\n  path: ${PATH_NAME_UPPER}Path;` : ''}` +
-          `${queryParameters?.length ? `\n  query: ${PATH_NAME_UPPER}Query;` : ''}` +
-          `${contentType ? `\n  data: ${PATH_NAME_UPPER}Body;` : ''}` +
-          `\n}`;
-
-        const responses = resolveObjectOrRef(
-          schema,
-          Object.values(operation.responses ?? {})?.[0],
-        ).object;
-        const statusType = Object.keys(operation.responses ?? {})[0];
-        const responseType = Object.keys(responses.content ?? {})[0];
-        //response
-        if (statusType && responseType) {
-          dts += `\n\nexport type ${PATH_NAME_UPPER}Result = Required<${TYPE_OPERATION}>['responses']['${statusType}']['content']['${responseType}']`;
-        } else {
-          dts += `\n\nexport type ${PATH_NAME_UPPER}Result = any`;
-        }
-
-        const comment =
-          `\n/**` +
-          `\n${operation.tags?.map((e) => ` * @tag ${e}`).join('\n')}` +
-          `\n * @summary ${operation.summary}` +
-          `\n * @url ${path}` +
-          `\n * @method ${method}` +
-          `\n * @description ${operation.description ?? ''}` +
-          `\n */`;
-
-        ts +=
-          `\n${comment}\n` +
-          `export function ${PATH_NAME}(options:${PATH_NAME_UPPER}Options):Promise<${PATH_NAME_UPPER}Result> {` +
-          `\n  return ${options.requestName}({` +
-          `\n    ...options,` +
-          `\n    url:'${path}',` +
-          `\n    method:'${method}',` +
-          `\n  });` +
-          `\n}`;
-      });
-      content += dts;
+      mainCode +=
+        `${comment}` +
+        `export function ${PATH_NAME}(options:${PATH_NAME_UPPER}.Options):Promise<${PATH_NAME_UPPER}.Result> {` +
+        `\n  return ${options.requestName}({` +
+        `\n    url:'${path}',` +
+        `\n    method:'${method}',` +
+        `\n    ...options,` +
+        `\n  });` +
+        `\n}`;
     });
+  });
 
-    content += ts;
-  })();
-
-  content = `${HEADER_CODE}\n` + `${options.headerCode ?? ''}` + `\n${content}`;
+  const headerCode = `${HEADER_CODE}\n` + `${options.headerCode ?? ''}`;
   fs.mkdirSync(posix.resolve(output, '../'), { recursive: true });
-  fs.writeFileSync(posix.resolve(output), content);
+  fs.writeFileSync(posix.resolve(output), `${headerCode}\n${mainCode}\n${openapiCode}`);
 }

@@ -8,6 +8,4395 @@
 
 import request from './request';
 
+
+
+/**
+ * @tag API列表/社区管理
+ * @summary 删除社区
+ * @url /api/v1/estate/system/communities/{communityId}
+ * @method delete
+ * @description **功能描述**
+
+从云眸社区租户下删除一个社区。
+
+**返回码**
+
+| 返回码 | 返回消息                   | 描述                                     |
+| ------ | -------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配             | 若删除其他租户社区则报此错误             |
+| 511075 | 社区已添加楼栋，不能删除   |                                          |
+| 511079 | 社区已添加设备，不能删除   |                                          |
+| 511080 | 社区已添加停车场，不能删除 |                                          |
+ */
+export module ApiV1EstateSystemCommunitiesCommunityIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/system/communities/{communityId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/社区管理
+ * @summary 删除社区
+ * @url /api/v1/estate/system/communities/{communityId}
+ * @method delete
+ * @description **功能描述**
+
+从云眸社区租户下删除一个社区。
+
+**返回码**
+
+| 返回码 | 返回消息                   | 描述                                     |
+| ------ | -------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配             | 若删除其他租户社区则报此错误             |
+| 511075 | 社区已添加楼栋，不能删除   |                                          |
+| 511079 | 社区已添加设备，不能删除   |                                          |
+| 511080 | 社区已添加停车场，不能删除 |                                          |
+ */
+export function apiV1EstateSystemCommunitiesCommunityIdUsingDelete(options:ApiV1EstateSystemCommunitiesCommunityIdUsingDelete.Options):Promise<ApiV1EstateSystemCommunitiesCommunityIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/system/communities/{communityId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag 快速入门
+ * @summary 生成授权凭证
+ * @url /oauth/token
+ * @method post
+ * @description 在调用服务端API前，需要先调用获取token接口获取access_token,通过access_token来鉴权调用者身份。
+
+```
+         在使用access_token时，请注意：
+         access_token的有效期为604800秒（7天），有效期内重复获取返回相同结果，过期后获取会返回新的access_token。
+         开发者需要缓存access_token，用于后续接口的调用。当access_token失效或过期时，接口会返回http状态码401，需要重新获取access_token。
+         不能频繁调用获取access_token接口，否则会受到接口调用频率拦截。
+        
+```
+
+## 准备工作
+
+在获取access_token前，需要先获取应用的client_id和client_secret：
+1.登录[海康云眸开发者服务](http://open.hik-cloud.com)
+
+2.在**秘钥管理**页面，查看应用的client_id和client_secret。
+![img](https://pbpic.hik-cloud.com/opencustom/apidoc/pictures/b8287cbd11bf4d108c53183c52b22bc7.png)
+
+
+其中 “access_token” 字段即为请求 REST API  所需的令牌,access_token生成时有效期为7天，expires_in字段表示剩余有效时间，开发者需要对access_token的有效性进行判断，若调用API时返回Http状态码为401，则说明access_token已失效，重新获取即可。
+
+注：在使用postman调试时，注意尽量不要使用浏览器插件版本的postman，使用客户端版本的。因为插件版本的默认会使用浏览器中的cookie和缓存，可能在调用时会出现问题而难以排查。
+![img](https://pic.hik-cloud.com/opencustom/apidoc/pictures/d8d60985e34a4e40857a98731a3dc85c.jpg)
+ */
+export module OauthTokenUsingPost {
+  export type Operation = paths['/oauth/token']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag 快速入门
+ * @summary 生成授权凭证
+ * @url /oauth/token
+ * @method post
+ * @description 在调用服务端API前，需要先调用获取token接口获取access_token,通过access_token来鉴权调用者身份。
+
+```
+         在使用access_token时，请注意：
+         access_token的有效期为604800秒（7天），有效期内重复获取返回相同结果，过期后获取会返回新的access_token。
+         开发者需要缓存access_token，用于后续接口的调用。当access_token失效或过期时，接口会返回http状态码401，需要重新获取access_token。
+         不能频繁调用获取access_token接口，否则会受到接口调用频率拦截。
+        
+```
+
+## 准备工作
+
+在获取access_token前，需要先获取应用的client_id和client_secret：
+1.登录[海康云眸开发者服务](http://open.hik-cloud.com)
+
+2.在**秘钥管理**页面，查看应用的client_id和client_secret。
+![img](https://pbpic.hik-cloud.com/opencustom/apidoc/pictures/b8287cbd11bf4d108c53183c52b22bc7.png)
+
+
+其中 “access_token” 字段即为请求 REST API  所需的令牌,access_token生成时有效期为7天，expires_in字段表示剩余有效时间，开发者需要对access_token的有效性进行判断，若调用API时返回Http状态码为401，则说明access_token已失效，重新获取即可。
+
+注：在使用postman调试时，注意尽量不要使用浏览器插件版本的postman，使用客户端版本的。因为插件版本的默认会使用浏览器中的cookie和缓存，可能在调用时会出现问题而难以排查。
+![img](https://pic.hik-cloud.com/opencustom/apidoc/pictures/d8d60985e34a4e40857a98731a3dc85c.jpg)
+ */
+export function oauthTokenUsingPost(options:OauthTokenUsingPost.Options):Promise<OauthTokenUsingPost.Result> {
+  return request({
+    url:'/oauth/token',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/社区管理
+ * @summary 修改社区
+ * @url /api/v1/estate/system/communities/actions/updateCommunity
+ * @method post
+ * @description **功能描述**
+
+修改云眸社区租户下的社区基础信息。（全量修改）
+
+**返回码**
+
+| 返回码 | 返回消息                            | 描述                                     |
+| ------ | ----------------------------------- | ---------------------------------------- |
+| 511000 | 社区不存在                          |                                          |
+| 510001 | 参数错误                            | 必填项为空、参数长度不符合等参数异常情况 |
+| 511003 | 已存在相同名称的社区，请修改        |                                          |
+| 511015 | 手机格式错误                        |                                          |
+| 511046 | 该人员不存在                        |                                          |
+| 511047 | 社区面积(万㎡) 最多8位整数, 2位小数 |                                          |
+| 511059 | 租户信息不匹配                      | 不能对其他租户的社区进行操作             |
+| 511093 | 省市区县代码错误                    | 省市区县代码包含非法字符                 |
+| 511094 | 经纬度坐标不合法                    |                                          |
+ */
+export module ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost {
+  export type Operation = paths['/api/v1/estate/system/communities/actions/updateCommunity']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/社区管理
+ * @summary 修改社区
+ * @url /api/v1/estate/system/communities/actions/updateCommunity
+ * @method post
+ * @description **功能描述**
+
+修改云眸社区租户下的社区基础信息。（全量修改）
+
+**返回码**
+
+| 返回码 | 返回消息                            | 描述                                     |
+| ------ | ----------------------------------- | ---------------------------------------- |
+| 511000 | 社区不存在                          |                                          |
+| 510001 | 参数错误                            | 必填项为空、参数长度不符合等参数异常情况 |
+| 511003 | 已存在相同名称的社区，请修改        |                                          |
+| 511015 | 手机格式错误                        |                                          |
+| 511046 | 该人员不存在                        |                                          |
+| 511047 | 社区面积(万㎡) 最多8位整数, 2位小数 |                                          |
+| 511059 | 租户信息不匹配                      | 不能对其他租户的社区进行操作             |
+| 511093 | 省市区县代码错误                    | 省市区县代码包含非法字符                 |
+| 511094 | 经纬度坐标不合法                    |                                          |
+ */
+export function apiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost(options:ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost.Options):Promise<ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/communities/actions/updateCommunity',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/社区管理
+ * @summary 新增社区
+ * @url /api/v1/estate/system/communities
+ * @method post
+ * @description **功能描述**
+
+在云眸社区租户下新增一个社区。
+
+**返回码**
+
+| 返回码 | 返回消息                                 | 描述                                                 |
+| ------ | ---------------------------------------- | ---------------------------------------------------- |
+| 510001 | 参数错误                                 | 必填项为空、参数长度不符合等参数异常情况             |
+| 511002 | 您所选择的区域已存在子区域，无法添加社区 | 新增社区会在系统默认区域下，若默认区域异常则报此异常 |
+| 511003 | 已存在相同名称的社区， 请修改            |                                                      |
+| 511015 | 手机格式错误                             |                                                      |
+| 511046 | 该人员不存在                             | 社区负责人不存在                                     |
+| 511047 | 社区面积(万㎡) 最多8位整数, 2位小数      |                                                      |
+| 511093 | 省市区县代码错误                         | 省市区县代码包含非法字符                             |
+| 511094 | 经纬度坐标不合法                         |                                                      |
+ */
+export module ApiV1EstateSystemCommunitiesUsingPost {
+  export type Operation = paths['/api/v1/estate/system/communities']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/社区管理
+ * @summary 新增社区
+ * @url /api/v1/estate/system/communities
+ * @method post
+ * @description **功能描述**
+
+在云眸社区租户下新增一个社区。
+
+**返回码**
+
+| 返回码 | 返回消息                                 | 描述                                                 |
+| ------ | ---------------------------------------- | ---------------------------------------------------- |
+| 510001 | 参数错误                                 | 必填项为空、参数长度不符合等参数异常情况             |
+| 511002 | 您所选择的区域已存在子区域，无法添加社区 | 新增社区会在系统默认区域下，若默认区域异常则报此异常 |
+| 511003 | 已存在相同名称的社区， 请修改            |                                                      |
+| 511015 | 手机格式错误                             |                                                      |
+| 511046 | 该人员不存在                             | 社区负责人不存在                                     |
+| 511047 | 社区面积(万㎡) 最多8位整数, 2位小数      |                                                      |
+| 511093 | 省市区县代码错误                         | 省市区县代码包含非法字符                             |
+| 511094 | 经纬度坐标不合法                         |                                                      |
+ */
+export function apiV1EstateSystemCommunitiesUsingPost(options:ApiV1EstateSystemCommunitiesUsingPost.Options):Promise<ApiV1EstateSystemCommunitiesUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/communities',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/社区管理
+ * @summary 查询社区
+ * @url /api/v1/estate/system/communities/actions/list
+ * @method get
+ * @description **功能描述**
+
+分页查询云眸社区租户下的社区。
+
+**返回码**
+
+| 返回码 | 返回消息 | 描述                                     |
+| ------ | -------- | ---------------------------------------- |
+| 200    | 成功     |                                          |
+| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
+ */
+export module ApiV1EstateSystemCommunitiesActionsListUsingGet {
+  export type Operation = paths['/api/v1/estate/system/communities/actions/list']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/社区管理
+ * @summary 查询社区
+ * @url /api/v1/estate/system/communities/actions/list
+ * @method get
+ * @description **功能描述**
+
+分页查询云眸社区租户下的社区。
+
+**返回码**
+
+| 返回码 | 返回消息 | 描述                                     |
+| ------ | -------- | ---------------------------------------- |
+| 200    | 成功     |                                          |
+| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
+ */
+export function apiV1EstateSystemCommunitiesActionsListUsingGet(options:ApiV1EstateSystemCommunitiesActionsListUsingGet.Options):Promise<ApiV1EstateSystemCommunitiesActionsListUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/communities/actions/list',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 新增楼栋
+ * @url /api/v1/estate/system/buildings
+ * @method post
+ * @description **功能描述**
+
+向社区下添加楼栋。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在                   |                                          |
+| 511001 | 该社区下楼栋已存在，无法添加 |                                          |
+| 511004 | 楼栋编号已经存在             |                                          |
+| 511059 | 租户信息不匹配               | 不能在其他租户的社区下新增房屋           |
+ */
+export module ApiV1EstateSystemBuildingsUsingPost {
+  export type Operation = paths['/api/v1/estate/system/buildings']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 新增楼栋
+ * @url /api/v1/estate/system/buildings
+ * @method post
+ * @description **功能描述**
+
+向社区下添加楼栋。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在                   |                                          |
+| 511001 | 该社区下楼栋已存在，无法添加 |                                          |
+| 511004 | 楼栋编号已经存在             |                                          |
+| 511059 | 租户信息不匹配               | 不能在其他租户的社区下新增房屋           |
+ */
+export function apiV1EstateSystemBuildingsUsingPost(options:ApiV1EstateSystemBuildingsUsingPost.Options):Promise<ApiV1EstateSystemBuildingsUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/buildings',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 删除单元
+ * @url /api/v1/estate/system/units/{unitId}
+ * @method delete
+ * @description **功能描述**
+
+删除社区下的楼栋。
+
+**返回码**
+
+| 返回码 | 返回消息                   | 描述                                     |
+| ------ | -------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511054 | 单元不存在                 |                                          |
+| 511059 | 租户信息不匹配             | 不能对其他租户的单元进行操作             |
+| 511087 | 房屋已有人入住,不能删除    |                                          |
+| 511090 | 该单元下有设备无法对其操作 |                                          |
+ */
+export module ApiV1EstateSystemUnitsUnitIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/system/units/{unitId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 删除单元
+ * @url /api/v1/estate/system/units/{unitId}
+ * @method delete
+ * @description **功能描述**
+
+删除社区下的楼栋。
+
+**返回码**
+
+| 返回码 | 返回消息                   | 描述                                     |
+| ------ | -------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511054 | 单元不存在                 |                                          |
+| 511059 | 租户信息不匹配             | 不能对其他租户的单元进行操作             |
+| 511087 | 房屋已有人入住,不能删除    |                                          |
+| 511090 | 该单元下有设备无法对其操作 |                                          |
+ */
+export function apiV1EstateSystemUnitsUnitIdUsingDelete(options:ApiV1EstateSystemUnitsUnitIdUsingDelete.Options):Promise<ApiV1EstateSystemUnitsUnitIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/system/units/{unitId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 删除楼栋
+ * @url /api/v1/estate/system/buildings/{buildingId}
+ * @method delete
+ * @description **功能描述**
+
+删除社区下的楼栋。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511005 | 楼栋不存在                   |                                          |
+| 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
+| 511008 | 单元编号已经存在             | 单元编号重复                             |
+| 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
+ */
+export module ApiV1EstateSystemBuildingsBuildingIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/system/buildings/{buildingId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 删除楼栋
+ * @url /api/v1/estate/system/buildings/{buildingId}
+ * @method delete
+ * @description **功能描述**
+
+删除社区下的楼栋。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511005 | 楼栋不存在                   |                                          |
+| 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
+| 511008 | 单元编号已经存在             | 单元编号重复                             |
+| 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
+ */
+export function apiV1EstateSystemBuildingsBuildingIdUsingDelete(options:ApiV1EstateSystemBuildingsBuildingIdUsingDelete.Options):Promise<ApiV1EstateSystemBuildingsBuildingIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/system/buildings/{buildingId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 新增单元
+ * @url /api/v1/estate/system/units
+ * @method post
+ * @description **功能描述**
+
+向楼栋下添加单元。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511005 | 楼栋不存在                   |                                          |
+| 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
+| 511008 | 单元编号已经存在             | 单元编号重复                             |
+| 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
+| 511098 | 超出单元数量                 | 超出楼栋单元数量的限制                   |
+ */
+export module ApiV1EstateSystemUnitsUsingPost {
+  export type Operation = paths['/api/v1/estate/system/units']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 新增单元
+ * @url /api/v1/estate/system/units
+ * @method post
+ * @description **功能描述**
+
+向楼栋下添加单元。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511005 | 楼栋不存在                   |                                          |
+| 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
+| 511008 | 单元编号已经存在             | 单元编号重复                             |
+| 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
+| 511098 | 超出单元数量                 | 超出楼栋单元数量的限制                   |
+ */
+export function apiV1EstateSystemUnitsUsingPost(options:ApiV1EstateSystemUnitsUsingPost.Options):Promise<ApiV1EstateSystemUnitsUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/units',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 新增户室
+ * @url /api/v1/estate/system/rooms
+ * @method post
+ * @description **功能描述**
+
+向单元下添加户室。
+
+**返回码**
+
+| 返回码 | 返回消息             | 描述                                     |
+| ------ | -------------------- | ---------------------------------------- |
+| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+| 511006 | 单元不存在           |                                          |
+| 511009 | 楼层数不存在         |                                          |
+| 511025 | 参数不合法           | 非法参数，如floorNumber传值为非数字      |
+| 511059 | 租户信息不匹配       |                                          |
+| 511092 | 当前房屋已存在       |                                          |
+| 511124 | 小区户室数量超出限制 |                                          |
+| 511152 | 单元下户室名称已存在 | 单元下户室名称需唯一                     |
+ */
+export module ApiV1EstateSystemRoomsUsingPost {
+  export type Operation = paths['/api/v1/estate/system/rooms']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 新增户室
+ * @url /api/v1/estate/system/rooms
+ * @method post
+ * @description **功能描述**
+
+向单元下添加户室。
+
+**返回码**
+
+| 返回码 | 返回消息             | 描述                                     |
+| ------ | -------------------- | ---------------------------------------- |
+| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+| 511006 | 单元不存在           |                                          |
+| 511009 | 楼层数不存在         |                                          |
+| 511025 | 参数不合法           | 非法参数，如floorNumber传值为非数字      |
+| 511059 | 租户信息不匹配       |                                          |
+| 511092 | 当前房屋已存在       |                                          |
+| 511124 | 小区户室数量超出限制 |                                          |
+| 511152 | 单元下户室名称已存在 | 单元下户室名称需唯一                     |
+ */
+export function apiV1EstateSystemRoomsUsingPost(options:ApiV1EstateSystemRoomsUsingPost.Options):Promise<ApiV1EstateSystemRoomsUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/rooms',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 根据编号查询户室
+ * @url /api/v1/estate/system/rooms/actions/info
+ * @method get
+ * @description **功能描述**
+
+根据楼栋编号、单元编号、户室编号查询户室信息。
+
+**返回码**
+
+| 返回码 | 返回消息 | 描述                                     |
+| ------ | -------- | ---------------------------------------- |
+| 200    | 成功     |                                          |
+| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
+ */
+export module ApiV1EstateSystemRoomsActionsInfoUsingGet {
+  export type Operation = paths['/api/v1/estate/system/rooms/actions/info']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 根据编号查询户室
+ * @url /api/v1/estate/system/rooms/actions/info
+ * @method get
+ * @description **功能描述**
+
+根据楼栋编号、单元编号、户室编号查询户室信息。
+
+**返回码**
+
+| 返回码 | 返回消息 | 描述                                     |
+| ------ | -------- | ---------------------------------------- |
+| 200    | 成功     |                                          |
+| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
+ */
+export function apiV1EstateSystemRoomsActionsInfoUsingGet(options:ApiV1EstateSystemRoomsActionsInfoUsingGet.Options):Promise<ApiV1EstateSystemRoomsActionsInfoUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/rooms/actions/info',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 删除户室
+ * @url /api/v1/estate/system/rooms/{roomId}
+ * @method delete
+ * @description **功能描述**
+
+删除户室信息。
+
+**返回码**
+
+| 返回码 | 返回消息                | 描述                                     |
+| ------ | ----------------------- | ---------------------------------------- |
+| 510001 | 参数错误                | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配          | 不能对其他租户的物业人员进行操作         |
+| 511086 | 房间不存在              |                                          |
+| 511087 | 房屋已有人入住,不能删除 |                                          |
+ */
+export module ApiV1EstateSystemRoomsRoomIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/system/rooms/{roomId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 删除户室
+ * @url /api/v1/estate/system/rooms/{roomId}
+ * @method delete
+ * @description **功能描述**
+
+删除户室信息。
+
+**返回码**
+
+| 返回码 | 返回消息                | 描述                                     |
+| ------ | ----------------------- | ---------------------------------------- |
+| 510001 | 参数错误                | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配          | 不能对其他租户的物业人员进行操作         |
+| 511086 | 房间不存在              |                                          |
+| 511087 | 房屋已有人入住,不能删除 |                                          |
+ */
+export function apiV1EstateSystemRoomsRoomIdUsingDelete(options:ApiV1EstateSystemRoomsRoomIdUsingDelete.Options):Promise<ApiV1EstateSystemRoomsRoomIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/system/rooms/{roomId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 删除人员
+ * @url /api/v1/estate/system/person/{personId}
+ * @method delete
+ * @description **功能描述**
+
+删除住户人员信息。
+
+**返回码**
+
+| 返回码 | 返回消息     | 描述                                     |
+| ------ | ------------ | ---------------------------------------- |
+| 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511046 | 该人员不存在 |                                          |
+ */
+export module ApiV1EstateSystemPersonPersonIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/system/person/{personId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 删除人员
+ * @url /api/v1/estate/system/person/{personId}
+ * @method delete
+ * @description **功能描述**
+
+删除住户人员信息。
+
+**返回码**
+
+| 返回码 | 返回消息     | 描述                                     |
+| ------ | ------------ | ---------------------------------------- |
+| 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511046 | 该人员不存在 |                                          |
+ */
+export function apiV1EstateSystemPersonPersonIdUsingDelete(options:ApiV1EstateSystemPersonPersonIdUsingDelete.Options):Promise<ApiV1EstateSystemPersonPersonIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/{personId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询社区下的房屋
+ * @url /api/v1/estate/system/rooms/actions/communityRoomList
+ * @method get
+ * @description **功能描述**
+
+查询指定社区下的所有房间数据。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export module ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet {
+  export type Operation = paths['/api/v1/estate/system/rooms/actions/communityRoomList']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询社区下的房屋
+ * @url /api/v1/estate/system/rooms/actions/communityRoomList
+ * @method get
+ * @description **功能描述**
+
+查询指定社区下的所有房间数据。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export function apiV1EstateSystemRoomsActionsCommunityRoomListUsingGet(options:ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet.Options):Promise<ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/rooms/actions/communityRoomList',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 根据ID查询户室
+ * @url /api/v1/estate/system/rooms/actions/infoById
+ * @method get
+ * @description **功能描述**
+
+根据户室ID查询社区下的户室信息。（当前仅支持根据关联ID查询）
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配 | 不能对其他租户的物业人员进行操作         |
+| 511086 | 房间不存在     |                                          |
+ */
+export module ApiV1EstateSystemRoomsActionsInfoByIdUsingGet {
+  export type Operation = paths['/api/v1/estate/system/rooms/actions/infoById']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 根据ID查询户室
+ * @url /api/v1/estate/system/rooms/actions/infoById
+ * @method get
+ * @description **功能描述**
+
+根据户室ID查询社区下的户室信息。（当前仅支持根据关联ID查询）
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配 | 不能对其他租户的物业人员进行操作         |
+| 511086 | 房间不存在     |                                          |
+ */
+export function apiV1EstateSystemRoomsActionsInfoByIdUsingGet(options:ApiV1EstateSystemRoomsActionsInfoByIdUsingGet.Options):Promise<ApiV1EstateSystemRoomsActionsInfoByIdUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/rooms/actions/infoById',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询社区下的楼栋
+ * @url /api/v1/estate/system/buildings/actions/communityBuildingList
+ * @method get
+ * @description **功能描述**
+
+查询指定社区下的所有楼栋数据。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export module ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet {
+  export type Operation = paths['/api/v1/estate/system/buildings/actions/communityBuildingList']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询社区下的楼栋
+ * @url /api/v1/estate/system/buildings/actions/communityBuildingList
+ * @method get
+ * @description **功能描述**
+
+查询指定社区下的所有楼栋数据。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export function apiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet(options:ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet.Options):Promise<ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/buildings/actions/communityBuildingList',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询单元下的房屋
+ * @url /api/v1/estate/system/rooms/actions/unitRoomList
+ * @method post
+ * @description **返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export module ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost {
+  export type Operation = paths['/api/v1/estate/system/rooms/actions/unitRoomList']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询单元下的房屋
+ * @url /api/v1/estate/system/rooms/actions/unitRoomList
+ * @method post
+ * @description **返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export function apiV1EstateSystemRoomsActionsUnitRoomListUsingPost(options:ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost.Options):Promise<ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/rooms/actions/unitRoomList',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询楼栋下的单元
+ * @url /api/v1/estate/system/units/actions/buildingUnitList
+ * @method post
+ * @description **功能描述**
+
+查询指定楼栋下的所有单元数据。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export module ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost {
+  export type Operation = paths['/api/v1/estate/system/units/actions/buildingUnitList']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/房屋管理
+ * @summary 查询楼栋下的单元
+ * @url /api/v1/estate/system/units/actions/buildingUnitList
+ * @method post
+ * @description **功能描述**
+
+查询指定楼栋下的所有单元数据。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export function apiV1EstateSystemUnitsActionsBuildingUnitListUsingPost(options:ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost.Options):Promise<ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/units/actions/buildingUnitList',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 新增人员
+ * @url /api/v1/estate/system/person
+ * @method post
+ * @description **功能描述**
+
+新增住户人员信息。
+
+注意：
+
+1、本篇住户专指业主、家属、租客三个身份类别的人员。
+
+2、“姓名”+“手机号”或者“证件类型”+“证件号码”至少有一组信息完整。
+
+**返回码**
+
+| 返回码 | 返回消息                                                     | 描述                                                         |      |
+| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况                     |      |
+| 511000 | 社区不存在                                                   |                                                              |      |
+| 511011 | 证件类型为空                                                 |                                                              |      |
+| 511012 | 证件号为空                                                   |                                                              |      |
+| 511013 | 证件格式错误                                                 |                                                              |      |
+| 511015 | 手机格式错误                                                 |                                                              |      |
+| 511016 | 英文名称格式错误                                             |                                                              |      |
+| 511017 | 社区ID不能为空                                               |                                                              |      |
+| 511018 | 身份类型为租客时，离开时间不能为空                           |                                                              |      |
+| 511021 | 姓名和手机号在平台中已存在，请判断证件信息与平台证件信息是否匹配 |                                                              |      |
+| 511025 | 参数不合法                                                   | 一些必填字段为空等参数异常情况，比如楼栋ID、单元ID、户室ID、身份类型为空等现象 |      |
+| 511027 | 该房间没有业主                                               |                                                              |      |
+| 511038 | 证件信息在平台中已存在，请判断姓名与证件信息是否匹配         |                                                              |      |
+| 511040 | 日期格式错误                                                 |                                                              |      |
+| 511053 | 楼栋不存在                                                   |                                                              |      |
+| 511054 | 单元不存在                                                   |                                                              |      |
+| 511056 | 你所添加的房屋已存在业主                                     |                                                              |      |
+| 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                                       |      |
+| 511083 | 社区不包含楼栋                                               |                                                              |      |
+| 511084 | 楼栋不包含单元                                               |                                                              |      |
+| 511086 | 房间不存在                                                   |                                                              |      |
+| 511096 | 没有填写身份信息                                             | 身份信息应至少包含：1、姓名+证件类型+证件号码2、手机号+姓名两组中的一组 |      |
+| 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                                              |      |
+| 511115 | 入住时间为空                                                 |                                                              |      |
+| 511143 | 证件类型错误                                                 |                                                              |      |
+| 511146 | 民族名称填写错误                                             |                                                              |      |
+| 511095 | 人脸URL不合法                                                |                                                              |      |
+| 511100 | 人脸图片质量不合格                                           |                                                              |      |
+| 511117 | 人脸评分校验失败                                             |                                                              |      |
+| 511118 | 人脸特征点置信度校验失败                                     |                                                              |      |
+| 511119 | 人脸眼间距校验失败                                           |                                                              |      |
+| 511120 | 人脸俯仰角校验失败                                           |                                                              |      |
+| 511121 | 人脸左右角校验失败                                           |                                                              |      |
+| 511122 | 人脸可见性校验失败                                           |                                                              |      |
+| 511123 | 人脸清晰度校验失败                                           |                                                              |      |
+| 511189 | 离开时间必须大于入住时间                                     |                                                              |      |
+| 511113 | 卡号长度超过20                                               |                                                              |      |
+| 511116 | 卡号只能是数字和字母                                         |                                                              |      |
+| 511104 | 住户只能有三张卡                                             |                                                              |      |
+| 511106 | 卡号已被使用                                                 |                                                              |      |
+ */
+export module ApiV1EstateSystemPersonUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 新增人员
+ * @url /api/v1/estate/system/person
+ * @method post
+ * @description **功能描述**
+
+新增住户人员信息。
+
+注意：
+
+1、本篇住户专指业主、家属、租客三个身份类别的人员。
+
+2、“姓名”+“手机号”或者“证件类型”+“证件号码”至少有一组信息完整。
+
+**返回码**
+
+| 返回码 | 返回消息                                                     | 描述                                                         |      |
+| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况                     |      |
+| 511000 | 社区不存在                                                   |                                                              |      |
+| 511011 | 证件类型为空                                                 |                                                              |      |
+| 511012 | 证件号为空                                                   |                                                              |      |
+| 511013 | 证件格式错误                                                 |                                                              |      |
+| 511015 | 手机格式错误                                                 |                                                              |      |
+| 511016 | 英文名称格式错误                                             |                                                              |      |
+| 511017 | 社区ID不能为空                                               |                                                              |      |
+| 511018 | 身份类型为租客时，离开时间不能为空                           |                                                              |      |
+| 511021 | 姓名和手机号在平台中已存在，请判断证件信息与平台证件信息是否匹配 |                                                              |      |
+| 511025 | 参数不合法                                                   | 一些必填字段为空等参数异常情况，比如楼栋ID、单元ID、户室ID、身份类型为空等现象 |      |
+| 511027 | 该房间没有业主                                               |                                                              |      |
+| 511038 | 证件信息在平台中已存在，请判断姓名与证件信息是否匹配         |                                                              |      |
+| 511040 | 日期格式错误                                                 |                                                              |      |
+| 511053 | 楼栋不存在                                                   |                                                              |      |
+| 511054 | 单元不存在                                                   |                                                              |      |
+| 511056 | 你所添加的房屋已存在业主                                     |                                                              |      |
+| 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                                       |      |
+| 511083 | 社区不包含楼栋                                               |                                                              |      |
+| 511084 | 楼栋不包含单元                                               |                                                              |      |
+| 511086 | 房间不存在                                                   |                                                              |      |
+| 511096 | 没有填写身份信息                                             | 身份信息应至少包含：1、姓名+证件类型+证件号码2、手机号+姓名两组中的一组 |      |
+| 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                                              |      |
+| 511115 | 入住时间为空                                                 |                                                              |      |
+| 511143 | 证件类型错误                                                 |                                                              |      |
+| 511146 | 民族名称填写错误                                             |                                                              |      |
+| 511095 | 人脸URL不合法                                                |                                                              |      |
+| 511100 | 人脸图片质量不合格                                           |                                                              |      |
+| 511117 | 人脸评分校验失败                                             |                                                              |      |
+| 511118 | 人脸特征点置信度校验失败                                     |                                                              |      |
+| 511119 | 人脸眼间距校验失败                                           |                                                              |      |
+| 511120 | 人脸俯仰角校验失败                                           |                                                              |      |
+| 511121 | 人脸左右角校验失败                                           |                                                              |      |
+| 511122 | 人脸可见性校验失败                                           |                                                              |      |
+| 511123 | 人脸清晰度校验失败                                           |                                                              |      |
+| 511189 | 离开时间必须大于入住时间                                     |                                                              |      |
+| 511113 | 卡号长度超过20                                               |                                                              |      |
+| 511116 | 卡号只能是数字和字母                                         |                                                              |      |
+| 511104 | 住户只能有三张卡                                             |                                                              |      |
+| 511106 | 卡号已被使用                                                 |                                                              |      |
+ */
+export function apiV1EstateSystemPersonUsingPost(options:ApiV1EstateSystemPersonUsingPost.Options):Promise<ApiV1EstateSystemPersonUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 删除人员所属社区
+ * @url /api/v1/estate/system/person/actions/deleteCommunityRelation
+ * @method post
+ * @description **功能描述**
+
+删除住户人员与社区的关联关系。
+
+若住户在该社区有所属房屋，将同步解除住户与房屋的所属关系。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511022 | 住户不存在     |                                          |
+| 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
+ */
+export module ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/deleteCommunityRelation']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 删除人员所属社区
+ * @url /api/v1/estate/system/person/actions/deleteCommunityRelation
+ * @method post
+ * @description **功能描述**
+
+删除住户人员与社区的关联关系。
+
+若住户在该社区有所属房屋，将同步解除住户与房屋的所属关系。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511022 | 住户不存在     |                                          |
+| 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
+ */
+export function apiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost(options:ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/deleteCommunityRelation',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 设置人员所属社区
+ * @url /api/v1/estate/system/person/actions/addCommunityRelation
+ * @method post
+ * @description **功能描述**
+
+设置住户人员所属社区。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在     |                                          |
+| 511023 | 住户已存在     |                                          |
+| 511046 | 该人员不存在   |                                          |
+| 511059 | 租户信息不匹配 | 不能关联其他租户的社区                   |
+ */
+export module ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/addCommunityRelation']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 设置人员所属社区
+ * @url /api/v1/estate/system/person/actions/addCommunityRelation
+ * @method post
+ * @description **功能描述**
+
+设置住户人员所属社区。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在     |                                          |
+| 511023 | 住户已存在     |                                          |
+| 511046 | 该人员不存在   |                                          |
+| 511059 | 租户信息不匹配 | 不能关联其他租户的社区                   |
+ */
+export function apiV1EstateSystemPersonActionsAddCommunityRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/addCommunityRelation',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 设置人员所属户室
+ * @url /api/v1/estate/system/person/actions/addRoomRelation
+ * @method post
+ * @description **功能描述**
+
+设置人员所属户室（人员和房屋关联之后，将自动下发权限到设备）。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
+
+业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
+
+返回码
+返回码 	返回消息 	描述
+510001 	参数错误 	必填项为空、参数长度不符合等参数异常情况
+511018 	身份类型为租客时，离开时间不能为空 	
+511022 	住户不存在 	
+511026 	该户室已经关联业主 	
+511028 	该人员已经入住xxx户室 	
+511029 	户室信息错误 	
+511059 	租户信息不匹配 	不能关联其他租户的房屋
+511099 	身份类型为租客时，离开时间必须大于入住时间 	
+511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 	
+511165 	身份类型错误 	
+511189 	离开时间必须大于入住时间 	
+ */
+export module ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/addRoomRelation']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 设置人员所属户室
+ * @url /api/v1/estate/system/person/actions/addRoomRelation
+ * @method post
+ * @description **功能描述**
+
+设置人员所属户室（人员和房屋关联之后，将自动下发权限到设备）。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
+
+业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
+
+返回码
+返回码 	返回消息 	描述
+510001 	参数错误 	必填项为空、参数长度不符合等参数异常情况
+511018 	身份类型为租客时，离开时间不能为空 	
+511022 	住户不存在 	
+511026 	该户室已经关联业主 	
+511028 	该人员已经入住xxx户室 	
+511029 	户室信息错误 	
+511059 	租户信息不匹配 	不能关联其他租户的房屋
+511099 	身份类型为租客时，离开时间必须大于入住时间 	
+511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 	
+511165 	身份类型错误 	
+511189 	离开时间必须大于入住时间 	
+ */
+export function apiV1EstateSystemPersonActionsAddRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/addRoomRelation',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 删除人员所属户室
+ * @url /api/v1/estate/system/person/actions/deleteRoomRelation
+ * @method post
+ * @description **功能描述**
+
+删除住户人员所属户室（后台将同步删除设备上的权限）。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511029 | 户室信息错误   |                                          |
+| 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
+ */
+export module ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/deleteRoomRelation']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 删除人员所属户室
+ * @url /api/v1/estate/system/person/actions/deleteRoomRelation
+ * @method post
+ * @description **功能描述**
+
+删除住户人员所属户室（后台将同步删除设备上的权限）。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511029 | 户室信息错误   |                                          |
+| 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
+ */
+export function apiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/deleteRoomRelation',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 修改人员
+ * @url /api/v1/estate/system/person/actions/updatePerson
+ * @method post
+ * @description **功能描述**
+
+修改住户人员的基础信息。
+
+**返回码**
+
+| 返回码 | 返回消息                 | 描述                                                         |      |
+| ------ | ------------------------ | ------------------------------------------------------------ | ---- |
+| 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况                     |      |
+| 511011 | 证件类型为空             |                                                              |      |
+| 511012 | 证件号为空               |                                                              |      |
+| 511013 | 证件格式错误             |                                                              |      |
+| 511014 | 手机号不能为空           |                                                              |      |
+| 511015 | 手机格式错误             |                                                              |      |
+| 511016 | 英文名称格式错误         |                                                              |      |
+| 511046 | 该人员不存在             |                                                              |      |
+| 511096 | 没有填写身份信息         | 身份信息应至少包含：1、证件类型+证件号码2、手机号+姓名两组中的一组 |      |
+| 511146 | 民族名称填写错误         |                                                              |      |
+| 511095 | 人脸URL不合法            |                                                              |      |
+| 511100 | 人脸图片质量不合格       |                                                              |      |
+| 511117 | 人脸评分校验失败         |                                                              |      |
+| 511118 | 人脸特征点置信度校验失败 |                                                              |      |
+| 511119 | 人脸眼间距校验失败       |                                                              |      |
+| 511120 | 人脸俯仰角校验失败       |                                                              |      |
+| 511121 | 人脸左右角校验失败       |                                                              |      |
+| 511122 | 人脸可见性校验失败       |                                                              |      |
+| 511123 | 人脸清晰度校验失败       |                                                              |      |
+ */
+export module ApiV1EstateSystemPersonActionsUpdatePersonUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/updatePerson']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 修改人员
+ * @url /api/v1/estate/system/person/actions/updatePerson
+ * @method post
+ * @description **功能描述**
+
+修改住户人员的基础信息。
+
+**返回码**
+
+| 返回码 | 返回消息                 | 描述                                                         |      |
+| ------ | ------------------------ | ------------------------------------------------------------ | ---- |
+| 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况                     |      |
+| 511011 | 证件类型为空             |                                                              |      |
+| 511012 | 证件号为空               |                                                              |      |
+| 511013 | 证件格式错误             |                                                              |      |
+| 511014 | 手机号不能为空           |                                                              |      |
+| 511015 | 手机格式错误             |                                                              |      |
+| 511016 | 英文名称格式错误         |                                                              |      |
+| 511046 | 该人员不存在             |                                                              |      |
+| 511096 | 没有填写身份信息         | 身份信息应至少包含：1、证件类型+证件号码2、手机号+姓名两组中的一组 |      |
+| 511146 | 民族名称填写错误         |                                                              |      |
+| 511095 | 人脸URL不合法            |                                                              |      |
+| 511100 | 人脸图片质量不合格       |                                                              |      |
+| 511117 | 人脸评分校验失败         |                                                              |      |
+| 511118 | 人脸特征点置信度校验失败 |                                                              |      |
+| 511119 | 人脸眼间距校验失败       |                                                              |      |
+| 511120 | 人脸俯仰角校验失败       |                                                              |      |
+| 511121 | 人脸左右角校验失败       |                                                              |      |
+| 511122 | 人脸可见性校验失败       |                                                              |      |
+| 511123 | 人脸清晰度校验失败       |                                                              |      |
+ */
+export function apiV1EstateSystemPersonActionsUpdatePersonUsingPost(options:ApiV1EstateSystemPersonActionsUpdatePersonUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsUpdatePersonUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/updatePerson',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 重置人员所属户室
+ * @url /api/v1/estate/system/person/actions/setRoomRelation
+ * @method post
+ * @description **功能描述**
+
+重置人员所属户室，可删除旧的户室关联关系的同时重新关联新的户室。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
+业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
+
+**返回码**
+
+| 返回码 | 返回消息                                                     | 描述                                     |
+| ------ | ------------------------------------------------------------ | ---------------------------------------- |
+| 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511018 | 身份类型为租客时，离开时间不能为空                           |                                          |
+| 511022 | 住户不存在                                                   |                                          |
+| 511026 | 该户室已经关联业主                                           |                                          |
+| 511029 | 户室信息错误                                                 |                                          |
+| 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                   |
+| 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                          |
+| 511153 | 当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 |                                          |
+| 511189 | 离开时间必须大于入住时间                                     |                                          |
+ */
+export module ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/setRoomRelation']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 重置人员所属户室
+ * @url /api/v1/estate/system/person/actions/setRoomRelation
+ * @method post
+ * @description **功能描述**
+
+重置人员所属户室，可删除旧的户室关联关系的同时重新关联新的户室。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
+业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
+
+**返回码**
+
+| 返回码 | 返回消息                                                     | 描述                                     |
+| ------ | ------------------------------------------------------------ | ---------------------------------------- |
+| 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511018 | 身份类型为租客时，离开时间不能为空                           |                                          |
+| 511022 | 住户不存在                                                   |                                          |
+| 511026 | 该户室已经关联业主                                           |                                          |
+| 511029 | 户室信息错误                                                 |                                          |
+| 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                   |
+| 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                          |
+| 511153 | 当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 |                                          |
+| 511189 | 离开时间必须大于入住时间                                     |                                          |
+ */
+export function apiV1EstateSystemPersonActionsSetRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/setRoomRelation',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 人员查询
+ * @url /api/v1/estate/system/person/actions/personInfoList
+ * @method post
+ * @description **功能描述**
+
+查询云眸社区指定社区下所有的住户信息。
+
+注意：本接口查询内容只包含当前社区的房屋资料，如果住户在其他小区也有房屋，将不会显示。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export module ApiV1EstateSystemPersonActionsPersonInfoListUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/personInfoList']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 人员查询
+ * @url /api/v1/estate/system/person/actions/personInfoList
+ * @method post
+ * @description **功能描述**
+
+查询云眸社区指定社区下所有的住户信息。
+
+注意：本接口查询内容只包含当前社区的房屋资料，如果住户在其他小区也有房屋，将不会显示。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export function apiV1EstateSystemPersonActionsPersonInfoListUsingPost(options:ApiV1EstateSystemPersonActionsPersonInfoListUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsPersonInfoListUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/personInfoList',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 获取人员户室信息
+ * @url /api/v1/estate/system/person/actions/roomList
+ * @method get
+ * @description **功能描述**
+
+查询该人员名下的户室列表。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 511000 | 社区不存在     |                                          |
+| 511059 | 租户信息不匹配 | 不能查询其他租户的资料                   |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+ */
+export module ApiV1EstateSystemPersonActionsRoomListUsingGet {
+  export type Operation = paths['/api/v1/estate/system/person/actions/roomList']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 获取人员户室信息
+ * @url /api/v1/estate/system/person/actions/roomList
+ * @method get
+ * @description **功能描述**
+
+查询该人员名下的户室列表。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 511000 | 社区不存在     |                                          |
+| 511059 | 租户信息不匹配 | 不能查询其他租户的资料                   |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+ */
+export function apiV1EstateSystemPersonActionsRoomListUsingGet(options:ApiV1EstateSystemPersonActionsRoomListUsingGet.Options):Promise<ApiV1EstateSystemPersonActionsRoomListUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/roomList',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 获取人员标签列表
+ * @url /api/v1/estate/system/person/actions/labelList
+ * @method get
+ * @description **功能描述**
+
+查询当前租户下的人员标签列表。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export module ApiV1EstateSystemPersonActionsLabelListUsingGet {
+  export type Operation = paths['/api/v1/estate/system/person/actions/labelList']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 获取人员标签列表
+ * @url /api/v1/estate/system/person/actions/labelList
+ * @method get
+ * @description **功能描述**
+
+查询当前租户下的人员标签列表。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 200    | 成功               |                                          |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+ */
+export function apiV1EstateSystemPersonActionsLabelListUsingGet(options:ApiV1EstateSystemPersonActionsLabelListUsingGet.Options):Promise<ApiV1EstateSystemPersonActionsLabelListUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/labelList',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 设置人员标签和车牌号
+ * @url /api/v1/estate/system/person/actions/addLabelAndLicenseRelation
+ * @method post
+ * @description **功能描述**
+
+给社区的人员设置标签和车牌号（注：需先给人员设置所属社区）。
+
+**返回码**
+
+| **返回码** | **返回消息**             | **描述**                                 |
+| ---------- | ------------------------ | ---------------------------------------- |
+| 200        | 成功                     |                                          |
+| 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000     | 社区不存在               | 社区id错误或者跨租户操作                 |
+| 511170     | 车牌数量不能超过三个     | 同一社区，一个人最多设置三个车牌号       |
+| 511171     | 车牌号格式错误           |                                          |
+| 511172     | 用户未入住当前社区       | 用户需先关联社区之后才可以设置标签       |
+| 511173     | 人员标签不存在           | 人员标签id错误                           |
+| 511174     | 车牌号码在当前社区已存在 | 一个车牌号在同一社区只能出现一次         |
+| 511177     | 车牌号不能重复           | 提交数据中有重复车牌号                   |
+| 511178     | 人员标签不能重复         | 提交数据中有重复人员标签                 |
+ */
+export module ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost {
+  export type Operation = paths['/api/v1/estate/system/person/actions/addLabelAndLicenseRelation']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/住户人人员管理
+ * @summary 设置人员标签和车牌号
+ * @url /api/v1/estate/system/person/actions/addLabelAndLicenseRelation
+ * @method post
+ * @description **功能描述**
+
+给社区的人员设置标签和车牌号（注：需先给人员设置所属社区）。
+
+**返回码**
+
+| **返回码** | **返回消息**             | **描述**                                 |
+| ---------- | ------------------------ | ---------------------------------------- |
+| 200        | 成功                     |                                          |
+| 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000     | 社区不存在               | 社区id错误或者跨租户操作                 |
+| 511170     | 车牌数量不能超过三个     | 同一社区，一个人最多设置三个车牌号       |
+| 511171     | 车牌号格式错误           |                                          |
+| 511172     | 用户未入住当前社区       | 用户需先关联社区之后才可以设置标签       |
+| 511173     | 人员标签不存在           | 人员标签id错误                           |
+| 511174     | 车牌号码在当前社区已存在 | 一个车牌号在同一社区只能出现一次         |
+| 511177     | 车牌号不能重复           | 提交数据中有重复车牌号                   |
+| 511178     | 人员标签不能重复         | 提交数据中有重复人员标签                 |
+ */
+export function apiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/person/actions/addLabelAndLicenseRelation',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/物业人员管理
+ * @summary 新增物业人员
+ * @url /api/v1/estate/system/property
+ * @method post
+ * @description **功能描述**
+
+新增物业人员信息。
+
+备注：调用物业人员添加接口，就是在云眸平台注册了一个可以登陆的物业人员账号；返回的参数中appId和secret两个参数是在第三方跳转的时候需要用到的参数，具体用法详见：第三方跳转登录云眸社区对接规范。
+
+**返回码**
+
+| 返回码 | 返回消息               | 描述                                                         |
+| ------ | ---------------------- | ------------------------------------------------------------ |
+| 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
+| 511015 | 手机格式错误           |                                                              |
+| 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
+| 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
+| 511082 | 用户名或手机号已被使用 |                                                              |
+| 511091 | 用户名不合法           | 用户名包含数字字母之外的非法字符                             |
+ */
+export module ApiV1EstateSystemPropertyUsingPost {
+  export type Operation = paths['/api/v1/estate/system/property']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/物业人员管理
+ * @summary 新增物业人员
+ * @url /api/v1/estate/system/property
+ * @method post
+ * @description **功能描述**
+
+新增物业人员信息。
+
+备注：调用物业人员添加接口，就是在云眸平台注册了一个可以登陆的物业人员账号；返回的参数中appId和secret两个参数是在第三方跳转的时候需要用到的参数，具体用法详见：第三方跳转登录云眸社区对接规范。
+
+**返回码**
+
+| 返回码 | 返回消息               | 描述                                                         |
+| ------ | ---------------------- | ------------------------------------------------------------ |
+| 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
+| 511015 | 手机格式错误           |                                                              |
+| 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
+| 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
+| 511082 | 用户名或手机号已被使用 |                                                              |
+| 511091 | 用户名不合法           | 用户名包含数字字母之外的非法字符                             |
+ */
+export function apiV1EstateSystemPropertyUsingPost(options:ApiV1EstateSystemPropertyUsingPost.Options):Promise<ApiV1EstateSystemPropertyUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/property',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 退卡
+ * @url /api/v1/estate/system/cards/actions/refundCard
+ * @method post
+ * @description **功能描述**
+
+已开通的卡片进行退卡（卡片将变为空白卡）。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511107 | 卡号不存在         |                                          |
+| 511108 | 只有正常卡才能退卡 | 其他状态的卡片无法退卡，比如挂失的卡片   |
+ */
+export module ApiV1EstateSystemCardsActionsRefundCardUsingPost {
+  export type Operation = paths['/api/v1/estate/system/cards/actions/refundCard']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 退卡
+ * @url /api/v1/estate/system/cards/actions/refundCard
+ * @method post
+ * @description **功能描述**
+
+已开通的卡片进行退卡（卡片将变为空白卡）。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511107 | 卡号不存在         |                                          |
+| 511108 | 只有正常卡才能退卡 | 其他状态的卡片无法退卡，比如挂失的卡片   |
+ */
+export function apiV1EstateSystemCardsActionsRefundCardUsingPost(options:ApiV1EstateSystemCardsActionsRefundCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsRefundCardUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards/actions/refundCard',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 解挂
+ * @url /api/v1/estate/system/cards/actions/cancelLossCard
+ * @method post
+ * @description **功能描述**
+
+将已挂失的卡片进行解挂（卡片将变为正常卡）。
+
+**返回码**
+
+| 返回码 | 返回消息             | 描述                                     |
+| ------ | -------------------- | ---------------------------------------- |
+| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+| 511107 | 卡号不存在           |                                          |
+| 511033 | 没有该设备权限       |                                          |
+| 511111 | 只有挂失的卡才能解挂 | 其他状态的卡片无法解挂，比如正常的卡片   |
+| 511145 | 设备数量超出限制     |                                          |
+ */
+export module ApiV1EstateSystemCardsActionsCancelLossCardUsingPost {
+  export type Operation = paths['/api/v1/estate/system/cards/actions/cancelLossCard']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 解挂
+ * @url /api/v1/estate/system/cards/actions/cancelLossCard
+ * @method post
+ * @description **功能描述**
+
+将已挂失的卡片进行解挂（卡片将变为正常卡）。
+
+**返回码**
+
+| 返回码 | 返回消息             | 描述                                     |
+| ------ | -------------------- | ---------------------------------------- |
+| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+| 511107 | 卡号不存在           |                                          |
+| 511033 | 没有该设备权限       |                                          |
+| 511111 | 只有挂失的卡才能解挂 | 其他状态的卡片无法解挂，比如正常的卡片   |
+| 511145 | 设备数量超出限制     |                                          |
+ */
+export function apiV1EstateSystemCardsActionsCancelLossCardUsingPost(options:ApiV1EstateSystemCardsActionsCancelLossCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsCancelLossCardUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards/actions/cancelLossCard',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 挂失
+ * @url /api/v1/estate/system/cards/actions/lossCard
+ * @method post
+ * @description **功能描述**
+
+将已开通的卡片进行挂失（卡片状态将变为挂失）。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511107 | 卡号不存在         |                                          |
+| 511110 | 只有正常卡才能挂失 | 其他状态的卡片无法挂失，比如空白卡       |
+ */
+export module ApiV1EstateSystemCardsActionsLossCardUsingPost {
+  export type Operation = paths['/api/v1/estate/system/cards/actions/lossCard']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 挂失
+ * @url /api/v1/estate/system/cards/actions/lossCard
+ * @method post
+ * @description **功能描述**
+
+将已开通的卡片进行挂失（卡片状态将变为挂失）。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511107 | 卡号不存在         |                                          |
+| 511110 | 只有正常卡才能挂失 | 其他状态的卡片无法挂失，比如空白卡       |
+ */
+export function apiV1EstateSystemCardsActionsLossCardUsingPost(options:ApiV1EstateSystemCardsActionsLossCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsLossCardUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards/actions/lossCard',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 新增卡片（白卡）
+ * @url /api/v1/estate/system/cards
+ * @method post
+ * @description **功能描述**
+
+添加一张新的空白卡片。
+
+
+ */
+export module ApiV1EstateSystemCardsUsingPost {
+  export type Operation = paths['/api/v1/estate/system/cards']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 新增卡片（白卡）
+ * @url /api/v1/estate/system/cards
+ * @method post
+ * @description **功能描述**
+
+添加一张新的空白卡片。
+
+
+ */
+export function apiV1EstateSystemCardsUsingPost(options:ApiV1EstateSystemCardsUsingPost.Options):Promise<ApiV1EstateSystemCardsUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/物业人员管理
+ * @summary 修改物业人员
+ * @url /api/v1/estate/system/property/actions/updateProperty
+ * @method post
+ * @description **功能描述**
+
+编辑物业人员信息。（全量修改）
+
+**返回码**
+
+| 返回码 | 返回消息               | 描述                                                         |
+| ------ | ---------------------- | ------------------------------------------------------------ |
+| 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
+| 511015 | 手机格式错误           |                                                              |
+| 511059 | 租户信息不匹配         | 不能对其他租户的物业人员进行操作                             |
+| 511046 | 该人员不存在           |                                                              |
+| 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
+| 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
+| 511082 | 用户名或手机号已被使用 |                                                              |
+ */
+export module ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost {
+  export type Operation = paths['/api/v1/estate/system/property/actions/updateProperty']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/物业人员管理
+ * @summary 修改物业人员
+ * @url /api/v1/estate/system/property/actions/updateProperty
+ * @method post
+ * @description **功能描述**
+
+编辑物业人员信息。（全量修改）
+
+**返回码**
+
+| 返回码 | 返回消息               | 描述                                                         |
+| ------ | ---------------------- | ------------------------------------------------------------ |
+| 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
+| 511015 | 手机格式错误           |                                                              |
+| 511059 | 租户信息不匹配         | 不能对其他租户的物业人员进行操作                             |
+| 511046 | 该人员不存在           |                                                              |
+| 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
+| 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
+| 511082 | 用户名或手机号已被使用 |                                                              |
+ */
+export function apiV1EstateSystemPropertyActionsUpdatePropertyUsingPost(options:ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost.Options):Promise<ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/property/actions/updateProperty',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 开卡
+ * @url /api/v1/estate/system/cards/actions/openCard
+ * @method post
+ * @description **功能描述**
+
+给人员开通卡片。
+
+**返回码**
+
+| 返回码 | 返回消息             | 描述                                     |
+| ------ | -------------------- | ---------------------------------------- |
+| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+| 511046 | 该人员不存在         |                                          |
+| 511104 | 住户只能有三张卡     |                                          |
+| 511105 | 物业人员只能有一张卡 |                                          |
+| 511106 | 卡号已被使用         | 卡号已绑定人员，空白卡可以使用           |
+| 511033 | 没有该设备权限       |                                          |
+| 511113 | 卡号长度超过20       |                                          |
+| 511114 | 人员类型不合法       |                                          |
+| 511116 | 卡号只能是数字       |                                          |
+| 511145 | 设备数量超出限制     |                                          |
+ */
+export module ApiV1EstateSystemCardsActionsOpenCardUsingPost {
+  export type Operation = paths['/api/v1/estate/system/cards/actions/openCard']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 开卡
+ * @url /api/v1/estate/system/cards/actions/openCard
+ * @method post
+ * @description **功能描述**
+
+给人员开通卡片。
+
+**返回码**
+
+| 返回码 | 返回消息             | 描述                                     |
+| ------ | -------------------- | ---------------------------------------- |
+| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+| 511046 | 该人员不存在         |                                          |
+| 511104 | 住户只能有三张卡     |                                          |
+| 511105 | 物业人员只能有一张卡 |                                          |
+| 511106 | 卡号已被使用         | 卡号已绑定人员，空白卡可以使用           |
+| 511033 | 没有该设备权限       |                                          |
+| 511113 | 卡号长度超过20       |                                          |
+| 511114 | 人员类型不合法       |                                          |
+| 511116 | 卡号只能是数字       |                                          |
+| 511145 | 设备数量超出限制     |                                          |
+ */
+export function apiV1EstateSystemCardsActionsOpenCardUsingPost(options:ApiV1EstateSystemCardsActionsOpenCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsOpenCardUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards/actions/openCard',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 换卡
+ * @url /api/v1/estate/system/cards/actions/changeCard
+ * @method get
+ * @description **功能描述**
+
+将已开通的卡片进行替换（旧卡将变为空白卡）。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
+| 511107 | 卡号不存在         | 旧卡不存在                               |
+| 511109 | 只有正常卡才能换卡 | 其他状态的卡片无法换卡，比如挂失的卡片   |
+| 511033 | 没有该设备权限     |                                          |
+| 511113 | 卡号长度超过20     |                                          |
+| 511116 | 卡号只能是数字     |                                          |
+| 511145 | 设备数量超出限制   |                                          |
+ */
+export module ApiV1EstateSystemCardsActionsChangeCardUsingGet {
+  export type Operation = paths['/api/v1/estate/system/cards/actions/changeCard']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 换卡
+ * @url /api/v1/estate/system/cards/actions/changeCard
+ * @method get
+ * @description **功能描述**
+
+将已开通的卡片进行替换（旧卡将变为空白卡）。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
+| 511107 | 卡号不存在         | 旧卡不存在                               |
+| 511109 | 只有正常卡才能换卡 | 其他状态的卡片无法换卡，比如挂失的卡片   |
+| 511033 | 没有该设备权限     |                                          |
+| 511113 | 卡号长度超过20     |                                          |
+| 511116 | 卡号只能是数字     |                                          |
+| 511145 | 设备数量超出限制   |                                          |
+ */
+export function apiV1EstateSystemCardsActionsChangeCardUsingGet(options:ApiV1EstateSystemCardsActionsChangeCardUsingGet.Options):Promise<ApiV1EstateSystemCardsActionsChangeCardUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards/actions/changeCard',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 删除卡片（白卡）
+ * @url /api/v1/estate/system/cards/{cardId}
+ * @method delete
+ * @description **功能描述**
+
+删除一张空白卡。
+
+注意：已绑定人员的卡片不允许删除，需要先解除绑定再进行删除。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511103 | 只能删除空白卡 |                                          |
+ */
+export module ApiV1EstateSystemCardsCardIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/system/cards/{cardId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 删除卡片（白卡）
+ * @url /api/v1/estate/system/cards/{cardId}
+ * @method delete
+ * @description **功能描述**
+
+删除一张空白卡。
+
+注意：已绑定人员的卡片不允许删除，需要先解除绑定再进行删除。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511103 | 只能删除空白卡 |                                          |
+ */
+export function apiV1EstateSystemCardsCardIdUsingDelete(options:ApiV1EstateSystemCardsCardIdUsingDelete.Options):Promise<ApiV1EstateSystemCardsCardIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards/{cardId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/物业人员管理
+ * @summary 删除物业人员
+ * @url /api/v1/estate/system/property/{personId}
+ * @method delete
+ * @description **功能描述**
+
+删除物业人员信息。
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                     |
+| ------ | ---------------- | ---------------------------------------- |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+| 511069 | 查询用户信息失败 |                                          |
+
+**物业人员角色列表**
+
+| 返回码           | 返回消息 | 描述         |
+| ---------------- | -------- | ------------ |
+| COMMUNITY_ROLE_A | 角色A    | 权限1..权限n |
+| COMMUNITY_ROLE_B | 角色B    | 权限1..权限n |
+| COMMUNITY_ROLE_C | 角色C    | 权限1..权限n |
+| COMMUNITY_ROLE_D | 角色D    | 权限1..权限n |
+ */
+export module ApiV1EstateSystemPropertyPersonIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/system/property/{personId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/物业人员管理
+ * @summary 删除物业人员
+ * @url /api/v1/estate/system/property/{personId}
+ * @method delete
+ * @description **功能描述**
+
+删除物业人员信息。
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                     |
+| ------ | ---------------- | ---------------------------------------- |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+| 511069 | 查询用户信息失败 |                                          |
+
+**物业人员角色列表**
+
+| 返回码           | 返回消息 | 描述         |
+| ---------------- | -------- | ------------ |
+| COMMUNITY_ROLE_A | 角色A    | 权限1..权限n |
+| COMMUNITY_ROLE_B | 角色B    | 权限1..权限n |
+| COMMUNITY_ROLE_C | 角色C    | 权限1..权限n |
+| COMMUNITY_ROLE_D | 角色D    | 权限1..权限n |
+ */
+export function apiV1EstateSystemPropertyPersonIdUsingDelete(options:ApiV1EstateSystemPropertyPersonIdUsingDelete.Options):Promise<ApiV1EstateSystemPropertyPersonIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/system/property/{personId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 删除设备
+ * @url /api/v1/estate/devices/actions/deleteDevice
+ * @method post
+ * @description **功能描述**
+
+修改设备。
+
+
+ */
+export module ApiV1EstateDevicesActionsDeleteDeviceUsingPost {
+  export type Operation = paths['/api/v1/estate/devices/actions/deleteDevice']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 删除设备
+ * @url /api/v1/estate/devices/actions/deleteDevice
+ * @method post
+ * @description **功能描述**
+
+修改设备。
+
+
+ */
+export function apiV1EstateDevicesActionsDeleteDeviceUsingPost(options:ApiV1EstateDevicesActionsDeleteDeviceUsingPost.Options):Promise<ApiV1EstateDevicesActionsDeleteDeviceUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/devices/actions/deleteDevice',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 修改设备
+ * @url /api/v1/estate/devices/actions/updateDevice
+ * @method post
+ * @description **功能描述**
+
+修改设备名称。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511148 | 未查到设备信息 | 设备不存在或已被删除                     |
+| 511158 | 设备名称重复   |                                          |
+ */
+export module ApiV1EstateDevicesActionsUpdateDeviceUsingPost {
+  export type Operation = paths['/api/v1/estate/devices/actions/updateDevice']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 修改设备
+ * @url /api/v1/estate/devices/actions/updateDevice
+ * @method post
+ * @description **功能描述**
+
+修改设备名称。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511148 | 未查到设备信息 | 设备不存在或已被删除                     |
+| 511158 | 设备名称重复   |                                          |
+ */
+export function apiV1EstateDevicesActionsUpdateDeviceUsingPost(options:ApiV1EstateDevicesActionsUpdateDeviceUsingPost.Options):Promise<ApiV1EstateDevicesActionsUpdateDeviceUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/devices/actions/updateDevice',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 查询设备详情
+ * @url /api/v1/estate/devices
+ * @method get
+ * @description **功能描述**
+
+查询设备详细资料。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511148 | 未查到设备信息 |                                          |
+ */
+export module ApiV1EstateDevicesUsingGet {
+  export type Operation = paths['/api/v1/estate/devices']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 查询设备详情
+ * @url /api/v1/estate/devices
+ * @method get
+ * @description **功能描述**
+
+查询设备详细资料。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511148 | 未查到设备信息 |                                          |
+ */
+export function apiV1EstateDevicesUsingGet(options:ApiV1EstateDevicesUsingGet.Options):Promise<ApiV1EstateDevicesUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/devices',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 新增设备
+ * @url /api/v1/estate/devices
+ * @method post
+ * @description **功能描述**
+
+新增设备，设备添加之后会异步去拉取通道，拉取通道存在失败的可能，使用过程中如果遇到通道问题，可以调用刷新通道的接口去同步通道信息。
+
+若只填写communityId（不填写buildingId和unitId）设备将添加为围墙机；若填写buildingId和unitId，设备将添加为单元机。
+**返回码**
+
+| 返回码 | 返回消息                           | 描述                                     |
+| ------ | ---------------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511154 | 楼栋或单元ID为空                   |                                          |
+| 511155 | 查询社区失败                       |                                          |
+| 511156 | 查询单元失败                       |                                          |
+| 511157 | 该设备已被添加                     |                                          |
+| 511158 | 设备名称重复                       | 设备名称需租户下唯一                     |
+| 511159 | 服务已经到达上限或者没有购买此服务 | 当前账号未开通此类设备的服务             |
+| 511160 | 设备不存在                         | 设备未开启萤石协议或设备未注册且不在线   |
+| 511161 | 设备不在线                         |                                          |
+| 511162 | 设备验证码错误                     |                                          |
+| 511164 | 设备序列号不正确                   |                                          |
+| 511192 | 不能使用出厂时的默认验证码         |                                          |
+| 511193 | 设备存在高风险需要确权             |                                          |
+
+ */
+export module ApiV1EstateDevicesUsingPost {
+  export type Operation = paths['/api/v1/estate/devices']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 新增设备
+ * @url /api/v1/estate/devices
+ * @method post
+ * @description **功能描述**
+
+新增设备，设备添加之后会异步去拉取通道，拉取通道存在失败的可能，使用过程中如果遇到通道问题，可以调用刷新通道的接口去同步通道信息。
+
+若只填写communityId（不填写buildingId和unitId）设备将添加为围墙机；若填写buildingId和unitId，设备将添加为单元机。
+**返回码**
+
+| 返回码 | 返回消息                           | 描述                                     |
+| ------ | ---------------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511154 | 楼栋或单元ID为空                   |                                          |
+| 511155 | 查询社区失败                       |                                          |
+| 511156 | 查询单元失败                       |                                          |
+| 511157 | 该设备已被添加                     |                                          |
+| 511158 | 设备名称重复                       | 设备名称需租户下唯一                     |
+| 511159 | 服务已经到达上限或者没有购买此服务 | 当前账号未开通此类设备的服务             |
+| 511160 | 设备不存在                         | 设备未开启萤石协议或设备未注册且不在线   |
+| 511161 | 设备不在线                         |                                          |
+| 511162 | 设备验证码错误                     |                                          |
+| 511164 | 设备序列号不正确                   |                                          |
+| 511192 | 不能使用出厂时的默认验证码         |                                          |
+| 511193 | 设备存在高风险需要确权             |                                          |
+
+ */
+export function apiV1EstateDevicesUsingPost(options:ApiV1EstateDevicesUsingPost.Options):Promise<ApiV1EstateDevicesUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/devices',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 补卡
+ * @url /api/v1/estate/system/cards/actions/reissueCard
+ * @method post
+ * @description **功能描述**
+
+补开一张新的卡片，旧卡将被删除。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
+| 511107 | 卡号不存在         | 旧卡不存在                               |
+| 511033 | 没有该设备权限     |                                          |
+| 511112 | 只有挂失卡才能补卡 | 其他状态的卡片无法补卡，比如正常的卡片   |
+| 511113 | 卡号长度超过20     |                                          |
+| 511116 | 卡号只能是数字     |                                          |
+| 511145 | 设备数量超出限制   |                                          |
+ */
+export module ApiV1EstateSystemCardsActionsReissueCardUsingPost {
+  export type Operation = paths['/api/v1/estate/system/cards/actions/reissueCard']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/卡片管理
+ * @summary 补卡
+ * @url /api/v1/estate/system/cards/actions/reissueCard
+ * @method post
+ * @description **功能描述**
+
+补开一张新的卡片，旧卡将被删除。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
+| 511107 | 卡号不存在         | 旧卡不存在                               |
+| 511033 | 没有该设备权限     |                                          |
+| 511112 | 只有挂失卡才能补卡 | 其他状态的卡片无法补卡，比如正常的卡片   |
+| 511113 | 卡号长度超过20     |                                          |
+| 511116 | 卡号只能是数字     |                                          |
+| 511145 | 设备数量超出限制   |                                          |
+ */
+export function apiV1EstateSystemCardsActionsReissueCardUsingPost(options:ApiV1EstateSystemCardsActionsReissueCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsReissueCardUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/system/cards/actions/reissueCard',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 查询社区下的设备列表
+ * @url /api/v1/estate/devices/actions/listByCommunityId
+ * @method post
+ * @description **功能描述**
+
+根据社区ID查询社区下的设备列表。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+| 511155 | 查询社区失败       |                                          |
+
+ */
+export module ApiV1EstateDevicesActionsListByCommunityIdUsingPost {
+  export type Operation = paths['/api/v1/estate/devices/actions/listByCommunityId']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 查询社区下的设备列表
+ * @url /api/v1/estate/devices/actions/listByCommunityId
+ * @method post
+ * @description **功能描述**
+
+根据社区ID查询社区下的设备列表。
+
+**返回码**
+
+| 返回码 | 返回消息           | 描述                                     |
+| ------ | ------------------ | ---------------------------------------- |
+| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144 | 超出最大分页量限制 |                                          |
+| 511155 | 查询社区失败       |                                          |
+
+ */
+export function apiV1EstateDevicesActionsListByCommunityIdUsingPost(options:ApiV1EstateDevicesActionsListByCommunityIdUsingPost.Options):Promise<ApiV1EstateDevicesActionsListByCommunityIdUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/devices/actions/listByCommunityId',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 查询社区下设备通道列表
+ * @url /api/v1/estate/devices/channels/actions/listByCommunityId
+ * @method get
+ * @description **功能描述**
+
+根据社区ID查询社区下的设备通道列表。
+
+**返回码**
+
+| 返回码 | 返回消息   | 描述                                     |
+| ------ | ---------- | ---------------------------------------- |
+| 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在 |                                          |
+ */
+export module ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet {
+  export type Operation = paths['/api/v1/estate/devices/channels/actions/listByCommunityId']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 查询社区下设备通道列表
+ * @url /api/v1/estate/devices/channels/actions/listByCommunityId
+ * @method get
+ * @description **功能描述**
+
+根据社区ID查询社区下的设备通道列表。
+
+**返回码**
+
+| 返回码 | 返回消息   | 描述                                     |
+| ------ | ---------- | ---------------------------------------- |
+| 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在 |                                          |
+ */
+export function apiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet(options:ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet.Options):Promise<ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/devices/channels/actions/listByCommunityId',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备确权
+ * @summary 自动确权
+ * @url /v1/carrier/wing/endpoint/confirm/right/autoconfirm
+ * @method get
+ * @description code码描述：
+
+| code     | 描述     |
+| -------- | -------- |
+| 0        | 确权成功 |
+| 20002001 | 请求失败 |
+| 20002002 | 确权失败 |
+ */
+export module V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet {
+  export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/autoconfirm']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Query = Operation['parameters']['query'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    query: Query;
+  };
+}
+
+/**
+ * @tag API列表/设备确权
+ * @summary 自动确权
+ * @url /v1/carrier/wing/endpoint/confirm/right/autoconfirm
+ * @method get
+ * @description code码描述：
+
+| code     | 描述     |
+| -------- | -------- |
+| 0        | 确权成功 |
+| 20002001 | 请求失败 |
+| 20002002 | 确权失败 |
+ */
+export function v1CarrierWingEndpointConfirmRightAutoconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet.Options):Promise<V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet.Result> {
+  return request({
+    url:'/v1/carrier/wing/endpoint/confirm/right/autoconfirm',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 设备抓图
+ * @url /v1/channels/{channelId}/capture
+ * @method post
+ * @description **功能描述**
+
+提供设备抓拍当前画面功能。
+
+该接口仅适用于IPC或者关联IPC的DVR设备，该接口并非预览时的截图功能。海康型号设备可能不支持萤石协议抓拍功能，使用该接口可能返回不支持或者超时。
+
+注意：设备抓图能力有限，请勿频繁调用，频繁调用将会被拉入限制黑名单,建议调用的间隔为4s左右。
+
+
+ */
+export module V1ChannelsChannelIdCaptureUsingPost {
+  export type Operation = paths['/v1/channels/{channelId}/capture']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/设备管理
+ * @summary 设备抓图
+ * @url /v1/channels/{channelId}/capture
+ * @method post
+ * @description **功能描述**
+
+提供设备抓拍当前画面功能。
+
+该接口仅适用于IPC或者关联IPC的DVR设备，该接口并非预览时的截图功能。海康型号设备可能不支持萤石协议抓拍功能，使用该接口可能返回不支持或者超时。
+
+注意：设备抓图能力有限，请勿频繁调用，频繁调用将会被拉入限制黑名单,建议调用的间隔为4s左右。
+
+
+ */
+export function v1ChannelsChannelIdCaptureUsingPost(options:V1ChannelsChannelIdCaptureUsingPost.Options):Promise<V1ChannelsChannelIdCaptureUsingPost.Result> {
+  return request({
+    url:'/v1/channels/{channelId}/capture',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备确权
+ * @summary 下线确认
+ * @url /v1/carrier/wing/endpoint/confirm/right/offlineconfirm
+ * @method get
+ * @description code码描述：
+
+| code     | 描述     |
+| -------- | -------- |
+| 0        | 离线成功 |
+| 20002001 | 请求失败 |
+| 20002003 | 离线失败 |
+ */
+export module V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet {
+  export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/offlineconfirm']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Query = Operation['parameters']['query'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    query: Query;
+  };
+}
+
+/**
+ * @tag API列表/设备确权
+ * @summary 下线确认
+ * @url /v1/carrier/wing/endpoint/confirm/right/offlineconfirm
+ * @method get
+ * @description code码描述：
+
+| code     | 描述     |
+| -------- | -------- |
+| 0        | 离线成功 |
+| 20002001 | 请求失败 |
+| 20002003 | 离线失败 |
+ */
+export function v1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet.Options):Promise<V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet.Result> {
+  return request({
+    url:'/v1/carrier/wing/endpoint/confirm/right/offlineconfirm',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/设备确权
+ * @summary 上线确认
+ * @url /v1/carrier/wing/endpoint/confirm/right/onlineconfirm
+ * @method get
+ * @description code码描述：
+
+| code     | 描述     |
+| -------- | -------- |
+| 0        | 确权成功 |
+| 20002001 | 请求失败 |
+| 20002004 | 确权失败 |
+ */
+export module V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet {
+  export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/onlineconfirm']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Query = Operation['parameters']['query'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    query: Query;
+  };
+}
+
+/**
+ * @tag API列表/设备确权
+ * @summary 上线确认
+ * @url /v1/carrier/wing/endpoint/confirm/right/onlineconfirm
+ * @method get
+ * @description code码描述：
+
+| code     | 描述     |
+| -------- | -------- |
+| 0        | 确权成功 |
+| 20002001 | 请求失败 |
+| 20002004 | 确权失败 |
+ */
+export function v1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet.Options):Promise<V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet.Result> {
+  return request({
+    url:'/v1/carrier/wing/endpoint/confirm/right/onlineconfirm',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/广告管理
+ * @summary 下发广告
+ * @url /api/v1/estate/publish/actions/publishProgram
+ * @method post
+ * @description **功能描述**
+
+往设备上下发广告信息。（下发的结果我们会通过消息订阅进行通知，消息类型为community_message_advert_state，消息码为：10025）
+
+ 图片：请上传分辨率为600*276 ,大小限制1M以内的图片,上传图片数量限制5张以内(只支持jpg格式)。
+视频：请上传大小限制200M以内的视频,上传视频素材数量限制3个以内(只支持mp4格式)。
+
+注：不支持6000C
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                             |
+| ------ | ---------------- | ------------------------------------------------ |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况         |
+| 511130 | 设备响应超时     |                                                  |
+| 511132 | 素材数量超过限制 | 图片素材数量不能超过5个，视频素材数量不能超过3个 |
+| 511133 | 节目名称过长     |                                                  |
+| 511134 | 备注过长         |                                                  |
+| 511135 | 设备最多为50台   |                                                  |
+| 511142 | 素材过大         | 单个图片不能超过1M，单个视频不能超过200M         |
+| 511148 | 未查到设备信息   | 未查到有效设备信息                               |
+| 511169 | 设备正在发布中   | 部分设备正在下发信息，请稍后再试                 |
+ */
+export module ApiV1EstatePublishActionsPublishProgramUsingPost {
+  export type Operation = paths['/api/v1/estate/publish/actions/publishProgram']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/广告管理
+ * @summary 下发广告
+ * @url /api/v1/estate/publish/actions/publishProgram
+ * @method post
+ * @description **功能描述**
+
+往设备上下发广告信息。（下发的结果我们会通过消息订阅进行通知，消息类型为community_message_advert_state，消息码为：10025）
+
+ 图片：请上传分辨率为600*276 ,大小限制1M以内的图片,上传图片数量限制5张以内(只支持jpg格式)。
+视频：请上传大小限制200M以内的视频,上传视频素材数量限制3个以内(只支持mp4格式)。
+
+注：不支持6000C
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                             |
+| ------ | ---------------- | ------------------------------------------------ |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况         |
+| 511130 | 设备响应超时     |                                                  |
+| 511132 | 素材数量超过限制 | 图片素材数量不能超过5个，视频素材数量不能超过3个 |
+| 511133 | 节目名称过长     |                                                  |
+| 511134 | 备注过长         |                                                  |
+| 511135 | 设备最多为50台   |                                                  |
+| 511142 | 素材过大         | 单个图片不能超过1M，单个视频不能超过200M         |
+| 511148 | 未查到设备信息   | 未查到有效设备信息                               |
+| 511169 | 设备正在发布中   | 部分设备正在下发信息，请稍后再试                 |
+ */
+export function apiV1EstatePublishActionsPublishProgramUsingPost(options:ApiV1EstatePublishActionsPublishProgramUsingPost.Options):Promise<ApiV1EstatePublishActionsPublishProgramUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/publish/actions/publishProgram',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/广告管理
+ * @summary 删除广告
+ * @url /api/v1/estate/publish/actions/deleteProgram
+ * @method post
+ * @description **功能描述**
+
+删除设备上的广告信息。
+
+注：不支持6000C
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511135 | 设备最多为50台 |                                          |
+ */
+export module ApiV1EstatePublishActionsDeleteProgramUsingPost {
+  export type Operation = paths['/api/v1/estate/publish/actions/deleteProgram']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/广告管理
+ * @summary 删除广告
+ * @url /api/v1/estate/publish/actions/deleteProgram
+ * @method post
+ * @description **功能描述**
+
+删除设备上的广告信息。
+
+注：不支持6000C
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511135 | 设备最多为50台 |                                          |
+ */
+export function apiV1EstatePublishActionsDeleteProgramUsingPost(options:ApiV1EstatePublishActionsDeleteProgramUsingPost.Options):Promise<ApiV1EstatePublishActionsDeleteProgramUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/publish/actions/deleteProgram',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 超脑人脸库删除人脸
+ * @url /api/v1/estate/device/faceDatabase/actions/delFaces
+ * @method post
+ * @description **功能描述**
+
+删除人脸库已经存在的人脸。
+
+注：不支持6000C
+
+**返回码**
+
+| 返回码 | 返回消息   | 描述                                     |
+| ------ | ---------- | ---------------------------------------- |
+| 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511181 | 人脸id错误 | 人脸不存在                               |
+ */
+export module ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost {
+  export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/delFaces']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 超脑人脸库删除人脸
+ * @url /api/v1/estate/device/faceDatabase/actions/delFaces
+ * @method post
+ * @description **功能描述**
+
+删除人脸库已经存在的人脸。
+
+注：不支持6000C
+
+**返回码**
+
+| 返回码 | 返回消息   | 描述                                     |
+| ------ | ---------- | ---------------------------------------- |
+| 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511181 | 人脸id错误 | 人脸不存在                               |
+ */
+export function apiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost(options:ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/device/faceDatabase/actions/delFaces',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 同步超脑人脸库
+ * @url /api/v1/estate/device/faceDatabase/actions/syncFaceDatabase
+ * @method get
+ * @description **功能描述**
+
+将人脸库与设备人脸库同步。
+
+注：不支持6000C
+
+**返回码**
+
+| **返回码** | **返回消息**     | **描述**                                     |
+| ---------- | ---------------- | -------------------------------------------- |
+| 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况     |
+| 511179     | 人脸库不存在     | 人脸库id错误或者跨租户操作                   |
+| 511180     | 人脸库未绑定设备 | 同步人脸库之前，需先操作人脸库绑定设备和通道 |
+ */
+export module ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet {
+  export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 同步超脑人脸库
+ * @url /api/v1/estate/device/faceDatabase/actions/syncFaceDatabase
+ * @method get
+ * @description **功能描述**
+
+将人脸库与设备人脸库同步。
+
+注：不支持6000C
+
+**返回码**
+
+| **返回码** | **返回消息**     | **描述**                                     |
+| ---------- | ---------------- | -------------------------------------------- |
+| 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况     |
+| 511179     | 人脸库不存在     | 人脸库id错误或者跨租户操作                   |
+| 511180     | 人脸库未绑定设备 | 同步人脸库之前，需先操作人脸库绑定设备和通道 |
+ */
+export function apiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet(options:ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 获取人员门禁设备信息
+ * @url /api/v1/estate/entranceGuard/remoteControl/actions/deviceList
+ * @method get
+ * @description **功能描述**
+
+查询人员可操控的门禁设备列表。
+
+**返回码**
+
+| 返回码 | 返回消息 | 描述                                           |
+| ------ | -------- | ---------------------------------------------- |
+| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况       |
+| 511025 | 参数异常 | 请求参数包含不合法信息（例如：平台不支持的值） |
+ */
+export module ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet {
+  export type Operation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/deviceList']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 获取人员门禁设备信息
+ * @url /api/v1/estate/entranceGuard/remoteControl/actions/deviceList
+ * @method get
+ * @description **功能描述**
+
+查询人员可操控的门禁设备列表。
+
+**返回码**
+
+| 返回码 | 返回消息 | 描述                                           |
+| ------ | -------- | ---------------------------------------------- |
+| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况       |
+| 511025 | 参数异常 | 请求参数包含不合法信息（例如：平台不支持的值） |
+ */
+export function apiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet(options:ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet.Options):Promise<ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/remoteControl/actions/deviceList',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人脸信息删除
+ * @url /api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued
+ * @method post
+ * @description **功能描述**
+
+删除门禁设备上人员的人脸信息。
+
+注：6000C场景，该接口不支持指定边缘子设备
+
+**返回码**
+
+| 返回码 | 返回消息                   | 描述                                     |
+| ------ | -------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511032 | 人员正在下发中，请稍后尝试 |                                          |
+| 511033 | 没有该设备权限             |                                          |
+ */
+export module ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人脸信息删除
+ * @url /api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued
+ * @method post
+ * @description **功能描述**
+
+删除门禁设备上人员的人脸信息。
+
+注：6000C场景，该接口不支持指定边缘子设备
+
+**返回码**
+
+| 返回码 | 返回消息                   | 描述                                     |
+| ------ | -------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+| 511032 | 人员正在下发中，请稍后尝试 |                                          |
+| 511033 | 没有该设备权限             |                                          |
+ */
+export function apiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人脸信息下发
+ * @url /api/v1/estate/entranceGuard/permissions/actions/faceIssued
+ * @method post
+ * @description **功能描述**
+
+将人脸信息下发到门禁设备（若无有权限的设备则不下发）。
+
+下发结果将通过门禁权限下发状态订阅消息进行通知。
+
+图片要求：大小：200k以内；格式：jpg
+
+注：6000C场景，该接口不支持指定边缘子设备
+
+**接口约束**
+
+设置人员所属户室后，若需要调用该接口请延时5秒以上，否则可能出现部分设备人脸权限未下发。
+
+建议：在接口【新增人员】添加人脸url,【设置人员所属户室】时人脸权限会自动下发，不需要单独调用该接口。
+
+**返回码**
+
+| 返回码 | 返回消息                 | 描述                                           |
+| ------ | ------------------------ | ---------------------------------------------- |
+| 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况       |
+| 511025 | 参数异常                 | 请求参数包含不合法信息（例如：平台不支持的值） |
+| 511033 | 没有该设备权限           |                                                |
+| 511095 | 人脸URL不合法            |                                                |
+| 511100 | 人脸图片质量不合格       |                                                |
+| 511117 | 人脸评分校验失败         |                                                |
+| 511118 | 人脸特征点置信度校验失败 |                                                |
+| 511119 | 人脸眼间距校验失败       |                                                |
+| 511120 | 人脸俯仰角校验失败       |                                                |
+| 511121 | 人脸左右角校验失败       |                                                |
+| 511122 | 人脸可见性校验失败       |                                                |
+| 511123 | 人脸清晰度校验失败       |                                                |
+ */
+export module ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/faceIssued']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人脸信息下发
+ * @url /api/v1/estate/entranceGuard/permissions/actions/faceIssued
+ * @method post
+ * @description **功能描述**
+
+将人脸信息下发到门禁设备（若无有权限的设备则不下发）。
+
+下发结果将通过门禁权限下发状态订阅消息进行通知。
+
+图片要求：大小：200k以内；格式：jpg
+
+注：6000C场景，该接口不支持指定边缘子设备
+
+**接口约束**
+
+设置人员所属户室后，若需要调用该接口请延时5秒以上，否则可能出现部分设备人脸权限未下发。
+
+建议：在接口【新增人员】添加人脸url,【设置人员所属户室】时人脸权限会自动下发，不需要单独调用该接口。
+
+**返回码**
+
+| 返回码 | 返回消息                 | 描述                                           |
+| ------ | ------------------------ | ---------------------------------------------- |
+| 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况       |
+| 511025 | 参数异常                 | 请求参数包含不合法信息（例如：平台不支持的值） |
+| 511033 | 没有该设备权限           |                                                |
+| 511095 | 人脸URL不合法            |                                                |
+| 511100 | 人脸图片质量不合格       |                                                |
+| 511117 | 人脸评分校验失败         |                                                |
+| 511118 | 人脸特征点置信度校验失败 |                                                |
+| 511119 | 人脸眼间距校验失败       |                                                |
+| 511120 | 人脸俯仰角校验失败       |                                                |
+| 511121 | 人脸左右角校验失败       |                                                |
+| 511122 | 人脸可见性校验失败       |                                                |
+| 511123 | 人脸清晰度校验失败       |                                                |
+ */
+export function apiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/permissions/actions/faceIssued',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 超脑人脸库添加人脸
+ * @url /api/v1/estate/device/faceDatabase/actions/addFace
+ * @method post
+ * @description **功能描述**
+
+人脸库中添加人脸。
+
+注：不支持6000C
+
+**返回码**
+
+| **返回码** | **返回消息**             | **描述**                                 |
+| ---------- | ------------------------ | ---------------------------------------- |
+| 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
+| 511179     | 人脸库不存在             | 人脸库id错误或者跨租户操作               |
+| 511095     | 人脸URL不合法            |                                          |
+| 511100     | 人脸图片质量不合格       |                                          |
+| 511117     | 人脸评分校验失败         |                                          |
+| 511118     | 人脸特征点置信度校验失败 |                                          |
+| 511119     | 人脸眼间距校验失败       |                                          |
+| 511120     | 人脸俯仰角校验失败       |                                          |
+| 511121     | 人脸左右角校验失败       |                                          |
+| 511122     | 人脸可见性校验失败       |                                          |
+| 511123     | 人脸清晰度校验失败       |                                          |
+ */
+export module ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost {
+  export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/addFace']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 超脑人脸库添加人脸
+ * @url /api/v1/estate/device/faceDatabase/actions/addFace
+ * @method post
+ * @description **功能描述**
+
+人脸库中添加人脸。
+
+注：不支持6000C
+
+**返回码**
+
+| **返回码** | **返回消息**             | **描述**                                 |
+| ---------- | ------------------------ | ---------------------------------------- |
+| 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
+| 511179     | 人脸库不存在             | 人脸库id错误或者跨租户操作               |
+| 511095     | 人脸URL不合法            |                                          |
+| 511100     | 人脸图片质量不合格       |                                          |
+| 511117     | 人脸评分校验失败         |                                          |
+| 511118     | 人脸特征点置信度校验失败 |                                          |
+| 511119     | 人脸眼间距校验失败       |                                          |
+| 511120     | 人脸俯仰角校验失败       |                                          |
+| 511121     | 人脸左右角校验失败       |                                          |
+| 511122     | 人脸可见性校验失败       |                                          |
+| 511123     | 人脸清晰度校验失败       |                                          |
+ */
+export function apiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost(options:ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/device/faceDatabase/actions/addFace',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 超脑人脸库列表
+ * @url /api/v1/estate/device/faceDatabase/actions/list
+ * @method get
+ * @description **功能描述**
+
+查询人脸库列表。
+
+注：不支持6000C
+
+**返回码**
+
+| **返回码** | **返回消息**     | **描述**                                 |
+| ---------- | ---------------- | ---------------------------------------- |
+| 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144     | 超出最大分页限制 | pageSize最大值为100                      |
+ */
+export module ApiV1EstateDeviceFaceDatabaseActionsListUsingGet {
+  export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/list']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/超脑人脸库列表
+ * @summary 超脑人脸库列表
+ * @url /api/v1/estate/device/faceDatabase/actions/list
+ * @method get
+ * @description **功能描述**
+
+查询人脸库列表。
+
+注：不支持6000C
+
+**返回码**
+
+| **返回码** | **返回消息**     | **描述**                                 |
+| ---------- | ---------------- | ---------------------------------------- |
+| 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+| 511144     | 超出最大分页限制 | pageSize最大值为100                      |
+ */
+export function apiV1EstateDeviceFaceDatabaseActionsListUsingGet(options:ApiV1EstateDeviceFaceDatabaseActionsListUsingGet.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsListUsingGet.Result> {
+  return request({
+    url:'/api/v1/estate/device/faceDatabase/actions/list',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 远程控门
+ * @url /api/v1/estate/entranceGuard/remoteControl/actions/gateControl
+ * @method post
+ * @description **功能描述**
+
+通过手机APP进行远程控门。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                           |
+| ------ | -------------- | ---------------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况       |
+| 511025 | 参数异常       | 请求参数包含不合法信息（例如：平台不支持的值） |
+| 511033 | 没有该设备权限 |                                                |
+| 511035 | 获取信息失败   |                                                |
+ */
+export module ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/gateControl']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 远程控门
+ * @url /api/v1/estate/entranceGuard/remoteControl/actions/gateControl
+ * @method post
+ * @description **功能描述**
+
+通过手机APP进行远程控门。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                           |
+| ------ | -------------- | ---------------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况       |
+| 511025 | 参数异常       | 请求参数包含不合法信息（例如：平台不支持的值） |
+| 511033 | 没有该设备权限 |                                                |
+| 511035 | 获取信息失败   |                                                |
+ */
+export function apiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost(options:ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost.Options):Promise<ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/remoteControl/actions/gateControl',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人员权限删除
+ * @url /api/v1/estate/entranceGuard/permissions/actions/authorityDelete
+ * @method post
+ * @description **功能描述**
+
+从指定设备上删除人员的门禁权限。
+
+注：6000C场景，该接口无法删除人房组件自动下发的人员权限
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                                  |
+| ------ | ---------------- | ----------------------------------------------------- |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况              |
+| 511059 | 租户信息不匹配   |                                                       |
+| 511030 | 社区中人员不存在 |                                                       |
+| 511148 | 未查到设备信息   | 设备不存在或设备不在该社区                            |
+| 511168 | 权限删除失败     | message描述可能为动态描述，返回的是设备的真实失败原因 |
+ */
+export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/authorityDelete']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人员权限删除
+ * @url /api/v1/estate/entranceGuard/permissions/actions/authorityDelete
+ * @method post
+ * @description **功能描述**
+
+从指定设备上删除人员的门禁权限。
+
+注：6000C场景，该接口无法删除人房组件自动下发的人员权限
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                                  |
+| ------ | ---------------- | ----------------------------------------------------- |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况              |
+| 511059 | 租户信息不匹配   |                                                       |
+| 511030 | 社区中人员不存在 |                                                       |
+| 511148 | 未查到设备信息   | 设备不存在或设备不在该社区                            |
+| 511168 | 权限删除失败     | message描述可能为动态描述，返回的是设备的真实失败原因 |
+ */
+export function apiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/permissions/actions/authorityDelete',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人员权限下发
+ * @url /api/v1/estate/entranceGuard/permissions/actions/authorityIssued
+ * @method post
+ * @description **功能描述**
+
+将人员权限下发到指定设备（包括人脸、指纹、卡号）。
+
+注：6000C场景，不支持指定边缘子设备
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                     |
+| ------ | ---------------- | ---------------------------------------- |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+| 511030 | 社区中人员不存在 |                                          |
+| 511148 | 未查到设备信息   | 设备不存在或设备不在该社区               |
+ */
+export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/authorityIssued']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 人员权限下发
+ * @url /api/v1/estate/entranceGuard/permissions/actions/authorityIssued
+ * @method post
+ * @description **功能描述**
+
+将人员权限下发到指定设备（包括人脸、指纹、卡号）。
+
+注：6000C场景，不支持指定边缘子设备
+
+**返回码**
+
+| 返回码 | 返回消息         | 描述                                     |
+| ------ | ---------------- | ---------------------------------------- |
+| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+| 511030 | 社区中人员不存在 |                                          |
+| 511148 | 未查到设备信息   | 设备不存在或设备不在该社区               |
+ */
+export function apiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/permissions/actions/authorityIssued',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 我的二维码
+ * @url /api/v1/estate/entranceGuard/permissions/actions/getQRcode
+ * @method post
+ * @description **功能描述**
+
+生成我的二维码信息。需要人员之前已经有卡号并且已经下发到设备，二维码信息有效期默认24小时，在同一设备上，可以刷4次。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511147 | 查询卡信息错误 |                                          |
+ */
+export module ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/getQRcode']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 我的二维码
+ * @url /api/v1/estate/entranceGuard/permissions/actions/getQRcode
+ * @method post
+ * @description **功能描述**
+
+生成我的二维码信息。需要人员之前已经有卡号并且已经下发到设备，二维码信息有效期默认24小时，在同一设备上，可以刷4次。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511147 | 查询卡信息错误 |                                          |
+ */
+export function apiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/permissions/actions/getQRcode',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 动态密码
+ * @url /api/v1/estate/entranceGuard/permissions/actions/dynamicCode
+ * @method post
+ * @description **功能描述**
+
+生成临时动态密码，在门禁设备上输入后用于开门。
+
+若下发失败将会通过订阅消息进行通知，消息类型为community_message_access_state，消息码为10024。
+
+**返回码**
+
+| 返回码 | 返回消息                           | 描述                                     |
+| ------ | ---------------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在                         |                                          |
+| 511125 | 动态密码失效时间不能早于当前时间   |                                          |
+| 511126 | 动态密码失效时间不能早于生效时间   |                                          |
+| 511127 | 动态密码最大有效时间不能超过24小时 |                                          |
+| 511128 | 动态密码生成失败                   |                                          |
+| 511033 | 没有该设备权限                     |                                          |
+| 511059 | 租户信息不匹配                     | 不能为其他租户生成动态密码               |
+| 511081 | 查询人员信息失败                   |                                          |
+| 511136 | 动态密码失效时间不能等于生效时间   |                                          |
+| 511137 | 未查询到有权限的设备               |                                          |
+| 511138 | 设备列表参数格式错误               |                                          |
+ */
+export module ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/dynamicCode']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 动态密码
+ * @url /api/v1/estate/entranceGuard/permissions/actions/dynamicCode
+ * @method post
+ * @description **功能描述**
+
+生成临时动态密码，在门禁设备上输入后用于开门。
+
+若下发失败将会通过订阅消息进行通知，消息类型为community_message_access_state，消息码为10024。
+
+**返回码**
+
+| 返回码 | 返回消息                           | 描述                                     |
+| ------ | ---------------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
+| 511000 | 社区不存在                         |                                          |
+| 511125 | 动态密码失效时间不能早于当前时间   |                                          |
+| 511126 | 动态密码失效时间不能早于生效时间   |                                          |
+| 511127 | 动态密码最大有效时间不能超过24小时 |                                          |
+| 511128 | 动态密码生成失败                   |                                          |
+| 511033 | 没有该设备权限                     |                                          |
+| 511059 | 租户信息不匹配                     | 不能为其他租户生成动态密码               |
+| 511081 | 查询人员信息失败                   |                                          |
+| 511136 | 动态密码失效时间不能等于生效时间   |                                          |
+| 511137 | 未查询到有权限的设备               |                                          |
+| 511138 | 设备列表参数格式错误               |                                          |
+ */
+export function apiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/permissions/actions/dynamicCode',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 呼梯
+ * @url /api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl
+ * @method post
+ * @description **功能描述**
+
+门口机呼梯，通过门口机（门禁设备）进行远程呼梯。
+
+**返回码**
+
+| 返回码 | 返回消息     | 描述                                     |
+| ------ | ------------ | ---------------------------------------- |
+| 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511086 | 房间不存在   |                                          |
+| 511167 | 远程呼梯失败 |                                          |
+ */
+export module ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 呼梯
+ * @url /api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl
+ * @method post
+ * @description **功能描述**
+
+门口机呼梯，通过门口机（门禁设备）进行远程呼梯。
+
+**返回码**
+
+| 返回码 | 返回消息     | 描述                                     |
+| ------ | ------------ | ---------------------------------------- |
+| 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511086 | 房间不存在   |                                          |
+| 511167 | 远程呼梯失败 |                                          |
+ */
+export function apiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost(options:ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost.Options):Promise<ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/访客管理
+ * @summary 访客登记（预约）
+ * @url /api/v1/estate/visitors
+ * @method post
+ * @description **功能描述**
+
+社区访客预约登记。
+
+若访客权限在设备上下发失败，将通过访客门禁权限下发状态订阅消息进行通知。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511015 | 手机格式错误                 |                                          |
+| 511033 | 没有该设备权限               |                                          |
+| 511036 | 日期校验失败                 | 日期格式不合法                           |
+| 511037 | 请选择您自己的户室           |                                          |
+| 511045 | 所选户室不存在               |                                          |
+| 511049 | 离开时间不能早于当前时间     |                                          |
+| 511050 | 离开时间不能早于来访时间     |                                          |
+| 511051 | 访客预约时长不能超过72小时   |                                          |
+| 511052 | 访客姓名需在2~10个字符间     |                                          |
+| 511058 | 预约人员不存在               |                                          |
+| 511059 | 租户信息不匹配               | 不能预约其他租户的房屋                   |
+| 511081 | 查询人员信息失败             |                                          |
+| 511138 | 设备列表参数格式错误         |                                          |
+| 511150 | 房屋和设备参数不能同时为空   |                                          |
+| 511151 | 不支持一次为多个小区预约访客 |                                          |
+
+ */
+export module ApiV1EstateVisitorsUsingPost {
+  export type Operation = paths['/api/v1/estate/visitors']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/访客管理
+ * @summary 访客登记（预约）
+ * @url /api/v1/estate/visitors
+ * @method post
+ * @description **功能描述**
+
+社区访客预约登记。
+
+若访客权限在设备上下发失败，将通过访客门禁权限下发状态订阅消息进行通知。
+
+**返回码**
+
+| 返回码 | 返回消息                     | 描述                                     |
+| ------ | ---------------------------- | ---------------------------------------- |
+| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+| 511015 | 手机格式错误                 |                                          |
+| 511033 | 没有该设备权限               |                                          |
+| 511036 | 日期校验失败                 | 日期格式不合法                           |
+| 511037 | 请选择您自己的户室           |                                          |
+| 511045 | 所选户室不存在               |                                          |
+| 511049 | 离开时间不能早于当前时间     |                                          |
+| 511050 | 离开时间不能早于来访时间     |                                          |
+| 511051 | 访客预约时长不能超过72小时   |                                          |
+| 511052 | 访客姓名需在2~10个字符间     |                                          |
+| 511058 | 预约人员不存在               |                                          |
+| 511059 | 租户信息不匹配               | 不能预约其他租户的房屋                   |
+| 511081 | 查询人员信息失败             |                                          |
+| 511138 | 设备列表参数格式错误         |                                          |
+| 511150 | 房屋和设备参数不能同时为空   |                                          |
+| 511151 | 不支持一次为多个小区预约访客 |                                          |
+
+ */
+export function apiV1EstateVisitorsUsingPost(options:ApiV1EstateVisitorsUsingPost.Options):Promise<ApiV1EstateVisitorsUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/visitors',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 住户人员权限批量下发
+ * @url /api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued
+ * @method post
+ * @description **功能描述**
+
+可按照人脸列表、社区、楼栋、单元的方式，将住户人员权限批量下发到指定设备（包括人脸、指纹、卡号）。
+
+**返回码**
+
+| 返回码 | 返回消息                               | 描述                                                 |
+| ------ | -------------------------------------- | ---------------------------------------------------- |
+| 510001 | 参数错误                               | 必填项为空、参数长度不符合等参数异常情况             |
+| 511000 | 社区不存在                             |                                                      |
+| 511005 | 楼栋不存在                             |                                                      |
+| 511006 | 单元不存在                             |                                                      |
+| 511059 | 租户信息不匹配                         |                                                      |
+| 511148 | 未查到设备信息                         |                                                      |
+| 511194 | 设备不属于当前社区                     |                                                      |
+| 511195 | 社区参数不匹配                         |                                                      |
+| 511196 | 人员列表不能为空                       | 当operationType=0时，personIds参数不能为空           |
+| 511197 | 设备列表不能为空                       |                                                      |
+| 511198 | 设备列表不能大于100                    |                                                      |
+| 511199 | 批量权限下发中，请勿重复操作           | 接口不能频繁调用，调用间隔不能小于10s                |
+| 511200 | 批量权限下发中，请下发完成后再进行下发 | 上次的批量下发任务仍未执行完成，需要执行完后再次操作 |
+ */
+export module ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost {
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/json'];
+  export type Body = Required<Operation>['requestBody']['content']['application/json'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/门禁管理
+ * @summary 住户人员权限批量下发
+ * @url /api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued
+ * @method post
+ * @description **功能描述**
+
+可按照人脸列表、社区、楼栋、单元的方式，将住户人员权限批量下发到指定设备（包括人脸、指纹、卡号）。
+
+**返回码**
+
+| 返回码 | 返回消息                               | 描述                                                 |
+| ------ | -------------------------------------- | ---------------------------------------------------- |
+| 510001 | 参数错误                               | 必填项为空、参数长度不符合等参数异常情况             |
+| 511000 | 社区不存在                             |                                                      |
+| 511005 | 楼栋不存在                             |                                                      |
+| 511006 | 单元不存在                             |                                                      |
+| 511059 | 租户信息不匹配                         |                                                      |
+| 511148 | 未查到设备信息                         |                                                      |
+| 511194 | 设备不属于当前社区                     |                                                      |
+| 511195 | 社区参数不匹配                         |                                                      |
+| 511196 | 人员列表不能为空                       | 当operationType=0时，personIds参数不能为空           |
+| 511197 | 设备列表不能为空                       |                                                      |
+| 511198 | 设备列表不能大于100                    |                                                      |
+| 511199 | 批量权限下发中，请勿重复操作           | 接口不能频繁调用，调用间隔不能小于10s                |
+| 511200 | 批量权限下发中，请下发完成后再进行下发 | 上次的批量下发任务仍未执行完成，需要执行完后再次操作 |
+ */
+export function apiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost.Result> {
+  return request({
+    url:'/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/消息通道
+ * @summary 创建消费者
+ * @url /api/v1/mq/consumer/group1
+ * @method post
+ * @description ## 功能描述
+
+1.该接口用于创建消费者ID，最多同时存在五个消费者ID。
+
+2.消费者如果5分钟未调用消费消息接口，则消费者ID将被删除。
+
+3.不可使用多个消费者ID同时消费消息
+
+
+ */
+export module ApiV1MqConsumerGroup1UsingPost {
+  export type Operation = paths['/api/v1/mq/consumer/group1']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/消息通道
+ * @summary 创建消费者
+ * @url /api/v1/mq/consumer/group1
+ * @method post
+ * @description ## 功能描述
+
+1.该接口用于创建消费者ID，最多同时存在五个消费者ID。
+
+2.消费者如果5分钟未调用消费消息接口，则消费者ID将被删除。
+
+3.不可使用多个消费者ID同时消费消息
+
+
+ */
+export function apiV1MqConsumerGroup1UsingPost(options:ApiV1MqConsumerGroup1UsingPost.Options):Promise<ApiV1MqConsumerGroup1UsingPost.Result> {
+  return request({
+    url:'/api/v1/mq/consumer/group1',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/访客管理
+ * @summary 访客删除
+ * @url /api/v1/estate/visitors/{reservationId}
+ * @method delete
+ * @description **功能描述**
+
+删除访客预约记录。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配 | 不能删除其他租户的预约信息               |
+ */
+export module ApiV1EstateVisitorsReservationIdUsingDelete {
+  export type Operation = paths['/api/v1/estate/visitors/{reservationId}']['delete'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Path = Operation['parameters']['path'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    path: Body;
+  };
+}
+
+/**
+ * @tag API列表/访客管理
+ * @summary 访客删除
+ * @url /api/v1/estate/visitors/{reservationId}
+ * @method delete
+ * @description **功能描述**
+
+删除访客预约记录。
+
+**返回码**
+
+| 返回码 | 返回消息       | 描述                                     |
+| ------ | -------------- | ---------------------------------------- |
+| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+| 511059 | 租户信息不匹配 | 不能删除其他租户的预约信息               |
+ */
+export function apiV1EstateVisitorsReservationIdUsingDelete(options:ApiV1EstateVisitorsReservationIdUsingDelete.Options):Promise<ApiV1EstateVisitorsReservationIdUsingDelete.Result> {
+  return request({
+    url:'/api/v1/estate/visitors/{reservationId}',
+    method:'delete',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/第三方跳转
+ * @summary 第三方跳转登录云眸普教对接规范
+ * @url /
+ * @method get
+ * @description ## 功能描述
+
+本接口提供第三方跳转登录云眸普教对接规范及示例。
+
+本节内容需结合基础服务-用户管理使用。
+
+ signature生成规则
+
+第一步，设所有发送的数据为集合M，将集合M内非signature外的非空参数(值为空的参数不参与签名)按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串str1。
+
+第二步，在str1最后拼接上登陆码authCode(用户管理-获取登陆码接口获取接口返回值)得到str2字符串，并对str2进行HmacSHA256运算，再将得到的字符串所有字符转换为大写，得到值为signature。
+
+## 实现示例
+
+|                | 参数      | 例子                             |
+| -------------- | --------- | -------------------------------- |
+| 平台提供的参数 | userId    | 499e861ec1254e8ca399dfb9e837a988 |
+| 平台提供的参数 | authCode  | 1d73e6a6a5bb4e90aa2e8ca52a2515c4 |
+| 业务参数       | ts        | 1616985134200                    |
+| 需要生成的参数 | signature |                                  |
+
+```
+         step1: 排序后拼接的字符串:ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988
+         step2: 加上登陆码后的字符串:  ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988&authCode=1d73e6a6a5bb4e90aa2e8ca52a2515c4
+         step3: signature=HmacSHA256(step2的字符串,authCode)后转大写,最终生成的signature值为:18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
+         step4:请求地址:https://edu.hik-cloud.com/?userId=499e861ec1254e8ca399dfb9e837a988&ts=1616985134200&signature=18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
+         
+         注意：登陆码有效期为1小时，且同一登陆码生成的跳转url，只能成功跳转一次；跳转链接的有效期是30分钟；跳转登录之后无操作30分钟后，认证信息失效。
+        
+```
+ */
+export module UsingGet {
+  export type Operation = paths['/']['get'];
+  export type Result = Required<Operation>['responses']['200']['content']['undefined'];
+  export type Header = Operation['parameters']['header'];
+  export type Query = Operation['parameters']['query'];
+  export interface Options {
+    [key: string]: unknown;
+    header?: Header;
+    query: Query;
+  };
+}
+
+/**
+ * @tag API列表/第三方跳转
+ * @summary 第三方跳转登录云眸普教对接规范
+ * @url /
+ * @method get
+ * @description ## 功能描述
+
+本接口提供第三方跳转登录云眸普教对接规范及示例。
+
+本节内容需结合基础服务-用户管理使用。
+
+ signature生成规则
+
+第一步，设所有发送的数据为集合M，将集合M内非signature外的非空参数(值为空的参数不参与签名)按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串str1。
+
+第二步，在str1最后拼接上登陆码authCode(用户管理-获取登陆码接口获取接口返回值)得到str2字符串，并对str2进行HmacSHA256运算，再将得到的字符串所有字符转换为大写，得到值为signature。
+
+## 实现示例
+
+|                | 参数      | 例子                             |
+| -------------- | --------- | -------------------------------- |
+| 平台提供的参数 | userId    | 499e861ec1254e8ca399dfb9e837a988 |
+| 平台提供的参数 | authCode  | 1d73e6a6a5bb4e90aa2e8ca52a2515c4 |
+| 业务参数       | ts        | 1616985134200                    |
+| 需要生成的参数 | signature |                                  |
+
+```
+         step1: 排序后拼接的字符串:ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988
+         step2: 加上登陆码后的字符串:  ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988&authCode=1d73e6a6a5bb4e90aa2e8ca52a2515c4
+         step3: signature=HmacSHA256(step2的字符串,authCode)后转大写,最终生成的signature值为:18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
+         step4:请求地址:https://edu.hik-cloud.com/?userId=499e861ec1254e8ca399dfb9e837a988&ts=1616985134200&signature=18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
+         
+         注意：登陆码有效期为1小时，且同一登陆码生成的跳转url，只能成功跳转一次；跳转链接的有效期是30分钟；跳转登录之后无操作30分钟后，认证信息失效。
+        
+```
+ */
+export function UsingGet(options:UsingGet.Options):Promise<UsingGet.Result> {
+  return request({
+    url:'/',
+    method:'get',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/消息通道
+ * @summary 消费消息
+ * @url /api/v1/mq/consumer/messages
+ * @method post
+ * @description ## 功能描述
+
+1.该接口用于拉取消息，消费消息请在单线程中进行消费，禁止使用多线程进行消费。
+
+2.消费者创建成功之后，循环调用该接口拉取消息，无需每次拉取消息都创建消费者。
+
+3.消费者首次拉取消息时需要与消息通道建立连接，此次调用实际拉到消息列表为空，再次调用即可拉取到消息，30秒内必须再次调用拉取消息接口，否则将断开与消息通道的连接。因此拉取间隔需要在30秒以内，否则每次拉到的消息是空的
+
+4.每次拉取到的消息大小上限为1M（500条左右）
+
+5.若采用手动提交偏移量消费模式，则正确的消费方式是，单线程内拉取一次消息，判断消息列表不为空，则提交一次偏移量，请注意：提交偏移量和消费消息必须使用同一consumerId。
+
+
+ */
+export module ApiV1MqConsumerMessagesUsingPost {
+  export type Operation = paths['/api/v1/mq/consumer/messages']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/消息通道
+ * @summary 消费消息
+ * @url /api/v1/mq/consumer/messages
+ * @method post
+ * @description ## 功能描述
+
+1.该接口用于拉取消息，消费消息请在单线程中进行消费，禁止使用多线程进行消费。
+
+2.消费者创建成功之后，循环调用该接口拉取消息，无需每次拉取消息都创建消费者。
+
+3.消费者首次拉取消息时需要与消息通道建立连接，此次调用实际拉到消息列表为空，再次调用即可拉取到消息，30秒内必须再次调用拉取消息接口，否则将断开与消息通道的连接。因此拉取间隔需要在30秒以内，否则每次拉到的消息是空的
+
+4.每次拉取到的消息大小上限为1M（500条左右）
+
+5.若采用手动提交偏移量消费模式，则正确的消费方式是，单线程内拉取一次消息，判断消息列表不为空，则提交一次偏移量，请注意：提交偏移量和消费消息必须使用同一consumerId。
+
+
+ */
+export function apiV1MqConsumerMessagesUsingPost(options:ApiV1MqConsumerMessagesUsingPost.Options):Promise<ApiV1MqConsumerMessagesUsingPost.Result> {
+  return request({
+    url:'/api/v1/mq/consumer/messages',
+    method:'post',
+    ...options,
+  });
+}
+
+/**
+ * @tag API列表/消息通道
+ * @summary 提交偏移量
+ * @url /api/v1/mq/consumer/offsets
+ * @method post
+ * @description ## 功能描述
+
+用于手动提交偏移量，提交上次消费到的消息的偏移量。
+
+消费消息和提交偏移量必须使用同一个consumerId，若不使用同一个consumerId进行提交，则会提交失败，消息可能会被重复消费。
+
+
+ */
+export module ApiV1MqConsumerOffsetsUsingPost {
+  export type Operation = paths['/api/v1/mq/consumer/offsets']['post'];
+  export type Result = Required<Operation>['responses']['200']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Header = Operation['parameters']['header'];
+  export interface Options {
+    [key: string]: unknown;
+    body: Body;
+    header?: Header;
+  };
+}
+
+/**
+ * @tag API列表/消息通道
+ * @summary 提交偏移量
+ * @url /api/v1/mq/consumer/offsets
+ * @method post
+ * @description ## 功能描述
+
+用于手动提交偏移量，提交上次消费到的消息的偏移量。
+
+消费消息和提交偏移量必须使用同一个consumerId，若不使用同一个consumerId进行提交，则会提交失败，消息可能会被重复消费。
+
+
+ */
+export function apiV1MqConsumerOffsetsUsingPost(options:ApiV1MqConsumerOffsetsUsingPost.Options):Promise<ApiV1MqConsumerOffsetsUsingPost.Result> {
+  return request({
+    url:'/api/v1/mq/consumer/offsets',
+    method:'post',
+    ...options,
+  });
+}
 export interface paths {
     "/": {
         parameters: {
@@ -8564,3068 +12953,3 @@ export interface components {
 }
 export type $defs = Record<string, never>;
 export type operations = Record<string, never>;
-
-
-export type ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteOperation = paths['/api/v1/estate/system/communities/{communityId}']['delete'];
-
-export type ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteHeader = ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateSystemCommunitiesCommunityIdUsingDeletePath = ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteOperation['parameters']['path']
-
-export type ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteBody = Required<ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteHeader;
-  path: ApiV1EstateSystemCommunitiesCommunityIdUsingDeletePath;
-  data: ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteBody;
-}
-
-export type ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteResult = Required<ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type OauthTokenUsingPostOperation = paths['/oauth/token']['post'];
-
-export type OauthTokenUsingPostHeader = OauthTokenUsingPostOperation['parameters']['header']
-
-export type OauthTokenUsingPostBody = Required<OauthTokenUsingPostOperation>['requestBody']['content']['application/x-www-form-urlencoded']
-
-export interface OauthTokenUsingPostOptions {
-  [key: string]: unknown;
-  header?: OauthTokenUsingPostHeader;
-  data: OauthTokenUsingPostBody;
-}
-
-export type OauthTokenUsingPostResult = Required<OauthTokenUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostOperation = paths['/api/v1/estate/system/communities/actions/updateCommunity']['post'];
-
-export type ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostHeader = ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostBody = Required<ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostHeader;
-  data: ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostBody;
-}
-
-export type ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostResult = Required<ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCommunitiesUsingPostOperation = paths['/api/v1/estate/system/communities']['post'];
-
-export type ApiV1EstateSystemCommunitiesUsingPostHeader = ApiV1EstateSystemCommunitiesUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCommunitiesUsingPostBody = Required<ApiV1EstateSystemCommunitiesUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCommunitiesUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCommunitiesUsingPostHeader;
-  data: ApiV1EstateSystemCommunitiesUsingPostBody;
-}
-
-export type ApiV1EstateSystemCommunitiesUsingPostResult = Required<ApiV1EstateSystemCommunitiesUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCommunitiesActionsListUsingGetOperation = paths['/api/v1/estate/system/communities/actions/list']['get'];
-
-export type ApiV1EstateSystemCommunitiesActionsListUsingGetHeader = ApiV1EstateSystemCommunitiesActionsListUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemCommunitiesActionsListUsingGetBody = Required<ApiV1EstateSystemCommunitiesActionsListUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCommunitiesActionsListUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCommunitiesActionsListUsingGetHeader;
-  data: ApiV1EstateSystemCommunitiesActionsListUsingGetBody;
-}
-
-export type ApiV1EstateSystemCommunitiesActionsListUsingGetResult = Required<ApiV1EstateSystemCommunitiesActionsListUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemBuildingsUsingPostOperation = paths['/api/v1/estate/system/buildings']['post'];
-
-export type ApiV1EstateSystemBuildingsUsingPostHeader = ApiV1EstateSystemBuildingsUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemBuildingsUsingPostBody = Required<ApiV1EstateSystemBuildingsUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemBuildingsUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemBuildingsUsingPostHeader;
-  data: ApiV1EstateSystemBuildingsUsingPostBody;
-}
-
-export type ApiV1EstateSystemBuildingsUsingPostResult = Required<ApiV1EstateSystemBuildingsUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemUnitsUnitIdUsingDeleteOperation = paths['/api/v1/estate/system/units/{unitId}']['delete'];
-
-export type ApiV1EstateSystemUnitsUnitIdUsingDeleteHeader = ApiV1EstateSystemUnitsUnitIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateSystemUnitsUnitIdUsingDeletePath = ApiV1EstateSystemUnitsUnitIdUsingDeleteOperation['parameters']['path']
-
-export interface ApiV1EstateSystemUnitsUnitIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemUnitsUnitIdUsingDeleteHeader;
-  path: ApiV1EstateSystemUnitsUnitIdUsingDeletePath;
-}
-
-export type ApiV1EstateSystemUnitsUnitIdUsingDeleteResult = Required<ApiV1EstateSystemUnitsUnitIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemBuildingsBuildingIdUsingDeleteOperation = paths['/api/v1/estate/system/buildings/{buildingId}']['delete'];
-
-export type ApiV1EstateSystemBuildingsBuildingIdUsingDeleteHeader = ApiV1EstateSystemBuildingsBuildingIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateSystemBuildingsBuildingIdUsingDeletePath = ApiV1EstateSystemBuildingsBuildingIdUsingDeleteOperation['parameters']['path']
-
-export type ApiV1EstateSystemBuildingsBuildingIdUsingDeleteBody = Required<ApiV1EstateSystemBuildingsBuildingIdUsingDeleteOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemBuildingsBuildingIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemBuildingsBuildingIdUsingDeleteHeader;
-  path: ApiV1EstateSystemBuildingsBuildingIdUsingDeletePath;
-  data: ApiV1EstateSystemBuildingsBuildingIdUsingDeleteBody;
-}
-
-export type ApiV1EstateSystemBuildingsBuildingIdUsingDeleteResult = Required<ApiV1EstateSystemBuildingsBuildingIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemUnitsUsingPostOperation = paths['/api/v1/estate/system/units']['post'];
-
-export type ApiV1EstateSystemUnitsUsingPostHeader = ApiV1EstateSystemUnitsUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemUnitsUsingPostBody = Required<ApiV1EstateSystemUnitsUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemUnitsUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemUnitsUsingPostHeader;
-  data: ApiV1EstateSystemUnitsUsingPostBody;
-}
-
-export type ApiV1EstateSystemUnitsUsingPostResult = Required<ApiV1EstateSystemUnitsUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemRoomsUsingPostOperation = paths['/api/v1/estate/system/rooms']['post'];
-
-export type ApiV1EstateSystemRoomsUsingPostHeader = ApiV1EstateSystemRoomsUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemRoomsUsingPostBody = Required<ApiV1EstateSystemRoomsUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemRoomsUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemRoomsUsingPostHeader;
-  data: ApiV1EstateSystemRoomsUsingPostBody;
-}
-
-export type ApiV1EstateSystemRoomsUsingPostResult = Required<ApiV1EstateSystemRoomsUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemRoomsActionsInfoUsingGetOperation = paths['/api/v1/estate/system/rooms/actions/info']['get'];
-
-export type ApiV1EstateSystemRoomsActionsInfoUsingGetHeader = ApiV1EstateSystemRoomsActionsInfoUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemRoomsActionsInfoUsingGetBody = Required<ApiV1EstateSystemRoomsActionsInfoUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemRoomsActionsInfoUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemRoomsActionsInfoUsingGetHeader;
-  data: ApiV1EstateSystemRoomsActionsInfoUsingGetBody;
-}
-
-export type ApiV1EstateSystemRoomsActionsInfoUsingGetResult = Required<ApiV1EstateSystemRoomsActionsInfoUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemRoomsRoomIdUsingDeleteOperation = paths['/api/v1/estate/system/rooms/{roomId}']['delete'];
-
-export type ApiV1EstateSystemRoomsRoomIdUsingDeleteHeader = ApiV1EstateSystemRoomsRoomIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateSystemRoomsRoomIdUsingDeletePath = ApiV1EstateSystemRoomsRoomIdUsingDeleteOperation['parameters']['path']
-
-export interface ApiV1EstateSystemRoomsRoomIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemRoomsRoomIdUsingDeleteHeader;
-  path: ApiV1EstateSystemRoomsRoomIdUsingDeletePath;
-}
-
-export type ApiV1EstateSystemRoomsRoomIdUsingDeleteResult = Required<ApiV1EstateSystemRoomsRoomIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonPersonIdUsingDeleteOperation = paths['/api/v1/estate/system/person/{personId}']['delete'];
-
-export type ApiV1EstateSystemPersonPersonIdUsingDeleteHeader = ApiV1EstateSystemPersonPersonIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonPersonIdUsingDeletePath = ApiV1EstateSystemPersonPersonIdUsingDeleteOperation['parameters']['path']
-
-export type ApiV1EstateSystemPersonPersonIdUsingDeleteBody = Required<ApiV1EstateSystemPersonPersonIdUsingDeleteOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonPersonIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonPersonIdUsingDeleteHeader;
-  path: ApiV1EstateSystemPersonPersonIdUsingDeletePath;
-  data: ApiV1EstateSystemPersonPersonIdUsingDeleteBody;
-}
-
-export type ApiV1EstateSystemPersonPersonIdUsingDeleteResult = Required<ApiV1EstateSystemPersonPersonIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetOperation = paths['/api/v1/estate/system/rooms/actions/communityRoomList']['get'];
-
-export type ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetHeader = ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetBody = Required<ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetHeader;
-  data: ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetBody;
-}
-
-export type ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetResult = Required<ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemRoomsActionsInfoByIdUsingGetOperation = paths['/api/v1/estate/system/rooms/actions/infoById']['get'];
-
-export type ApiV1EstateSystemRoomsActionsInfoByIdUsingGetHeader = ApiV1EstateSystemRoomsActionsInfoByIdUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemRoomsActionsInfoByIdUsingGetBody = Required<ApiV1EstateSystemRoomsActionsInfoByIdUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemRoomsActionsInfoByIdUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemRoomsActionsInfoByIdUsingGetHeader;
-  data: ApiV1EstateSystemRoomsActionsInfoByIdUsingGetBody;
-}
-
-export type ApiV1EstateSystemRoomsActionsInfoByIdUsingGetResult = Required<ApiV1EstateSystemRoomsActionsInfoByIdUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetOperation = paths['/api/v1/estate/system/buildings/actions/communityBuildingList']['get'];
-
-export type ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetHeader = ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetBody = Required<ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetHeader;
-  data: ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetBody;
-}
-
-export type ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetResult = Required<ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostOperation = paths['/api/v1/estate/system/rooms/actions/unitRoomList']['post'];
-
-export type ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostHeader = ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostBody = Required<ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostHeader;
-  data: ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostBody;
-}
-
-export type ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostResult = Required<ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostOperation = paths['/api/v1/estate/system/units/actions/buildingUnitList']['post'];
-
-export type ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostHeader = ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostBody = Required<ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostHeader;
-  data: ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostBody;
-}
-
-export type ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostResult = Required<ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonUsingPostOperation = paths['/api/v1/estate/system/person']['post'];
-
-export type ApiV1EstateSystemPersonUsingPostHeader = ApiV1EstateSystemPersonUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonUsingPostBody = Required<ApiV1EstateSystemPersonUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonUsingPostHeader;
-  data: ApiV1EstateSystemPersonUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonUsingPostResult = Required<ApiV1EstateSystemPersonUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostOperation = paths['/api/v1/estate/system/person/actions/deleteCommunityRelation']['post'];
-
-export type ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostHeader = ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostBody = Required<ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostResult = Required<ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostOperation = paths['/api/v1/estate/system/person/actions/addCommunityRelation']['post'];
-
-export type ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostHeader = ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostBody = Required<ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostResult = Required<ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostOperation = paths['/api/v1/estate/system/person/actions/addRoomRelation']['post'];
-
-export type ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostHeader = ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostBody = Required<ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostResult = Required<ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostOperation = paths['/api/v1/estate/system/person/actions/deleteRoomRelation']['post'];
-
-export type ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostHeader = ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostBody = Required<ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostResult = Required<ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsUpdatePersonUsingPostOperation = paths['/api/v1/estate/system/person/actions/updatePerson']['post'];
-
-export type ApiV1EstateSystemPersonActionsUpdatePersonUsingPostHeader = ApiV1EstateSystemPersonActionsUpdatePersonUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsUpdatePersonUsingPostBody = Required<ApiV1EstateSystemPersonActionsUpdatePersonUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsUpdatePersonUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsUpdatePersonUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsUpdatePersonUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsUpdatePersonUsingPostResult = Required<ApiV1EstateSystemPersonActionsUpdatePersonUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostOperation = paths['/api/v1/estate/system/person/actions/setRoomRelation']['post'];
-
-export type ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostHeader = ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostBody = Required<ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostResult = Required<ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsPersonInfoListUsingPostOperation = paths['/api/v1/estate/system/person/actions/personInfoList']['post'];
-
-export type ApiV1EstateSystemPersonActionsPersonInfoListUsingPostHeader = ApiV1EstateSystemPersonActionsPersonInfoListUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsPersonInfoListUsingPostBody = Required<ApiV1EstateSystemPersonActionsPersonInfoListUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsPersonInfoListUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsPersonInfoListUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsPersonInfoListUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsPersonInfoListUsingPostResult = Required<ApiV1EstateSystemPersonActionsPersonInfoListUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsRoomListUsingGetOperation = paths['/api/v1/estate/system/person/actions/roomList']['get'];
-
-export type ApiV1EstateSystemPersonActionsRoomListUsingGetHeader = ApiV1EstateSystemPersonActionsRoomListUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsRoomListUsingGetBody = Required<ApiV1EstateSystemPersonActionsRoomListUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsRoomListUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsRoomListUsingGetHeader;
-  data: ApiV1EstateSystemPersonActionsRoomListUsingGetBody;
-}
-
-export type ApiV1EstateSystemPersonActionsRoomListUsingGetResult = Required<ApiV1EstateSystemPersonActionsRoomListUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsLabelListUsingGetOperation = paths['/api/v1/estate/system/person/actions/labelList']['get'];
-
-export type ApiV1EstateSystemPersonActionsLabelListUsingGetHeader = ApiV1EstateSystemPersonActionsLabelListUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsLabelListUsingGetBody = Required<ApiV1EstateSystemPersonActionsLabelListUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsLabelListUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsLabelListUsingGetHeader;
-  data: ApiV1EstateSystemPersonActionsLabelListUsingGetBody;
-}
-
-export type ApiV1EstateSystemPersonActionsLabelListUsingGetResult = Required<ApiV1EstateSystemPersonActionsLabelListUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostOperation = paths['/api/v1/estate/system/person/actions/addLabelAndLicenseRelation']['post'];
-
-export type ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostHeader = ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostBody = Required<ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostHeader;
-  data: ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostBody;
-}
-
-export type ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostResult = Required<ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPropertyUsingPostOperation = paths['/api/v1/estate/system/property']['post'];
-
-export type ApiV1EstateSystemPropertyUsingPostHeader = ApiV1EstateSystemPropertyUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPropertyUsingPostBody = Required<ApiV1EstateSystemPropertyUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPropertyUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPropertyUsingPostHeader;
-  data: ApiV1EstateSystemPropertyUsingPostBody;
-}
-
-export type ApiV1EstateSystemPropertyUsingPostResult = Required<ApiV1EstateSystemPropertyUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsActionsRefundCardUsingPostOperation = paths['/api/v1/estate/system/cards/actions/refundCard']['post'];
-
-export type ApiV1EstateSystemCardsActionsRefundCardUsingPostHeader = ApiV1EstateSystemCardsActionsRefundCardUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsActionsRefundCardUsingPostBody = Required<ApiV1EstateSystemCardsActionsRefundCardUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCardsActionsRefundCardUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsActionsRefundCardUsingPostHeader;
-  data: ApiV1EstateSystemCardsActionsRefundCardUsingPostBody;
-}
-
-export type ApiV1EstateSystemCardsActionsRefundCardUsingPostResult = Required<ApiV1EstateSystemCardsActionsRefundCardUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsActionsCancelLossCardUsingPostOperation = paths['/api/v1/estate/system/cards/actions/cancelLossCard']['post'];
-
-export type ApiV1EstateSystemCardsActionsCancelLossCardUsingPostHeader = ApiV1EstateSystemCardsActionsCancelLossCardUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsActionsCancelLossCardUsingPostBody = Required<ApiV1EstateSystemCardsActionsCancelLossCardUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCardsActionsCancelLossCardUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsActionsCancelLossCardUsingPostHeader;
-  data: ApiV1EstateSystemCardsActionsCancelLossCardUsingPostBody;
-}
-
-export type ApiV1EstateSystemCardsActionsCancelLossCardUsingPostResult = Required<ApiV1EstateSystemCardsActionsCancelLossCardUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsActionsLossCardUsingPostOperation = paths['/api/v1/estate/system/cards/actions/lossCard']['post'];
-
-export type ApiV1EstateSystemCardsActionsLossCardUsingPostHeader = ApiV1EstateSystemCardsActionsLossCardUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsActionsLossCardUsingPostBody = Required<ApiV1EstateSystemCardsActionsLossCardUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCardsActionsLossCardUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsActionsLossCardUsingPostHeader;
-  data: ApiV1EstateSystemCardsActionsLossCardUsingPostBody;
-}
-
-export type ApiV1EstateSystemCardsActionsLossCardUsingPostResult = Required<ApiV1EstateSystemCardsActionsLossCardUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsUsingPostOperation = paths['/api/v1/estate/system/cards']['post'];
-
-export type ApiV1EstateSystemCardsUsingPostHeader = ApiV1EstateSystemCardsUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsUsingPostBody = Required<ApiV1EstateSystemCardsUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCardsUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsUsingPostHeader;
-  data: ApiV1EstateSystemCardsUsingPostBody;
-}
-
-export type ApiV1EstateSystemCardsUsingPostResult = Required<ApiV1EstateSystemCardsUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostOperation = paths['/api/v1/estate/system/property/actions/updateProperty']['post'];
-
-export type ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostHeader = ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostBody = Required<ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostHeader;
-  data: ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostBody;
-}
-
-export type ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostResult = Required<ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsActionsOpenCardUsingPostOperation = paths['/api/v1/estate/system/cards/actions/openCard']['post'];
-
-export type ApiV1EstateSystemCardsActionsOpenCardUsingPostHeader = ApiV1EstateSystemCardsActionsOpenCardUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsActionsOpenCardUsingPostBody = Required<ApiV1EstateSystemCardsActionsOpenCardUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCardsActionsOpenCardUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsActionsOpenCardUsingPostHeader;
-  data: ApiV1EstateSystemCardsActionsOpenCardUsingPostBody;
-}
-
-export type ApiV1EstateSystemCardsActionsOpenCardUsingPostResult = Required<ApiV1EstateSystemCardsActionsOpenCardUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsActionsChangeCardUsingGetOperation = paths['/api/v1/estate/system/cards/actions/changeCard']['get'];
-
-export type ApiV1EstateSystemCardsActionsChangeCardUsingGetHeader = ApiV1EstateSystemCardsActionsChangeCardUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsActionsChangeCardUsingGetBody = Required<ApiV1EstateSystemCardsActionsChangeCardUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCardsActionsChangeCardUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsActionsChangeCardUsingGetHeader;
-  data: ApiV1EstateSystemCardsActionsChangeCardUsingGetBody;
-}
-
-export type ApiV1EstateSystemCardsActionsChangeCardUsingGetResult = Required<ApiV1EstateSystemCardsActionsChangeCardUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsCardIdUsingDeleteOperation = paths['/api/v1/estate/system/cards/{cardId}']['delete'];
-
-export type ApiV1EstateSystemCardsCardIdUsingDeleteHeader = ApiV1EstateSystemCardsCardIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsCardIdUsingDeletePath = ApiV1EstateSystemCardsCardIdUsingDeleteOperation['parameters']['path']
-
-export interface ApiV1EstateSystemCardsCardIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsCardIdUsingDeleteHeader;
-  path: ApiV1EstateSystemCardsCardIdUsingDeletePath;
-}
-
-export type ApiV1EstateSystemCardsCardIdUsingDeleteResult = Required<ApiV1EstateSystemCardsCardIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemPropertyPersonIdUsingDeleteOperation = paths['/api/v1/estate/system/property/{personId}']['delete'];
-
-export type ApiV1EstateSystemPropertyPersonIdUsingDeleteHeader = ApiV1EstateSystemPropertyPersonIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateSystemPropertyPersonIdUsingDeletePath = ApiV1EstateSystemPropertyPersonIdUsingDeleteOperation['parameters']['path']
-
-export interface ApiV1EstateSystemPropertyPersonIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemPropertyPersonIdUsingDeleteHeader;
-  path: ApiV1EstateSystemPropertyPersonIdUsingDeletePath;
-}
-
-export type ApiV1EstateSystemPropertyPersonIdUsingDeleteResult = Required<ApiV1EstateSystemPropertyPersonIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDevicesActionsDeleteDeviceUsingPostOperation = paths['/api/v1/estate/devices/actions/deleteDevice']['post'];
-
-export type ApiV1EstateDevicesActionsDeleteDeviceUsingPostHeader = ApiV1EstateDevicesActionsDeleteDeviceUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateDevicesActionsDeleteDeviceUsingPostBody = Required<ApiV1EstateDevicesActionsDeleteDeviceUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDevicesActionsDeleteDeviceUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDevicesActionsDeleteDeviceUsingPostHeader;
-  data: ApiV1EstateDevicesActionsDeleteDeviceUsingPostBody;
-}
-
-export type ApiV1EstateDevicesActionsDeleteDeviceUsingPostResult = Required<ApiV1EstateDevicesActionsDeleteDeviceUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDevicesActionsUpdateDeviceUsingPostOperation = paths['/api/v1/estate/devices/actions/updateDevice']['post'];
-
-export type ApiV1EstateDevicesActionsUpdateDeviceUsingPostHeader = ApiV1EstateDevicesActionsUpdateDeviceUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateDevicesActionsUpdateDeviceUsingPostBody = Required<ApiV1EstateDevicesActionsUpdateDeviceUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDevicesActionsUpdateDeviceUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDevicesActionsUpdateDeviceUsingPostHeader;
-  data: ApiV1EstateDevicesActionsUpdateDeviceUsingPostBody;
-}
-
-export type ApiV1EstateDevicesActionsUpdateDeviceUsingPostResult = Required<ApiV1EstateDevicesActionsUpdateDeviceUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDevicesUsingGetOperation = paths['/api/v1/estate/devices']['get'];
-
-export type ApiV1EstateDevicesUsingGetHeader = ApiV1EstateDevicesUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateDevicesUsingGetBody = Required<ApiV1EstateDevicesUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDevicesUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDevicesUsingGetHeader;
-  data: ApiV1EstateDevicesUsingGetBody;
-}
-
-export type ApiV1EstateDevicesUsingGetResult = Required<ApiV1EstateDevicesUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDevicesUsingPostOperation = paths['/api/v1/estate/devices']['post'];
-
-export type ApiV1EstateDevicesUsingPostHeader = ApiV1EstateDevicesUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateDevicesUsingPostBody = Required<ApiV1EstateDevicesUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDevicesUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDevicesUsingPostHeader;
-  data: ApiV1EstateDevicesUsingPostBody;
-}
-
-export type ApiV1EstateDevicesUsingPostResult = Required<ApiV1EstateDevicesUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateSystemCardsActionsReissueCardUsingPostOperation = paths['/api/v1/estate/system/cards/actions/reissueCard']['post'];
-
-export type ApiV1EstateSystemCardsActionsReissueCardUsingPostHeader = ApiV1EstateSystemCardsActionsReissueCardUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateSystemCardsActionsReissueCardUsingPostBody = Required<ApiV1EstateSystemCardsActionsReissueCardUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateSystemCardsActionsReissueCardUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateSystemCardsActionsReissueCardUsingPostHeader;
-  data: ApiV1EstateSystemCardsActionsReissueCardUsingPostBody;
-}
-
-export type ApiV1EstateSystemCardsActionsReissueCardUsingPostResult = Required<ApiV1EstateSystemCardsActionsReissueCardUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDevicesActionsListByCommunityIdUsingPostOperation = paths['/api/v1/estate/devices/actions/listByCommunityId']['post'];
-
-export type ApiV1EstateDevicesActionsListByCommunityIdUsingPostHeader = ApiV1EstateDevicesActionsListByCommunityIdUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateDevicesActionsListByCommunityIdUsingPostBody = Required<ApiV1EstateDevicesActionsListByCommunityIdUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDevicesActionsListByCommunityIdUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDevicesActionsListByCommunityIdUsingPostHeader;
-  data: ApiV1EstateDevicesActionsListByCommunityIdUsingPostBody;
-}
-
-export type ApiV1EstateDevicesActionsListByCommunityIdUsingPostResult = Required<ApiV1EstateDevicesActionsListByCommunityIdUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetOperation = paths['/api/v1/estate/devices/channels/actions/listByCommunityId']['get'];
-
-export type ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetHeader = ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetBody = Required<ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetHeader;
-  data: ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetBody;
-}
-
-export type ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetResult = Required<ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetOperation = paths['/v1/carrier/wing/endpoint/confirm/right/autoconfirm']['get'];
-
-export type V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetHeader = V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetOperation['parameters']['header']
-
-export type V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetQuery = V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetOperation['parameters']['query']
-
-export interface V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetOptions {
-  [key: string]: unknown;
-  header?: V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetHeader;
-  query: V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetQuery;
-}
-
-export type V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetResult = Required<V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type V1ChannelsChannelIdCaptureUsingPostOperation = paths['/v1/channels/{channelId}/capture']['post'];
-
-export type V1ChannelsChannelIdCaptureUsingPostHeader = V1ChannelsChannelIdCaptureUsingPostOperation['parameters']['header']
-
-export type V1ChannelsChannelIdCaptureUsingPostPath = V1ChannelsChannelIdCaptureUsingPostOperation['parameters']['path']
-
-export interface V1ChannelsChannelIdCaptureUsingPostOptions {
-  [key: string]: unknown;
-  header?: V1ChannelsChannelIdCaptureUsingPostHeader;
-  path: V1ChannelsChannelIdCaptureUsingPostPath;
-}
-
-export type V1ChannelsChannelIdCaptureUsingPostResult = Required<V1ChannelsChannelIdCaptureUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetOperation = paths['/v1/carrier/wing/endpoint/confirm/right/offlineconfirm']['get'];
-
-export type V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetHeader = V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetOperation['parameters']['header']
-
-export type V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetQuery = V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetOperation['parameters']['query']
-
-export interface V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetOptions {
-  [key: string]: unknown;
-  header?: V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetHeader;
-  query: V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetQuery;
-}
-
-export type V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetResult = Required<V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetOperation = paths['/v1/carrier/wing/endpoint/confirm/right/onlineconfirm']['get'];
-
-export type V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetHeader = V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetOperation['parameters']['header']
-
-export type V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetQuery = V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetOperation['parameters']['query']
-
-export interface V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetOptions {
-  [key: string]: unknown;
-  header?: V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetHeader;
-  query: V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetQuery;
-}
-
-export type V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetResult = Required<V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstatePublishActionsPublishProgramUsingPostOperation = paths['/api/v1/estate/publish/actions/publishProgram']['post'];
-
-export type ApiV1EstatePublishActionsPublishProgramUsingPostHeader = ApiV1EstatePublishActionsPublishProgramUsingPostOperation['parameters']['header']
-
-export type ApiV1EstatePublishActionsPublishProgramUsingPostBody = Required<ApiV1EstatePublishActionsPublishProgramUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstatePublishActionsPublishProgramUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstatePublishActionsPublishProgramUsingPostHeader;
-  data: ApiV1EstatePublishActionsPublishProgramUsingPostBody;
-}
-
-export type ApiV1EstatePublishActionsPublishProgramUsingPostResult = Required<ApiV1EstatePublishActionsPublishProgramUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstatePublishActionsDeleteProgramUsingPostOperation = paths['/api/v1/estate/publish/actions/deleteProgram']['post'];
-
-export type ApiV1EstatePublishActionsDeleteProgramUsingPostHeader = ApiV1EstatePublishActionsDeleteProgramUsingPostOperation['parameters']['header']
-
-export type ApiV1EstatePublishActionsDeleteProgramUsingPostBody = Required<ApiV1EstatePublishActionsDeleteProgramUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstatePublishActionsDeleteProgramUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstatePublishActionsDeleteProgramUsingPostHeader;
-  data: ApiV1EstatePublishActionsDeleteProgramUsingPostBody;
-}
-
-export type ApiV1EstatePublishActionsDeleteProgramUsingPostResult = Required<ApiV1EstatePublishActionsDeleteProgramUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostOperation = paths['/api/v1/estate/device/faceDatabase/actions/delFaces']['post'];
-
-export type ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostHeader = ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostBody = Required<ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostHeader;
-  data: ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostBody;
-}
-
-export type ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostResult = Required<ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetOperation = paths['/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase']['get'];
-
-export type ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetHeader = ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetBody = Required<ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetHeader;
-  data: ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetBody;
-}
-
-export type ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetResult = Required<ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetOperation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/deviceList']['get'];
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetHeader = ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetBody = Required<ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetHeader;
-  data: ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetBody;
-}
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetResult = Required<ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostOperation = paths['/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued']['post'];
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostHeader = ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostBody = Required<ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostHeader;
-  data: ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostResult = Required<ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostOperation = paths['/api/v1/estate/entranceGuard/permissions/actions/faceIssued']['post'];
-
-export type ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostHeader = ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostBody = Required<ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostHeader;
-  data: ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostResult = Required<ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostOperation = paths['/api/v1/estate/device/faceDatabase/actions/addFace']['post'];
-
-export type ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostHeader = ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostBody = Required<ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostHeader;
-  data: ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostBody;
-}
-
-export type ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostResult = Required<ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsListUsingGetOperation = paths['/api/v1/estate/device/faceDatabase/actions/list']['get'];
-
-export type ApiV1EstateDeviceFaceDatabaseActionsListUsingGetHeader = ApiV1EstateDeviceFaceDatabaseActionsListUsingGetOperation['parameters']['header']
-
-export type ApiV1EstateDeviceFaceDatabaseActionsListUsingGetBody = Required<ApiV1EstateDeviceFaceDatabaseActionsListUsingGetOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateDeviceFaceDatabaseActionsListUsingGetOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateDeviceFaceDatabaseActionsListUsingGetHeader;
-  data: ApiV1EstateDeviceFaceDatabaseActionsListUsingGetBody;
-}
-
-export type ApiV1EstateDeviceFaceDatabaseActionsListUsingGetResult = Required<ApiV1EstateDeviceFaceDatabaseActionsListUsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostOperation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/gateControl']['post'];
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostHeader = ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostBody = Required<ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostHeader;
-  data: ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostResult = Required<ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostOperation = paths['/api/v1/estate/entranceGuard/permissions/actions/authorityDelete']['post'];
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostHeader = ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostBody = Required<ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostHeader;
-  data: ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostResult = Required<ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostOperation = paths['/api/v1/estate/entranceGuard/permissions/actions/authorityIssued']['post'];
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostHeader = ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostBody = Required<ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostHeader;
-  data: ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostResult = Required<ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostOperation = paths['/api/v1/estate/entranceGuard/permissions/actions/getQRcode']['post'];
-
-export type ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostHeader = ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostBody = Required<ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostHeader;
-  data: ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostResult = Required<ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostOperation = paths['/api/v1/estate/entranceGuard/permissions/actions/dynamicCode']['post'];
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostHeader = ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostBody = Required<ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostHeader;
-  data: ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostResult = Required<ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostOperation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl']['post'];
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostHeader = ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostBody = Required<ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostHeader;
-  data: ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostResult = Required<ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateVisitorsUsingPostOperation = paths['/api/v1/estate/visitors']['post'];
-
-export type ApiV1EstateVisitorsUsingPostHeader = ApiV1EstateVisitorsUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateVisitorsUsingPostBody = Required<ApiV1EstateVisitorsUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateVisitorsUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateVisitorsUsingPostHeader;
-  data: ApiV1EstateVisitorsUsingPostBody;
-}
-
-export type ApiV1EstateVisitorsUsingPostResult = Required<ApiV1EstateVisitorsUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostOperation = paths['/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued']['post'];
-
-export type ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostHeader = ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostOperation['parameters']['header']
-
-export type ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostBody = Required<ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostOperation>['requestBody']['content']['application/json']
-
-export interface ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostHeader;
-  data: ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostBody;
-}
-
-export type ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostResult = Required<ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1MqConsumerGroup1UsingPostOperation = paths['/api/v1/mq/consumer/group1']['post'];
-
-export type ApiV1MqConsumerGroup1UsingPostHeader = ApiV1MqConsumerGroup1UsingPostOperation['parameters']['header']
-
-export type ApiV1MqConsumerGroup1UsingPostBody = Required<ApiV1MqConsumerGroup1UsingPostOperation>['requestBody']['content']['application/x-www-form-urlencoded']
-
-export interface ApiV1MqConsumerGroup1UsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1MqConsumerGroup1UsingPostHeader;
-  data: ApiV1MqConsumerGroup1UsingPostBody;
-}
-
-export type ApiV1MqConsumerGroup1UsingPostResult = Required<ApiV1MqConsumerGroup1UsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1EstateVisitorsReservationIdUsingDeleteOperation = paths['/api/v1/estate/visitors/{reservationId}']['delete'];
-
-export type ApiV1EstateVisitorsReservationIdUsingDeleteHeader = ApiV1EstateVisitorsReservationIdUsingDeleteOperation['parameters']['header']
-
-export type ApiV1EstateVisitorsReservationIdUsingDeletePath = ApiV1EstateVisitorsReservationIdUsingDeleteOperation['parameters']['path']
-
-export interface ApiV1EstateVisitorsReservationIdUsingDeleteOptions {
-  [key: string]: unknown;
-  header?: ApiV1EstateVisitorsReservationIdUsingDeleteHeader;
-  path: ApiV1EstateVisitorsReservationIdUsingDeletePath;
-}
-
-export type ApiV1EstateVisitorsReservationIdUsingDeleteResult = Required<ApiV1EstateVisitorsReservationIdUsingDeleteOperation>['responses']['200']['content']['application/json']
-
-export type UsingGetOperation = paths['/']['get'];
-
-export type UsingGetHeader = UsingGetOperation['parameters']['header']
-
-export type UsingGetQuery = UsingGetOperation['parameters']['query']
-
-export interface UsingGetOptions {
-  [key: string]: unknown;
-  header?: UsingGetHeader;
-  query: UsingGetQuery;
-}
-
-export type UsingGetResult = Required<UsingGetOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1MqConsumerMessagesUsingPostOperation = paths['/api/v1/mq/consumer/messages']['post'];
-
-export type ApiV1MqConsumerMessagesUsingPostHeader = ApiV1MqConsumerMessagesUsingPostOperation['parameters']['header']
-
-export type ApiV1MqConsumerMessagesUsingPostBody = Required<ApiV1MqConsumerMessagesUsingPostOperation>['requestBody']['content']['application/x-www-form-urlencoded']
-
-export interface ApiV1MqConsumerMessagesUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1MqConsumerMessagesUsingPostHeader;
-  data: ApiV1MqConsumerMessagesUsingPostBody;
-}
-
-export type ApiV1MqConsumerMessagesUsingPostResult = Required<ApiV1MqConsumerMessagesUsingPostOperation>['responses']['200']['content']['application/json']
-
-export type ApiV1MqConsumerOffsetsUsingPostOperation = paths['/api/v1/mq/consumer/offsets']['post'];
-
-export type ApiV1MqConsumerOffsetsUsingPostHeader = ApiV1MqConsumerOffsetsUsingPostOperation['parameters']['header']
-
-export type ApiV1MqConsumerOffsetsUsingPostBody = Required<ApiV1MqConsumerOffsetsUsingPostOperation>['requestBody']['content']['application/x-www-form-urlencoded']
-
-export interface ApiV1MqConsumerOffsetsUsingPostOptions {
-  [key: string]: unknown;
-  header?: ApiV1MqConsumerOffsetsUsingPostHeader;
-  data: ApiV1MqConsumerOffsetsUsingPostBody;
-}
-
-export type ApiV1MqConsumerOffsetsUsingPostResult = Required<ApiV1MqConsumerOffsetsUsingPostOperation>['responses']['200']['content']['application/json']
-
-/**
- * @tag API列表/社区管理
- * @summary 删除社区
- * @url /api/v1/estate/system/communities/{communityId}
- * @method delete
- * @description **功能描述**
-
-从云眸社区租户下删除一个社区。
-
-**返回码**
-
-| 返回码 | 返回消息                   | 描述                                     |
-| ------ | -------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
-| 511059 | 租户信息不匹配             | 若删除其他租户社区则报此错误             |
-| 511075 | 社区已添加楼栋，不能删除   |                                          |
-| 511079 | 社区已添加设备，不能删除   |                                          |
-| 511080 | 社区已添加停车场，不能删除 |                                          |
- */
-export function apiV1EstateSystemCommunitiesCommunityIdUsingDelete(options:ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteOptions):Promise<ApiV1EstateSystemCommunitiesCommunityIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/communities/{communityId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag 快速入门
- * @summary 生成授权凭证
- * @url /oauth/token
- * @method post
- * @description 在调用服务端API前，需要先调用获取token接口获取access_token,通过access_token来鉴权调用者身份。
-
-```
-         在使用access_token时，请注意：
-         access_token的有效期为604800秒（7天），有效期内重复获取返回相同结果，过期后获取会返回新的access_token。
-         开发者需要缓存access_token，用于后续接口的调用。当access_token失效或过期时，接口会返回http状态码401，需要重新获取access_token。
-         不能频繁调用获取access_token接口，否则会受到接口调用频率拦截。
-        
-```
-
-## 准备工作
-
-在获取access_token前，需要先获取应用的client_id和client_secret：
-1.登录[海康云眸开发者服务](http://open.hik-cloud.com)
-
-2.在**秘钥管理**页面，查看应用的client_id和client_secret。
-![img](https://pbpic.hik-cloud.com/opencustom/apidoc/pictures/b8287cbd11bf4d108c53183c52b22bc7.png)
-
-
-其中 “access_token” 字段即为请求 REST API  所需的令牌,access_token生成时有效期为7天，expires_in字段表示剩余有效时间，开发者需要对access_token的有效性进行判断，若调用API时返回Http状态码为401，则说明access_token已失效，重新获取即可。
-
-注：在使用postman调试时，注意尽量不要使用浏览器插件版本的postman，使用客户端版本的。因为插件版本的默认会使用浏览器中的cookie和缓存，可能在调用时会出现问题而难以排查。
-![img](https://pic.hik-cloud.com/opencustom/apidoc/pictures/d8d60985e34a4e40857a98731a3dc85c.jpg)
- */
-export function oauthTokenUsingPost(options:OauthTokenUsingPostOptions):Promise<OauthTokenUsingPostResult> {
-  return request({
-    ...options,
-    url:'/oauth/token',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/社区管理
- * @summary 修改社区
- * @url /api/v1/estate/system/communities/actions/updateCommunity
- * @method post
- * @description **功能描述**
-
-修改云眸社区租户下的社区基础信息。（全量修改）
-
-**返回码**
-
-| 返回码 | 返回消息                            | 描述                                     |
-| ------ | ----------------------------------- | ---------------------------------------- |
-| 511000 | 社区不存在                          |                                          |
-| 510001 | 参数错误                            | 必填项为空、参数长度不符合等参数异常情况 |
-| 511003 | 已存在相同名称的社区，请修改        |                                          |
-| 511015 | 手机格式错误                        |                                          |
-| 511046 | 该人员不存在                        |                                          |
-| 511047 | 社区面积(万㎡) 最多8位整数, 2位小数 |                                          |
-| 511059 | 租户信息不匹配                      | 不能对其他租户的社区进行操作             |
-| 511093 | 省市区县代码错误                    | 省市区县代码包含非法字符                 |
-| 511094 | 经纬度坐标不合法                    |                                          |
- */
-export function apiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost(options:ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostOptions):Promise<ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/communities/actions/updateCommunity',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/社区管理
- * @summary 新增社区
- * @url /api/v1/estate/system/communities
- * @method post
- * @description **功能描述**
-
-在云眸社区租户下新增一个社区。
-
-**返回码**
-
-| 返回码 | 返回消息                                 | 描述                                                 |
-| ------ | ---------------------------------------- | ---------------------------------------------------- |
-| 510001 | 参数错误                                 | 必填项为空、参数长度不符合等参数异常情况             |
-| 511002 | 您所选择的区域已存在子区域，无法添加社区 | 新增社区会在系统默认区域下，若默认区域异常则报此异常 |
-| 511003 | 已存在相同名称的社区， 请修改            |                                                      |
-| 511015 | 手机格式错误                             |                                                      |
-| 511046 | 该人员不存在                             | 社区负责人不存在                                     |
-| 511047 | 社区面积(万㎡) 最多8位整数, 2位小数      |                                                      |
-| 511093 | 省市区县代码错误                         | 省市区县代码包含非法字符                             |
-| 511094 | 经纬度坐标不合法                         |                                                      |
- */
-export function apiV1EstateSystemCommunitiesUsingPost(options:ApiV1EstateSystemCommunitiesUsingPostOptions):Promise<ApiV1EstateSystemCommunitiesUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/communities',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/社区管理
- * @summary 查询社区
- * @url /api/v1/estate/system/communities/actions/list
- * @method get
- * @description **功能描述**
-
-分页查询云眸社区租户下的社区。
-
-**返回码**
-
-| 返回码 | 返回消息 | 描述                                     |
-| ------ | -------- | ---------------------------------------- |
-| 200    | 成功     |                                          |
-| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
- */
-export function apiV1EstateSystemCommunitiesActionsListUsingGet(options:ApiV1EstateSystemCommunitiesActionsListUsingGetOptions):Promise<ApiV1EstateSystemCommunitiesActionsListUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/communities/actions/list',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 新增楼栋
- * @url /api/v1/estate/system/buildings
- * @method post
- * @description **功能描述**
-
-向社区下添加楼栋。
-
-**返回码**
-
-| 返回码 | 返回消息                     | 描述                                     |
-| ------ | ---------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-| 511000 | 社区不存在                   |                                          |
-| 511001 | 该社区下楼栋已存在，无法添加 |                                          |
-| 511004 | 楼栋编号已经存在             |                                          |
-| 511059 | 租户信息不匹配               | 不能在其他租户的社区下新增房屋           |
- */
-export function apiV1EstateSystemBuildingsUsingPost(options:ApiV1EstateSystemBuildingsUsingPostOptions):Promise<ApiV1EstateSystemBuildingsUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/buildings',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 删除单元
- * @url /api/v1/estate/system/units/{unitId}
- * @method delete
- * @description **功能描述**
-
-删除社区下的楼栋。
-
-**返回码**
-
-| 返回码 | 返回消息                   | 描述                                     |
-| ------ | -------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
-| 511054 | 单元不存在                 |                                          |
-| 511059 | 租户信息不匹配             | 不能对其他租户的单元进行操作             |
-| 511087 | 房屋已有人入住,不能删除    |                                          |
-| 511090 | 该单元下有设备无法对其操作 |                                          |
- */
-export function apiV1EstateSystemUnitsUnitIdUsingDelete(options:ApiV1EstateSystemUnitsUnitIdUsingDeleteOptions):Promise<ApiV1EstateSystemUnitsUnitIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/units/{unitId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 删除楼栋
- * @url /api/v1/estate/system/buildings/{buildingId}
- * @method delete
- * @description **功能描述**
-
-删除社区下的楼栋。
-
-**返回码**
-
-| 返回码 | 返回消息                     | 描述                                     |
-| ------ | ---------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-| 511005 | 楼栋不存在                   |                                          |
-| 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
-| 511008 | 单元编号已经存在             | 单元编号重复                             |
-| 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
- */
-export function apiV1EstateSystemBuildingsBuildingIdUsingDelete(options:ApiV1EstateSystemBuildingsBuildingIdUsingDeleteOptions):Promise<ApiV1EstateSystemBuildingsBuildingIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/buildings/{buildingId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 新增单元
- * @url /api/v1/estate/system/units
- * @method post
- * @description **功能描述**
-
-向楼栋下添加单元。
-
-**返回码**
-
-| 返回码 | 返回消息                     | 描述                                     |
-| ------ | ---------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-| 511005 | 楼栋不存在                   |                                          |
-| 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
-| 511008 | 单元编号已经存在             | 单元编号重复                             |
-| 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
-| 511098 | 超出单元数量                 | 超出楼栋单元数量的限制                   |
- */
-export function apiV1EstateSystemUnitsUsingPost(options:ApiV1EstateSystemUnitsUsingPostOptions):Promise<ApiV1EstateSystemUnitsUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/units',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 新增户室
- * @url /api/v1/estate/system/rooms
- * @method post
- * @description **功能描述**
-
-向单元下添加户室。
-
-**返回码**
-
-| 返回码 | 返回消息             | 描述                                     |
-| ------ | -------------------- | ---------------------------------------- |
-| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
-| 511006 | 单元不存在           |                                          |
-| 511009 | 楼层数不存在         |                                          |
-| 511025 | 参数不合法           | 非法参数，如floorNumber传值为非数字      |
-| 511059 | 租户信息不匹配       |                                          |
-| 511092 | 当前房屋已存在       |                                          |
-| 511124 | 小区户室数量超出限制 |                                          |
-| 511152 | 单元下户室名称已存在 | 单元下户室名称需唯一                     |
- */
-export function apiV1EstateSystemRoomsUsingPost(options:ApiV1EstateSystemRoomsUsingPostOptions):Promise<ApiV1EstateSystemRoomsUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/rooms',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 根据编号查询户室
- * @url /api/v1/estate/system/rooms/actions/info
- * @method get
- * @description **功能描述**
-
-根据楼栋编号、单元编号、户室编号查询户室信息。
-
-**返回码**
-
-| 返回码 | 返回消息 | 描述                                     |
-| ------ | -------- | ---------------------------------------- |
-| 200    | 成功     |                                          |
-| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
- */
-export function apiV1EstateSystemRoomsActionsInfoUsingGet(options:ApiV1EstateSystemRoomsActionsInfoUsingGetOptions):Promise<ApiV1EstateSystemRoomsActionsInfoUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/rooms/actions/info',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 删除户室
- * @url /api/v1/estate/system/rooms/{roomId}
- * @method delete
- * @description **功能描述**
-
-删除户室信息。
-
-**返回码**
-
-| 返回码 | 返回消息                | 描述                                     |
-| ------ | ----------------------- | ---------------------------------------- |
-| 510001 | 参数错误                | 必填项为空、参数长度不符合等参数异常情况 |
-| 511059 | 租户信息不匹配          | 不能对其他租户的物业人员进行操作         |
-| 511086 | 房间不存在              |                                          |
-| 511087 | 房屋已有人入住,不能删除 |                                          |
- */
-export function apiV1EstateSystemRoomsRoomIdUsingDelete(options:ApiV1EstateSystemRoomsRoomIdUsingDeleteOptions):Promise<ApiV1EstateSystemRoomsRoomIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/rooms/{roomId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 删除人员
- * @url /api/v1/estate/system/person/{personId}
- * @method delete
- * @description **功能描述**
-
-删除住户人员信息。
-
-**返回码**
-
-| 返回码 | 返回消息     | 描述                                     |
-| ------ | ------------ | ---------------------------------------- |
-| 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
-| 511046 | 该人员不存在 |                                          |
- */
-export function apiV1EstateSystemPersonPersonIdUsingDelete(options:ApiV1EstateSystemPersonPersonIdUsingDeleteOptions):Promise<ApiV1EstateSystemPersonPersonIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/{personId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 查询社区下的房屋
- * @url /api/v1/estate/system/rooms/actions/communityRoomList
- * @method get
- * @description **功能描述**
-
-查询指定社区下的所有房间数据。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 200    | 成功               |                                          |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144 | 超出最大分页量限制 |                                          |
- */
-export function apiV1EstateSystemRoomsActionsCommunityRoomListUsingGet(options:ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetOptions):Promise<ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/rooms/actions/communityRoomList',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 根据ID查询户室
- * @url /api/v1/estate/system/rooms/actions/infoById
- * @method get
- * @description **功能描述**
-
-根据户室ID查询社区下的户室信息。（当前仅支持根据关联ID查询）
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511059 | 租户信息不匹配 | 不能对其他租户的物业人员进行操作         |
-| 511086 | 房间不存在     |                                          |
- */
-export function apiV1EstateSystemRoomsActionsInfoByIdUsingGet(options:ApiV1EstateSystemRoomsActionsInfoByIdUsingGetOptions):Promise<ApiV1EstateSystemRoomsActionsInfoByIdUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/rooms/actions/infoById',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 查询社区下的楼栋
- * @url /api/v1/estate/system/buildings/actions/communityBuildingList
- * @method get
- * @description **功能描述**
-
-查询指定社区下的所有楼栋数据。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 200    | 成功               |                                          |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144 | 超出最大分页量限制 |                                          |
- */
-export function apiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet(options:ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetOptions):Promise<ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/buildings/actions/communityBuildingList',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 查询单元下的房屋
- * @url /api/v1/estate/system/rooms/actions/unitRoomList
- * @method post
- * @description **返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 200    | 成功               |                                          |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144 | 超出最大分页量限制 |                                          |
- */
-export function apiV1EstateSystemRoomsActionsUnitRoomListUsingPost(options:ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostOptions):Promise<ApiV1EstateSystemRoomsActionsUnitRoomListUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/rooms/actions/unitRoomList',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/房屋管理
- * @summary 查询楼栋下的单元
- * @url /api/v1/estate/system/units/actions/buildingUnitList
- * @method post
- * @description **功能描述**
-
-查询指定楼栋下的所有单元数据。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 200    | 成功               |                                          |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144 | 超出最大分页量限制 |                                          |
- */
-export function apiV1EstateSystemUnitsActionsBuildingUnitListUsingPost(options:ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostOptions):Promise<ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/units/actions/buildingUnitList',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 新增人员
- * @url /api/v1/estate/system/person
- * @method post
- * @description **功能描述**
-
-新增住户人员信息。
-
-注意：
-
-1、本篇住户专指业主、家属、租客三个身份类别的人员。
-
-2、“姓名”+“手机号”或者“证件类型”+“证件号码”至少有一组信息完整。
-
-**返回码**
-
-| 返回码 | 返回消息                                                     | 描述                                                         |      |
-| ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-| 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况                     |      |
-| 511000 | 社区不存在                                                   |                                                              |      |
-| 511011 | 证件类型为空                                                 |                                                              |      |
-| 511012 | 证件号为空                                                   |                                                              |      |
-| 511013 | 证件格式错误                                                 |                                                              |      |
-| 511015 | 手机格式错误                                                 |                                                              |      |
-| 511016 | 英文名称格式错误                                             |                                                              |      |
-| 511017 | 社区ID不能为空                                               |                                                              |      |
-| 511018 | 身份类型为租客时，离开时间不能为空                           |                                                              |      |
-| 511021 | 姓名和手机号在平台中已存在，请判断证件信息与平台证件信息是否匹配 |                                                              |      |
-| 511025 | 参数不合法                                                   | 一些必填字段为空等参数异常情况，比如楼栋ID、单元ID、户室ID、身份类型为空等现象 |      |
-| 511027 | 该房间没有业主                                               |                                                              |      |
-| 511038 | 证件信息在平台中已存在，请判断姓名与证件信息是否匹配         |                                                              |      |
-| 511040 | 日期格式错误                                                 |                                                              |      |
-| 511053 | 楼栋不存在                                                   |                                                              |      |
-| 511054 | 单元不存在                                                   |                                                              |      |
-| 511056 | 你所添加的房屋已存在业主                                     |                                                              |      |
-| 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                                       |      |
-| 511083 | 社区不包含楼栋                                               |                                                              |      |
-| 511084 | 楼栋不包含单元                                               |                                                              |      |
-| 511086 | 房间不存在                                                   |                                                              |      |
-| 511096 | 没有填写身份信息                                             | 身份信息应至少包含：1、姓名+证件类型+证件号码2、手机号+姓名两组中的一组 |      |
-| 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                                              |      |
-| 511115 | 入住时间为空                                                 |                                                              |      |
-| 511143 | 证件类型错误                                                 |                                                              |      |
-| 511146 | 民族名称填写错误                                             |                                                              |      |
-| 511095 | 人脸URL不合法                                                |                                                              |      |
-| 511100 | 人脸图片质量不合格                                           |                                                              |      |
-| 511117 | 人脸评分校验失败                                             |                                                              |      |
-| 511118 | 人脸特征点置信度校验失败                                     |                                                              |      |
-| 511119 | 人脸眼间距校验失败                                           |                                                              |      |
-| 511120 | 人脸俯仰角校验失败                                           |                                                              |      |
-| 511121 | 人脸左右角校验失败                                           |                                                              |      |
-| 511122 | 人脸可见性校验失败                                           |                                                              |      |
-| 511123 | 人脸清晰度校验失败                                           |                                                              |      |
-| 511189 | 离开时间必须大于入住时间                                     |                                                              |      |
-| 511113 | 卡号长度超过20                                               |                                                              |      |
-| 511116 | 卡号只能是数字和字母                                         |                                                              |      |
-| 511104 | 住户只能有三张卡                                             |                                                              |      |
-| 511106 | 卡号已被使用                                                 |                                                              |      |
- */
-export function apiV1EstateSystemPersonUsingPost(options:ApiV1EstateSystemPersonUsingPostOptions):Promise<ApiV1EstateSystemPersonUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 删除人员所属社区
- * @url /api/v1/estate/system/person/actions/deleteCommunityRelation
- * @method post
- * @description **功能描述**
-
-删除住户人员与社区的关联关系。
-
-若住户在该社区有所属房屋，将同步解除住户与房屋的所属关系。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511022 | 住户不存在     |                                          |
-| 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
- */
-export function apiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost(options:ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/deleteCommunityRelation',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 设置人员所属社区
- * @url /api/v1/estate/system/person/actions/addCommunityRelation
- * @method post
- * @description **功能描述**
-
-设置住户人员所属社区。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511000 | 社区不存在     |                                          |
-| 511023 | 住户已存在     |                                          |
-| 511046 | 该人员不存在   |                                          |
-| 511059 | 租户信息不匹配 | 不能关联其他租户的社区                   |
- */
-export function apiV1EstateSystemPersonActionsAddCommunityRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/addCommunityRelation',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 设置人员所属户室
- * @url /api/v1/estate/system/person/actions/addRoomRelation
- * @method post
- * @description **功能描述**
-
-设置人员所属户室（人员和房屋关联之后，将自动下发权限到设备）。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
-
-业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
-
-返回码
-返回码 	返回消息 	描述
-510001 	参数错误 	必填项为空、参数长度不符合等参数异常情况
-511018 	身份类型为租客时，离开时间不能为空 	
-511022 	住户不存在 	
-511026 	该户室已经关联业主 	
-511028 	该人员已经入住xxx户室 	
-511029 	户室信息错误 	
-511059 	租户信息不匹配 	不能关联其他租户的房屋
-511099 	身份类型为租客时，离开时间必须大于入住时间 	
-511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 	
-511165 	身份类型错误 	
-511189 	离开时间必须大于入住时间 	
- */
-export function apiV1EstateSystemPersonActionsAddRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsAddRoomRelationUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/addRoomRelation',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 删除人员所属户室
- * @url /api/v1/estate/system/person/actions/deleteRoomRelation
- * @method post
- * @description **功能描述**
-
-删除住户人员所属户室（后台将同步删除设备上的权限）。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511029 | 户室信息错误   |                                          |
-| 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
- */
-export function apiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/deleteRoomRelation',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 修改人员
- * @url /api/v1/estate/system/person/actions/updatePerson
- * @method post
- * @description **功能描述**
-
-修改住户人员的基础信息。
-
-**返回码**
-
-| 返回码 | 返回消息                 | 描述                                                         |      |
-| ------ | ------------------------ | ------------------------------------------------------------ | ---- |
-| 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况                     |      |
-| 511011 | 证件类型为空             |                                                              |      |
-| 511012 | 证件号为空               |                                                              |      |
-| 511013 | 证件格式错误             |                                                              |      |
-| 511014 | 手机号不能为空           |                                                              |      |
-| 511015 | 手机格式错误             |                                                              |      |
-| 511016 | 英文名称格式错误         |                                                              |      |
-| 511046 | 该人员不存在             |                                                              |      |
-| 511096 | 没有填写身份信息         | 身份信息应至少包含：1、证件类型+证件号码2、手机号+姓名两组中的一组 |      |
-| 511146 | 民族名称填写错误         |                                                              |      |
-| 511095 | 人脸URL不合法            |                                                              |      |
-| 511100 | 人脸图片质量不合格       |                                                              |      |
-| 511117 | 人脸评分校验失败         |                                                              |      |
-| 511118 | 人脸特征点置信度校验失败 |                                                              |      |
-| 511119 | 人脸眼间距校验失败       |                                                              |      |
-| 511120 | 人脸俯仰角校验失败       |                                                              |      |
-| 511121 | 人脸左右角校验失败       |                                                              |      |
-| 511122 | 人脸可见性校验失败       |                                                              |      |
-| 511123 | 人脸清晰度校验失败       |                                                              |      |
- */
-export function apiV1EstateSystemPersonActionsUpdatePersonUsingPost(options:ApiV1EstateSystemPersonActionsUpdatePersonUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsUpdatePersonUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/updatePerson',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 重置人员所属户室
- * @url /api/v1/estate/system/person/actions/setRoomRelation
- * @method post
- * @description **功能描述**
-
-重置人员所属户室，可删除旧的户室关联关系的同时重新关联新的户室。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
-业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
-
-**返回码**
-
-| 返回码 | 返回消息                                                     | 描述                                     |
-| ------ | ------------------------------------------------------------ | ---------------------------------------- |
-| 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况 |
-| 511018 | 身份类型为租客时，离开时间不能为空                           |                                          |
-| 511022 | 住户不存在                                                   |                                          |
-| 511026 | 该户室已经关联业主                                           |                                          |
-| 511029 | 户室信息错误                                                 |                                          |
-| 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                   |
-| 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                          |
-| 511153 | 当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 |                                          |
-| 511189 | 离开时间必须大于入住时间                                     |                                          |
- */
-export function apiV1EstateSystemPersonActionsSetRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsSetRoomRelationUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/setRoomRelation',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 人员查询
- * @url /api/v1/estate/system/person/actions/personInfoList
- * @method post
- * @description **功能描述**
-
-查询云眸社区指定社区下所有的住户信息。
-
-注意：本接口查询内容只包含当前社区的房屋资料，如果住户在其他小区也有房屋，将不会显示。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 200    | 成功               |                                          |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144 | 超出最大分页量限制 |                                          |
- */
-export function apiV1EstateSystemPersonActionsPersonInfoListUsingPost(options:ApiV1EstateSystemPersonActionsPersonInfoListUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsPersonInfoListUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/personInfoList',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 获取人员户室信息
- * @url /api/v1/estate/system/person/actions/roomList
- * @method get
- * @description **功能描述**
-
-查询该人员名下的户室列表。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 511000 | 社区不存在     |                                          |
-| 511059 | 租户信息不匹配 | 不能查询其他租户的资料                   |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
- */
-export function apiV1EstateSystemPersonActionsRoomListUsingGet(options:ApiV1EstateSystemPersonActionsRoomListUsingGetOptions):Promise<ApiV1EstateSystemPersonActionsRoomListUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/roomList',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 获取人员标签列表
- * @url /api/v1/estate/system/person/actions/labelList
- * @method get
- * @description **功能描述**
-
-查询当前租户下的人员标签列表。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 200    | 成功               |                                          |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144 | 超出最大分页量限制 |                                          |
- */
-export function apiV1EstateSystemPersonActionsLabelListUsingGet(options:ApiV1EstateSystemPersonActionsLabelListUsingGetOptions):Promise<ApiV1EstateSystemPersonActionsLabelListUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/labelList',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/住户人人员管理
- * @summary 设置人员标签和车牌号
- * @url /api/v1/estate/system/person/actions/addLabelAndLicenseRelation
- * @method post
- * @description **功能描述**
-
-给社区的人员设置标签和车牌号（注：需先给人员设置所属社区）。
-
-**返回码**
-
-| **返回码** | **返回消息**             | **描述**                                 |
-| ---------- | ------------------------ | ---------------------------------------- |
-| 200        | 成功                     |                                          |
-| 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
-| 511000     | 社区不存在               | 社区id错误或者跨租户操作                 |
-| 511170     | 车牌数量不能超过三个     | 同一社区，一个人最多设置三个车牌号       |
-| 511171     | 车牌号格式错误           |                                          |
-| 511172     | 用户未入住当前社区       | 用户需先关联社区之后才可以设置标签       |
-| 511173     | 人员标签不存在           | 人员标签id错误                           |
-| 511174     | 车牌号码在当前社区已存在 | 一个车牌号在同一社区只能出现一次         |
-| 511177     | 车牌号不能重复           | 提交数据中有重复车牌号                   |
-| 511178     | 人员标签不能重复         | 提交数据中有重复人员标签                 |
- */
-export function apiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostOptions):Promise<ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/person/actions/addLabelAndLicenseRelation',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/物业人员管理
- * @summary 新增物业人员
- * @url /api/v1/estate/system/property
- * @method post
- * @description **功能描述**
-
-新增物业人员信息。
-
-备注：调用物业人员添加接口，就是在云眸平台注册了一个可以登陆的物业人员账号；返回的参数中appId和secret两个参数是在第三方跳转的时候需要用到的参数，具体用法详见：第三方跳转登录云眸社区对接规范。
-
-**返回码**
-
-| 返回码 | 返回消息               | 描述                                                         |
-| ------ | ---------------------- | ------------------------------------------------------------ |
-| 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
-| 511015 | 手机格式错误           |                                                              |
-| 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
-| 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
-| 511082 | 用户名或手机号已被使用 |                                                              |
-| 511091 | 用户名不合法           | 用户名包含数字字母之外的非法字符                             |
- */
-export function apiV1EstateSystemPropertyUsingPost(options:ApiV1EstateSystemPropertyUsingPostOptions):Promise<ApiV1EstateSystemPropertyUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/property',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 退卡
- * @url /api/v1/estate/system/cards/actions/refundCard
- * @method post
- * @description **功能描述**
-
-已开通的卡片进行退卡（卡片将变为空白卡）。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511107 | 卡号不存在         |                                          |
-| 511108 | 只有正常卡才能退卡 | 其他状态的卡片无法退卡，比如挂失的卡片   |
- */
-export function apiV1EstateSystemCardsActionsRefundCardUsingPost(options:ApiV1EstateSystemCardsActionsRefundCardUsingPostOptions):Promise<ApiV1EstateSystemCardsActionsRefundCardUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards/actions/refundCard',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 解挂
- * @url /api/v1/estate/system/cards/actions/cancelLossCard
- * @method post
- * @description **功能描述**
-
-将已挂失的卡片进行解挂（卡片将变为正常卡）。
-
-**返回码**
-
-| 返回码 | 返回消息             | 描述                                     |
-| ------ | -------------------- | ---------------------------------------- |
-| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
-| 511107 | 卡号不存在           |                                          |
-| 511033 | 没有该设备权限       |                                          |
-| 511111 | 只有挂失的卡才能解挂 | 其他状态的卡片无法解挂，比如正常的卡片   |
-| 511145 | 设备数量超出限制     |                                          |
- */
-export function apiV1EstateSystemCardsActionsCancelLossCardUsingPost(options:ApiV1EstateSystemCardsActionsCancelLossCardUsingPostOptions):Promise<ApiV1EstateSystemCardsActionsCancelLossCardUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards/actions/cancelLossCard',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 挂失
- * @url /api/v1/estate/system/cards/actions/lossCard
- * @method post
- * @description **功能描述**
-
-将已开通的卡片进行挂失（卡片状态将变为挂失）。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511107 | 卡号不存在         |                                          |
-| 511110 | 只有正常卡才能挂失 | 其他状态的卡片无法挂失，比如空白卡       |
- */
-export function apiV1EstateSystemCardsActionsLossCardUsingPost(options:ApiV1EstateSystemCardsActionsLossCardUsingPostOptions):Promise<ApiV1EstateSystemCardsActionsLossCardUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards/actions/lossCard',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 新增卡片（白卡）
- * @url /api/v1/estate/system/cards
- * @method post
- * @description **功能描述**
-
-添加一张新的空白卡片。
-
-
- */
-export function apiV1EstateSystemCardsUsingPost(options:ApiV1EstateSystemCardsUsingPostOptions):Promise<ApiV1EstateSystemCardsUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/物业人员管理
- * @summary 修改物业人员
- * @url /api/v1/estate/system/property/actions/updateProperty
- * @method post
- * @description **功能描述**
-
-编辑物业人员信息。（全量修改）
-
-**返回码**
-
-| 返回码 | 返回消息               | 描述                                                         |
-| ------ | ---------------------- | ------------------------------------------------------------ |
-| 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
-| 511015 | 手机格式错误           |                                                              |
-| 511059 | 租户信息不匹配         | 不能对其他租户的物业人员进行操作                             |
-| 511046 | 该人员不存在           |                                                              |
-| 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
-| 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
-| 511082 | 用户名或手机号已被使用 |                                                              |
- */
-export function apiV1EstateSystemPropertyActionsUpdatePropertyUsingPost(options:ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostOptions):Promise<ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/property/actions/updateProperty',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 开卡
- * @url /api/v1/estate/system/cards/actions/openCard
- * @method post
- * @description **功能描述**
-
-给人员开通卡片。
-
-**返回码**
-
-| 返回码 | 返回消息             | 描述                                     |
-| ------ | -------------------- | ---------------------------------------- |
-| 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
-| 511046 | 该人员不存在         |                                          |
-| 511104 | 住户只能有三张卡     |                                          |
-| 511105 | 物业人员只能有一张卡 |                                          |
-| 511106 | 卡号已被使用         | 卡号已绑定人员，空白卡可以使用           |
-| 511033 | 没有该设备权限       |                                          |
-| 511113 | 卡号长度超过20       |                                          |
-| 511114 | 人员类型不合法       |                                          |
-| 511116 | 卡号只能是数字       |                                          |
-| 511145 | 设备数量超出限制     |                                          |
- */
-export function apiV1EstateSystemCardsActionsOpenCardUsingPost(options:ApiV1EstateSystemCardsActionsOpenCardUsingPostOptions):Promise<ApiV1EstateSystemCardsActionsOpenCardUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards/actions/openCard',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 换卡
- * @url /api/v1/estate/system/cards/actions/changeCard
- * @method get
- * @description **功能描述**
-
-将已开通的卡片进行替换（旧卡将变为空白卡）。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
-| 511107 | 卡号不存在         | 旧卡不存在                               |
-| 511109 | 只有正常卡才能换卡 | 其他状态的卡片无法换卡，比如挂失的卡片   |
-| 511033 | 没有该设备权限     |                                          |
-| 511113 | 卡号长度超过20     |                                          |
-| 511116 | 卡号只能是数字     |                                          |
-| 511145 | 设备数量超出限制   |                                          |
- */
-export function apiV1EstateSystemCardsActionsChangeCardUsingGet(options:ApiV1EstateSystemCardsActionsChangeCardUsingGetOptions):Promise<ApiV1EstateSystemCardsActionsChangeCardUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards/actions/changeCard',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 删除卡片（白卡）
- * @url /api/v1/estate/system/cards/{cardId}
- * @method delete
- * @description **功能描述**
-
-删除一张空白卡。
-
-注意：已绑定人员的卡片不允许删除，需要先解除绑定再进行删除。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511103 | 只能删除空白卡 |                                          |
- */
-export function apiV1EstateSystemCardsCardIdUsingDelete(options:ApiV1EstateSystemCardsCardIdUsingDeleteOptions):Promise<ApiV1EstateSystemCardsCardIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards/{cardId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag API列表/物业人员管理
- * @summary 删除物业人员
- * @url /api/v1/estate/system/property/{personId}
- * @method delete
- * @description **功能描述**
-
-删除物业人员信息。
-
-**返回码**
-
-| 返回码 | 返回消息         | 描述                                     |
-| ------ | ---------------- | ---------------------------------------- |
-| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
-| 511069 | 查询用户信息失败 |                                          |
-
-**物业人员角色列表**
-
-| 返回码           | 返回消息 | 描述         |
-| ---------------- | -------- | ------------ |
-| COMMUNITY_ROLE_A | 角色A    | 权限1..权限n |
-| COMMUNITY_ROLE_B | 角色B    | 权限1..权限n |
-| COMMUNITY_ROLE_C | 角色C    | 权限1..权限n |
-| COMMUNITY_ROLE_D | 角色D    | 权限1..权限n |
- */
-export function apiV1EstateSystemPropertyPersonIdUsingDelete(options:ApiV1EstateSystemPropertyPersonIdUsingDeleteOptions):Promise<ApiV1EstateSystemPropertyPersonIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/property/{personId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag API列表/设备管理
- * @summary 删除设备
- * @url /api/v1/estate/devices/actions/deleteDevice
- * @method post
- * @description **功能描述**
-
-修改设备。
-
-
- */
-export function apiV1EstateDevicesActionsDeleteDeviceUsingPost(options:ApiV1EstateDevicesActionsDeleteDeviceUsingPostOptions):Promise<ApiV1EstateDevicesActionsDeleteDeviceUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/devices/actions/deleteDevice',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/设备管理
- * @summary 修改设备
- * @url /api/v1/estate/devices/actions/updateDevice
- * @method post
- * @description **功能描述**
-
-修改设备名称。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511148 | 未查到设备信息 | 设备不存在或已被删除                     |
-| 511158 | 设备名称重复   |                                          |
- */
-export function apiV1EstateDevicesActionsUpdateDeviceUsingPost(options:ApiV1EstateDevicesActionsUpdateDeviceUsingPostOptions):Promise<ApiV1EstateDevicesActionsUpdateDeviceUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/devices/actions/updateDevice',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/设备管理
- * @summary 查询设备详情
- * @url /api/v1/estate/devices
- * @method get
- * @description **功能描述**
-
-查询设备详细资料。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511148 | 未查到设备信息 |                                          |
- */
-export function apiV1EstateDevicesUsingGet(options:ApiV1EstateDevicesUsingGetOptions):Promise<ApiV1EstateDevicesUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/devices',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/设备管理
- * @summary 新增设备
- * @url /api/v1/estate/devices
- * @method post
- * @description **功能描述**
-
-新增设备，设备添加之后会异步去拉取通道，拉取通道存在失败的可能，使用过程中如果遇到通道问题，可以调用刷新通道的接口去同步通道信息。
-
-若只填写communityId（不填写buildingId和unitId）设备将添加为围墙机；若填写buildingId和unitId，设备将添加为单元机。
-**返回码**
-
-| 返回码 | 返回消息                           | 描述                                     |
-| ------ | ---------------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511154 | 楼栋或单元ID为空                   |                                          |
-| 511155 | 查询社区失败                       |                                          |
-| 511156 | 查询单元失败                       |                                          |
-| 511157 | 该设备已被添加                     |                                          |
-| 511158 | 设备名称重复                       | 设备名称需租户下唯一                     |
-| 511159 | 服务已经到达上限或者没有购买此服务 | 当前账号未开通此类设备的服务             |
-| 511160 | 设备不存在                         | 设备未开启萤石协议或设备未注册且不在线   |
-| 511161 | 设备不在线                         |                                          |
-| 511162 | 设备验证码错误                     |                                          |
-| 511164 | 设备序列号不正确                   |                                          |
-| 511192 | 不能使用出厂时的默认验证码         |                                          |
-| 511193 | 设备存在高风险需要确权             |                                          |
-
- */
-export function apiV1EstateDevicesUsingPost(options:ApiV1EstateDevicesUsingPostOptions):Promise<ApiV1EstateDevicesUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/devices',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/卡片管理
- * @summary 补卡
- * @url /api/v1/estate/system/cards/actions/reissueCard
- * @method post
- * @description **功能描述**
-
-补开一张新的卡片，旧卡将被删除。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
-| 511107 | 卡号不存在         | 旧卡不存在                               |
-| 511033 | 没有该设备权限     |                                          |
-| 511112 | 只有挂失卡才能补卡 | 其他状态的卡片无法补卡，比如正常的卡片   |
-| 511113 | 卡号长度超过20     |                                          |
-| 511116 | 卡号只能是数字     |                                          |
-| 511145 | 设备数量超出限制   |                                          |
- */
-export function apiV1EstateSystemCardsActionsReissueCardUsingPost(options:ApiV1EstateSystemCardsActionsReissueCardUsingPostOptions):Promise<ApiV1EstateSystemCardsActionsReissueCardUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/system/cards/actions/reissueCard',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/设备管理
- * @summary 查询社区下的设备列表
- * @url /api/v1/estate/devices/actions/listByCommunityId
- * @method post
- * @description **功能描述**
-
-根据社区ID查询社区下的设备列表。
-
-**返回码**
-
-| 返回码 | 返回消息           | 描述                                     |
-| ------ | ------------------ | ---------------------------------------- |
-| 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144 | 超出最大分页量限制 |                                          |
-| 511155 | 查询社区失败       |                                          |
-
- */
-export function apiV1EstateDevicesActionsListByCommunityIdUsingPost(options:ApiV1EstateDevicesActionsListByCommunityIdUsingPostOptions):Promise<ApiV1EstateDevicesActionsListByCommunityIdUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/devices/actions/listByCommunityId',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/设备管理
- * @summary 查询社区下设备通道列表
- * @url /api/v1/estate/devices/channels/actions/listByCommunityId
- * @method get
- * @description **功能描述**
-
-根据社区ID查询社区下的设备通道列表。
-
-**返回码**
-
-| 返回码 | 返回消息   | 描述                                     |
-| ------ | ---------- | ---------------------------------------- |
-| 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
-| 511000 | 社区不存在 |                                          |
- */
-export function apiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet(options:ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetOptions):Promise<ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/devices/channels/actions/listByCommunityId',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/设备确权
- * @summary 自动确权
- * @url /v1/carrier/wing/endpoint/confirm/right/autoconfirm
- * @method get
- * @description code码描述：
-
-| code     | 描述     |
-| -------- | -------- |
-| 0        | 确权成功 |
-| 20002001 | 请求失败 |
-| 20002002 | 确权失败 |
- */
-export function v1CarrierWingEndpointConfirmRightAutoconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetOptions):Promise<V1CarrierWingEndpointConfirmRightAutoconfirmUsingGetResult> {
-  return request({
-    ...options,
-    url:'/v1/carrier/wing/endpoint/confirm/right/autoconfirm',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/设备管理
- * @summary 设备抓图
- * @url /v1/channels/{channelId}/capture
- * @method post
- * @description **功能描述**
-
-提供设备抓拍当前画面功能。
-
-该接口仅适用于IPC或者关联IPC的DVR设备，该接口并非预览时的截图功能。海康型号设备可能不支持萤石协议抓拍功能，使用该接口可能返回不支持或者超时。
-
-注意：设备抓图能力有限，请勿频繁调用，频繁调用将会被拉入限制黑名单,建议调用的间隔为4s左右。
-
-
- */
-export function v1ChannelsChannelIdCaptureUsingPost(options:V1ChannelsChannelIdCaptureUsingPostOptions):Promise<V1ChannelsChannelIdCaptureUsingPostResult> {
-  return request({
-    ...options,
-    url:'/v1/channels/{channelId}/capture',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/设备确权
- * @summary 下线确认
- * @url /v1/carrier/wing/endpoint/confirm/right/offlineconfirm
- * @method get
- * @description code码描述：
-
-| code     | 描述     |
-| -------- | -------- |
-| 0        | 离线成功 |
-| 20002001 | 请求失败 |
-| 20002003 | 离线失败 |
- */
-export function v1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetOptions):Promise<V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGetResult> {
-  return request({
-    ...options,
-    url:'/v1/carrier/wing/endpoint/confirm/right/offlineconfirm',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/设备确权
- * @summary 上线确认
- * @url /v1/carrier/wing/endpoint/confirm/right/onlineconfirm
- * @method get
- * @description code码描述：
-
-| code     | 描述     |
-| -------- | -------- |
-| 0        | 确权成功 |
-| 20002001 | 请求失败 |
-| 20002004 | 确权失败 |
- */
-export function v1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetOptions):Promise<V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGetResult> {
-  return request({
-    ...options,
-    url:'/v1/carrier/wing/endpoint/confirm/right/onlineconfirm',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/广告管理
- * @summary 下发广告
- * @url /api/v1/estate/publish/actions/publishProgram
- * @method post
- * @description **功能描述**
-
-往设备上下发广告信息。（下发的结果我们会通过消息订阅进行通知，消息类型为community_message_advert_state，消息码为：10025）
-
- 图片：请上传分辨率为600*276 ,大小限制1M以内的图片,上传图片数量限制5张以内(只支持jpg格式)。
-视频：请上传大小限制200M以内的视频,上传视频素材数量限制3个以内(只支持mp4格式)。
-
-注：不支持6000C
-
-**返回码**
-
-| 返回码 | 返回消息         | 描述                                             |
-| ------ | ---------------- | ------------------------------------------------ |
-| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况         |
-| 511130 | 设备响应超时     |                                                  |
-| 511132 | 素材数量超过限制 | 图片素材数量不能超过5个，视频素材数量不能超过3个 |
-| 511133 | 节目名称过长     |                                                  |
-| 511134 | 备注过长         |                                                  |
-| 511135 | 设备最多为50台   |                                                  |
-| 511142 | 素材过大         | 单个图片不能超过1M，单个视频不能超过200M         |
-| 511148 | 未查到设备信息   | 未查到有效设备信息                               |
-| 511169 | 设备正在发布中   | 部分设备正在下发信息，请稍后再试                 |
- */
-export function apiV1EstatePublishActionsPublishProgramUsingPost(options:ApiV1EstatePublishActionsPublishProgramUsingPostOptions):Promise<ApiV1EstatePublishActionsPublishProgramUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/publish/actions/publishProgram',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/广告管理
- * @summary 删除广告
- * @url /api/v1/estate/publish/actions/deleteProgram
- * @method post
- * @description **功能描述**
-
-删除设备上的广告信息。
-
-注：不支持6000C
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511135 | 设备最多为50台 |                                          |
- */
-export function apiV1EstatePublishActionsDeleteProgramUsingPost(options:ApiV1EstatePublishActionsDeleteProgramUsingPostOptions):Promise<ApiV1EstatePublishActionsDeleteProgramUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/publish/actions/deleteProgram',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/超脑人脸库列表
- * @summary 超脑人脸库删除人脸
- * @url /api/v1/estate/device/faceDatabase/actions/delFaces
- * @method post
- * @description **功能描述**
-
-删除人脸库已经存在的人脸。
-
-注：不支持6000C
-
-**返回码**
-
-| 返回码 | 返回消息   | 描述                                     |
-| ------ | ---------- | ---------------------------------------- |
-| 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
-| 511181 | 人脸id错误 | 人脸不存在                               |
- */
-export function apiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost(options:ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostOptions):Promise<ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/device/faceDatabase/actions/delFaces',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/超脑人脸库列表
- * @summary 同步超脑人脸库
- * @url /api/v1/estate/device/faceDatabase/actions/syncFaceDatabase
- * @method get
- * @description **功能描述**
-
-将人脸库与设备人脸库同步。
-
-注：不支持6000C
-
-**返回码**
-
-| **返回码** | **返回消息**     | **描述**                                     |
-| ---------- | ---------------- | -------------------------------------------- |
-| 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况     |
-| 511179     | 人脸库不存在     | 人脸库id错误或者跨租户操作                   |
-| 511180     | 人脸库未绑定设备 | 同步人脸库之前，需先操作人脸库绑定设备和通道 |
- */
-export function apiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet(options:ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetOptions):Promise<ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 获取人员门禁设备信息
- * @url /api/v1/estate/entranceGuard/remoteControl/actions/deviceList
- * @method get
- * @description **功能描述**
-
-查询人员可操控的门禁设备列表。
-
-**返回码**
-
-| 返回码 | 返回消息 | 描述                                           |
-| ------ | -------- | ---------------------------------------------- |
-| 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况       |
-| 511025 | 参数异常 | 请求参数包含不合法信息（例如：平台不支持的值） |
- */
-export function apiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet(options:ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetOptions):Promise<ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/remoteControl/actions/deviceList',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 人脸信息删除
- * @url /api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued
- * @method post
- * @description **功能描述**
-
-删除门禁设备上人员的人脸信息。
-
-注：6000C场景，该接口不支持指定边缘子设备
-
-**返回码**
-
-| 返回码 | 返回消息                   | 描述                                     |
-| ------ | -------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
-| 511032 | 人员正在下发中，请稍后尝试 |                                          |
-| 511033 | 没有该设备权限             |                                          |
- */
-export function apiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostOptions):Promise<ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 人脸信息下发
- * @url /api/v1/estate/entranceGuard/permissions/actions/faceIssued
- * @method post
- * @description **功能描述**
-
-将人脸信息下发到门禁设备（若无有权限的设备则不下发）。
-
-下发结果将通过门禁权限下发状态订阅消息进行通知。
-
-图片要求：大小：200k以内；格式：jpg
-
-注：6000C场景，该接口不支持指定边缘子设备
-
-**接口约束**
-
-设置人员所属户室后，若需要调用该接口请延时5秒以上，否则可能出现部分设备人脸权限未下发。
-
-建议：在接口【新增人员】添加人脸url,【设置人员所属户室】时人脸权限会自动下发，不需要单独调用该接口。
-
-**返回码**
-
-| 返回码 | 返回消息                 | 描述                                           |
-| ------ | ------------------------ | ---------------------------------------------- |
-| 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况       |
-| 511025 | 参数异常                 | 请求参数包含不合法信息（例如：平台不支持的值） |
-| 511033 | 没有该设备权限           |                                                |
-| 511095 | 人脸URL不合法            |                                                |
-| 511100 | 人脸图片质量不合格       |                                                |
-| 511117 | 人脸评分校验失败         |                                                |
-| 511118 | 人脸特征点置信度校验失败 |                                                |
-| 511119 | 人脸眼间距校验失败       |                                                |
-| 511120 | 人脸俯仰角校验失败       |                                                |
-| 511121 | 人脸左右角校验失败       |                                                |
-| 511122 | 人脸可见性校验失败       |                                                |
-| 511123 | 人脸清晰度校验失败       |                                                |
- */
-export function apiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostOptions):Promise<ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/permissions/actions/faceIssued',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/超脑人脸库列表
- * @summary 超脑人脸库添加人脸
- * @url /api/v1/estate/device/faceDatabase/actions/addFace
- * @method post
- * @description **功能描述**
-
-人脸库中添加人脸。
-
-注：不支持6000C
-
-**返回码**
-
-| **返回码** | **返回消息**             | **描述**                                 |
-| ---------- | ------------------------ | ---------------------------------------- |
-| 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
-| 511179     | 人脸库不存在             | 人脸库id错误或者跨租户操作               |
-| 511095     | 人脸URL不合法            |                                          |
-| 511100     | 人脸图片质量不合格       |                                          |
-| 511117     | 人脸评分校验失败         |                                          |
-| 511118     | 人脸特征点置信度校验失败 |                                          |
-| 511119     | 人脸眼间距校验失败       |                                          |
-| 511120     | 人脸俯仰角校验失败       |                                          |
-| 511121     | 人脸左右角校验失败       |                                          |
-| 511122     | 人脸可见性校验失败       |                                          |
-| 511123     | 人脸清晰度校验失败       |                                          |
- */
-export function apiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost(options:ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostOptions):Promise<ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/device/faceDatabase/actions/addFace',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/超脑人脸库列表
- * @summary 超脑人脸库列表
- * @url /api/v1/estate/device/faceDatabase/actions/list
- * @method get
- * @description **功能描述**
-
-查询人脸库列表。
-
-注：不支持6000C
-
-**返回码**
-
-| **返回码** | **返回消息**     | **描述**                                 |
-| ---------- | ---------------- | ---------------------------------------- |
-| 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
-| 511144     | 超出最大分页限制 | pageSize最大值为100                      |
- */
-export function apiV1EstateDeviceFaceDatabaseActionsListUsingGet(options:ApiV1EstateDeviceFaceDatabaseActionsListUsingGetOptions):Promise<ApiV1EstateDeviceFaceDatabaseActionsListUsingGetResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/device/faceDatabase/actions/list',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 远程控门
- * @url /api/v1/estate/entranceGuard/remoteControl/actions/gateControl
- * @method post
- * @description **功能描述**
-
-通过手机APP进行远程控门。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                           |
-| ------ | -------------- | ---------------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况       |
-| 511025 | 参数异常       | 请求参数包含不合法信息（例如：平台不支持的值） |
-| 511033 | 没有该设备权限 |                                                |
-| 511035 | 获取信息失败   |                                                |
- */
-export function apiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost(options:ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostOptions):Promise<ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/remoteControl/actions/gateControl',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 人员权限删除
- * @url /api/v1/estate/entranceGuard/permissions/actions/authorityDelete
- * @method post
- * @description **功能描述**
-
-从指定设备上删除人员的门禁权限。
-
-注：6000C场景，该接口无法删除人房组件自动下发的人员权限
-
-**返回码**
-
-| 返回码 | 返回消息         | 描述                                                  |
-| ------ | ---------------- | ----------------------------------------------------- |
-| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况              |
-| 511059 | 租户信息不匹配   |                                                       |
-| 511030 | 社区中人员不存在 |                                                       |
-| 511148 | 未查到设备信息   | 设备不存在或设备不在该社区                            |
-| 511168 | 权限删除失败     | message描述可能为动态描述，返回的是设备的真实失败原因 |
- */
-export function apiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostOptions):Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/permissions/actions/authorityDelete',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 人员权限下发
- * @url /api/v1/estate/entranceGuard/permissions/actions/authorityIssued
- * @method post
- * @description **功能描述**
-
-将人员权限下发到指定设备（包括人脸、指纹、卡号）。
-
-注：6000C场景，不支持指定边缘子设备
-
-**返回码**
-
-| 返回码 | 返回消息         | 描述                                     |
-| ------ | ---------------- | ---------------------------------------- |
-| 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
-| 511030 | 社区中人员不存在 |                                          |
-| 511148 | 未查到设备信息   | 设备不存在或设备不在该社区               |
- */
-export function apiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostOptions):Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/permissions/actions/authorityIssued',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 我的二维码
- * @url /api/v1/estate/entranceGuard/permissions/actions/getQRcode
- * @method post
- * @description **功能描述**
-
-生成我的二维码信息。需要人员之前已经有卡号并且已经下发到设备，二维码信息有效期默认24小时，在同一设备上，可以刷4次。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511147 | 查询卡信息错误 |                                          |
- */
-export function apiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostOptions):Promise<ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/permissions/actions/getQRcode',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 动态密码
- * @url /api/v1/estate/entranceGuard/permissions/actions/dynamicCode
- * @method post
- * @description **功能描述**
-
-生成临时动态密码，在门禁设备上输入后用于开门。
-
-若下发失败将会通过订阅消息进行通知，消息类型为community_message_access_state，消息码为10024。
-
-**返回码**
-
-| 返回码 | 返回消息                           | 描述                                     |
-| ------ | ---------------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
-| 511000 | 社区不存在                         |                                          |
-| 511125 | 动态密码失效时间不能早于当前时间   |                                          |
-| 511126 | 动态密码失效时间不能早于生效时间   |                                          |
-| 511127 | 动态密码最大有效时间不能超过24小时 |                                          |
-| 511128 | 动态密码生成失败                   |                                          |
-| 511033 | 没有该设备权限                     |                                          |
-| 511059 | 租户信息不匹配                     | 不能为其他租户生成动态密码               |
-| 511081 | 查询人员信息失败                   |                                          |
-| 511136 | 动态密码失效时间不能等于生效时间   |                                          |
-| 511137 | 未查询到有权限的设备               |                                          |
-| 511138 | 设备列表参数格式错误               |                                          |
- */
-export function apiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostOptions):Promise<ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/permissions/actions/dynamicCode',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 呼梯
- * @url /api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl
- * @method post
- * @description **功能描述**
-
-门口机呼梯，通过门口机（门禁设备）进行远程呼梯。
-
-**返回码**
-
-| 返回码 | 返回消息     | 描述                                     |
-| ------ | ------------ | ---------------------------------------- |
-| 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
-| 511086 | 房间不存在   |                                          |
-| 511167 | 远程呼梯失败 |                                          |
- */
-export function apiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost(options:ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostOptions):Promise<ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/访客管理
- * @summary 访客登记（预约）
- * @url /api/v1/estate/visitors
- * @method post
- * @description **功能描述**
-
-社区访客预约登记。
-
-若访客权限在设备上下发失败，将通过访客门禁权限下发状态订阅消息进行通知。
-
-**返回码**
-
-| 返回码 | 返回消息                     | 描述                                     |
-| ------ | ---------------------------- | ---------------------------------------- |
-| 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-| 511015 | 手机格式错误                 |                                          |
-| 511033 | 没有该设备权限               |                                          |
-| 511036 | 日期校验失败                 | 日期格式不合法                           |
-| 511037 | 请选择您自己的户室           |                                          |
-| 511045 | 所选户室不存在               |                                          |
-| 511049 | 离开时间不能早于当前时间     |                                          |
-| 511050 | 离开时间不能早于来访时间     |                                          |
-| 511051 | 访客预约时长不能超过72小时   |                                          |
-| 511052 | 访客姓名需在2~10个字符间     |                                          |
-| 511058 | 预约人员不存在               |                                          |
-| 511059 | 租户信息不匹配               | 不能预约其他租户的房屋                   |
-| 511081 | 查询人员信息失败             |                                          |
-| 511138 | 设备列表参数格式错误         |                                          |
-| 511150 | 房屋和设备参数不能同时为空   |                                          |
-| 511151 | 不支持一次为多个小区预约访客 |                                          |
-
- */
-export function apiV1EstateVisitorsUsingPost(options:ApiV1EstateVisitorsUsingPostOptions):Promise<ApiV1EstateVisitorsUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/visitors',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/门禁管理
- * @summary 住户人员权限批量下发
- * @url /api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued
- * @method post
- * @description **功能描述**
-
-可按照人脸列表、社区、楼栋、单元的方式，将住户人员权限批量下发到指定设备（包括人脸、指纹、卡号）。
-
-**返回码**
-
-| 返回码 | 返回消息                               | 描述                                                 |
-| ------ | -------------------------------------- | ---------------------------------------------------- |
-| 510001 | 参数错误                               | 必填项为空、参数长度不符合等参数异常情况             |
-| 511000 | 社区不存在                             |                                                      |
-| 511005 | 楼栋不存在                             |                                                      |
-| 511006 | 单元不存在                             |                                                      |
-| 511059 | 租户信息不匹配                         |                                                      |
-| 511148 | 未查到设备信息                         |                                                      |
-| 511194 | 设备不属于当前社区                     |                                                      |
-| 511195 | 社区参数不匹配                         |                                                      |
-| 511196 | 人员列表不能为空                       | 当operationType=0时，personIds参数不能为空           |
-| 511197 | 设备列表不能为空                       |                                                      |
-| 511198 | 设备列表不能大于100                    |                                                      |
-| 511199 | 批量权限下发中，请勿重复操作           | 接口不能频繁调用，调用间隔不能小于10s                |
-| 511200 | 批量权限下发中，请下发完成后再进行下发 | 上次的批量下发任务仍未执行完成，需要执行完后再次操作 |
- */
-export function apiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostOptions):Promise<ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/消息通道
- * @summary 创建消费者
- * @url /api/v1/mq/consumer/group1
- * @method post
- * @description ## 功能描述
-
-1.该接口用于创建消费者ID，最多同时存在五个消费者ID。
-
-2.消费者如果5分钟未调用消费消息接口，则消费者ID将被删除。
-
-3.不可使用多个消费者ID同时消费消息
-
-
- */
-export function apiV1MqConsumerGroup1UsingPost(options:ApiV1MqConsumerGroup1UsingPostOptions):Promise<ApiV1MqConsumerGroup1UsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/mq/consumer/group1',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/访客管理
- * @summary 访客删除
- * @url /api/v1/estate/visitors/{reservationId}
- * @method delete
- * @description **功能描述**
-
-删除访客预约记录。
-
-**返回码**
-
-| 返回码 | 返回消息       | 描述                                     |
-| ------ | -------------- | ---------------------------------------- |
-| 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-| 511059 | 租户信息不匹配 | 不能删除其他租户的预约信息               |
- */
-export function apiV1EstateVisitorsReservationIdUsingDelete(options:ApiV1EstateVisitorsReservationIdUsingDeleteOptions):Promise<ApiV1EstateVisitorsReservationIdUsingDeleteResult> {
-  return request({
-    ...options,
-    url:'/api/v1/estate/visitors/{reservationId}',
-    method:'delete',
-  });
-}
-
-/**
- * @tag API列表/第三方跳转
- * @summary 第三方跳转登录云眸普教对接规范
- * @url /
- * @method get
- * @description ## 功能描述
-
-本接口提供第三方跳转登录云眸普教对接规范及示例。
-
-本节内容需结合基础服务-用户管理使用。
-
- signature生成规则
-
-第一步，设所有发送的数据为集合M，将集合M内非signature外的非空参数(值为空的参数不参与签名)按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串str1。
-
-第二步，在str1最后拼接上登陆码authCode(用户管理-获取登陆码接口获取接口返回值)得到str2字符串，并对str2进行HmacSHA256运算，再将得到的字符串所有字符转换为大写，得到值为signature。
-
-## 实现示例
-
-|                | 参数      | 例子                             |
-| -------------- | --------- | -------------------------------- |
-| 平台提供的参数 | userId    | 499e861ec1254e8ca399dfb9e837a988 |
-| 平台提供的参数 | authCode  | 1d73e6a6a5bb4e90aa2e8ca52a2515c4 |
-| 业务参数       | ts        | 1616985134200                    |
-| 需要生成的参数 | signature |                                  |
-
-```
-         step1: 排序后拼接的字符串:ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988
-         step2: 加上登陆码后的字符串:  ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988&authCode=1d73e6a6a5bb4e90aa2e8ca52a2515c4
-         step3: signature=HmacSHA256(step2的字符串,authCode)后转大写,最终生成的signature值为:18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
-         step4:请求地址:https://edu.hik-cloud.com/?userId=499e861ec1254e8ca399dfb9e837a988&ts=1616985134200&signature=18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
-         
-         注意：登陆码有效期为1小时，且同一登陆码生成的跳转url，只能成功跳转一次；跳转链接的有效期是30分钟；跳转登录之后无操作30分钟后，认证信息失效。
-        
-```
- */
-export function UsingGet(options:UsingGetOptions):Promise<UsingGetResult> {
-  return request({
-    ...options,
-    url:'/',
-    method:'get',
-  });
-}
-
-/**
- * @tag API列表/消息通道
- * @summary 消费消息
- * @url /api/v1/mq/consumer/messages
- * @method post
- * @description ## 功能描述
-
-1.该接口用于拉取消息，消费消息请在单线程中进行消费，禁止使用多线程进行消费。
-
-2.消费者创建成功之后，循环调用该接口拉取消息，无需每次拉取消息都创建消费者。
-
-3.消费者首次拉取消息时需要与消息通道建立连接，此次调用实际拉到消息列表为空，再次调用即可拉取到消息，30秒内必须再次调用拉取消息接口，否则将断开与消息通道的连接。因此拉取间隔需要在30秒以内，否则每次拉到的消息是空的
-
-4.每次拉取到的消息大小上限为1M（500条左右）
-
-5.若采用手动提交偏移量消费模式，则正确的消费方式是，单线程内拉取一次消息，判断消息列表不为空，则提交一次偏移量，请注意：提交偏移量和消费消息必须使用同一consumerId。
-
-
- */
-export function apiV1MqConsumerMessagesUsingPost(options:ApiV1MqConsumerMessagesUsingPostOptions):Promise<ApiV1MqConsumerMessagesUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/mq/consumer/messages',
-    method:'post',
-  });
-}
-
-/**
- * @tag API列表/消息通道
- * @summary 提交偏移量
- * @url /api/v1/mq/consumer/offsets
- * @method post
- * @description ## 功能描述
-
-用于手动提交偏移量，提交上次消费到的消息的偏移量。
-
-消费消息和提交偏移量必须使用同一个consumerId，若不使用同一个consumerId进行提交，则会提交失败，消息可能会被重复消费。
-
-
- */
-export function apiV1MqConsumerOffsetsUsingPost(options:ApiV1MqConsumerOffsetsUsingPostOptions):Promise<ApiV1MqConsumerOffsetsUsingPostResult> {
-  return request({
-    ...options,
-    url:'/api/v1/mq/consumer/offsets',
-    method:'post',
-  });
-}
