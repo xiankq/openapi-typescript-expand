@@ -13,12 +13,19 @@ export const resolveOpenapi = async (source: any): Promise<OpenAPI3> => {
   if (typeof source === 'string') {
     eval(`data=${source}`);
   } else {
-    data = source;
+    data = repair(source);
   }
-  data = repair(data);
+
   if (data.swagger) {
-    const obj = await convert(data, {});
-    data = obj.openapi;
+    try {
+      const { openapi } = await convert(data, {
+        lint: true,
+        warnOnly: true,
+      });
+      data = openapi;
+    } catch (error: any) {
+      data = error?.options?.openapi;
+    }
   }
   const openapi = data as OpenAPI3;
   return openapi;
