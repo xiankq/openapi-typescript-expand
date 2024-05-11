@@ -39,7 +39,7 @@
     "test": "tsx demo/index",
     "build": "unbuild",
     "bumpp": "bumpp -r",
-    "publish": "pnpm publish -r",
+    "publish": "pnpm publish",
     "taze": "taze -w -r major minor patch"
   },
   "dependencies": {
