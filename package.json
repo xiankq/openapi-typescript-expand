@@ -41,7 +41,7 @@
     "lint": "eslint . --fix",
     "taze": "taze -w -r major minor patch",
     "============[CI]==========": "",
-    "prepublish": "tsx ./internals/build",
+    "prepublish": "unbuild",
     "publish:ci": "pnpm publish -r --no-git-checks --access public"
   },
   "dependencies": {
