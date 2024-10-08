@@ -95,14 +95,14 @@ function repair(schema: any) {
 
 export type ResolveObjectOrRefReturn<T> =
   | {
-    isRef: true
-    object: T
-    origin: ReferenceObject
+    isRef: true;
+    object: T;
+    origin: ReferenceObject;
   }
   | {
-    isRef: false
-    object: T
-    origin: T
+    isRef: false;
+    object: T;
+    origin: T;
   };
 
 export function resolveObjectOrRef<T>(

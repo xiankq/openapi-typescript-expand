@@ -23,17 +23,17 @@ export interface OpenapiCodegenOptions {
   /**
    * 生成代码的路径文件夹
    */
-  output: string
+  output: string;
 
   /**
    * 请求函数名称
    */
-  requestName: string
+  requestName: string;
 
   /**
    * 文件头部添加的字符串，可在此处填写如import之类的代码
    */
-  headerCode?: string
+  headerCode?: string;
 }
 
 export type HttpMethod = 'get' | 'put' | 'post' | 'delete' | 'options' | 'head' | 'patch' | 'trace';
