@@ -1,3 +1,4 @@
+
 /* eslint-disable eslint-comments/no-unlimited-disable */
 /* eslint-disable */
 /* prettier-ignore */
@@ -6,6 +7,8 @@
 // Power by openapi-typescript
 
 import request from './request';
+
+
 
 /**
  * @tag API列表/社区管理
@@ -26,6 +29,7 @@ import request from './request';
 | 511079 | 社区已添加设备，不能删除   |                                          |
 | 511080 | 社区已添加停车场，不能删除 |                                          |
  */
+
 export module ApiV1EstateSystemCommunitiesCommunityIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/communities/{communityId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -37,7 +41,7 @@ export module ApiV1EstateSystemCommunitiesCommunityIdUsingDelete {
     data: Body;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -59,12 +63,11 @@ export module ApiV1EstateSystemCommunitiesCommunityIdUsingDelete {
 | 511079 | 社区已添加设备，不能删除   |                                          |
 | 511080 | 社区已添加停车场，不能删除 |                                          |
  */
-export function apiV1EstateSystemCommunitiesCommunityIdUsingDelete(
-  options: ApiV1EstateSystemCommunitiesCommunityIdUsingDelete.Options,
-): Promise<ApiV1EstateSystemCommunitiesCommunityIdUsingDelete.Result> {
+
+export function apiV1EstateSystemCommunitiesCommunityIdUsingDelete(options:ApiV1EstateSystemCommunitiesCommunityIdUsingDelete.Options):Promise<ApiV1EstateSystemCommunitiesCommunityIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/system/communities/{communityId}',
-    method: 'delete',
+    url:'/api/v1/estate/system/communities/{communityId}',
+    method:'delete',
     ...options,
   });
 }
@@ -81,7 +84,7 @@ export function apiV1EstateSystemCommunitiesCommunityIdUsingDelete(
          access_token的有效期为604800秒（7天），有效期内重复获取返回相同结果，过期后获取会返回新的access_token。
          开发者需要缓存access_token，用于后续接口的调用。当access_token失效或过期时，接口会返回http状态码401，需要重新获取access_token。
          不能频繁调用获取access_token接口，否则会受到接口调用频率拦截。
-
+        
 ```
 
 ## 准备工作
@@ -98,17 +101,17 @@ export function apiV1EstateSystemCommunitiesCommunityIdUsingDelete(
 注：在使用postman调试时，注意尽量不要使用浏览器插件版本的postman，使用客户端版本的。因为插件版本的默认会使用浏览器中的cookie和缓存，可能在调用时会出现问题而难以排查。
 ![img](https://pic.hik-cloud.com/opencustom/apidoc/pictures/d8d60985e34a4e40857a98731a3dc85c.jpg)
  */
+
 export module OauthTokenUsingPost {
   export type Operation = paths['/oauth/token']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
-  export type Body =
-    Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -123,7 +126,7 @@ export module OauthTokenUsingPost {
          access_token的有效期为604800秒（7天），有效期内重复获取返回相同结果，过期后获取会返回新的access_token。
          开发者需要缓存access_token，用于后续接口的调用。当access_token失效或过期时，接口会返回http状态码401，需要重新获取access_token。
          不能频繁调用获取access_token接口，否则会受到接口调用频率拦截。
-
+        
 ```
 
 ## 准备工作
@@ -140,12 +143,11 @@ export module OauthTokenUsingPost {
 注：在使用postman调试时，注意尽量不要使用浏览器插件版本的postman，使用客户端版本的。因为插件版本的默认会使用浏览器中的cookie和缓存，可能在调用时会出现问题而难以排查。
 ![img](https://pic.hik-cloud.com/opencustom/apidoc/pictures/d8d60985e34a4e40857a98731a3dc85c.jpg)
  */
-export function oauthTokenUsingPost(
-  options: OauthTokenUsingPost.Options,
-): Promise<OauthTokenUsingPost.Result> {
+
+export function oauthTokenUsingPost(options:OauthTokenUsingPost.Options):Promise<OauthTokenUsingPost.Result> {
   return request({
-    url: '/oauth/token',
-    method: 'post',
+    url:'/oauth/token',
+    method:'post',
     ...options,
   });
 }
@@ -173,9 +175,9 @@ export function oauthTokenUsingPost(
 | 511093 | 省市区县代码错误                    | 省市区县代码包含非法字符                 |
 | 511094 | 经纬度坐标不合法                    |                                          |
  */
+
 export module ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/system/communities/actions/updateCommunity']['post'];
+  export type Operation = paths['/api/v1/estate/system/communities/actions/updateCommunity']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -183,7 +185,7 @@ export module ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -209,12 +211,11 @@ export module ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost {
 | 511093 | 省市区县代码错误                    | 省市区县代码包含非法字符                 |
 | 511094 | 经纬度坐标不合法                    |                                          |
  */
-export function apiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost(
-  options: ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost.Options,
-): Promise<ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost.Result> {
+
+export function apiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost(options:ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost.Options):Promise<ApiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/communities/actions/updateCommunity',
-    method: 'post',
+    url:'/api/v1/estate/system/communities/actions/updateCommunity',
+    method:'post',
     ...options,
   });
 }
@@ -241,6 +242,7 @@ export function apiV1EstateSystemCommunitiesActionsUpdateCommunityUsingPost(
 | 511093 | 省市区县代码错误                         | 省市区县代码包含非法字符                             |
 | 511094 | 经纬度坐标不合法                         |                                                      |
  */
+
 export module ApiV1EstateSystemCommunitiesUsingPost {
   export type Operation = paths['/api/v1/estate/system/communities']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -250,7 +252,7 @@ export module ApiV1EstateSystemCommunitiesUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -275,12 +277,11 @@ export module ApiV1EstateSystemCommunitiesUsingPost {
 | 511093 | 省市区县代码错误                         | 省市区县代码包含非法字符                             |
 | 511094 | 经纬度坐标不合法                         |                                                      |
  */
-export function apiV1EstateSystemCommunitiesUsingPost(
-  options: ApiV1EstateSystemCommunitiesUsingPost.Options,
-): Promise<ApiV1EstateSystemCommunitiesUsingPost.Result> {
+
+export function apiV1EstateSystemCommunitiesUsingPost(options:ApiV1EstateSystemCommunitiesUsingPost.Options):Promise<ApiV1EstateSystemCommunitiesUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/communities',
-    method: 'post',
+    url:'/api/v1/estate/system/communities',
+    method:'post',
     ...options,
   });
 }
@@ -301,6 +302,7 @@ export function apiV1EstateSystemCommunitiesUsingPost(
 | 200    | 成功     |                                          |
 | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
  */
+
 export module ApiV1EstateSystemCommunitiesActionsListUsingGet {
   export type Operation = paths['/api/v1/estate/system/communities/actions/list']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -310,7 +312,7 @@ export module ApiV1EstateSystemCommunitiesActionsListUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -329,12 +331,11 @@ export module ApiV1EstateSystemCommunitiesActionsListUsingGet {
 | 200    | 成功     |                                          |
 | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
  */
-export function apiV1EstateSystemCommunitiesActionsListUsingGet(
-  options: ApiV1EstateSystemCommunitiesActionsListUsingGet.Options,
-): Promise<ApiV1EstateSystemCommunitiesActionsListUsingGet.Result> {
+
+export function apiV1EstateSystemCommunitiesActionsListUsingGet(options:ApiV1EstateSystemCommunitiesActionsListUsingGet.Options):Promise<ApiV1EstateSystemCommunitiesActionsListUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/communities/actions/list',
-    method: 'get',
+    url:'/api/v1/estate/system/communities/actions/list',
+    method:'get',
     ...options,
   });
 }
@@ -358,6 +359,7 @@ export function apiV1EstateSystemCommunitiesActionsListUsingGet(
 | 511004 | 楼栋编号已经存在             |                                          |
 | 511059 | 租户信息不匹配               | 不能在其他租户的社区下新增房屋           |
  */
+
 export module ApiV1EstateSystemBuildingsUsingPost {
   export type Operation = paths['/api/v1/estate/system/buildings']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -367,7 +369,7 @@ export module ApiV1EstateSystemBuildingsUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -389,12 +391,11 @@ export module ApiV1EstateSystemBuildingsUsingPost {
 | 511004 | 楼栋编号已经存在             |                                          |
 | 511059 | 租户信息不匹配               | 不能在其他租户的社区下新增房屋           |
  */
-export function apiV1EstateSystemBuildingsUsingPost(
-  options: ApiV1EstateSystemBuildingsUsingPost.Options,
-): Promise<ApiV1EstateSystemBuildingsUsingPost.Result> {
+
+export function apiV1EstateSystemBuildingsUsingPost(options:ApiV1EstateSystemBuildingsUsingPost.Options):Promise<ApiV1EstateSystemBuildingsUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/buildings',
-    method: 'post',
+    url:'/api/v1/estate/system/buildings',
+    method:'post',
     ...options,
   });
 }
@@ -418,6 +419,7 @@ export function apiV1EstateSystemBuildingsUsingPost(
 | 511087 | 房屋已有人入住,不能删除    |                                          |
 | 511090 | 该单元下有设备无法对其操作 |                                          |
  */
+
 export module ApiV1EstateSystemUnitsUnitIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/units/{unitId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -427,7 +429,7 @@ export module ApiV1EstateSystemUnitsUnitIdUsingDelete {
     [key: string]: unknown;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -449,12 +451,11 @@ export module ApiV1EstateSystemUnitsUnitIdUsingDelete {
 | 511087 | 房屋已有人入住,不能删除    |                                          |
 | 511090 | 该单元下有设备无法对其操作 |                                          |
  */
-export function apiV1EstateSystemUnitsUnitIdUsingDelete(
-  options: ApiV1EstateSystemUnitsUnitIdUsingDelete.Options,
-): Promise<ApiV1EstateSystemUnitsUnitIdUsingDelete.Result> {
+
+export function apiV1EstateSystemUnitsUnitIdUsingDelete(options:ApiV1EstateSystemUnitsUnitIdUsingDelete.Options):Promise<ApiV1EstateSystemUnitsUnitIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/system/units/{unitId}',
-    method: 'delete',
+    url:'/api/v1/estate/system/units/{unitId}',
+    method:'delete',
     ...options,
   });
 }
@@ -478,6 +479,7 @@ export function apiV1EstateSystemUnitsUnitIdUsingDelete(
 | 511008 | 单元编号已经存在             | 单元编号重复                             |
 | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
  */
+
 export module ApiV1EstateSystemBuildingsBuildingIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/buildings/{buildingId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -489,7 +491,7 @@ export module ApiV1EstateSystemBuildingsBuildingIdUsingDelete {
     data: Body;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -511,12 +513,11 @@ export module ApiV1EstateSystemBuildingsBuildingIdUsingDelete {
 | 511008 | 单元编号已经存在             | 单元编号重复                             |
 | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
  */
-export function apiV1EstateSystemBuildingsBuildingIdUsingDelete(
-  options: ApiV1EstateSystemBuildingsBuildingIdUsingDelete.Options,
-): Promise<ApiV1EstateSystemBuildingsBuildingIdUsingDelete.Result> {
+
+export function apiV1EstateSystemBuildingsBuildingIdUsingDelete(options:ApiV1EstateSystemBuildingsBuildingIdUsingDelete.Options):Promise<ApiV1EstateSystemBuildingsBuildingIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/system/buildings/{buildingId}',
-    method: 'delete',
+    url:'/api/v1/estate/system/buildings/{buildingId}',
+    method:'delete',
     ...options,
   });
 }
@@ -541,6 +542,7 @@ export function apiV1EstateSystemBuildingsBuildingIdUsingDelete(
 | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
 | 511098 | 超出单元数量                 | 超出楼栋单元数量的限制                   |
  */
+
 export module ApiV1EstateSystemUnitsUsingPost {
   export type Operation = paths['/api/v1/estate/system/units']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -550,7 +552,7 @@ export module ApiV1EstateSystemUnitsUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -573,12 +575,11 @@ export module ApiV1EstateSystemUnitsUsingPost {
 | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
 | 511098 | 超出单元数量                 | 超出楼栋单元数量的限制                   |
  */
-export function apiV1EstateSystemUnitsUsingPost(
-  options: ApiV1EstateSystemUnitsUsingPost.Options,
-): Promise<ApiV1EstateSystemUnitsUsingPost.Result> {
+
+export function apiV1EstateSystemUnitsUsingPost(options:ApiV1EstateSystemUnitsUsingPost.Options):Promise<ApiV1EstateSystemUnitsUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/units',
-    method: 'post',
+    url:'/api/v1/estate/system/units',
+    method:'post',
     ...options,
   });
 }
@@ -605,6 +606,7 @@ export function apiV1EstateSystemUnitsUsingPost(
 | 511124 | 小区户室数量超出限制 |                                          |
 | 511152 | 单元下户室名称已存在 | 单元下户室名称需唯一                     |
  */
+
 export module ApiV1EstateSystemRoomsUsingPost {
   export type Operation = paths['/api/v1/estate/system/rooms']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -614,7 +616,7 @@ export module ApiV1EstateSystemRoomsUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -639,12 +641,11 @@ export module ApiV1EstateSystemRoomsUsingPost {
 | 511124 | 小区户室数量超出限制 |                                          |
 | 511152 | 单元下户室名称已存在 | 单元下户室名称需唯一                     |
  */
-export function apiV1EstateSystemRoomsUsingPost(
-  options: ApiV1EstateSystemRoomsUsingPost.Options,
-): Promise<ApiV1EstateSystemRoomsUsingPost.Result> {
+
+export function apiV1EstateSystemRoomsUsingPost(options:ApiV1EstateSystemRoomsUsingPost.Options):Promise<ApiV1EstateSystemRoomsUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/rooms',
-    method: 'post',
+    url:'/api/v1/estate/system/rooms',
+    method:'post',
     ...options,
   });
 }
@@ -665,6 +666,7 @@ export function apiV1EstateSystemRoomsUsingPost(
 | 200    | 成功     |                                          |
 | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
  */
+
 export module ApiV1EstateSystemRoomsActionsInfoUsingGet {
   export type Operation = paths['/api/v1/estate/system/rooms/actions/info']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -674,7 +676,7 @@ export module ApiV1EstateSystemRoomsActionsInfoUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -693,12 +695,11 @@ export module ApiV1EstateSystemRoomsActionsInfoUsingGet {
 | 200    | 成功     |                                          |
 | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
  */
-export function apiV1EstateSystemRoomsActionsInfoUsingGet(
-  options: ApiV1EstateSystemRoomsActionsInfoUsingGet.Options,
-): Promise<ApiV1EstateSystemRoomsActionsInfoUsingGet.Result> {
+
+export function apiV1EstateSystemRoomsActionsInfoUsingGet(options:ApiV1EstateSystemRoomsActionsInfoUsingGet.Options):Promise<ApiV1EstateSystemRoomsActionsInfoUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/rooms/actions/info',
-    method: 'get',
+    url:'/api/v1/estate/system/rooms/actions/info',
+    method:'get',
     ...options,
   });
 }
@@ -721,6 +722,7 @@ export function apiV1EstateSystemRoomsActionsInfoUsingGet(
 | 511086 | 房间不存在              |                                          |
 | 511087 | 房屋已有人入住,不能删除 |                                          |
  */
+
 export module ApiV1EstateSystemRoomsRoomIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/rooms/{roomId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -730,7 +732,7 @@ export module ApiV1EstateSystemRoomsRoomIdUsingDelete {
     [key: string]: unknown;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -751,12 +753,11 @@ export module ApiV1EstateSystemRoomsRoomIdUsingDelete {
 | 511086 | 房间不存在              |                                          |
 | 511087 | 房屋已有人入住,不能删除 |                                          |
  */
-export function apiV1EstateSystemRoomsRoomIdUsingDelete(
-  options: ApiV1EstateSystemRoomsRoomIdUsingDelete.Options,
-): Promise<ApiV1EstateSystemRoomsRoomIdUsingDelete.Result> {
+
+export function apiV1EstateSystemRoomsRoomIdUsingDelete(options:ApiV1EstateSystemRoomsRoomIdUsingDelete.Options):Promise<ApiV1EstateSystemRoomsRoomIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/system/rooms/{roomId}',
-    method: 'delete',
+    url:'/api/v1/estate/system/rooms/{roomId}',
+    method:'delete',
     ...options,
   });
 }
@@ -777,6 +778,7 @@ export function apiV1EstateSystemRoomsRoomIdUsingDelete(
 | 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
 | 511046 | 该人员不存在 |                                          |
  */
+
 export module ApiV1EstateSystemPersonPersonIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/person/{personId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -788,7 +790,7 @@ export module ApiV1EstateSystemPersonPersonIdUsingDelete {
     data: Body;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -807,12 +809,11 @@ export module ApiV1EstateSystemPersonPersonIdUsingDelete {
 | 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
 | 511046 | 该人员不存在 |                                          |
  */
-export function apiV1EstateSystemPersonPersonIdUsingDelete(
-  options: ApiV1EstateSystemPersonPersonIdUsingDelete.Options,
-): Promise<ApiV1EstateSystemPersonPersonIdUsingDelete.Result> {
+
+export function apiV1EstateSystemPersonPersonIdUsingDelete(options:ApiV1EstateSystemPersonPersonIdUsingDelete.Options):Promise<ApiV1EstateSystemPersonPersonIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/system/person/{personId}',
-    method: 'delete',
+    url:'/api/v1/estate/system/person/{personId}',
+    method:'delete',
     ...options,
   });
 }
@@ -834,6 +835,7 @@ export function apiV1EstateSystemPersonPersonIdUsingDelete(
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
+
 export module ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet {
   export type Operation = paths['/api/v1/estate/system/rooms/actions/communityRoomList']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -843,7 +845,7 @@ export module ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -863,12 +865,11 @@ export module ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet {
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
-export function apiV1EstateSystemRoomsActionsCommunityRoomListUsingGet(
-  options: ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet.Options,
-): Promise<ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet.Result> {
+
+export function apiV1EstateSystemRoomsActionsCommunityRoomListUsingGet(options:ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet.Options):Promise<ApiV1EstateSystemRoomsActionsCommunityRoomListUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/rooms/actions/communityRoomList',
-    method: 'get',
+    url:'/api/v1/estate/system/rooms/actions/communityRoomList',
+    method:'get',
     ...options,
   });
 }
@@ -890,6 +891,7 @@ export function apiV1EstateSystemRoomsActionsCommunityRoomListUsingGet(
 | 511059 | 租户信息不匹配 | 不能对其他租户的物业人员进行操作         |
 | 511086 | 房间不存在     |                                          |
  */
+
 export module ApiV1EstateSystemRoomsActionsInfoByIdUsingGet {
   export type Operation = paths['/api/v1/estate/system/rooms/actions/infoById']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -899,7 +901,7 @@ export module ApiV1EstateSystemRoomsActionsInfoByIdUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -919,12 +921,11 @@ export module ApiV1EstateSystemRoomsActionsInfoByIdUsingGet {
 | 511059 | 租户信息不匹配 | 不能对其他租户的物业人员进行操作         |
 | 511086 | 房间不存在     |                                          |
  */
-export function apiV1EstateSystemRoomsActionsInfoByIdUsingGet(
-  options: ApiV1EstateSystemRoomsActionsInfoByIdUsingGet.Options,
-): Promise<ApiV1EstateSystemRoomsActionsInfoByIdUsingGet.Result> {
+
+export function apiV1EstateSystemRoomsActionsInfoByIdUsingGet(options:ApiV1EstateSystemRoomsActionsInfoByIdUsingGet.Options):Promise<ApiV1EstateSystemRoomsActionsInfoByIdUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/rooms/actions/infoById',
-    method: 'get',
+    url:'/api/v1/estate/system/rooms/actions/infoById',
+    method:'get',
     ...options,
   });
 }
@@ -946,9 +947,9 @@ export function apiV1EstateSystemRoomsActionsInfoByIdUsingGet(
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
+
 export module ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet {
-  export type Operation =
-    paths['/api/v1/estate/system/buildings/actions/communityBuildingList']['get'];
+  export type Operation = paths['/api/v1/estate/system/buildings/actions/communityBuildingList']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -956,7 +957,7 @@ export module ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -976,12 +977,11 @@ export module ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet {
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
-export function apiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet(
-  options: ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet.Options,
-): Promise<ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet.Result> {
+
+export function apiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet(options:ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet.Options):Promise<ApiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/buildings/actions/communityBuildingList',
-    method: 'get',
+    url:'/api/v1/estate/system/buildings/actions/communityBuildingList',
+    method:'get',
     ...options,
   });
 }
@@ -999,6 +999,7 @@ export function apiV1EstateSystemBuildingsActionsCommunityBuildingListUsingGet(
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
+
 export module ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost {
   export type Operation = paths['/api/v1/estate/system/rooms/actions/unitRoomList']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1008,7 +1009,7 @@ export module ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1024,12 +1025,11 @@ export module ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost {
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
-export function apiV1EstateSystemRoomsActionsUnitRoomListUsingPost(
-  options: ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost.Options,
-): Promise<ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost.Result> {
+
+export function apiV1EstateSystemRoomsActionsUnitRoomListUsingPost(options:ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost.Options):Promise<ApiV1EstateSystemRoomsActionsUnitRoomListUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/rooms/actions/unitRoomList',
-    method: 'post',
+    url:'/api/v1/estate/system/rooms/actions/unitRoomList',
+    method:'post',
     ...options,
   });
 }
@@ -1051,6 +1051,7 @@ export function apiV1EstateSystemRoomsActionsUnitRoomListUsingPost(
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
+
 export module ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost {
   export type Operation = paths['/api/v1/estate/system/units/actions/buildingUnitList']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1060,7 +1061,7 @@ export module ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1080,12 +1081,11 @@ export module ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost {
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
-export function apiV1EstateSystemUnitsActionsBuildingUnitListUsingPost(
-  options: ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost.Options,
-): Promise<ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost.Result> {
+
+export function apiV1EstateSystemUnitsActionsBuildingUnitListUsingPost(options:ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost.Options):Promise<ApiV1EstateSystemUnitsActionsBuildingUnitListUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/units/actions/buildingUnitList',
-    method: 'post',
+    url:'/api/v1/estate/system/units/actions/buildingUnitList',
+    method:'post',
     ...options,
   });
 }
@@ -1150,6 +1150,7 @@ export function apiV1EstateSystemUnitsActionsBuildingUnitListUsingPost(
 | 511104 | 住户只能有三张卡                                             |                                                              |      |
 | 511106 | 卡号已被使用                                                 |                                                              |      |
  */
+
 export module ApiV1EstateSystemPersonUsingPost {
   export type Operation = paths['/api/v1/estate/system/person']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1159,7 +1160,7 @@ export module ApiV1EstateSystemPersonUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1222,12 +1223,11 @@ export module ApiV1EstateSystemPersonUsingPost {
 | 511104 | 住户只能有三张卡                                             |                                                              |      |
 | 511106 | 卡号已被使用                                                 |                                                              |      |
  */
-export function apiV1EstateSystemPersonUsingPost(
-  options: ApiV1EstateSystemPersonUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonUsingPost.Result> {
+
+export function apiV1EstateSystemPersonUsingPost(options:ApiV1EstateSystemPersonUsingPost.Options):Promise<ApiV1EstateSystemPersonUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person',
-    method: 'post',
+    url:'/api/v1/estate/system/person',
+    method:'post',
     ...options,
   });
 }
@@ -1251,9 +1251,9 @@ export function apiV1EstateSystemPersonUsingPost(
 | 511022 | 住户不存在     |                                          |
 | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
  */
+
 export module ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/system/person/actions/deleteCommunityRelation']['post'];
+  export type Operation = paths['/api/v1/estate/system/person/actions/deleteCommunityRelation']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -1261,7 +1261,7 @@ export module ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1283,12 +1283,11 @@ export module ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost {
 | 511022 | 住户不存在     |                                          |
 | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
  */
-export function apiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost(
-  options: ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost(options:ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/deleteCommunityRelation',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/deleteCommunityRelation',
+    method:'post',
     ...options,
   });
 }
@@ -1312,9 +1311,9 @@ export function apiV1EstateSystemPersonActionsDeleteCommunityRelationUsingPost(
 | 511046 | 该人员不存在   |                                          |
 | 511059 | 租户信息不匹配 | 不能关联其他租户的社区                   |
  */
+
 export module ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/system/person/actions/addCommunityRelation']['post'];
+  export type Operation = paths['/api/v1/estate/system/person/actions/addCommunityRelation']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -1322,7 +1321,7 @@ export module ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1344,12 +1343,11 @@ export module ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost {
 | 511046 | 该人员不存在   |                                          |
 | 511059 | 租户信息不匹配 | 不能关联其他租户的社区                   |
  */
-export function apiV1EstateSystemPersonActionsAddCommunityRelationUsingPost(
-  options: ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsAddCommunityRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsAddCommunityRelationUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/addCommunityRelation',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/addCommunityRelation',
+    method:'post',
     ...options,
   });
 }
@@ -1368,17 +1366,18 @@ export function apiV1EstateSystemPersonActionsAddCommunityRelationUsingPost(
 返回码
 返回码 	返回消息 	描述
 510001 	参数错误 	必填项为空、参数长度不符合等参数异常情况
-511018 	身份类型为租客时，离开时间不能为空
-511022 	住户不存在
-511026 	该户室已经关联业主
-511028 	该人员已经入住xxx户室
-511029 	户室信息错误
+511018 	身份类型为租客时，离开时间不能为空 	
+511022 	住户不存在 	
+511026 	该户室已经关联业主 	
+511028 	该人员已经入住xxx户室 	
+511029 	户室信息错误 	
 511059 	租户信息不匹配 	不能关联其他租户的房屋
-511099 	身份类型为租客时，离开时间必须大于入住时间
-511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核
-511165 	身份类型错误
-511189 	离开时间必须大于入住时间
+511099 	身份类型为租客时，离开时间必须大于入住时间 	
+511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 	
+511165 	身份类型错误 	
+511189 	离开时间必须大于入住时间 	
  */
+
 export module ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost {
   export type Operation = paths['/api/v1/estate/system/person/actions/addRoomRelation']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1388,7 +1387,7 @@ export module ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1405,23 +1404,22 @@ export module ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost {
 返回码
 返回码 	返回消息 	描述
 510001 	参数错误 	必填项为空、参数长度不符合等参数异常情况
-511018 	身份类型为租客时，离开时间不能为空
-511022 	住户不存在
-511026 	该户室已经关联业主
-511028 	该人员已经入住xxx户室
-511029 	户室信息错误
+511018 	身份类型为租客时，离开时间不能为空 	
+511022 	住户不存在 	
+511026 	该户室已经关联业主 	
+511028 	该人员已经入住xxx户室 	
+511029 	户室信息错误 	
 511059 	租户信息不匹配 	不能关联其他租户的房屋
-511099 	身份类型为租客时，离开时间必须大于入住时间
-511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核
-511165 	身份类型错误
-511189 	离开时间必须大于入住时间
+511099 	身份类型为租客时，离开时间必须大于入住时间 	
+511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 	
+511165 	身份类型错误 	
+511189 	离开时间必须大于入住时间 	
  */
-export function apiV1EstateSystemPersonActionsAddRoomRelationUsingPost(
-  options: ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsAddRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsAddRoomRelationUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/addRoomRelation',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/addRoomRelation',
+    method:'post',
     ...options,
   });
 }
@@ -1443,6 +1441,7 @@ export function apiV1EstateSystemPersonActionsAddRoomRelationUsingPost(
 | 511029 | 户室信息错误   |                                          |
 | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
  */
+
 export module ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost {
   export type Operation = paths['/api/v1/estate/system/person/actions/deleteRoomRelation']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1452,7 +1451,7 @@ export module ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1472,12 +1471,11 @@ export module ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost {
 | 511029 | 户室信息错误   |                                          |
 | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
  */
-export function apiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost(
-  options: ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/deleteRoomRelation',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/deleteRoomRelation',
+    method:'post',
     ...options,
   });
 }
@@ -1515,6 +1513,7 @@ export function apiV1EstateSystemPersonActionsDeleteRoomRelationUsingPost(
 | 511122 | 人脸可见性校验失败       |                                                              |      |
 | 511123 | 人脸清晰度校验失败       |                                                              |      |
  */
+
 export module ApiV1EstateSystemPersonActionsUpdatePersonUsingPost {
   export type Operation = paths['/api/v1/estate/system/person/actions/updatePerson']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1524,7 +1523,7 @@ export module ApiV1EstateSystemPersonActionsUpdatePersonUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1560,12 +1559,11 @@ export module ApiV1EstateSystemPersonActionsUpdatePersonUsingPost {
 | 511122 | 人脸可见性校验失败       |                                                              |      |
 | 511123 | 人脸清晰度校验失败       |                                                              |      |
  */
-export function apiV1EstateSystemPersonActionsUpdatePersonUsingPost(
-  options: ApiV1EstateSystemPersonActionsUpdatePersonUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsUpdatePersonUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsUpdatePersonUsingPost(options:ApiV1EstateSystemPersonActionsUpdatePersonUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsUpdatePersonUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/updatePerson',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/updatePerson',
+    method:'post',
     ...options,
   });
 }
@@ -1594,6 +1592,7 @@ export function apiV1EstateSystemPersonActionsUpdatePersonUsingPost(
 | 511153 | 当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 |                                          |
 | 511189 | 离开时间必须大于入住时间                                     |                                          |
  */
+
 export module ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost {
   export type Operation = paths['/api/v1/estate/system/person/actions/setRoomRelation']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1603,7 +1602,7 @@ export module ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1630,12 +1629,11 @@ export module ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost {
 | 511153 | 当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 |                                          |
 | 511189 | 离开时间必须大于入住时间                                     |                                          |
  */
-export function apiV1EstateSystemPersonActionsSetRoomRelationUsingPost(
-  options: ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsSetRoomRelationUsingPost(options:ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsSetRoomRelationUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/setRoomRelation',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/setRoomRelation',
+    method:'post',
     ...options,
   });
 }
@@ -1659,6 +1657,7 @@ export function apiV1EstateSystemPersonActionsSetRoomRelationUsingPost(
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
+
 export module ApiV1EstateSystemPersonActionsPersonInfoListUsingPost {
   export type Operation = paths['/api/v1/estate/system/person/actions/personInfoList']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1668,7 +1667,7 @@ export module ApiV1EstateSystemPersonActionsPersonInfoListUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1690,12 +1689,11 @@ export module ApiV1EstateSystemPersonActionsPersonInfoListUsingPost {
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
-export function apiV1EstateSystemPersonActionsPersonInfoListUsingPost(
-  options: ApiV1EstateSystemPersonActionsPersonInfoListUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsPersonInfoListUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsPersonInfoListUsingPost(options:ApiV1EstateSystemPersonActionsPersonInfoListUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsPersonInfoListUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/personInfoList',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/personInfoList',
+    method:'post',
     ...options,
   });
 }
@@ -1717,6 +1715,7 @@ export function apiV1EstateSystemPersonActionsPersonInfoListUsingPost(
 | 511059 | 租户信息不匹配 | 不能查询其他租户的资料                   |
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
  */
+
 export module ApiV1EstateSystemPersonActionsRoomListUsingGet {
   export type Operation = paths['/api/v1/estate/system/person/actions/roomList']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1726,7 +1725,7 @@ export module ApiV1EstateSystemPersonActionsRoomListUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1746,12 +1745,11 @@ export module ApiV1EstateSystemPersonActionsRoomListUsingGet {
 | 511059 | 租户信息不匹配 | 不能查询其他租户的资料                   |
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
  */
-export function apiV1EstateSystemPersonActionsRoomListUsingGet(
-  options: ApiV1EstateSystemPersonActionsRoomListUsingGet.Options,
-): Promise<ApiV1EstateSystemPersonActionsRoomListUsingGet.Result> {
+
+export function apiV1EstateSystemPersonActionsRoomListUsingGet(options:ApiV1EstateSystemPersonActionsRoomListUsingGet.Options):Promise<ApiV1EstateSystemPersonActionsRoomListUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/roomList',
-    method: 'get',
+    url:'/api/v1/estate/system/person/actions/roomList',
+    method:'get',
     ...options,
   });
 }
@@ -1773,6 +1771,7 @@ export function apiV1EstateSystemPersonActionsRoomListUsingGet(
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
+
 export module ApiV1EstateSystemPersonActionsLabelListUsingGet {
   export type Operation = paths['/api/v1/estate/system/person/actions/labelList']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1782,7 +1781,7 @@ export module ApiV1EstateSystemPersonActionsLabelListUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1802,12 +1801,11 @@ export module ApiV1EstateSystemPersonActionsLabelListUsingGet {
 | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144 | 超出最大分页量限制 |                                          |
  */
-export function apiV1EstateSystemPersonActionsLabelListUsingGet(
-  options: ApiV1EstateSystemPersonActionsLabelListUsingGet.Options,
-): Promise<ApiV1EstateSystemPersonActionsLabelListUsingGet.Result> {
+
+export function apiV1EstateSystemPersonActionsLabelListUsingGet(options:ApiV1EstateSystemPersonActionsLabelListUsingGet.Options):Promise<ApiV1EstateSystemPersonActionsLabelListUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/labelList',
-    method: 'get',
+    url:'/api/v1/estate/system/person/actions/labelList',
+    method:'get',
     ...options,
   });
 }
@@ -1836,9 +1834,9 @@ export function apiV1EstateSystemPersonActionsLabelListUsingGet(
 | 511177     | 车牌号不能重复           | 提交数据中有重复车牌号                   |
 | 511178     | 人员标签不能重复         | 提交数据中有重复人员标签                 |
  */
+
 export module ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/system/person/actions/addLabelAndLicenseRelation']['post'];
+  export type Operation = paths['/api/v1/estate/system/person/actions/addLabelAndLicenseRelation']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -1846,7 +1844,7 @@ export module ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost 
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1873,12 +1871,11 @@ export module ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost 
 | 511177     | 车牌号不能重复           | 提交数据中有重复车牌号                   |
 | 511178     | 人员标签不能重复         | 提交数据中有重复人员标签                 |
  */
-export function apiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost(
-  options: ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost.Options,
-): Promise<ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost.Result> {
+
+export function apiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost(options:ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost.Options):Promise<ApiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/person/actions/addLabelAndLicenseRelation',
-    method: 'post',
+    url:'/api/v1/estate/system/person/actions/addLabelAndLicenseRelation',
+    method:'post',
     ...options,
   });
 }
@@ -1905,6 +1902,7 @@ export function apiV1EstateSystemPersonActionsAddLabelAndLicenseRelationUsingPos
 | 511082 | 用户名或手机号已被使用 |                                                              |
 | 511091 | 用户名不合法           | 用户名包含数字字母之外的非法字符                             |
  */
+
 export module ApiV1EstateSystemPropertyUsingPost {
   export type Operation = paths['/api/v1/estate/system/property']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1914,7 +1912,7 @@ export module ApiV1EstateSystemPropertyUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1939,12 +1937,11 @@ export module ApiV1EstateSystemPropertyUsingPost {
 | 511082 | 用户名或手机号已被使用 |                                                              |
 | 511091 | 用户名不合法           | 用户名包含数字字母之外的非法字符                             |
  */
-export function apiV1EstateSystemPropertyUsingPost(
-  options: ApiV1EstateSystemPropertyUsingPost.Options,
-): Promise<ApiV1EstateSystemPropertyUsingPost.Result> {
+
+export function apiV1EstateSystemPropertyUsingPost(options:ApiV1EstateSystemPropertyUsingPost.Options):Promise<ApiV1EstateSystemPropertyUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/property',
-    method: 'post',
+    url:'/api/v1/estate/system/property',
+    method:'post',
     ...options,
   });
 }
@@ -1966,6 +1963,7 @@ export function apiV1EstateSystemPropertyUsingPost(
 | 511107 | 卡号不存在         |                                          |
 | 511108 | 只有正常卡才能退卡 | 其他状态的卡片无法退卡，比如挂失的卡片   |
  */
+
 export module ApiV1EstateSystemCardsActionsRefundCardUsingPost {
   export type Operation = paths['/api/v1/estate/system/cards/actions/refundCard']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -1975,7 +1973,7 @@ export module ApiV1EstateSystemCardsActionsRefundCardUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -1995,12 +1993,11 @@ export module ApiV1EstateSystemCardsActionsRefundCardUsingPost {
 | 511107 | 卡号不存在         |                                          |
 | 511108 | 只有正常卡才能退卡 | 其他状态的卡片无法退卡，比如挂失的卡片   |
  */
-export function apiV1EstateSystemCardsActionsRefundCardUsingPost(
-  options: ApiV1EstateSystemCardsActionsRefundCardUsingPost.Options,
-): Promise<ApiV1EstateSystemCardsActionsRefundCardUsingPost.Result> {
+
+export function apiV1EstateSystemCardsActionsRefundCardUsingPost(options:ApiV1EstateSystemCardsActionsRefundCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsRefundCardUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/cards/actions/refundCard',
-    method: 'post',
+    url:'/api/v1/estate/system/cards/actions/refundCard',
+    method:'post',
     ...options,
   });
 }
@@ -2024,6 +2021,7 @@ export function apiV1EstateSystemCardsActionsRefundCardUsingPost(
 | 511111 | 只有挂失的卡才能解挂 | 其他状态的卡片无法解挂，比如正常的卡片   |
 | 511145 | 设备数量超出限制     |                                          |
  */
+
 export module ApiV1EstateSystemCardsActionsCancelLossCardUsingPost {
   export type Operation = paths['/api/v1/estate/system/cards/actions/cancelLossCard']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2033,7 +2031,7 @@ export module ApiV1EstateSystemCardsActionsCancelLossCardUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2055,12 +2053,11 @@ export module ApiV1EstateSystemCardsActionsCancelLossCardUsingPost {
 | 511111 | 只有挂失的卡才能解挂 | 其他状态的卡片无法解挂，比如正常的卡片   |
 | 511145 | 设备数量超出限制     |                                          |
  */
-export function apiV1EstateSystemCardsActionsCancelLossCardUsingPost(
-  options: ApiV1EstateSystemCardsActionsCancelLossCardUsingPost.Options,
-): Promise<ApiV1EstateSystemCardsActionsCancelLossCardUsingPost.Result> {
+
+export function apiV1EstateSystemCardsActionsCancelLossCardUsingPost(options:ApiV1EstateSystemCardsActionsCancelLossCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsCancelLossCardUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/cards/actions/cancelLossCard',
-    method: 'post',
+    url:'/api/v1/estate/system/cards/actions/cancelLossCard',
+    method:'post',
     ...options,
   });
 }
@@ -2082,6 +2079,7 @@ export function apiV1EstateSystemCardsActionsCancelLossCardUsingPost(
 | 511107 | 卡号不存在         |                                          |
 | 511110 | 只有正常卡才能挂失 | 其他状态的卡片无法挂失，比如空白卡       |
  */
+
 export module ApiV1EstateSystemCardsActionsLossCardUsingPost {
   export type Operation = paths['/api/v1/estate/system/cards/actions/lossCard']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2091,7 +2089,7 @@ export module ApiV1EstateSystemCardsActionsLossCardUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2111,12 +2109,11 @@ export module ApiV1EstateSystemCardsActionsLossCardUsingPost {
 | 511107 | 卡号不存在         |                                          |
 | 511110 | 只有正常卡才能挂失 | 其他状态的卡片无法挂失，比如空白卡       |
  */
-export function apiV1EstateSystemCardsActionsLossCardUsingPost(
-  options: ApiV1EstateSystemCardsActionsLossCardUsingPost.Options,
-): Promise<ApiV1EstateSystemCardsActionsLossCardUsingPost.Result> {
+
+export function apiV1EstateSystemCardsActionsLossCardUsingPost(options:ApiV1EstateSystemCardsActionsLossCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsLossCardUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/cards/actions/lossCard',
-    method: 'post',
+    url:'/api/v1/estate/system/cards/actions/lossCard',
+    method:'post',
     ...options,
   });
 }
@@ -2132,6 +2129,7 @@ export function apiV1EstateSystemCardsActionsLossCardUsingPost(
 
 
  */
+
 export module ApiV1EstateSystemCardsUsingPost {
   export type Operation = paths['/api/v1/estate/system/cards']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2141,7 +2139,7 @@ export module ApiV1EstateSystemCardsUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2155,12 +2153,11 @@ export module ApiV1EstateSystemCardsUsingPost {
 
 
  */
-export function apiV1EstateSystemCardsUsingPost(
-  options: ApiV1EstateSystemCardsUsingPost.Options,
-): Promise<ApiV1EstateSystemCardsUsingPost.Result> {
+
+export function apiV1EstateSystemCardsUsingPost(options:ApiV1EstateSystemCardsUsingPost.Options):Promise<ApiV1EstateSystemCardsUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/cards',
-    method: 'post',
+    url:'/api/v1/estate/system/cards',
+    method:'post',
     ...options,
   });
 }
@@ -2186,6 +2183,7 @@ export function apiV1EstateSystemCardsUsingPost(
 | 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
 | 511082 | 用户名或手机号已被使用 |                                                              |
  */
+
 export module ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost {
   export type Operation = paths['/api/v1/estate/system/property/actions/updateProperty']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2195,7 +2193,7 @@ export module ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2219,12 +2217,11 @@ export module ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost {
 | 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
 | 511082 | 用户名或手机号已被使用 |                                                              |
  */
-export function apiV1EstateSystemPropertyActionsUpdatePropertyUsingPost(
-  options: ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost.Options,
-): Promise<ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost.Result> {
+
+export function apiV1EstateSystemPropertyActionsUpdatePropertyUsingPost(options:ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost.Options):Promise<ApiV1EstateSystemPropertyActionsUpdatePropertyUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/property/actions/updateProperty',
-    method: 'post',
+    url:'/api/v1/estate/system/property/actions/updateProperty',
+    method:'post',
     ...options,
   });
 }
@@ -2253,6 +2250,7 @@ export function apiV1EstateSystemPropertyActionsUpdatePropertyUsingPost(
 | 511116 | 卡号只能是数字       |                                          |
 | 511145 | 设备数量超出限制     |                                          |
  */
+
 export module ApiV1EstateSystemCardsActionsOpenCardUsingPost {
   export type Operation = paths['/api/v1/estate/system/cards/actions/openCard']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2262,7 +2260,7 @@ export module ApiV1EstateSystemCardsActionsOpenCardUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2289,12 +2287,11 @@ export module ApiV1EstateSystemCardsActionsOpenCardUsingPost {
 | 511116 | 卡号只能是数字       |                                          |
 | 511145 | 设备数量超出限制     |                                          |
  */
-export function apiV1EstateSystemCardsActionsOpenCardUsingPost(
-  options: ApiV1EstateSystemCardsActionsOpenCardUsingPost.Options,
-): Promise<ApiV1EstateSystemCardsActionsOpenCardUsingPost.Result> {
+
+export function apiV1EstateSystemCardsActionsOpenCardUsingPost(options:ApiV1EstateSystemCardsActionsOpenCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsOpenCardUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/cards/actions/openCard',
-    method: 'post',
+    url:'/api/v1/estate/system/cards/actions/openCard',
+    method:'post',
     ...options,
   });
 }
@@ -2321,6 +2318,7 @@ export function apiV1EstateSystemCardsActionsOpenCardUsingPost(
 | 511116 | 卡号只能是数字     |                                          |
 | 511145 | 设备数量超出限制   |                                          |
  */
+
 export module ApiV1EstateSystemCardsActionsChangeCardUsingGet {
   export type Operation = paths['/api/v1/estate/system/cards/actions/changeCard']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2330,7 +2328,7 @@ export module ApiV1EstateSystemCardsActionsChangeCardUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2355,12 +2353,11 @@ export module ApiV1EstateSystemCardsActionsChangeCardUsingGet {
 | 511116 | 卡号只能是数字     |                                          |
 | 511145 | 设备数量超出限制   |                                          |
  */
-export function apiV1EstateSystemCardsActionsChangeCardUsingGet(
-  options: ApiV1EstateSystemCardsActionsChangeCardUsingGet.Options,
-): Promise<ApiV1EstateSystemCardsActionsChangeCardUsingGet.Result> {
+
+export function apiV1EstateSystemCardsActionsChangeCardUsingGet(options:ApiV1EstateSystemCardsActionsChangeCardUsingGet.Options):Promise<ApiV1EstateSystemCardsActionsChangeCardUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/system/cards/actions/changeCard',
-    method: 'get',
+    url:'/api/v1/estate/system/cards/actions/changeCard',
+    method:'get',
     ...options,
   });
 }
@@ -2383,6 +2380,7 @@ export function apiV1EstateSystemCardsActionsChangeCardUsingGet(
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511103 | 只能删除空白卡 |                                          |
  */
+
 export module ApiV1EstateSystemCardsCardIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/cards/{cardId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2392,7 +2390,7 @@ export module ApiV1EstateSystemCardsCardIdUsingDelete {
     [key: string]: unknown;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -2413,12 +2411,11 @@ export module ApiV1EstateSystemCardsCardIdUsingDelete {
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511103 | 只能删除空白卡 |                                          |
  */
-export function apiV1EstateSystemCardsCardIdUsingDelete(
-  options: ApiV1EstateSystemCardsCardIdUsingDelete.Options,
-): Promise<ApiV1EstateSystemCardsCardIdUsingDelete.Result> {
+
+export function apiV1EstateSystemCardsCardIdUsingDelete(options:ApiV1EstateSystemCardsCardIdUsingDelete.Options):Promise<ApiV1EstateSystemCardsCardIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/system/cards/{cardId}',
-    method: 'delete',
+    url:'/api/v1/estate/system/cards/{cardId}',
+    method:'delete',
     ...options,
   });
 }
@@ -2448,6 +2445,7 @@ export function apiV1EstateSystemCardsCardIdUsingDelete(
 | COMMUNITY_ROLE_C | 角色C    | 权限1..权限n |
 | COMMUNITY_ROLE_D | 角色D    | 权限1..权限n |
  */
+
 export module ApiV1EstateSystemPropertyPersonIdUsingDelete {
   export type Operation = paths['/api/v1/estate/system/property/{personId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2457,7 +2455,7 @@ export module ApiV1EstateSystemPropertyPersonIdUsingDelete {
     [key: string]: unknown;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -2485,12 +2483,11 @@ export module ApiV1EstateSystemPropertyPersonIdUsingDelete {
 | COMMUNITY_ROLE_C | 角色C    | 权限1..权限n |
 | COMMUNITY_ROLE_D | 角色D    | 权限1..权限n |
  */
-export function apiV1EstateSystemPropertyPersonIdUsingDelete(
-  options: ApiV1EstateSystemPropertyPersonIdUsingDelete.Options,
-): Promise<ApiV1EstateSystemPropertyPersonIdUsingDelete.Result> {
+
+export function apiV1EstateSystemPropertyPersonIdUsingDelete(options:ApiV1EstateSystemPropertyPersonIdUsingDelete.Options):Promise<ApiV1EstateSystemPropertyPersonIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/system/property/{personId}',
-    method: 'delete',
+    url:'/api/v1/estate/system/property/{personId}',
+    method:'delete',
     ...options,
   });
 }
@@ -2506,6 +2503,7 @@ export function apiV1EstateSystemPropertyPersonIdUsingDelete(
 
 
  */
+
 export module ApiV1EstateDevicesActionsDeleteDeviceUsingPost {
   export type Operation = paths['/api/v1/estate/devices/actions/deleteDevice']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2515,7 +2513,7 @@ export module ApiV1EstateDevicesActionsDeleteDeviceUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2529,12 +2527,11 @@ export module ApiV1EstateDevicesActionsDeleteDeviceUsingPost {
 
 
  */
-export function apiV1EstateDevicesActionsDeleteDeviceUsingPost(
-  options: ApiV1EstateDevicesActionsDeleteDeviceUsingPost.Options,
-): Promise<ApiV1EstateDevicesActionsDeleteDeviceUsingPost.Result> {
+
+export function apiV1EstateDevicesActionsDeleteDeviceUsingPost(options:ApiV1EstateDevicesActionsDeleteDeviceUsingPost.Options):Promise<ApiV1EstateDevicesActionsDeleteDeviceUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/devices/actions/deleteDevice',
-    method: 'post',
+    url:'/api/v1/estate/devices/actions/deleteDevice',
+    method:'post',
     ...options,
   });
 }
@@ -2556,6 +2553,7 @@ export function apiV1EstateDevicesActionsDeleteDeviceUsingPost(
 | 511148 | 未查到设备信息 | 设备不存在或已被删除                     |
 | 511158 | 设备名称重复   |                                          |
  */
+
 export module ApiV1EstateDevicesActionsUpdateDeviceUsingPost {
   export type Operation = paths['/api/v1/estate/devices/actions/updateDevice']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2565,7 +2563,7 @@ export module ApiV1EstateDevicesActionsUpdateDeviceUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2585,12 +2583,11 @@ export module ApiV1EstateDevicesActionsUpdateDeviceUsingPost {
 | 511148 | 未查到设备信息 | 设备不存在或已被删除                     |
 | 511158 | 设备名称重复   |                                          |
  */
-export function apiV1EstateDevicesActionsUpdateDeviceUsingPost(
-  options: ApiV1EstateDevicesActionsUpdateDeviceUsingPost.Options,
-): Promise<ApiV1EstateDevicesActionsUpdateDeviceUsingPost.Result> {
+
+export function apiV1EstateDevicesActionsUpdateDeviceUsingPost(options:ApiV1EstateDevicesActionsUpdateDeviceUsingPost.Options):Promise<ApiV1EstateDevicesActionsUpdateDeviceUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/devices/actions/updateDevice',
-    method: 'post',
+    url:'/api/v1/estate/devices/actions/updateDevice',
+    method:'post',
     ...options,
   });
 }
@@ -2611,6 +2608,7 @@ export function apiV1EstateDevicesActionsUpdateDeviceUsingPost(
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511148 | 未查到设备信息 |                                          |
  */
+
 export module ApiV1EstateDevicesUsingGet {
   export type Operation = paths['/api/v1/estate/devices']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2620,7 +2618,7 @@ export module ApiV1EstateDevicesUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2639,12 +2637,11 @@ export module ApiV1EstateDevicesUsingGet {
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511148 | 未查到设备信息 |                                          |
  */
-export function apiV1EstateDevicesUsingGet(
-  options: ApiV1EstateDevicesUsingGet.Options,
-): Promise<ApiV1EstateDevicesUsingGet.Result> {
+
+export function apiV1EstateDevicesUsingGet(options:ApiV1EstateDevicesUsingGet.Options):Promise<ApiV1EstateDevicesUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/devices',
-    method: 'get',
+    url:'/api/v1/estate/devices',
+    method:'get',
     ...options,
   });
 }
@@ -2678,6 +2675,7 @@ export function apiV1EstateDevicesUsingGet(
 | 511193 | 设备存在高风险需要确权             |                                          |
 
  */
+
 export module ApiV1EstateDevicesUsingPost {
   export type Operation = paths['/api/v1/estate/devices']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2687,7 +2685,7 @@ export module ApiV1EstateDevicesUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2719,12 +2717,11 @@ export module ApiV1EstateDevicesUsingPost {
 | 511193 | 设备存在高风险需要确权             |                                          |
 
  */
-export function apiV1EstateDevicesUsingPost(
-  options: ApiV1EstateDevicesUsingPost.Options,
-): Promise<ApiV1EstateDevicesUsingPost.Result> {
+
+export function apiV1EstateDevicesUsingPost(options:ApiV1EstateDevicesUsingPost.Options):Promise<ApiV1EstateDevicesUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/devices',
-    method: 'post',
+    url:'/api/v1/estate/devices',
+    method:'post',
     ...options,
   });
 }
@@ -2751,6 +2748,7 @@ export function apiV1EstateDevicesUsingPost(
 | 511116 | 卡号只能是数字     |                                          |
 | 511145 | 设备数量超出限制   |                                          |
  */
+
 export module ApiV1EstateSystemCardsActionsReissueCardUsingPost {
   export type Operation = paths['/api/v1/estate/system/cards/actions/reissueCard']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2760,7 +2758,7 @@ export module ApiV1EstateSystemCardsActionsReissueCardUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2785,12 +2783,11 @@ export module ApiV1EstateSystemCardsActionsReissueCardUsingPost {
 | 511116 | 卡号只能是数字     |                                          |
 | 511145 | 设备数量超出限制   |                                          |
  */
-export function apiV1EstateSystemCardsActionsReissueCardUsingPost(
-  options: ApiV1EstateSystemCardsActionsReissueCardUsingPost.Options,
-): Promise<ApiV1EstateSystemCardsActionsReissueCardUsingPost.Result> {
+
+export function apiV1EstateSystemCardsActionsReissueCardUsingPost(options:ApiV1EstateSystemCardsActionsReissueCardUsingPost.Options):Promise<ApiV1EstateSystemCardsActionsReissueCardUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/system/cards/actions/reissueCard',
-    method: 'post',
+    url:'/api/v1/estate/system/cards/actions/reissueCard',
+    method:'post',
     ...options,
   });
 }
@@ -2813,6 +2810,7 @@ export function apiV1EstateSystemCardsActionsReissueCardUsingPost(
 | 511155 | 查询社区失败       |                                          |
 
  */
+
 export module ApiV1EstateDevicesActionsListByCommunityIdUsingPost {
   export type Operation = paths['/api/v1/estate/devices/actions/listByCommunityId']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2822,7 +2820,7 @@ export module ApiV1EstateDevicesActionsListByCommunityIdUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2843,12 +2841,11 @@ export module ApiV1EstateDevicesActionsListByCommunityIdUsingPost {
 | 511155 | 查询社区失败       |                                          |
 
  */
-export function apiV1EstateDevicesActionsListByCommunityIdUsingPost(
-  options: ApiV1EstateDevicesActionsListByCommunityIdUsingPost.Options,
-): Promise<ApiV1EstateDevicesActionsListByCommunityIdUsingPost.Result> {
+
+export function apiV1EstateDevicesActionsListByCommunityIdUsingPost(options:ApiV1EstateDevicesActionsListByCommunityIdUsingPost.Options):Promise<ApiV1EstateDevicesActionsListByCommunityIdUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/devices/actions/listByCommunityId',
-    method: 'post',
+    url:'/api/v1/estate/devices/actions/listByCommunityId',
+    method:'post',
     ...options,
   });
 }
@@ -2869,6 +2866,7 @@ export function apiV1EstateDevicesActionsListByCommunityIdUsingPost(
 | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
 | 511000 | 社区不存在 |                                          |
  */
+
 export module ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet {
   export type Operation = paths['/api/v1/estate/devices/channels/actions/listByCommunityId']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2878,7 +2876,7 @@ export module ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -2897,12 +2895,11 @@ export module ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet {
 | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
 | 511000 | 社区不存在 |                                          |
  */
-export function apiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet(
-  options: ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet.Options,
-): Promise<ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet.Result> {
+
+export function apiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet(options:ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet.Options):Promise<ApiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/devices/channels/actions/listByCommunityId',
-    method: 'get',
+    url:'/api/v1/estate/devices/channels/actions/listByCommunityId',
+    method:'get',
     ...options,
   });
 }
@@ -2920,6 +2917,7 @@ export function apiV1EstateDevicesChannelsActionsListByCommunityIdUsingGet(
 | 20002001 | 请求失败 |
 | 20002002 | 确权失败 |
  */
+
 export module V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet {
   export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/autoconfirm']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2929,7 +2927,7 @@ export module V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet {
     [key: string]: unknown;
     header?: Header;
     params: Query;
-  }
+  };
 }
 
 /**
@@ -2945,12 +2943,11 @@ export module V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet {
 | 20002001 | 请求失败 |
 | 20002002 | 确权失败 |
  */
-export function v1CarrierWingEndpointConfirmRightAutoconfirmUsingGet(
-  options: V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet.Options,
-): Promise<V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet.Result> {
+
+export function v1CarrierWingEndpointConfirmRightAutoconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet.Options):Promise<V1CarrierWingEndpointConfirmRightAutoconfirmUsingGet.Result> {
   return request({
-    url: '/v1/carrier/wing/endpoint/confirm/right/autoconfirm',
-    method: 'get',
+    url:'/v1/carrier/wing/endpoint/confirm/right/autoconfirm',
+    method:'get',
     ...options,
   });
 }
@@ -2970,6 +2967,7 @@ export function v1CarrierWingEndpointConfirmRightAutoconfirmUsingGet(
 
 
  */
+
 export module V1ChannelsChannelIdCaptureUsingPost {
   export type Operation = paths['/v1/channels/{channelId}/capture']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -2979,7 +2977,7 @@ export module V1ChannelsChannelIdCaptureUsingPost {
     [key: string]: unknown;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -2997,12 +2995,11 @@ export module V1ChannelsChannelIdCaptureUsingPost {
 
 
  */
-export function v1ChannelsChannelIdCaptureUsingPost(
-  options: V1ChannelsChannelIdCaptureUsingPost.Options,
-): Promise<V1ChannelsChannelIdCaptureUsingPost.Result> {
+
+export function v1ChannelsChannelIdCaptureUsingPost(options:V1ChannelsChannelIdCaptureUsingPost.Options):Promise<V1ChannelsChannelIdCaptureUsingPost.Result> {
   return request({
-    url: '/v1/channels/{channelId}/capture',
-    method: 'post',
+    url:'/v1/channels/{channelId}/capture',
+    method:'post',
     ...options,
   });
 }
@@ -3020,6 +3017,7 @@ export function v1ChannelsChannelIdCaptureUsingPost(
 | 20002001 | 请求失败 |
 | 20002003 | 离线失败 |
  */
+
 export module V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet {
   export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/offlineconfirm']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -3029,7 +3027,7 @@ export module V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet {
     [key: string]: unknown;
     header?: Header;
     params: Query;
-  }
+  };
 }
 
 /**
@@ -3045,12 +3043,11 @@ export module V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet {
 | 20002001 | 请求失败 |
 | 20002003 | 离线失败 |
  */
-export function v1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet(
-  options: V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet.Options,
-): Promise<V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet.Result> {
+
+export function v1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet.Options):Promise<V1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet.Result> {
   return request({
-    url: '/v1/carrier/wing/endpoint/confirm/right/offlineconfirm',
-    method: 'get',
+    url:'/v1/carrier/wing/endpoint/confirm/right/offlineconfirm',
+    method:'get',
     ...options,
   });
 }
@@ -3068,6 +3065,7 @@ export function v1CarrierWingEndpointConfirmRightOfflineconfirmUsingGet(
 | 20002001 | 请求失败 |
 | 20002004 | 确权失败 |
  */
+
 export module V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet {
   export type Operation = paths['/v1/carrier/wing/endpoint/confirm/right/onlineconfirm']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -3077,7 +3075,7 @@ export module V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet {
     [key: string]: unknown;
     header?: Header;
     params: Query;
-  }
+  };
 }
 
 /**
@@ -3093,12 +3091,11 @@ export module V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet {
 | 20002001 | 请求失败 |
 | 20002004 | 确权失败 |
  */
-export function v1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet(
-  options: V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet.Options,
-): Promise<V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet.Result> {
+
+export function v1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet(options:V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet.Options):Promise<V1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet.Result> {
   return request({
-    url: '/v1/carrier/wing/endpoint/confirm/right/onlineconfirm',
-    method: 'get',
+    url:'/v1/carrier/wing/endpoint/confirm/right/onlineconfirm',
+    method:'get',
     ...options,
   });
 }
@@ -3131,6 +3128,7 @@ export function v1CarrierWingEndpointConfirmRightOnlineconfirmUsingGet(
 | 511148 | 未查到设备信息   | 未查到有效设备信息                               |
 | 511169 | 设备正在发布中   | 部分设备正在下发信息，请稍后再试                 |
  */
+
 export module ApiV1EstatePublishActionsPublishProgramUsingPost {
   export type Operation = paths['/api/v1/estate/publish/actions/publishProgram']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -3140,7 +3138,7 @@ export module ApiV1EstatePublishActionsPublishProgramUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3171,12 +3169,11 @@ export module ApiV1EstatePublishActionsPublishProgramUsingPost {
 | 511148 | 未查到设备信息   | 未查到有效设备信息                               |
 | 511169 | 设备正在发布中   | 部分设备正在下发信息，请稍后再试                 |
  */
-export function apiV1EstatePublishActionsPublishProgramUsingPost(
-  options: ApiV1EstatePublishActionsPublishProgramUsingPost.Options,
-): Promise<ApiV1EstatePublishActionsPublishProgramUsingPost.Result> {
+
+export function apiV1EstatePublishActionsPublishProgramUsingPost(options:ApiV1EstatePublishActionsPublishProgramUsingPost.Options):Promise<ApiV1EstatePublishActionsPublishProgramUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/publish/actions/publishProgram',
-    method: 'post',
+    url:'/api/v1/estate/publish/actions/publishProgram',
+    method:'post',
     ...options,
   });
 }
@@ -3199,6 +3196,7 @@ export function apiV1EstatePublishActionsPublishProgramUsingPost(
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511135 | 设备最多为50台 |                                          |
  */
+
 export module ApiV1EstatePublishActionsDeleteProgramUsingPost {
   export type Operation = paths['/api/v1/estate/publish/actions/deleteProgram']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -3208,7 +3206,7 @@ export module ApiV1EstatePublishActionsDeleteProgramUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3229,12 +3227,11 @@ export module ApiV1EstatePublishActionsDeleteProgramUsingPost {
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511135 | 设备最多为50台 |                                          |
  */
-export function apiV1EstatePublishActionsDeleteProgramUsingPost(
-  options: ApiV1EstatePublishActionsDeleteProgramUsingPost.Options,
-): Promise<ApiV1EstatePublishActionsDeleteProgramUsingPost.Result> {
+
+export function apiV1EstatePublishActionsDeleteProgramUsingPost(options:ApiV1EstatePublishActionsDeleteProgramUsingPost.Options):Promise<ApiV1EstatePublishActionsDeleteProgramUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/publish/actions/deleteProgram',
-    method: 'post',
+    url:'/api/v1/estate/publish/actions/deleteProgram',
+    method:'post',
     ...options,
   });
 }
@@ -3257,6 +3254,7 @@ export function apiV1EstatePublishActionsDeleteProgramUsingPost(
 | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
 | 511181 | 人脸id错误 | 人脸不存在                               |
  */
+
 export module ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost {
   export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/delFaces']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -3266,7 +3264,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3287,12 +3285,11 @@ export module ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost {
 | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
 | 511181 | 人脸id错误 | 人脸不存在                               |
  */
-export function apiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost(
-  options: ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost.Options,
-): Promise<ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost.Result> {
+
+export function apiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost(options:ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/device/faceDatabase/actions/delFaces',
-    method: 'post',
+    url:'/api/v1/estate/device/faceDatabase/actions/delFaces',
+    method:'post',
     ...options,
   });
 }
@@ -3316,9 +3313,9 @@ export function apiV1EstateDeviceFaceDatabaseActionsDelFacesUsingPost(
 | 511179     | 人脸库不存在     | 人脸库id错误或者跨租户操作                   |
 | 511180     | 人脸库未绑定设备 | 同步人脸库之前，需先操作人脸库绑定设备和通道 |
  */
+
 export module ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet {
-  export type Operation =
-    paths['/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase']['get'];
+  export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3326,7 +3323,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3348,12 +3345,11 @@ export module ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet {
 | 511179     | 人脸库不存在     | 人脸库id错误或者跨租户操作                   |
 | 511180     | 人脸库未绑定设备 | 同步人脸库之前，需先操作人脸库绑定设备和通道 |
  */
-export function apiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet(
-  options: ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet.Options,
-): Promise<ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet.Result> {
+
+export function apiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet(options:ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase',
-    method: 'get',
+    url:'/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase',
+    method:'get',
     ...options,
   });
 }
@@ -3374,9 +3370,9 @@ export function apiV1EstateDeviceFaceDatabaseActionsSyncFaceDatabaseUsingGet(
 | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况       |
 | 511025 | 参数异常 | 请求参数包含不合法信息（例如：平台不支持的值） |
  */
+
 export module ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/remoteControl/actions/deviceList']['get'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/deviceList']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3384,7 +3380,7 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3403,12 +3399,11 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet {
 | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况       |
 | 511025 | 参数异常 | 请求参数包含不合法信息（例如：平台不支持的值） |
  */
-export function apiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet(
-  options: ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet.Options,
-): Promise<ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet.Result> {
+
+export function apiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet(options:ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet.Options):Promise<ApiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/remoteControl/actions/deviceList',
-    method: 'get',
+    url:'/api/v1/estate/entranceGuard/remoteControl/actions/deviceList',
+    method:'get',
     ...options,
   });
 }
@@ -3432,9 +3427,9 @@ export function apiV1EstateEntranceGuardRemoteControlActionsDeviceListUsingGet(
 | 511032 | 人员正在下发中，请稍后尝试 |                                          |
 | 511033 | 没有该设备权限             |                                          |
  */
+
 export module ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3442,7 +3437,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPos
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3464,12 +3459,11 @@ export module ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPos
 | 511032 | 人员正在下发中，请稍后尝试 |                                          |
 | 511033 | 没有该设备权限             |                                          |
  */
-export function apiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost(
-  options: ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued',
+    method:'post',
     ...options,
   });
 }
@@ -3512,9 +3506,9 @@ export function apiV1EstateEntranceGuardPermissionsActionsDeleteFaceIssuedUsingP
 | 511122 | 人脸可见性校验失败       |                                                |
 | 511123 | 人脸清晰度校验失败       |                                                |
  */
+
 export module ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/permissions/actions/faceIssued']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/faceIssued']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3522,7 +3516,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3563,12 +3557,11 @@ export module ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost {
 | 511122 | 人脸可见性校验失败       |                                                |
 | 511123 | 人脸清晰度校验失败       |                                                |
  */
-export function apiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost(
-  options: ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/permissions/actions/faceIssued',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/permissions/actions/faceIssued',
+    method:'post',
     ...options,
   });
 }
@@ -3600,6 +3593,7 @@ export function apiV1EstateEntranceGuardPermissionsActionsFaceIssuedUsingPost(
 | 511122     | 人脸可见性校验失败       |                                          |
 | 511123     | 人脸清晰度校验失败       |                                          |
  */
+
 export module ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost {
   export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/addFace']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -3609,7 +3603,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3639,12 +3633,11 @@ export module ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost {
 | 511122     | 人脸可见性校验失败       |                                          |
 | 511123     | 人脸清晰度校验失败       |                                          |
  */
-export function apiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost(
-  options: ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost.Options,
-): Promise<ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost.Result> {
+
+export function apiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost(options:ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/device/faceDatabase/actions/addFace',
-    method: 'post',
+    url:'/api/v1/estate/device/faceDatabase/actions/addFace',
+    method:'post',
     ...options,
   });
 }
@@ -3667,6 +3660,7 @@ export function apiV1EstateDeviceFaceDatabaseActionsAddFaceUsingPost(
 | 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144     | 超出最大分页限制 | pageSize最大值为100                      |
  */
+
 export module ApiV1EstateDeviceFaceDatabaseActionsListUsingGet {
   export type Operation = paths['/api/v1/estate/device/faceDatabase/actions/list']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -3676,7 +3670,7 @@ export module ApiV1EstateDeviceFaceDatabaseActionsListUsingGet {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3697,12 +3691,11 @@ export module ApiV1EstateDeviceFaceDatabaseActionsListUsingGet {
 | 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
 | 511144     | 超出最大分页限制 | pageSize最大值为100                      |
  */
-export function apiV1EstateDeviceFaceDatabaseActionsListUsingGet(
-  options: ApiV1EstateDeviceFaceDatabaseActionsListUsingGet.Options,
-): Promise<ApiV1EstateDeviceFaceDatabaseActionsListUsingGet.Result> {
+
+export function apiV1EstateDeviceFaceDatabaseActionsListUsingGet(options:ApiV1EstateDeviceFaceDatabaseActionsListUsingGet.Options):Promise<ApiV1EstateDeviceFaceDatabaseActionsListUsingGet.Result> {
   return request({
-    url: '/api/v1/estate/device/faceDatabase/actions/list',
-    method: 'get',
+    url:'/api/v1/estate/device/faceDatabase/actions/list',
+    method:'get',
     ...options,
   });
 }
@@ -3725,9 +3718,9 @@ export function apiV1EstateDeviceFaceDatabaseActionsListUsingGet(
 | 511033 | 没有该设备权限 |                                                |
 | 511035 | 获取信息失败   |                                                |
  */
+
 export module ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/remoteControl/actions/gateControl']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/gateControl']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3735,7 +3728,7 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3756,12 +3749,11 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost {
 | 511033 | 没有该设备权限 |                                                |
 | 511035 | 获取信息失败   |                                                |
  */
-export function apiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost(
-  options: ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost(options:ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost.Options):Promise<ApiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/remoteControl/actions/gateControl',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/remoteControl/actions/gateControl',
+    method:'post',
     ...options,
   });
 }
@@ -3787,9 +3779,9 @@ export function apiV1EstateEntranceGuardRemoteControlActionsGateControlUsingPost
 | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区                            |
 | 511168 | 权限删除失败     | message描述可能为动态描述，返回的是设备的真实失败原因 |
  */
+
 export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/permissions/actions/authorityDelete']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/authorityDelete']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3797,7 +3789,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3821,12 +3813,11 @@ export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost
 | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区                            |
 | 511168 | 权限删除失败     | message描述可能为动态描述，返回的是设备的真实失败原因 |
  */
-export function apiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost(
-  options: ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/permissions/actions/authorityDelete',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/permissions/actions/authorityDelete',
+    method:'post',
     ...options,
   });
 }
@@ -3850,9 +3841,9 @@ export function apiV1EstateEntranceGuardPermissionsActionsAuthorityDeleteUsingPo
 | 511030 | 社区中人员不存在 |                                          |
 | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区               |
  */
+
 export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/permissions/actions/authorityIssued']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/authorityIssued']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3860,7 +3851,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3882,12 +3873,11 @@ export module ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost
 | 511030 | 社区中人员不存在 |                                          |
 | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区               |
  */
-export function apiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost(
-  options: ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/permissions/actions/authorityIssued',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/permissions/actions/authorityIssued',
+    method:'post',
     ...options,
   });
 }
@@ -3908,9 +3898,9 @@ export function apiV1EstateEntranceGuardPermissionsActionsAuthorityIssuedUsingPo
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511147 | 查询卡信息错误 |                                          |
  */
+
 export module ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/permissions/actions/getQRcode']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/getQRcode']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3918,7 +3908,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -3937,12 +3927,11 @@ export module ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost {
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511147 | 查询卡信息错误 |                                          |
  */
-export function apiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost(
-  options: ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/permissions/actions/getQRcode',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/permissions/actions/getQRcode',
+    method:'post',
     ...options,
   });
 }
@@ -3975,9 +3964,9 @@ export function apiV1EstateEntranceGuardPermissionsActionsGetQRcodeUsingPost(
 | 511137 | 未查询到有权限的设备               |                                          |
 | 511138 | 设备列表参数格式错误               |                                          |
  */
+
 export module ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/permissions/actions/dynamicCode']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/dynamicCode']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -3985,7 +3974,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -4016,12 +4005,11 @@ export module ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost {
 | 511137 | 未查询到有权限的设备               |                                          |
 | 511138 | 设备列表参数格式错误               |                                          |
  */
-export function apiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost(
-  options: ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/permissions/actions/dynamicCode',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/permissions/actions/dynamicCode',
+    method:'post',
     ...options,
   });
 }
@@ -4043,9 +4031,9 @@ export function apiV1EstateEntranceGuardPermissionsActionsDynamicCodeUsingPost(
 | 511086 | 房间不存在   |                                          |
 | 511167 | 远程呼梯失败 |                                          |
  */
+
 export module ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -4053,7 +4041,7 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPo
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -4073,12 +4061,11 @@ export module ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPo
 | 511086 | 房间不存在   |                                          |
 | 511167 | 远程呼梯失败 |                                          |
  */
-export function apiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost(
-  options: ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost(options:ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost.Options):Promise<ApiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl',
+    method:'post',
     ...options,
   });
 }
@@ -4116,6 +4103,7 @@ export function apiV1EstateEntranceGuardRemoteControlActionsElevatorControlUsing
 | 511151 | 不支持一次为多个小区预约访客 |                                          |
 
  */
+
 export module ApiV1EstateVisitorsUsingPost {
   export type Operation = paths['/api/v1/estate/visitors']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -4125,7 +4113,7 @@ export module ApiV1EstateVisitorsUsingPost {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -4161,12 +4149,11 @@ export module ApiV1EstateVisitorsUsingPost {
 | 511151 | 不支持一次为多个小区预约访客 |                                          |
 
  */
-export function apiV1EstateVisitorsUsingPost(
-  options: ApiV1EstateVisitorsUsingPost.Options,
-): Promise<ApiV1EstateVisitorsUsingPost.Result> {
+
+export function apiV1EstateVisitorsUsingPost(options:ApiV1EstateVisitorsUsingPost.Options):Promise<ApiV1EstateVisitorsUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/visitors',
-    method: 'post',
+    url:'/api/v1/estate/visitors',
+    method:'post',
     ...options,
   });
 }
@@ -4198,9 +4185,9 @@ export function apiV1EstateVisitorsUsingPost(
 | 511199 | 批量权限下发中，请勿重复操作           | 接口不能频繁调用，调用间隔不能小于10s                |
 | 511200 | 批量权限下发中，请下发完成后再进行下发 | 上次的批量下发任务仍未执行完成，需要执行完后再次操作 |
  */
+
 export module ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost {
-  export type Operation =
-    paths['/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued']['post'];
+  export type Operation = paths['/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
   export type Body = Required<Operation>['requestBody']['content']['application/json'];
   export type Header = Operation['parameters']['header'];
@@ -4208,7 +4195,7 @@ export module ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsin
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -4238,12 +4225,11 @@ export module ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsin
 | 511199 | 批量权限下发中，请勿重复操作           | 接口不能频繁调用，调用间隔不能小于10s                |
 | 511200 | 批量权限下发中，请下发完成后再进行下发 | 上次的批量下发任务仍未执行完成，需要执行完后再次操作 |
  */
-export function apiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost(
-  options: ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost.Options,
-): Promise<ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost.Result> {
+
+export function apiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost(options:ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost.Options):Promise<ApiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUsingPost.Result> {
   return request({
-    url: '/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued',
-    method: 'post',
+    url:'/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued',
+    method:'post',
     ...options,
   });
 }
@@ -4263,17 +4249,17 @@ export function apiV1EstateEntranceGuardPermissionsActionsBatchAuthorityIssuedUs
 
 
  */
+
 export module ApiV1MqConsumerGroup1UsingPost {
   export type Operation = paths['/api/v1/mq/consumer/group1']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
-  export type Body =
-    Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -4291,12 +4277,11 @@ export module ApiV1MqConsumerGroup1UsingPost {
 
 
  */
-export function apiV1MqConsumerGroup1UsingPost(
-  options: ApiV1MqConsumerGroup1UsingPost.Options,
-): Promise<ApiV1MqConsumerGroup1UsingPost.Result> {
+
+export function apiV1MqConsumerGroup1UsingPost(options:ApiV1MqConsumerGroup1UsingPost.Options):Promise<ApiV1MqConsumerGroup1UsingPost.Result> {
   return request({
-    url: '/api/v1/mq/consumer/group1',
-    method: 'post',
+    url:'/api/v1/mq/consumer/group1',
+    method:'post',
     ...options,
   });
 }
@@ -4317,6 +4302,7 @@ export function apiV1MqConsumerGroup1UsingPost(
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511059 | 租户信息不匹配 | 不能删除其他租户的预约信息               |
  */
+
 export module ApiV1EstateVisitorsReservationIdUsingDelete {
   export type Operation = paths['/api/v1/estate/visitors/{reservationId}']['delete'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -4326,7 +4312,7 @@ export module ApiV1EstateVisitorsReservationIdUsingDelete {
     [key: string]: unknown;
     header?: Header;
     path: Path;
-  }
+  };
 }
 
 /**
@@ -4345,12 +4331,11 @@ export module ApiV1EstateVisitorsReservationIdUsingDelete {
 | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
 | 511059 | 租户信息不匹配 | 不能删除其他租户的预约信息               |
  */
-export function apiV1EstateVisitorsReservationIdUsingDelete(
-  options: ApiV1EstateVisitorsReservationIdUsingDelete.Options,
-): Promise<ApiV1EstateVisitorsReservationIdUsingDelete.Result> {
+
+export function apiV1EstateVisitorsReservationIdUsingDelete(options:ApiV1EstateVisitorsReservationIdUsingDelete.Options):Promise<ApiV1EstateVisitorsReservationIdUsingDelete.Result> {
   return request({
-    url: '/api/v1/estate/visitors/{reservationId}',
-    method: 'delete',
+    url:'/api/v1/estate/visitors/{reservationId}',
+    method:'delete',
     ...options,
   });
 }
@@ -4386,11 +4371,12 @@ export function apiV1EstateVisitorsReservationIdUsingDelete(
          step2: 加上登陆码后的字符串:  ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988&authCode=1d73e6a6a5bb4e90aa2e8ca52a2515c4
          step3: signature=HmacSHA256(step2的字符串,authCode)后转大写,最终生成的signature值为:18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
          step4:请求地址:https://edu.hik-cloud.com/?userId=499e861ec1254e8ca399dfb9e837a988&ts=1616985134200&signature=18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
-
+         
          注意：登陆码有效期为1小时，且同一登陆码生成的跳转url，只能成功跳转一次；跳转链接的有效期是30分钟；跳转登录之后无操作30分钟后，认证信息失效。
-
+        
 ```
  */
+
 export module UsingGet {
   export type Operation = paths['/']['get'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
@@ -4400,7 +4386,7 @@ export module UsingGet {
     [key: string]: unknown;
     header?: Header;
     params: Query;
-  }
+  };
 }
 
 /**
@@ -4434,15 +4420,16 @@ export module UsingGet {
          step2: 加上登陆码后的字符串:  ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988&authCode=1d73e6a6a5bb4e90aa2e8ca52a2515c4
          step3: signature=HmacSHA256(step2的字符串,authCode)后转大写,最终生成的signature值为:18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
          step4:请求地址:https://edu.hik-cloud.com/?userId=499e861ec1254e8ca399dfb9e837a988&ts=1616985134200&signature=18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
-
+         
          注意：登陆码有效期为1小时，且同一登陆码生成的跳转url，只能成功跳转一次；跳转链接的有效期是30分钟；跳转登录之后无操作30分钟后，认证信息失效。
-
+        
 ```
  */
-export function UsingGet(options: UsingGet.Options): Promise<UsingGet.Result> {
+
+export function UsingGet(options:UsingGet.Options):Promise<UsingGet.Result> {
   return request({
-    url: '/',
-    method: 'get',
+    url:'/',
+    method:'get',
     ...options,
   });
 }
@@ -4466,17 +4453,17 @@ export function UsingGet(options: UsingGet.Options): Promise<UsingGet.Result> {
 
 
  */
+
 export module ApiV1MqConsumerMessagesUsingPost {
   export type Operation = paths['/api/v1/mq/consumer/messages']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
-  export type Body =
-    Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -4498,12 +4485,11 @@ export module ApiV1MqConsumerMessagesUsingPost {
 
 
  */
-export function apiV1MqConsumerMessagesUsingPost(
-  options: ApiV1MqConsumerMessagesUsingPost.Options,
-): Promise<ApiV1MqConsumerMessagesUsingPost.Result> {
+
+export function apiV1MqConsumerMessagesUsingPost(options:ApiV1MqConsumerMessagesUsingPost.Options):Promise<ApiV1MqConsumerMessagesUsingPost.Result> {
   return request({
-    url: '/api/v1/mq/consumer/messages',
-    method: 'post',
+    url:'/api/v1/mq/consumer/messages',
+    method:'post',
     ...options,
   });
 }
@@ -4521,17 +4507,17 @@ export function apiV1MqConsumerMessagesUsingPost(
 
 
  */
+
 export module ApiV1MqConsumerOffsetsUsingPost {
   export type Operation = paths['/api/v1/mq/consumer/offsets']['post'];
   export type Result = Required<Operation>['responses']['200']['content']['application/json'];
-  export type Body =
-    Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
+  export type Body = Required<Operation>['requestBody']['content']['application/x-www-form-urlencoded'];
   export type Header = Operation['parameters']['header'];
   export interface Options {
     [key: string]: unknown;
     data: Body;
     header?: Header;
-  }
+  };
 }
 
 /**
@@ -4547,8568 +4533,8380 @@ export module ApiV1MqConsumerOffsetsUsingPost {
 
 
  */
-export function apiV1MqConsumerOffsetsUsingPost(
-  options: ApiV1MqConsumerOffsetsUsingPost.Options,
-): Promise<ApiV1MqConsumerOffsetsUsingPost.Result> {
+
+export function apiV1MqConsumerOffsetsUsingPost(options:ApiV1MqConsumerOffsetsUsingPost.Options):Promise<ApiV1MqConsumerOffsetsUsingPost.Result> {
   return request({
-    url: '/api/v1/mq/consumer/offsets',
-    method: 'post',
+    url:'/api/v1/mq/consumer/offsets',
+    method:'post',
     ...options,
   });
 }
 export interface paths {
-  '/': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 第三方跳转登录云眸普教对接规范
-     * @description ## 功能描述
-     *
-     *     本接口提供第三方跳转登录云眸普教对接规范及示例。
-     *
-     *     本节内容需结合基础服务-用户管理使用。
-     *
-     *      signature生成规则
-     *
-     *     第一步，设所有发送的数据为集合M，将集合M内非signature外的非空参数(值为空的参数不参与签名)按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串str1。
-     *
-     *     第二步，在str1最后拼接上登陆码authCode(用户管理-获取登陆码接口获取接口返回值)得到str2字符串，并对str2进行HmacSHA256运算，再将得到的字符串所有字符转换为大写，得到值为signature。
-     *
-     *     ## 实现示例
-     *
-     *     |                | 参数      | 例子                             |
-     *     | -------------- | --------- | -------------------------------- |
-     *     | 平台提供的参数 | userId    | 499e861ec1254e8ca399dfb9e837a988 |
-     *     | 平台提供的参数 | authCode  | 1d73e6a6a5bb4e90aa2e8ca52a2515c4 |
-     *     | 业务参数       | ts        | 1616985134200                    |
-     *     | 需要生成的参数 | signature |                                  |
-     *
-     *     ```
-     *              step1: 排序后拼接的字符串:ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988
-     *              step2: 加上登陆码后的字符串:  ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988&authCode=1d73e6a6a5bb4e90aa2e8ca52a2515c4
-     *              step3: signature=HmacSHA256(step2的字符串,authCode)后转大写,最终生成的signature值为:18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
-     *              step4:请求地址:https://edu.hik-cloud.com/?userId=499e861ec1254e8ca399dfb9e837a988&ts=1616985134200&signature=18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
-     *
-     *              注意：登陆码有效期为1小时，且同一登陆码生成的跳转url，只能成功跳转一次；跳转链接的有效期是30分钟；跳转登录之后无操作30分钟后，认证信息失效。
-     *
-     *     ```
-     */
-    get: {
-      parameters: {
-        query: {
-          /**
-           * @description 学校ID
-           * @example {schoolId}
-           */
-          schoolId?: string;
-          /**
-           * @description 通过签名生成算法生成（见下方）
-           * @example {signature}
-           */
-          signature: string;
-          /**
-           * @description 时间戳（第三方生成）
-           * @example {ts}
-           */
-          ts: string;
-          /**
-           * @description 用户ID（添加用户接口的返回值）
-           * @example {userId}
-           */
-          userId: string;
-        };
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': Record<string, never>;
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/device/faceDatabase/actions/addFace': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 超脑人脸库添加人脸
-     * @description **功能描述**
-     *
-     *     人脸库中添加人脸。
-     *
-     *     注：不支持6000C
-     *
-     *     **返回码**
-     *
-     *     | **返回码** | **返回消息**             | **描述**                                 |
-     *     | ---------- | ------------------------ | ---------------------------------------- |
-     *     | 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511179     | 人脸库不存在             | 人脸库id错误或者跨租户操作               |
-     *     | 511095     | 人脸URL不合法            |                                          |
-     *     | 511100     | 人脸图片质量不合格       |                                          |
-     *     | 511117     | 人脸评分校验失败         |                                          |
-     *     | 511118     | 人脸特征点置信度校验失败 |                                          |
-     *     | 511119     | 人脸眼间距校验失败       |                                          |
-     *     | 511120     | 人脸俯仰角校验失败       |                                          |
-     *     | 511121     | 人脸左右角校验失败       |                                          |
-     *     | 511122     | 人脸可见性校验失败       |                                          |
-     *     | 511123     | 人脸清晰度校验失败       |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "faceDatabaseId": "6514484bc11397508cab7870c633216b",
-           *       "name": "张三",
-           *       "faceUrl": "https://pbpicup.hik-cloud.com/neptune/device/faceLib/2020/12/bc8d4529cb15464682ae2de970dc74ac/gd3Hosm5TWKK.jpg",
-           *       "sex": 1,
-           *       "idType": 1,
-           *       "idNumber": "110011200001011121"
-           *     } */
-          'application/json': {
-            /**
-             * 人脸库id
-             * @description 人脸库id
-             */
-            faceDatabaseId: string;
-            /**
-             * 人脸url
-             * @description 人脸url
-             */
-            faceUrl: string;
-            /**
-             * 证件号
-             * @description 证件号
-             */
-            idNumber?: string;
-            /**
-             * 证件类型；1-身份证2-护照 3-军官证4-其他
-             * @description 证件类型；1-身份证2-护照 3-军官证4-其他
-             */
-            idType: number;
-            /**
-             * 姓名
-             * @description 姓名
-             */
-            name: string;
-            /**
-             * 性别；1 男；2 女
-             * @description 性别；1 男；2 女
-             */
-            sex: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 人脸id
-                 * @description 人脸id
-                 */
-                faceId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/device/faceDatabase/actions/delFaces': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 超脑人脸库删除人脸
-     * @description **功能描述**
-     *
-     *     删除人脸库已经存在的人脸。
-     *
-     *     注：不支持6000C
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息   | 描述                                     |
-     *     | ------ | ---------- | ---------------------------------------- |
-     *     | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511181 | 人脸id错误 | 人脸不存在                               |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "faceIds": [
-           *         "6514484bc11397508cab7870c633216b"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 人脸id的集合，大小不能超过100个
-             * @description 人脸id的集合，大小不能超过100个
-             */
-            faceIds: string[];
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/device/faceDatabase/actions/list': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 超脑人脸库列表
-     * @description **功能描述**
-     *
-     *     查询人脸库列表。
-     *
-     *     注：不支持6000C
-     *
-     *     **返回码**
-     *
-     *     | **返回码** | **返回消息**     | **描述**                                 |
-     *     | ---------- | ---------------- | ---------------------------------------- |
-     *     | 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144     | 超出最大分页限制 | pageSize最大值为100                      |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 社区id
-             * @description 社区id
-             */
-            communityId: string;
-            /**
-             * 人脸库名称
-             * @description 人脸库名称
-             */
-            faceDatabaseName?: string;
-            /**
-             * 人脸库类型，0-白名单，1-黑名单，2-重点人员
-             * @description 人脸库类型，0-白名单，1-黑名单，2-重点人员
-             */
-            faceDatabaseType: string;
-            /**
-             * 当前页数
-             * @description 当前页数，正整数
-             */
-            pageNo: string;
-            /**
-             * 分页量，最大为100
-             * @description 分页量，最大为100，正整数
-             */
-            pageSize: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 人脸库id
-                   * @description 人脸库id
-                   */
-                  faceDatabaseId: string;
-                  /**
-                   * 人脸库名称
-                   * @description 人脸库名称
-                   */
-                  faceDatabaseName: string;
-                  /**
-                   * 人脸库类型，0-白名单，1-黑名单，2-重点人员
-                   * @description 人脸库类型，0-白名单，1-黑名单，2-重点人员
-                   */
-                  faceDatabaseType: number;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 同步超脑人脸库
-     * @description **功能描述**
-     *
-     *     将人脸库与设备人脸库同步。
-     *
-     *     注：不支持6000C
-     *
-     *     **返回码**
-     *
-     *     | **返回码** | **返回消息**     | **描述**                                     |
-     *     | ---------- | ---------------- | -------------------------------------------- |
-     *     | 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况     |
-     *     | 511179     | 人脸库不存在     | 人脸库id错误或者跨租户操作                   |
-     *     | 511180     | 人脸库未绑定设备 | 同步人脸库之前，需先操作人脸库绑定设备和通道 |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 人脸库id
-             * @description 人脸库id
-             */
-            faceDatabaseId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/devices': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 查询设备详情
-     * @description **功能描述**
-     *
-     *     查询设备详细资料。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511148 | 未查到设备信息 |                                          |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 设备ID
-             * @description 设备ID
-             */
-            deviceId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 设备ID
-                 * @description 设备ID
-                 */
-                deviceId: string;
-                /**
-                 * 设备IP
-                 * @description 设备IP
-                 */
-                deviceIp: string;
-                /**
-                 * 设备型号
-                 * @description 设备型号
-                 */
-                deviceModel?: string;
-                /**
-                 * 设备名称
-                 * @description 设备名称
-                 */
-                deviceName: string;
-                /**
-                 * 设备路径
-                 * @description 设备路径
-                 */
-                devicePath: string;
-                /**
-                 * 设备序列号
-                 * @description 设备序列号
-                 */
-                deviceSerial: string;
-                /**
-                 * 设备状态，0：离线，1：在线
-                 * @description 设备状态，0：离线，1：在线
-                 */
-                deviceStatus?: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    put?: never;
-    /**
-     * 新增设备
-     * @description **功能描述**
-     *
-     *     新增设备，设备添加之后会异步去拉取通道，拉取通道存在失败的可能，使用过程中如果遇到通道问题，可以调用刷新通道的接口去同步通道信息。
-     *
-     *     若只填写communityId（不填写buildingId和unitId）设备将添加为围墙机；若填写buildingId和unitId，设备将添加为单元机。
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                           | 描述                                     |
-     *     | ------ | ---------------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511154 | 楼栋或单元ID为空                   |                                          |
-     *     | 511155 | 查询社区失败                       |                                          |
-     *     | 511156 | 查询单元失败                       |                                          |
-     *     | 511157 | 该设备已被添加                     |                                          |
-     *     | 511158 | 设备名称重复                       | 设备名称需租户下唯一                     |
-     *     | 511159 | 服务已经到达上限或者没有购买此服务 | 当前账号未开通此类设备的服务             |
-     *     | 511160 | 设备不存在                         | 设备未开启萤石协议或设备未注册且不在线   |
-     *     | 511161 | 设备不在线                         |                                          |
-     *     | 511162 | 设备验证码错误                     |                                          |
-     *     | 511164 | 设备序列号不正确                   |                                          |
-     *     | 511192 | 不能使用出厂时的默认验证码         |                                          |
-     *     | 511193 | 设备存在高风险需要确权             |                                          |
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "deviceSerial": "029936331",
-           *       "validateCode": "SFGRSD",
-           *       "deviceName": "大门口",
-           *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "buildingId": "9edd091f28700a795f4a25d4de047eb4",
-           *       "unitId": "00ae09edd795f4a25d4d091f28747eb4"
-           *     } */
-          'application/json': {
-            /**
-             * 楼栋ID
-             * @description 楼栋ID
-             */
-            buildingId?: string;
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 设备名称
-             * @description 设备名称
-             */
-            deviceName: string;
-            /**
-             * 设备序列号
-             * @description 设备序列号
-             */
-            deviceSerial: string;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            /**
-             * 单元ID
-             * @description 单元ID
-             */
-            unitId?: string;
-            /**
-             * 设备验证码
-             * @description 设备验证码
-             */
-            validateCode: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 设备ID
-                 * @description 设备ID
-                 */
-                deviceId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/devices/actions/deleteDevice': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 删除设备
-     * @description **功能描述**
-     *
-     *     修改设备。
-     *
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "deviceId": "00a795f4a25d4de09edd091f28747eb4"
-           *     } */
-          'application/json': {
-            /**
-             * 设备ID
-             * @description 设备ID
-             */
-            deviceId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: string;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/devices/actions/listByCommunityId': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 查询社区下的设备列表
-     * @description **功能描述**
-     *
-     *     根据社区ID查询社区下的设备列表。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144 | 超出最大分页量限制 |                                          |
-     *     | 511155 | 查询社区失败       |                                          |
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "pageNo": 1,
-           *       "pageSize": 10
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: number;
-            /**
-             * 分页量（最大支持1000）
-             * @description 分页量（最大支持1000）
-             */
-            pageSize: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 设备ID
-                   * @description 设备ID
-                   */
-                  deviceId: string;
-                  /**
-                   * 设备型号
-                   * @description 设备型号
-                   */
-                  deviceModel?: string;
-                  /**
-                   * 设备名称
-                   * @description 设备名称
-                   */
-                  deviceName: string;
-                  /**
-                   * 设备路径
-                   * @description 设备路径
-                   */
-                  devicePath: string;
-                  /**
-                   * 设备序列号
-                   * @description 设备序列号
-                   */
-                  deviceSerial: string;
-                  /**
-                   * 设备状态，0：离线，1：在线
-                   * @description 设备状态，0：离线，1：在线
-                   */
-                  deviceStatus?: number;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/devices/actions/updateDevice': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 修改设备
-     * @description **功能描述**
-     *
-     *     修改设备名称。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511148 | 未查到设备信息 | 设备不存在或已被删除                     |
-     *     | 511158 | 设备名称重复   |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "deviceId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "deviceName": "大门口"
-           *     } */
-          'application/json': {
-            /**
-             * 设备ID
-             * @description 设备ID
-             */
-            deviceId: string;
-            /**
-             * 设备名称
-             * @description 设备名称
-             */
-            deviceName: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: string;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/devices/channels/actions/listByCommunityId': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 查询社区下设备通道列表
-     * @description **功能描述**
-     *
-     *     根据社区ID查询社区下的设备通道列表。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息   | 描述                                     |
-     *     | ------ | ---------- | ---------------------------------------- |
-     *     | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511000 | 社区不存在 |                                          |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: string;
-            /**
-             * 分页量
-             * @description 分页量
-             */
-            pageSize: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 通道ID
-                   * @description 通道ID
-                   */
-                  channelId?: string;
-                  /**
-                   * 通道名
-                   * @description 通道名
-                   */
-                  channelName?: string;
-                  /**
-                   * 通道号
-                   * @description 通道号
-                   */
-                  channelNo?: number;
-                  /**
-                   * 通道封面图片URL
-                   * @description 通道封面图片URL
-                   */
-                  channelPicUrl?: string;
-                  /**
-                   * 状态，0：离线，1：在线 ，-1：未知
-                   * @description 状态，0：离线，1：在线 ，-1：未知
-                   */
-                  channelStatus?: number;
-                  /**
-                   * 设备ID
-                   * @description 设备ID
-                   */
-                  deviceId?: string;
-                  /**
-                   * 设备型号
-                   * @description 设备型号
-                   */
-                  deviceModel?: string;
-                  /**
-                   * 设备名称
-                   * @description 设备名称
-                   */
-                  deviceName?: string;
-                  /**
-                   * 设备序列号
-                   * @description 设备序列号
-                   */
-                  deviceSerial?: string;
-                  /**
-                   * 设备状态，0：离线，1：在线
-                   * @description 设备状态，0：离线，1：在线
-                   */
-                  deviceStatus?: number;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/permissions/actions/authorityDelete': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 人员权限删除
-     * @description **功能描述**
-     *
-     *     从指定设备上删除人员的门禁权限。
-     *
-     *     注：6000C场景，该接口无法删除人房组件自动下发的人员权限
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息         | 描述                                                  |
-     *     | ------ | ---------------- | ----------------------------------------------------- |
-     *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况              |
-     *     | 511059 | 租户信息不匹配   |                                                       |
-     *     | 511030 | 社区中人员不存在 |                                                       |
-     *     | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区                            |
-     *     | 511168 | 权限删除失败     | message描述可能为动态描述，返回的是设备的真实失败原因 |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "e09edd091f28747e00a795f4a25d4db4",
-           *       "personId": " a25d400a795f4d47eb4e09edd091f287",
-           *       "personType": 1,
-           *       "deviceId": "91f28747eb400a795f4a25d4de09edd0"
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 设备ID
-             * @description 设备ID
-             */
-            deviceId: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/permissions/actions/authorityIssued': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 人员权限下发
-     * @description **功能描述**
-     *
-     *     将人员权限下发到指定设备（包括人脸、指纹、卡号）。
-     *
-     *     注：6000C场景，不支持指定边缘子设备
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息         | 描述                                     |
-     *     | ------ | ---------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511030 | 社区中人员不存在 |                                          |
-     *     | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区               |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "e09edd091f28747e00a795f4a25d4db4",
-           *       "personId": " a25d400a795f4d47eb4e09edd091f287",
-           *       "personType": 1,
-           *       "deviceId": "91f28747eb400a795f4a25d4de09edd0"
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 设备ID
-             * @description 设备ID
-             */
-            deviceId: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 住户人员权限批量下发
-     * @description **功能描述**
-     *
-     *     可按照人脸列表、社区、楼栋、单元的方式，将住户人员权限批量下发到指定设备（包括人脸、指纹、卡号）。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                               | 描述                                                 |
-     *     | ------ | -------------------------------------- | ---------------------------------------------------- |
-     *     | 510001 | 参数错误                               | 必填项为空、参数长度不符合等参数异常情况             |
-     *     | 511000 | 社区不存在                             |                                                      |
-     *     | 511005 | 楼栋不存在                             |                                                      |
-     *     | 511006 | 单元不存在                             |                                                      |
-     *     | 511059 | 租户信息不匹配                         |                                                      |
-     *     | 511148 | 未查到设备信息                         |                                                      |
-     *     | 511194 | 设备不属于当前社区                     |                                                      |
-     *     | 511195 | 社区参数不匹配                         |                                                      |
-     *     | 511196 | 人员列表不能为空                       | 当operationType=0时，personIds参数不能为空           |
-     *     | 511197 | 设备列表不能为空                       |                                                      |
-     *     | 511198 | 设备列表不能大于100                    |                                                      |
-     *     | 511199 | 批量权限下发中，请勿重复操作           | 接口不能频繁调用，调用间隔不能小于10s                |
-     *     | 511200 | 批量权限下发中，请下发完成后再进行下发 | 上次的批量下发任务仍未执行完成，需要执行完后再次操作 |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "operationType": 0,
-           *       "operationId": "",
-           *       "personIds": [
-           *         "564c4ca13ead4df9a823f4ebe624772f",
-           *         "5649f7c1be2443fb8fbdb807c6affd76",
-           *         "5649d70aff1d424ab99b5a4adf0a84df",
-           *         "5646654df8904e20817a49d1097d49d5"
-           *       ],
-           *       "deviceIds": [
-           *         "290e878b630b4ab08b3dab7cea55aa3a",
-           *         "30f0f335db1b4197b8077e2ab6b6a22c"
-           *       ],
-           *       "communityId": "0467c177ffdc4ab3b988474c82287695"
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 待下发的设备列表
-             * @description 待下发的设备列表
-             */
-            deviceIds: string[];
-            /**
-             * 当operationType=0，表示按照人员列表批量下发，此时personIds生效；当operationType=1，表示下发指定社区的人员权限，此时operationId表示社区id；当operationType=2，表示下发指定楼栋的人员权限，此时operationId表示楼栋id；当operationType=3，表示下发指定单元的人员权限，此时operationId表示单元id；
-             * @description 当operationType=0，表示按照人员列表批量下发，此时personIds生效；当operationType=1，表示下发指定社区的人员权限，此时operationId表示社区id；当operationType=2，表示下发指定楼栋的人员权限，此时operationId表示楼栋id；当operationType=3，表示下发指定单元的人员权限，此时operationId表示单元id；
-             */
-            operationId: string;
-            /**
-             * 操作类型，[0]-按住户人员列表下发权限 [1]-按社区下发权限 [2]-按楼栋下发权限 [3]-按单元下发权限
-             * @description 操作类型，[0]-按住户人员列表下发权限 [1]-按社区下发权限 [2]-按楼栋下发权限 [3]-按单元下发权限
-             */
-            operationType: number;
-            /**
-             * 住户人员ID列表,当operationType=0时生效
-             * @description 住户人员ID列表,当operationType=0时生效
-             */
-            personIds: string[];
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 人脸信息删除
-     * @description **功能描述**
-     *
-     *     删除门禁设备上人员的人脸信息。
-     *
-     *     注：6000C场景，该接口不支持指定边缘子设备
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                   | 描述                                     |
-     *     | ------ | -------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511032 | 人员正在下发中，请稍后尝试 |                                          |
-     *     | 511033 | 没有该设备权限             |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "deviceId": "1053359bc54648799daa0fb6f40f3e78"
-           *     } */
-          'application/json': {
-            /**
-             * 设备ID
-             * @description 设备ID，如果设备ID为空，会默认删除所有设备上的该用户人脸信息
-             */
-            deviceId?: string;
-            /**
-             * 需要删除的人员ID
-             * @description 需要删除的人员ID
-             */
-            personId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/permissions/actions/dynamicCode': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 动态密码
-     * @description **功能描述**
-     *
-     *     生成临时动态密码，在门禁设备上输入后用于开门。
-     *
-     *     若下发失败将会通过订阅消息进行通知，消息类型为community_message_access_state，消息码为10024。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                           | 描述                                     |
-     *     | ------ | ---------------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511000 | 社区不存在                         |                                          |
-     *     | 511125 | 动态密码失效时间不能早于当前时间   |                                          |
-     *     | 511126 | 动态密码失效时间不能早于生效时间   |                                          |
-     *     | 511127 | 动态密码最大有效时间不能超过24小时 |                                          |
-     *     | 511128 | 动态密码生成失败                   |                                          |
-     *     | 511033 | 没有该设备权限                     |                                          |
-     *     | 511059 | 租户信息不匹配                     | 不能为其他租户生成动态密码               |
-     *     | 511081 | 查询人员信息失败                   |                                          |
-     *     | 511136 | 动态密码失效时间不能等于生效时间   |                                          |
-     *     | 511137 | 未查询到有权限的设备               |                                          |
-     *     | 511138 | 设备列表参数格式错误               |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "personType": 1,
-           *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "beginTime": "2018-01-01T12:00:00+08:00",
-           *       "endTime": "2018-01-02T12:00:00+08:00",
-           *       "deviceIds": "00a795f4a25d4de09edd091f28747eb4,00a795f4a25d4de09edd091f28747eb4"
-           *     } */
-          'application/json': {
-            /**
-             * 动态密码生效时间（UTC+08:00）
-             * @description 动态密码生效时间（UTC+08:00）
-             */
-            beginTime: string;
-            /**
-             * 需要动态密码权限的社区id
-             * @description 需要动态密码权限的社区id
-             */
-            communityId: string;
-            /**
-             * 指定要下发动态密码的设备列表
-             * @description 指定要下发动态密码的设备列表，当设备列表为空时，默认为人员(personId)在社区(communityId)下有权限的设备下发动态密码权限。如有多个以英文逗号分隔
-             */
-            deviceIds?: string;
-            /**
-             * 动态密码失效时间（UTC+08:00）
-             * @description 动态密码失效时间（UTC+08:00），失效时间和生效时间差最大不能超过24小时，为了社区安全，建议尽量把有效时间放短点
-             */
-            endTime: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 开门密码
-                 * @description 开门密码
-                 */
-                dynamicCode: string;
-                /**
-                 * 下发到设备的虚拟人员ID（可用于接收下发消息）
-                 * @description 下发到设备的虚拟人员ID（可用于接收下发消息）
-                 */
-                virtualPersonId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/permissions/actions/faceIssued': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 人脸信息下发
-     * @description **功能描述**
-     *
-     *     将人脸信息下发到门禁设备（若无有权限的设备则不下发）。
-     *
-     *     下发结果将通过门禁权限下发状态订阅消息进行通知。
-     *
-     *     图片要求：大小：200k以内；格式：jpg
-     *
-     *     注：6000C场景，该接口不支持指定边缘子设备
-     *
-     *     **接口约束**
-     *
-     *     设置人员所属户室后，若需要调用该接口请延时5秒以上，否则可能出现部分设备人脸权限未下发。
-     *
-     *     建议：在接口【新增人员】添加人脸url,【设置人员所属户室】时人脸权限会自动下发，不需要单独调用该接口。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                 | 描述                                           |
-     *     | ------ | ------------------------ | ---------------------------------------------- |
-     *     | 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况       |
-     *     | 511025 | 参数异常                 | 请求参数包含不合法信息（例如：平台不支持的值） |
-     *     | 511033 | 没有该设备权限           |                                                |
-     *     | 511095 | 人脸URL不合法            |                                                |
-     *     | 511100 | 人脸图片质量不合格       |                                                |
-     *     | 511117 | 人脸评分校验失败         |                                                |
-     *     | 511118 | 人脸特征点置信度校验失败 |                                                |
-     *     | 511119 | 人脸眼间距校验失败       |                                                |
-     *     | 511120 | 人脸俯仰角校验失败       |                                                |
-     *     | 511121 | 人脸左右角校验失败       |                                                |
-     *     | 511122 | 人脸可见性校验失败       |                                                |
-     *     | 511123 | 人脸清晰度校验失败       |                                                |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "personType": 1,
-           *       "deviceId": "bc92ac2d734246cfb0a9901f3a1bb690",
-           *       "faceUrl": "https://hik-cloud.com/img1.jpg"
-           *     } */
-          'application/json': {
-            /**
-             * 设备ID
-             * @description 设备ID，若设备ID为空，则会下发到所有有权限的设备
-             */
-            deviceId: string;
-            /**
-             * 人脸图片URL
-             * @description 人脸图片URL
-             */
-            faceUrl: string;
-            /**
-             * 需要下发的人员ID
-             * @description 需要下发的人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/permissions/actions/getQRcode': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 我的二维码
-     * @description **功能描述**
-     *
-     *     生成我的二维码信息。需要人员之前已经有卡号并且已经下发到设备，二维码信息有效期默认24小时，在同一设备上，可以刷4次。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511147 | 查询卡信息错误 |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "personType": 1
-           *     } */
-          'application/json': {
-            /**
-             * 人员ID
-             * @description 人员ID，人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 加密二维码信息
-                 * @description 加密二维码信息
-                 */
-                qrCode: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/remoteControl/actions/deviceList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 获取人员门禁设备信息
-     * @description **功能描述**
-     *
-     *     查询人员可操控的门禁设备列表。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息 | 描述                                           |
-     *     | ------ | -------- | ---------------------------------------------- |
-     *     | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况       |
-     *     | 511025 | 参数异常 | 请求参数包含不合法信息（例如：平台不支持的值） |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 设备ID
-                 * @description 设备ID
-                 */
-                deviceId: string;
-                /**
-                 * 设备名称
-                 * @description 设备名称
-                 */
-                deviceName: string;
-                /**
-                 * 户室信息
-                 * @description 户室信息
-                 */
-                roomInfo: string;
-                [key: string]: unknown;
-              }[];
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 呼梯
-     * @description **功能描述**
-     *
-     *     门口机呼梯，通过门口机（门禁设备）进行远程呼梯。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息     | 描述                                     |
-     *     | ------ | ------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511086 | 房间不存在   |                                          |
-     *     | 511167 | 远程呼梯失败 |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "roomId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "deviceId": "1053359bc54648799daa0fb6f40f3e78",
-           *       "sourceFloor": 1,
-           *       "targetFloor": 10
-           *     } */
-          'application/json': {
-            /**
-             * 设备ID
-             * @description 设备ID，电梯关联的门口机ID
-             */
-            deviceId: string;
-            /**
-             * 房间ID
-             * @description 房间ID，目标房间ID
-             */
-            roomId: string;
-            /**
-             * 起始楼层
-             * @description 起始楼层，范围区间为-3~100
-             */
-            sourceFloor: number;
-            /**
-             * 目标楼层
-             * @description 目标楼层，范围区间为-3~100
-             */
-            targetFloor: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/entranceGuard/remoteControl/actions/gateControl': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 远程控门
-     * @description **功能描述**
-     *
-     *     通过手机APP进行远程控门。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                           |
-     *     | ------ | -------------- | ---------------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况       |
-     *     | 511025 | 参数异常       | 请求参数包含不合法信息（例如：平台不支持的值） |
-     *     | 511033 | 没有该设备权限 |                                                |
-     *     | 511035 | 获取信息失败   |                                                |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "deviceId": "1053359bc54648799daa0fb6f40f3e78",
-           *       "command": "open"
-           *     } */
-          'application/json': {
-            /**
-             * 控制类型
-             * @description 控制类型，cmd 命令:open-开门
-             */
-            command: string;
-            /**
-             * 设备ID
-             * @description 设备ID
-             */
-            deviceId: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
-            };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/publish/actions/deleteProgram': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 删除广告
-     * @description **功能描述**
-     *
-     *     删除设备上的广告信息。
-     *
-     *     注：不支持6000C
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511135 | 设备最多为50台 |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "deviceIds": [
-           *         "0f8f9ecdbfab7c78238088a4e3c81f31",
-           *         "4e3c81f310f8b7c78238088af9ecdbfa"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 需要下发的设备ID列表
-             * @description 需要下发的设备ID列表，每次最大支持50台设备
-             */
-            deviceIds: string[];
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 删除失败的设备集合
-                 * @description 删除失败的设备集合
-                 */
-                failureMap?: {
-                  /**
-                   * 删除失败的设备ID
-                   * @description 删除失败的设备ID
-                   */
-                  deviceId?: string;
-                  /**
-                   * 返回码
-                   * @description 返回码
-                   */
-                  resultCode?: string;
-                  /**
-                   * 错误信息
-                   * @description 错误信息
-                   */
-                  resultMessage?: string;
-                  [key: string]: unknown;
+    "/": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 第三方跳转登录云眸普教对接规范
+         * @description ## 功能描述
+         *
+         *     本接口提供第三方跳转登录云眸普教对接规范及示例。
+         *
+         *     本节内容需结合基础服务-用户管理使用。
+         *
+         *      signature生成规则
+         *
+         *     第一步，设所有发送的数据为集合M，将集合M内非signature外的非空参数(值为空的参数不参与签名)按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串str1。
+         *
+         *     第二步，在str1最后拼接上登陆码authCode(用户管理-获取登陆码接口获取接口返回值)得到str2字符串，并对str2进行HmacSHA256运算，再将得到的字符串所有字符转换为大写，得到值为signature。
+         *
+         *     ## 实现示例
+         *
+         *     |                | 参数      | 例子                             |
+         *     | -------------- | --------- | -------------------------------- |
+         *     | 平台提供的参数 | userId    | 499e861ec1254e8ca399dfb9e837a988 |
+         *     | 平台提供的参数 | authCode  | 1d73e6a6a5bb4e90aa2e8ca52a2515c4 |
+         *     | 业务参数       | ts        | 1616985134200                    |
+         *     | 需要生成的参数 | signature |                                  |
+         *
+         *     ```
+         *              step1: 排序后拼接的字符串:ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988
+         *              step2: 加上登陆码后的字符串:  ts=1616985134200&userId=499e861ec1254e8ca399dfb9e837a988&authCode=1d73e6a6a5bb4e90aa2e8ca52a2515c4
+         *              step3: signature=HmacSHA256(step2的字符串,authCode)后转大写,最终生成的signature值为:18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
+         *              step4:请求地址:https://edu.hik-cloud.com/?userId=499e861ec1254e8ca399dfb9e837a988&ts=1616985134200&signature=18E98E016F290F9609FCA5C74647143C42888FC6C72CE9C91ACDAEBEF13C5232
+         *
+         *              注意：登陆码有效期为1小时，且同一登陆码生成的跳转url，只能成功跳转一次；跳转链接的有效期是30分钟；跳转登录之后无操作30分钟后，认证信息失效。
+         *
+         *     ```
+         */
+        get: {
+            parameters: {
+                query: {
+                    /**
+                     * @description 学校ID
+                     * @example {schoolId}
+                     */
+                    schoolId?: string;
+                    /**
+                     * @description 通过签名生成算法生成（见下方）
+                     * @example {signature}
+                     */
+                    signature: string;
+                    /**
+                     * @description 时间戳（第三方生成）
+                     * @example {ts}
+                     */
+                    ts: string;
+                    /**
+                     * @description 用户ID（添加用户接口的返回值）
+                     * @example {userId}
+                     */
+                    userId: string;
                 };
-                [key: string]: unknown;
-              }[];
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/publish/actions/publishProgram': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 下发广告
-     * @description **功能描述**
-     *
-     *     往设备上下发广告信息。（下发的结果我们会通过消息订阅进行通知，消息类型为community_message_advert_state，消息码为：10025）
-     *
-     *      图片：请上传分辨率为600*276 ,大小限制1M以内的图片,上传图片数量限制5张以内(只支持jpg格式)。
-     *     视频：请上传大小限制200M以内的视频,上传视频素材数量限制3个以内(只支持mp4格式)。
-     *
-     *     注：不支持6000C
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息         | 描述                                             |
-     *     | ------ | ---------------- | ------------------------------------------------ |
-     *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况         |
-     *     | 511130 | 设备响应超时     |                                                  |
-     *     | 511132 | 素材数量超过限制 | 图片素材数量不能超过5个，视频素材数量不能超过3个 |
-     *     | 511133 | 节目名称过长     |                                                  |
-     *     | 511134 | 备注过长         |                                                  |
-     *     | 511135 | 设备最多为50台   |                                                  |
-     *     | 511142 | 素材过大         | 单个图片不能超过1M，单个视频不能超过200M         |
-     *     | 511148 | 未查到设备信息   | 未查到有效设备信息                               |
-     *     | 511169 | 设备正在发布中   | 部分设备正在下发信息，请稍后再试                 |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "programName": "广告名称",
-           *       "programRemark": "备注信息",
-           *       "userId": "b7c78238088a4e3c81f310f8f9ecdbfa",
-           *       "materialType": 0,
-           *       "deviceIds": [
-           *         "0f8f9ecdbfab7c78238088a4e3c81f31",
-           *         "4e3c81f310f8b7c78238088af9ecdbfa"
-           *       ],
-           *       "materials": [
-           *         {
-           *           "materialUrl": "https://pbpic.hik-cloud.com/neptune/b7c78238088a4e3c81f310f8f9ecdbfa/publishPicture/jvaglpsddKMKqpB4.jpg",
-           *           "fileSize": 181963
-           *         }
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 需要下发的设备ID列表
-             * @description 需要下发的设备ID列表，每次最大支持50台设备
-             */
-            deviceIds: string[];
-            /**
-             * 素材类型
-             * @description 素材类型，[0]图片，[1]视频（为空默认为0-图片）
-             */
-            materials?: {
-              /**
-               * 图片大小(字节)
-               * @description 图片大小(字节)
-               */
-              fileSize?: number;
-              /**
-               * 图片素材URL
-               * @description 图片素材URL
-               */
-              materialUrl: string;
-              [key: string]: unknown;
-            }[];
-            /**
-             * 素材列表
-             * @description 素材列表，详细说明见下方
-             */
-            materialType: number;
-            /**
-             * 广告名称
-             * @description 广告名称
-             */
-            programName: string;
-            /**
-             * 备注信息
-             * @description 备注信息
-             */
-            programRemark?: string;
-            /**
-             * 创建人员ID
-             * @description 创建人员ID
-             */
-            userId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 下发记录ID
-                 * @description 下发记录ID
-                 */
-                publishRecordId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": Record<string, never>;
+                    };
+                };
             };
-          };
         };
-      };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/buildings': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 新增楼栋
-     * @description **功能描述**
-     *
-     *     向社区下添加楼栋。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                     | 描述                                     |
-     *     | ------ | ---------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511000 | 社区不存在                   |                                          |
-     *     | 511001 | 该社区下楼栋已存在，无法添加 |                                          |
-     *     | 511004 | 楼栋编号已经存在             |                                          |
-     *     | 511059 | 租户信息不匹配               | 不能在其他租户的社区下新增房屋           |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/device/faceDatabase/actions/addFace": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "buildingName": "1幢",
-           *       "buildingNumber": "12",
-           *       "floorUpCount": "50",
-           *       "floorDownCount": "2",
-           *       "floorFamilyCount": "6",
-           *       "buildingUnitSize": "10",
-           *       "buildingRemark": "备注信息"
-           *     } */
-          'application/json': {
-            /**
-             * 楼栋名称
-             * @description 楼栋名称
-             */
-            buildingName: string;
-            /**
-             * 楼栋编号（1-999之间的整数）
-             * @description 楼栋编号（1-999之间的整数）
-             */
-            buildingNumber: string;
-            /**
-             * 备注
-             * @description 备注
-             */
-            buildingRemark: string;
-            /**
-             * 楼栋单元数量（每栋最多支持30单元）
-             * @description 楼栋单元数量（每栋最多支持30单元）
-             */
-            buildingUnitSize: string;
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 地下楼层数（最多支持3层）
-             * @description 地下楼层数（最多支持3层）
-             */
-            floorDownCount: string;
-            /**
-             * 每层户数（每层最多支持50户）
-             * @description 每层户数（每层最多支持50户）
-             */
-            floorFamilyCount: string;
-            /**
-             * 地上楼层数（最多支持100层）
-             * @description 地上楼层数（最多支持100层）
-             */
-            floorUpCount: string;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 楼栋id
-                 * @description 楼栋id
-                 */
-                buildingId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 超脑人脸库添加人脸
+         * @description **功能描述**
+         *
+         *     人脸库中添加人脸。
+         *
+         *     注：不支持6000C
+         *
+         *     **返回码**
+         *
+         *     | **返回码** | **返回消息**             | **描述**                                 |
+         *     | ---------- | ------------------------ | ---------------------------------------- |
+         *     | 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511179     | 人脸库不存在             | 人脸库id错误或者跨租户操作               |
+         *     | 511095     | 人脸URL不合法            |                                          |
+         *     | 511100     | 人脸图片质量不合格       |                                          |
+         *     | 511117     | 人脸评分校验失败         |                                          |
+         *     | 511118     | 人脸特征点置信度校验失败 |                                          |
+         *     | 511119     | 人脸眼间距校验失败       |                                          |
+         *     | 511120     | 人脸俯仰角校验失败       |                                          |
+         *     | 511121     | 人脸左右角校验失败       |                                          |
+         *     | 511122     | 人脸可见性校验失败       |                                          |
+         *     | 511123     | 人脸清晰度校验失败       |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/buildings/{buildingId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 删除楼栋
-     * @description **功能描述**
-     *
-     *     删除社区下的楼栋。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                     | 描述                                     |
-     *     | ------ | ---------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511005 | 楼栋不存在                   |                                          |
-     *     | 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
-     *     | 511008 | 单元编号已经存在             | 单元编号重复                             |
-     *     | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path: {
-          buildingId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 楼栋ID
-             * @description 楼栋ID
-             */
-            buildingId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "faceDatabaseId": "6514484bc11397508cab7870c633216b",
+                     *       "name": "张三",
+                     *       "faceUrl": "https://pbpicup.hik-cloud.com/neptune/device/faceLib/2020/12/bc8d4529cb15464682ae2de970dc74ac/gd3Hosm5TWKK.jpg",
+                     *       "sex": 1,
+                     *       "idType": 1,
+                     *       "idNumber": "110011200001011121"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 人脸库id
+                         * @description 人脸库id
+                         */
+                        faceDatabaseId: string;
+                        /**
+                         * 人脸url
+                         * @description 人脸url
+                         */
+                        faceUrl: string;
+                        /**
+                         * 证件号
+                         * @description 证件号
+                         */
+                        idNumber?: string;
+                        /**
+                         * 证件类型；1-身份证2-护照 3-军官证4-其他
+                         * @description 证件类型；1-身份证2-护照 3-军官证4-其他
+                         */
+                        idType: number;
+                        /**
+                         * 姓名
+                         * @description 姓名
+                         */
+                        name: string;
+                        /**
+                         * 性别；1 男；2 女
+                         * @description 性别；1 男；2 女
+                         */
+                        sex: number;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/buildings/actions/communityBuildingList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 查询社区下的楼栋
-     * @description **功能描述**
-     *
-     *     查询指定社区下的所有楼栋数据。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 200    | 成功               |                                          |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144 | 超出最大分页量限制 |                                          |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "pageNo": 1,
-           *       "pageSize": 10
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: number;
-            /**
-             * 分页量(最大支持100)
-             * @description 分页量(最大支持100)
-             */
-            pageSize: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 楼栋ID
-                   * @description 楼栋ID
-                   */
-                  buildingId: string;
-                  /**
-                   * 楼栋名称
-                   * @description 楼栋名称
-                   */
-                  buildingName: string;
-                  /**
-                   * 楼栋编号（1-999之间的整数）
-                   * @description 楼栋编号（1-999之间的整数）
-                   */
-                  buildingNumber: string;
-                  /**
-                   * 备注
-                   * @description 备注
-                   */
-                  buildingRemark?: string;
-                  /**
-                   * 楼栋单元数量（每栋最多支持30单元）
-                   * @description 楼栋单元数量（每栋最多支持30单元）
-                   */
-                  buildingUnitSize: string;
-                  /**
-                   * 创建时间
-                   * @description 创建时间
-                   */
-                  createTime?: string;
-                  /**
-                   * 地下楼层数（最多支持3层）
-                   * @description 地下楼层数（最多支持3层）
-                   */
-                  floorDownCount?: string;
-                  /**
-                   * 每层户数（每层最多支持50户）
-                   * @description 每层户数（每层最多支持50户）
-                   */
-                  floorFamilyCount: string;
-                  /**
-                   * 地上楼层数（最多支持100层）
-                   * @description 地上楼层数（最多支持100层）
-                   */
-                  floorUpCount: string;
-                  /**
-                   * 所属路径（社区/楼栋）
-                   * @description 所属路径（社区/楼栋）
-                   */
-                  path: string;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 人脸id
+                                 * @description 人脸id
+                                 */
+                                faceId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 新增卡片（白卡）
-     * @description **功能描述**
-     *
-     *     添加一张新的空白卡片。
-     *
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/device/faceDatabase/actions/delFaces": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "cardNumber": "12345678"
-           *     } */
-          'application/json': {
-            /**
-             * 卡号
-             * @description 卡号，仅支持数字
-             */
-            cardNumber: string;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 卡片ID
-                 * @description 卡片ID
-                 */
-                cardId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 超脑人脸库删除人脸
+         * @description **功能描述**
+         *
+         *     删除人脸库已经存在的人脸。
+         *
+         *     注：不支持6000C
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息   | 描述                                     |
+         *     | ------ | ---------- | ---------------------------------------- |
+         *     | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511181 | 人脸id错误 | 人脸不存在                               |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards/{cardId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 删除卡片（白卡）
-     * @description **功能描述**
-     *
-     *     删除一张空白卡。
-     *
-     *     注意：已绑定人员的卡片不允许删除，需要先解除绑定再进行删除。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511103 | 只能删除空白卡 |                                          |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path: {
-          /** @description 要删除的卡片ID */
-          cardId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "faceIds": [
+                     *         "6514484bc11397508cab7870c633216b"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 人脸id的集合，大小不能超过100个
+                         * @description 人脸id的集合，大小不能超过100个
+                         */
+                        faceIds: string[];
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards/actions/cancelLossCard': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 解挂
-     * @description **功能描述**
-     *
-     *     将已挂失的卡片进行解挂（卡片将变为正常卡）。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息             | 描述                                     |
-     *     | ------ | -------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511107 | 卡号不存在           |                                          |
-     *     | 511033 | 没有该设备权限       |                                          |
-     *     | 511111 | 只有挂失的卡才能解挂 | 其他状态的卡片无法解挂，比如正常的卡片   |
-     *     | 511145 | 设备数量超出限制     |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "cardId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "deviceIds": [
-           *         "0f8f9ecdbfab7c78238088a4e3c81f31",
-           *         "4e3c81f310f8b7c78238088af9ecdbfa"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 卡片ID
-             * @description 卡片ID
-             */
-            cardId: string;
-            /**
-             * 需要下发的设备ID列表
-             * @description 需要下发的设备ID列表，会将此卡号下发到指定设备，若未传，将下发到所有有权限的设备
-             */
-            deviceIds?: string[];
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards/actions/changeCard': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 换卡
-     * @description **功能描述**
-     *
-     *     将已开通的卡片进行替换（旧卡将变为空白卡）。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
-     *     | 511107 | 卡号不存在         | 旧卡不存在                               |
-     *     | 511109 | 只有正常卡才能换卡 | 其他状态的卡片无法换卡，比如挂失的卡片   |
-     *     | 511033 | 没有该设备权限     |                                          |
-     *     | 511113 | 卡号长度超过20     |                                          |
-     *     | 511116 | 卡号只能是数字     |                                          |
-     *     | 511145 | 设备数量超出限制   |                                          |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/device/faceDatabase/actions/list": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "cardId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "cardNumber": "12345678",
-           *       "deviceIds": [
-           *         "0f8f9ecdbfab7c78238088a4e3c81f31",
-           *         "4e3c81f310f8b7c78238088af9ecdbfa"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 旧卡片ID
-             * @description 旧卡片ID
-             */
-            cardId: string;
-            /**
-             * 新卡号
-             * @description 新卡号，仅支持数字
-             */
-            cardNumber: string;
-            /**
-             * 需要下发的设备ID列表
-             * @description 需要下发的设备ID列表，清除所有的旧卡权限，并将新卡下发到指定设备，若未传，将下发到所有有权限的设备
-             */
-            deviceIds: string[];
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 新卡片ID
-                 * @description 新卡片ID
-                 */
-                cardId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        /**
+         * 超脑人脸库列表
+         * @description **功能描述**
+         *
+         *     查询人脸库列表。
+         *
+         *     注：不支持6000C
+         *
+         *     **返回码**
+         *
+         *     | **返回码** | **返回消息**     | **描述**                                 |
+         *     | ---------- | ---------------- | ---------------------------------------- |
+         *     | 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144     | 超出最大分页限制 | pageSize最大值为100                      |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards/actions/lossCard': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 挂失
-     * @description **功能描述**
-     *
-     *     将已开通的卡片进行挂失（卡片状态将变为挂失）。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511107 | 卡号不存在         |                                          |
-     *     | 511110 | 只有正常卡才能挂失 | 其他状态的卡片无法挂失，比如空白卡       |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "cardId": "00a795f4a25d4de09edd091f28747eb4"
-           *     } */
-          'application/json': {
-            /**
-             * 卡片ID
-             * @description 卡片ID
-             */
-            cardId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 社区id
+                         * @description 社区id
+                         */
+                        communityId: string;
+                        /**
+                         * 人脸库名称
+                         * @description 人脸库名称
+                         */
+                        faceDatabaseName?: string;
+                        /**
+                         * 人脸库类型，0-白名单，1-黑名单，2-重点人员
+                         * @description 人脸库类型，0-白名单，1-黑名单，2-重点人员
+                         */
+                        faceDatabaseType: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数，正整数
+                         */
+                        pageNo: string;
+                        /**
+                         * 分页量，最大为100
+                         * @description 分页量，最大为100，正整数
+                         */
+                        pageSize: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards/actions/openCard': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 开卡
-     * @description **功能描述**
-     *
-     *     给人员开通卡片。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息             | 描述                                     |
-     *     | ------ | -------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511046 | 该人员不存在         |                                          |
-     *     | 511104 | 住户只能有三张卡     |                                          |
-     *     | 511105 | 物业人员只能有一张卡 |                                          |
-     *     | 511106 | 卡号已被使用         | 卡号已绑定人员，空白卡可以使用           |
-     *     | 511033 | 没有该设备权限       |                                          |
-     *     | 511113 | 卡号长度超过20       |                                          |
-     *     | 511114 | 人员类型不合法       |                                          |
-     *     | 511116 | 卡号只能是数字       |                                          |
-     *     | 511145 | 设备数量超出限制     |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "cardNumber": "12345678",
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "personType": 1,
-           *       "deviceIds": [
-           *         "0f8f9ecdbfab7c78238088a4e3c81f31",
-           *         "4e3c81f310f8b7c78238088af9ecdbfa"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 卡号
-             * @description 卡号，仅支持数字
-             */
-            cardNumber: string;
-            /**
-             * 需要下发的设备ID列表
-             * @description 需要下发的设备ID列表，若未传设备ID，将对所有有权限的设备进行下发
-             */
-            deviceIds?: string[];
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: number;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 卡片ID
-                 * @description 卡片ID
-                 */
-                cardId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 人脸库id
+                                     * @description 人脸库id
+                                     */
+                                    faceDatabaseId: string;
+                                    /**
+                                     * 人脸库名称
+                                     * @description 人脸库名称
+                                     */
+                                    faceDatabaseName: string;
+                                    /**
+                                     * 人脸库类型，0-白名单，1-黑名单，2-重点人员
+                                     * @description 人脸库类型，0-白名单，1-黑名单，2-重点人员
+                                     */
+                                    faceDatabaseType: number;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards/actions/refundCard': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 退卡
-     * @description **功能描述**
-     *
-     *     已开通的卡片进行退卡（卡片将变为空白卡）。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511107 | 卡号不存在         |                                          |
-     *     | 511108 | 只有正常卡才能退卡 | 其他状态的卡片无法退卡，比如挂失的卡片   |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/device/faceDatabase/actions/syncFaceDatabase": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "cardId": "00a795f4a25d4de09edd091f28747eb4"
-           *     } */
-          'application/json': {
-            /**
-             * 卡片ID
-             * @description 卡片ID
-             */
-            cardId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        /**
+         * 同步超脑人脸库
+         * @description **功能描述**
+         *
+         *     将人脸库与设备人脸库同步。
+         *
+         *     注：不支持6000C
+         *
+         *     **返回码**
+         *
+         *     | **返回码** | **返回消息**     | **描述**                                     |
+         *     | ---------- | ---------------- | -------------------------------------------- |
+         *     | 510001     | 参数错误         | 必填项为空、参数长度不符合等参数异常情况     |
+         *     | 511179     | 人脸库不存在     | 人脸库id错误或者跨租户操作                   |
+         *     | 511180     | 人脸库未绑定设备 | 同步人脸库之前，需先操作人脸库绑定设备和通道 |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/cards/actions/reissueCard': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 补卡
-     * @description **功能描述**
-     *
-     *     补开一张新的卡片，旧卡将被删除。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
-     *     | 511107 | 卡号不存在         | 旧卡不存在                               |
-     *     | 511033 | 没有该设备权限     |                                          |
-     *     | 511112 | 只有挂失卡才能补卡 | 其他状态的卡片无法补卡，比如正常的卡片   |
-     *     | 511113 | 卡号长度超过20     |                                          |
-     *     | 511116 | 卡号只能是数字     |                                          |
-     *     | 511145 | 设备数量超出限制   |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "cardId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "cardNumber": "12345678",
-           *       "deviceIds": [
-           *         "0f8f9ecdbfab7c78238088a4e3c81f31",
-           *         "4e3c81f310f8b7c78238088af9ecdbfa"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 旧卡片ID
-             * @description 旧卡片ID
-             */
-            cardId: string;
-            /**
-             * 新卡号
-             * @description 新卡号，仅支持数字
-             */
-            cardNumber: string;
-            /**
-             * 需要下发的设备ID列表
-             * @description 需要下发的设备ID列表，清除所有的旧卡权限，并将新卡下发到指定设备，若未传，将下发到所有有权限的设备
-             */
-            deviceIds?: string[];
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 卡片ID
-                 * @description 卡片ID
-                 */
-                cardId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 人脸库id
+                         * @description 人脸库id
+                         */
+                        faceDatabaseId: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/communities': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 新增社区
-     * @description **功能描述**
-     *
-     *     在云眸社区租户下新增一个社区。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                                 | 描述                                                 |
-     *     | ------ | ---------------------------------------- | ---------------------------------------------------- |
-     *     | 510001 | 参数错误                                 | 必填项为空、参数长度不符合等参数异常情况             |
-     *     | 511002 | 您所选择的区域已存在子区域，无法添加社区 | 新增社区会在系统默认区域下，若默认区域异常则报此异常 |
-     *     | 511003 | 已存在相同名称的社区， 请修改            |                                                      |
-     *     | 511015 | 手机格式错误                             |                                                      |
-     *     | 511046 | 该人员不存在                             | 社区负责人不存在                                     |
-     *     | 511047 | 社区面积(万㎡) 最多8位整数, 2位小数      |                                                      |
-     *     | 511093 | 省市区县代码错误                         | 省市区县代码包含非法字符                             |
-     *     | 511094 | 经纬度坐标不合法                         |                                                      |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "communityName": "龙湖社区",
-           *       "provinceCode": "130000",
-           *       "cityCode": "130300",
-           *       "countyCode": "130302",
-           *       "addressDetail": "我是街道详细地址",
-           *       "communitySquareMeter": "50.22",
-           *       "longitude": "116.37319",
-           *       "latitude": "39.93428",
-           *       "chargePersonId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "phoneNumber": "15200212124",
-           *       "communityRemark": "备注信息"
-           *     } */
-          'application/json': {
-            /**
-             * 街道详细地址
-             * @description 街道详细地址
-             */
-            addressDetail: string;
-            /**
-             * 负责人ID（该社区的物业负责人）
-             * @description 负责人ID（该社区的物业负责人）
-             */
-            chargePersonId?: string;
-            /**
-             * 市代号
-             * @description 市代号
-             */
-            cityCode?: string;
-            /**
-             * 社区名称
-             * @description 社区名称
-             */
-            communityName: string;
-            /**
-             * 备注
-             * @description 备注
-             */
-            communityRemark?: string;
-            /**
-             * 社区面积(万㎡) 最多8位整数, 2位小数
-             * @description 社区面积(万㎡) 最多8位整数, 2位小数
-             */
-            communitySquareMeter?: string;
-            /**
-             * 区代号
-             * @description 区代号
-             */
-            countyCode?: string;
-            /**
-             * 维度坐标值
-             * @description 维度坐标值
-             */
-            latitude?: string;
-            /**
-             * 经度坐标值
-             * @description 经度坐标值
-             */
-            longitude?: string;
-            /**
-             * 联系方式
-             * @description 联系方式
-             */
-            phoneNumber?: string;
-            /**
-             * 省代号
-             * @description 省代号
-             */
-            provinceCode: string;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 社区ID（云眸平台的主键）
-                 * @description 社区ID（云眸平台的主键）
-                 */
-                communityId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/communities/{communityId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 删除社区
-     * @description **功能描述**
-     *
-     *     从云眸社区租户下删除一个社区。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                   | 描述                                     |
-     *     | ------ | -------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511059 | 租户信息不匹配             | 若删除其他租户社区则报此错误             |
-     *     | 511075 | 社区已添加楼栋，不能删除   |                                          |
-     *     | 511079 | 社区已添加设备，不能删除   |                                          |
-     *     | 511080 | 社区已添加停车场，不能删除 |                                          |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/devices": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path: {
-          communityId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        /**
+         * 查询设备详情
+         * @description **功能描述**
+         *
+         *     查询设备详细资料。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511148 | 未查到设备信息 |                                          |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/communities/actions/list': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 查询社区
-     * @description **功能描述**
-     *
-     *     分页查询云眸社区租户下的社区。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息 | 描述                                     |
-     *     | ------ | -------- | ---------------------------------------- |
-     *     | 200    | 成功     |                                          |
-     *     | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: number;
-            /**
-             * 分页量
-             * @description 分页量
-             */
-            pageSize: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 街道详细地址
-                   * @description 街道详细地址
-                   */
-                  addressDetail: string;
-                  /**
-                   * 负责人ID（该社区的物业负责人）
-                   * @description 负责人ID（该社区的物业负责人）
-                   */
-                  chargePersonId?: string;
-                  /**
-                   * 负责人名字（该社区的物业负责人）
-                   * @description 负责人名字（该社区的物业负责人）
-                   */
-                  chargePersonName?: string;
-                  /**
-                   * 市代号
-                   * @description 市代号
-                   */
-                  cityCode?: string;
-                  /**
-                   * 地址（省/市/区）
-                   * @description 地址（省/市/区）
-                   */
-                  communityAddress: string;
-                  /**
-                   * 云眸平台的社区id
-                   * @description 云眸平台的社区id
-                   */
-                  communityId: string;
-                  /**
-                   * 社区名称
-                   * @description 社区名称
-                   */
-                  communityName: string;
-                  /**
-                   * 备注
-                   * @description 备注
-                   */
-                  communityRemark?: string;
-                  /**
-                   * 社区面积(万㎡) 面积最多8位整数, 2位小数
-                   * @description 社区面积(万㎡) 面积最多8位整数, 2位小数
-                   */
-                  communitySquareMeter?: string;
-                  /**
-                   * 区代号
-                   * @description 区代号
-                   */
-                  countyCode?: string;
-                  /**
-                   * 维度坐标值
-                   * @description 维度坐标值
-                   */
-                  Latitude?: string;
-                  /**
-                   * 经度坐标值
-                   * @description 经度坐标值
-                   */
-                  Longitude?: string;
-                  /**
-                   * 联系方式
-                   * @description 联系方式
-                   */
-                  phoneNumber?: string;
-                  /**
-                   * 省代号
-                   * @description 省代号
-                   */
-                  provinceCode: string;
-                  /**
-                   * 楼栋结构
-                   * @description 楼栋结构
-                   */
-                  structName: string;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 设备ID
+                         * @description 设备ID
+                         */
+                        deviceId: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/communities/actions/updateCommunity': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 修改社区
-     * @description **功能描述**
-     *
-     *     修改云眸社区租户下的社区基础信息。（全量修改）
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                            | 描述                                     |
-     *     | ------ | ----------------------------------- | ---------------------------------------- |
-     *     | 511000 | 社区不存在                          |                                          |
-     *     | 510001 | 参数错误                            | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511003 | 已存在相同名称的社区，请修改        |                                          |
-     *     | 511015 | 手机格式错误                        |                                          |
-     *     | 511046 | 该人员不存在                        |                                          |
-     *     | 511047 | 社区面积(万㎡) 最多8位整数, 2位小数 |                                          |
-     *     | 511059 | 租户信息不匹配                      | 不能对其他租户的社区进行操作             |
-     *     | 511093 | 省市区县代码错误                    | 省市区县代码包含非法字符                 |
-     *     | 511094 | 经纬度坐标不合法                    |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "communityName": "龙湖社区",
-           *       "provinceCode": "130000",
-           *       "cityCode": "130300",
-           *       "countyCode": "130302",
-           *       "addressDetail": "街道详细地址",
-           *       "communitySquareMeter": "50.22",
-           *       "longitude": "116.37319",
-           *       "latitude": "39.93428",
-           *       "chargePersonId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "phoneNumber": "15200212124",
-           *       "communityRemark": "备注信息"
-           *     } */
-          'application/json': {
-            /**
-             * 街道详细地址
-             * @description 街道详细地址
-             */
-            addressDetail: string;
-            /**
-             * 负责人ID（该社区的物业负责人）
-             * @description 负责人ID（该社区的物业负责人）
-             */
-            chargePersonId?: string;
-            /**
-             * 市代号
-             * @description 市代号
-             */
-            cityCode?: string;
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 社区名称
-             * @description 社区名称
-             */
-            communityName: string;
-            /**
-             * 备注
-             * @description 备注
-             */
-            communityRemark?: string;
-            /**
-             * 社区面积(万㎡) 最多8位整数, 2位小数
-             * @description 社区面积(万㎡) 最多8位整数, 2位小数
-             */
-            communitySquareMeter?: string;
-            /**
-             * 区代号
-             * @description 区代号
-             */
-            countyCode?: string;
-            /**
-             * 维度坐标值
-             * @description 维度坐标值
-             */
-            latitude?: string;
-            /**
-             * 经度坐标值
-             * @description 经度坐标值
-             */
-            longitude?: string;
-            /**
-             * 联系方式
-             * @description 联系方式
-             */
-            phoneNumber?: string;
-            /**
-             * 省代号
-             * @description 省代号
-             */
-            provinceCode: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 方消息
-               * @description 方消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 设备ID
+                                 * @description 设备ID
+                                 */
+                                deviceId: string;
+                                /**
+                                 * 设备IP
+                                 * @description 设备IP
+                                 */
+                                deviceIp: string;
+                                /**
+                                 * 设备型号
+                                 * @description 设备型号
+                                 */
+                                deviceModel?: string;
+                                /**
+                                 * 设备名称
+                                 * @description 设备名称
+                                 */
+                                deviceName: string;
+                                /**
+                                 * 设备路径
+                                 * @description 设备路径
+                                 */
+                                devicePath: string;
+                                /**
+                                 * 设备序列号
+                                 * @description 设备序列号
+                                 */
+                                deviceSerial: string;
+                                /**
+                                 * 设备状态，0：离线，1：在线
+                                 * @description 设备状态，0：离线，1：在线
+                                 */
+                                deviceStatus?: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 新增人员
-     * @description **功能描述**
-     *
-     *     新增住户人员信息。
-     *
-     *     注意：
-     *
-     *     1、本篇住户专指业主、家属、租客三个身份类别的人员。
-     *
-     *     2、“姓名”+“手机号”或者“证件类型”+“证件号码”至少有一组信息完整。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                                                     | 描述                                                         |      |
-     *     | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
-     *     | 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况                     |      |
-     *     | 511000 | 社区不存在                                                   |                                                              |      |
-     *     | 511011 | 证件类型为空                                                 |                                                              |      |
-     *     | 511012 | 证件号为空                                                   |                                                              |      |
-     *     | 511013 | 证件格式错误                                                 |                                                              |      |
-     *     | 511015 | 手机格式错误                                                 |                                                              |      |
-     *     | 511016 | 英文名称格式错误                                             |                                                              |      |
-     *     | 511017 | 社区ID不能为空                                               |                                                              |      |
-     *     | 511018 | 身份类型为租客时，离开时间不能为空                           |                                                              |      |
-     *     | 511021 | 姓名和手机号在平台中已存在，请判断证件信息与平台证件信息是否匹配 |                                                              |      |
-     *     | 511025 | 参数不合法                                                   | 一些必填字段为空等参数异常情况，比如楼栋ID、单元ID、户室ID、身份类型为空等现象 |      |
-     *     | 511027 | 该房间没有业主                                               |                                                              |      |
-     *     | 511038 | 证件信息在平台中已存在，请判断姓名与证件信息是否匹配         |                                                              |      |
-     *     | 511040 | 日期格式错误                                                 |                                                              |      |
-     *     | 511053 | 楼栋不存在                                                   |                                                              |      |
-     *     | 511054 | 单元不存在                                                   |                                                              |      |
-     *     | 511056 | 你所添加的房屋已存在业主                                     |                                                              |      |
-     *     | 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                                       |      |
-     *     | 511083 | 社区不包含楼栋                                               |                                                              |      |
-     *     | 511084 | 楼栋不包含单元                                               |                                                              |      |
-     *     | 511086 | 房间不存在                                                   |                                                              |      |
-     *     | 511096 | 没有填写身份信息                                             | 身份信息应至少包含：1、姓名+证件类型+证件号码2、手机号+姓名两组中的一组 |      |
-     *     | 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                                              |      |
-     *     | 511115 | 入住时间为空                                                 |                                                              |      |
-     *     | 511143 | 证件类型错误                                                 |                                                              |      |
-     *     | 511146 | 民族名称填写错误                                             |                                                              |      |
-     *     | 511095 | 人脸URL不合法                                                |                                                              |      |
-     *     | 511100 | 人脸图片质量不合格                                           |                                                              |      |
-     *     | 511117 | 人脸评分校验失败                                             |                                                              |      |
-     *     | 511118 | 人脸特征点置信度校验失败                                     |                                                              |      |
-     *     | 511119 | 人脸眼间距校验失败                                           |                                                              |      |
-     *     | 511120 | 人脸俯仰角校验失败                                           |                                                              |      |
-     *     | 511121 | 人脸左右角校验失败                                           |                                                              |      |
-     *     | 511122 | 人脸可见性校验失败                                           |                                                              |      |
-     *     | 511123 | 人脸清晰度校验失败                                           |                                                              |      |
-     *     | 511189 | 离开时间必须大于入住时间                                     |                                                              |      |
-     *     | 511113 | 卡号长度超过20                                               |                                                              |      |
-     *     | 511116 | 卡号只能是数字和字母                                         |                                                              |      |
-     *     | 511104 | 住户只能有三张卡                                             |                                                              |      |
-     *     | 511106 | 卡号已被使用                                                 |                                                              |      |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "personName": "张三",
-           *       "gender": 1,
-           *       "credentialType": 1,
-           *       "credentialNumber": "522128547844512369",
-           *       "mobile": "13358745129",
-           *       "faceUrl": "https://hik-cloud.com/img1.jpg",
-           *       "birthday": "2001-02-02",
-           *       "personRemark": "备注信息",
-           *       "nation": "汉族",
-           *       "educationalLevel": 3,
-           *       "workUnit": "海康威视",
-           *       "position": "研发总监",
-           *       "religion": 2,
-           *       "englishName": "Bob",
-           *       "email": "12345@qq.com",
-           *       "addressDetail": "北京市天通苑详细地址",
-           *       "provinceCode": "130000",
-           *       "cityCode": "130100",
-           *       "countyCode": "130102",
-           *       "personCommunityRels": [
-           *         {
-           *           "communityId": "c242a6d58bb4485e99cd5c3e8c1cc570",
-           *           "buildingId": "c242a6d58bb4485e99cd5c3e8c1cc570",
-           *           "unitId": "fd8fe4f53fa449c4b9e640956030478b",
-           *           "roomId": "4b7c226f000146189ff76f445a7cc268",
-           *           "identityType": 2,
-           *           "checkInDate": "2019-04-07",
-           *           "checkOutDate": "2029-05-07"
-           *         }
-           *       ],
-           *       "cardNumbers": [
-           *         "1234567",
-           *         "2234567"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 详细地址
-             * @description 详细地址
-             */
-            addressDetail?: string;
-            /**
-             * 出生日期
-             * @description 出生日期
-             */
-            birthday?: string;
-            /**
-             * 卡号列表
-             * @description 卡号列表
-             */
-            cardNumbers?: string[];
-            /**
-             * 现户籍地/市编码
-             * @description 现户籍地/市编码
-             */
-            cityCode?: string;
-            /**
-             * 现户籍地/区编码
-             * @description 现户籍地/区编码
-             */
-            countyCode?: string;
-            /**
-             * 证件号码
-             * @description 证件号码
-             */
-            credentialNumber: string;
-            /**
-             * 证件类型
-             * @description 证件类型，[1]身份证[2护照[3]其他
-             */
-            credentialType: number;
-            /**
-             * 文化程度
-             * @description 文化程度，[1]中专;[2]大专;[3]本科;[4]硕士;[5]博士;[6]其他
-             */
-            educationalLevel?: number;
-            /**
-             * 邮箱
-             * @description 邮箱
-             */
-            email?: string;
-            /**
-             * 英文名称
-             * @description 英文名称
-             */
-            englishName?: string;
-            /**
-             * 人脸图片URL
-             * @description 人脸图片URL，图片要求：大小：200k以内；格式：jpg
-             */
-            faceUrl?: string;
-            /**
-             * 性别
-             * @description 性别，[-1]无[0]女[1]男
-             */
-            gender?: number;
-            /**
-             * 手机号
-             * @description 手机号
-             */
-            mobile: string;
-            /**
-             * 民族
-             * @description 民族
-             */
-            nation?: string;
-            /**
-             * 房屋信息
-             * @description 房屋信息
-             */
-            personCommunityRels?: {
-              /**
-               * 楼栋ID
-               * @description 楼栋ID
-               */
-              buildingId: string;
-              /**
-               * 入住时间
-               * @description 入住时间
-               */
-              checkInDate: string;
-              /**
-               * 离开时间
-               * @description 离开时间，当身份类型为业主或家属时,无需离开时间
-               */
-              checkOutDate?: string;
-              /**
-               * 社区ID
-               * @description 社区ID
-               */
-              communityId: string;
-              /**
-               * 身份类型
-               * @description 身份类型，[1]业主[2]租客[3]家属
-               */
-              identityType: number;
-              /**
-               * 户室ID
-               * @description 户室ID
-               */
-              roomId: string;
-              /**
-               * 单元ID
-               * @description 单元ID
-               */
-              unitId: string;
-              [key: string]: unknown;
-            }[];
-            /**
-             * 姓名
-             * @description 姓名
-             */
-            personName: string;
-            /**
-             * 备注
-             * @description 备注
-             */
-            personRemark?: string;
-            /**
-             * 职务
-             * @description 职务
-             */
-            position?: string;
-            /**
-             * 现户籍地/省编码
-             * @description 现户籍地/省编码
-             */
-            provinceCode?: string;
-            /**
-             * 宗教信仰
-             * @description 宗教信仰，[1]基督教;[2]伊斯兰教;[3]佛教
-             */
-            religion?: number;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            /**
-             * 工作单位
-             * @description 工作单位
-             */
-            workUnit?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 卡号id列表
-                 * @description 卡号id列表
-                 */
-                cardIds?: string[];
-                /**
-                 * 人员id
-                 * @description 人员id
-                 */
-                personId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        put?: never;
+        /**
+         * 新增设备
+         * @description **功能描述**
+         *
+         *     新增设备，设备添加之后会异步去拉取通道，拉取通道存在失败的可能，使用过程中如果遇到通道问题，可以调用刷新通道的接口去同步通道信息。
+         *
+         *     若只填写communityId（不填写buildingId和unitId）设备将添加为围墙机；若填写buildingId和unitId，设备将添加为单元机。
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                           | 描述                                     |
+         *     | ------ | ---------------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511154 | 楼栋或单元ID为空                   |                                          |
+         *     | 511155 | 查询社区失败                       |                                          |
+         *     | 511156 | 查询单元失败                       |                                          |
+         *     | 511157 | 该设备已被添加                     |                                          |
+         *     | 511158 | 设备名称重复                       | 设备名称需租户下唯一                     |
+         *     | 511159 | 服务已经到达上限或者没有购买此服务 | 当前账号未开通此类设备的服务             |
+         *     | 511160 | 设备不存在                         | 设备未开启萤石协议或设备未注册且不在线   |
+         *     | 511161 | 设备不在线                         |                                          |
+         *     | 511162 | 设备验证码错误                     |                                          |
+         *     | 511164 | 设备序列号不正确                   |                                          |
+         *     | 511192 | 不能使用出厂时的默认验证码         |                                          |
+         *     | 511193 | 设备存在高风险需要确权             |                                          |
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/{personId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 删除人员
-     * @description **功能描述**
-     *
-     *     删除住户人员信息。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息     | 描述                                     |
-     *     | ------ | ------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511046 | 该人员不存在 |                                          |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path: {
-          /** @description 要删除的人员id */
-          personId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': Record<string, never>;
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "deviceSerial": "029936331",
+                     *       "validateCode": "SFGRSD",
+                     *       "deviceName": "大门口",
+                     *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "buildingId": "9edd091f28700a795f4a25d4de047eb4",
+                     *       "unitId": "00ae09edd795f4a25d4d091f28747eb4"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 楼栋ID
+                         * @description 楼栋ID
+                         */
+                        buildingId?: string;
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 设备名称
+                         * @description 设备名称
+                         */
+                        deviceName: string;
+                        /**
+                         * 设备序列号
+                         * @description 设备序列号
+                         */
+                        deviceSerial: string;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                        /**
+                         * 单元ID
+                         * @description 单元ID
+                         */
+                        unitId?: string;
+                        /**
+                         * 设备验证码
+                         * @description 设备验证码
+                         */
+                        validateCode: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/addCommunityRelation': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 设置人员所属社区
-     * @description **功能描述**
-     *
-     *     设置住户人员所属社区。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511000 | 社区不存在     |                                          |
-     *     | 511023 | 住户已存在     |                                          |
-     *     | 511046 | 该人员不存在   |                                          |
-     *     | 511059 | 租户信息不匹配 | 不能关联其他租户的社区                   |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
-           *       "communityId": "0253b3f7daaf48dc9bef267163cd1cd1"
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 设备ID
+                                 * @description 设备ID
+                                 */
+                                deviceId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/addLabelAndLicenseRelation': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 设置人员标签和车牌号
-     * @description **功能描述**
-     *
-     *     给社区的人员设置标签和车牌号（注：需先给人员设置所属社区）。
-     *
-     *     **返回码**
-     *
-     *     | **返回码** | **返回消息**             | **描述**                                 |
-     *     | ---------- | ------------------------ | ---------------------------------------- |
-     *     | 200        | 成功                     |                                          |
-     *     | 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511000     | 社区不存在               | 社区id错误或者跨租户操作                 |
-     *     | 511170     | 车牌数量不能超过三个     | 同一社区，一个人最多设置三个车牌号       |
-     *     | 511171     | 车牌号格式错误           |                                          |
-     *     | 511172     | 用户未入住当前社区       | 用户需先关联社区之后才可以设置标签       |
-     *     | 511173     | 人员标签不存在           | 人员标签id错误                           |
-     *     | 511174     | 车牌号码在当前社区已存在 | 一个车牌号在同一社区只能出现一次         |
-     *     | 511177     | 车牌号不能重复           | 提交数据中有重复车牌号                   |
-     *     | 511178     | 人员标签不能重复         | 提交数据中有重复人员标签                 |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/devices/actions/deleteDevice": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "6514484bc11397508cab7870c633216b",
-           *       "personId": "6514484bc11397508cab7870c633216b",
-           *       "labelIds": [
-           *         "6514484bc11397508cab7870c633216b",
-           *         "6514484bc11397508cab7870c633216b"
-           *       ],
-           *       "licenseNumbers": [
-           *         "京A66666",
-           *         "京A88888"
-           *       ]
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 人员标签ID，为空则清空人员标签
-             * @description 人员标签ID，为空则清空人员标签
-             */
-            labelIds?: string[];
-            /**
-             * 车牌号，最多支持三个，为空则清空车牌号
-             * @description 车牌号，最多支持三个，为空则清空车牌号
-             */
-            licenseNumbers?: string[];
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 删除设备
+         * @description **功能描述**
+         *
+         *     修改设备。
+         *
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/addRoomRelation': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 设置人员所属户室
-     * @description **功能描述**
-     *
-     *     设置人员所属户室（人员和房屋关联之后，将自动下发权限到设备）。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
-     *
-     *     业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
-     *
-     *     返回码
-     *     返回码 	返回消息 	描述
-     *     510001 	参数错误 	必填项为空、参数长度不符合等参数异常情况
-     *     511018 	身份类型为租客时，离开时间不能为空
-     *     511022 	住户不存在
-     *     511026 	该户室已经关联业主
-     *     511028 	该人员已经入住xxx户室
-     *     511029 	户室信息错误
-     *     511059 	租户信息不匹配 	不能关联其他租户的房屋
-     *     511099 	身份类型为租客时，离开时间必须大于入住时间
-     *     511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核
-     *     511165 	身份类型错误
-     *     511189 	离开时间必须大于入住时间
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
-           *       "roomId": "4b7c226f000146189ff76f445a7cc268",
-           *       "identityType": 2,
-           *       "checkInDate": "2019-04-07",
-           *       "checkOutDate": "2029-05-07",
-           *       "isAudit": 1
-           *     } */
-          'application/json': {
-            /**
-             * 入住时间
-             * @description 入住时间
-             */
-            checkInDate: string;
-            /**
-             * 离开时间
-             * @description 离开时间，当身份类型为业主或家属时,无需离开时间
-             */
-            checkOutDate?: string;
-            /**
-             * 身份类型
-             * @description 身份类型，[1]业主[2]租客[3]家属
-             */
-            identityType: number;
-            /**
-             * 是否需要审核
-             * @description 是否需要审核，[0]否[1]是不填或者为空默认不需要审核
-             */
-            isAudit?: number;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 户室ID
-             * @description 户室ID
-             */
-            roomId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 审核单ID
-                 * @description 审核单ID
-                 */
-                auditOrderId?: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "deviceId": "00a795f4a25d4de09edd091f28747eb4"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 设备ID
+                         * @description 设备ID
+                         */
+                        deviceId: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/deleteCommunityRelation': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 删除人员所属社区
-     * @description **功能描述**
-     *
-     *     删除住户人员与社区的关联关系。
-     *
-     *     若住户在该社区有所属房屋，将同步解除住户与房屋的所属关系。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511022 | 住户不存在     |                                          |
-     *     | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
-           *       "communityId": "0253b3f7daaf48dc9bef267163cd1cd1"
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: string;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/deleteRoomRelation': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 删除人员所属户室
-     * @description **功能描述**
-     *
-     *     删除住户人员所属户室（后台将同步删除设备上的权限）。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511029 | 户室信息错误   |                                          |
-     *     | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/devices/actions/listByCommunityId": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
-           *       "roomId": "025d4bbddc4e4eb29cdb5f2617b78f9e"
-           *     } */
-          'application/json': {
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 户室ID
-             * @description 户室ID
-             */
-            roomId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 查询社区下的设备列表
+         * @description **功能描述**
+         *
+         *     根据社区ID查询社区下的设备列表。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144 | 超出最大分页量限制 |                                          |
+         *     | 511155 | 查询社区失败       |                                          |
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/labelList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 获取人员标签列表
-     * @description **功能描述**
-     *
-     *     查询当前租户下的人员标签列表。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 200    | 成功               |                                          |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144 | 超出最大分页量限制 |                                          |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 标签名称
-             * @description 标签名称
-             */
-            name?: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: string;
-            /**
-             * 分页量（最大支持100）
-             * @description 分页量（最大支持100）
-             */
-            pageSize: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 标签id
-                   * @description 标签id
-                   */
-                  labelId: string;
-                  /**
-                   * 标签名称
-                   * @description 标签名称
-                   */
-                  labelName: string;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "pageNo": 1,
+                     *       "pageSize": 10
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: number;
+                        /**
+                         * 分页量（最大支持1000）
+                         * @description 分页量（最大支持1000）
+                         */
+                        pageSize: number;
+                    };
+                };
             };
-          };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 设备ID
+                                     * @description 设备ID
+                                     */
+                                    deviceId: string;
+                                    /**
+                                     * 设备型号
+                                     * @description 设备型号
+                                     */
+                                    deviceModel?: string;
+                                    /**
+                                     * 设备名称
+                                     * @description 设备名称
+                                     */
+                                    deviceName: string;
+                                    /**
+                                     * 设备路径
+                                     * @description 设备路径
+                                     */
+                                    devicePath: string;
+                                    /**
+                                     * 设备序列号
+                                     * @description 设备序列号
+                                     */
+                                    deviceSerial: string;
+                                    /**
+                                     * 设备状态，0：离线，1：在线
+                                     * @description 设备状态，0：离线，1：在线
+                                     */
+                                    deviceStatus?: number;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/personInfoList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
+    "/api/v1/estate/devices/actions/updateDevice": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 修改设备
+         * @description **功能描述**
+         *
+         *     修改设备名称。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511148 | 未查到设备信息 | 设备不存在或已被删除                     |
+         *     | 511158 | 设备名称重复   |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "deviceId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "deviceName": "大门口"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 设备ID
+                         * @description 设备ID
+                         */
+                        deviceId: string;
+                        /**
+                         * 设备名称
+                         * @description 设备名称
+                         */
+                        deviceName: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: string;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    get?: never;
-    put?: never;
-    /**
-     * 人员查询
-     * @description **功能描述**
-     *
-     *     查询云眸社区指定社区下所有的住户信息。
-     *
-     *     注意：本接口查询内容只包含当前社区的房屋资料，如果住户在其他小区也有房屋，将不会显示。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 200    | 成功               |                                          |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144 | 超出最大分页量限制 |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/devices/channels/actions/listByCommunityId": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "6514484bc11397508cab7870c633216b",
-           *       "pageNo": 1,
-           *       "pageSize": 10
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: number;
-            /**
-             * 分页量（最大支持100）
-             * @description 分页量（最大支持100）
-             */
-            pageSize: number;
-            [key: string]: unknown;
-          };
+        /**
+         * 查询社区下设备通道列表
+         * @description **功能描述**
+         *
+         *     根据社区ID查询社区下的设备通道列表。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息   | 描述                                     |
+         *     | ------ | ---------- | ---------------------------------------- |
+         *     | 510001 | 参数错误   | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511000 | 社区不存在 |                                          |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: string;
+                        /**
+                         * 分页量
+                         * @description 分页量
+                         */
+                        pageSize: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 通道ID
+                                     * @description 通道ID
+                                     */
+                                    channelId?: string;
+                                    /**
+                                     * 通道名
+                                     * @description 通道名
+                                     */
+                                    channelName?: string;
+                                    /**
+                                     * 通道号
+                                     * @description 通道号
+                                     */
+                                    channelNo?: number;
+                                    /**
+                                     * 通道封面图片URL
+                                     * @description 通道封面图片URL
+                                     */
+                                    channelPicUrl?: string;
+                                    /**
+                                     * 状态，0：离线，1：在线 ，-1：未知
+                                     * @description 状态，0：离线，1：在线 ，-1：未知
+                                     */
+                                    channelStatus?: number;
+                                    /**
+                                     * 设备ID
+                                     * @description 设备ID
+                                     */
+                                    deviceId?: string;
+                                    /**
+                                     * 设备型号
+                                     * @description 设备型号
+                                     */
+                                    deviceModel?: string;
+                                    /**
+                                     * 设备名称
+                                     * @description 设备名称
+                                     */
+                                    deviceName?: string;
+                                    /**
+                                     * 设备序列号
+                                     * @description 设备序列号
+                                     */
+                                    deviceSerial?: string;
+                                    /**
+                                     * 设备状态，0：离线，1：在线
+                                     * @description 设备状态，0：离线，1：在线
+                                     */
+                                    deviceStatus?: number;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
         };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 详细地址
-                   * @description 详细地址
-                   */
-                  addressDetail?: string;
-                  /**
-                   * 出生日期
-                   * @description 出生日期
-                   */
-                  birthday?: string;
-                  /**
-                   * 现户籍地/市编码
-                   * @description 现户籍地/市编码
-                   */
-                  cityCode?: string;
-                  /**
-                   * 现户籍地/区编码
-                   * @description 现户籍地/区编码
-                   */
-                  countyCode?: string;
-                  /**
-                   * 创建时间（UTC+08:00）
-                   * @description 创建时间（UTC+08:00）
-                   */
-                  createTime?: string;
-                  /**
-                   * 文化程度
-                   * @description 文化程度，[0]无;[1]中专;[2]大专;[3]本科;[4]硕士;[5]博士;[6]其他
-                   */
-                  educationalLevel?: number;
-                  /**
-                   * 邮箱
-                   * @description 邮箱
-                   */
-                  email?: string;
-                  /**
-                   * 英文名称
-                   * @description 英文名称
-                   */
-                  englishName?: string;
-                  /**
-                   * 性别
-                   * @description 性别，[-1]无[0]女[1]男
-                   */
-                  gender: number;
-                  /**
-                   * 手机号
-                   * @description 手机号
-                   */
-                  mobile: string;
-                  /**
-                   * 民族
-                   * @description 民族
-                   */
-                  nation?: string;
-                  personCommunityRels?: {
-                    /**
-                     * 户室地址
-                     * @description 户室地址
-                     */
-                    address: string;
-                    /**
-                     * 楼栋ID
-                     * @description 楼栋ID
-                     */
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/permissions/actions/authorityDelete": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 人员权限删除
+         * @description **功能描述**
+         *
+         *     从指定设备上删除人员的门禁权限。
+         *
+         *     注：6000C场景，该接口无法删除人房组件自动下发的人员权限
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息         | 描述                                                  |
+         *     | ------ | ---------------- | ----------------------------------------------------- |
+         *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况              |
+         *     | 511059 | 租户信息不匹配   |                                                       |
+         *     | 511030 | 社区中人员不存在 |                                                       |
+         *     | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区                            |
+         *     | 511168 | 权限删除失败     | message描述可能为动态描述，返回的是设备的真实失败原因 |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "e09edd091f28747e00a795f4a25d4db4",
+                     *       "personId": " a25d400a795f4d47eb4e09edd091f287",
+                     *       "personType": 1,
+                     *       "deviceId": "91f28747eb400a795f4a25d4de09edd0"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 设备ID
+                         * @description 设备ID
+                         */
+                        deviceId: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/permissions/actions/authorityIssued": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 人员权限下发
+         * @description **功能描述**
+         *
+         *     将人员权限下发到指定设备（包括人脸、指纹、卡号）。
+         *
+         *     注：6000C场景，不支持指定边缘子设备
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息         | 描述                                     |
+         *     | ------ | ---------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511030 | 社区中人员不存在 |                                          |
+         *     | 511148 | 未查到设备信息   | 设备不存在或设备不在该社区               |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "e09edd091f28747e00a795f4a25d4db4",
+                     *       "personId": " a25d400a795f4d47eb4e09edd091f287",
+                     *       "personType": 1,
+                     *       "deviceId": "91f28747eb400a795f4a25d4de09edd0"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 设备ID
+                         * @description 设备ID
+                         */
+                        deviceId: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/permissions/actions/batchAuthorityIssued": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 住户人员权限批量下发
+         * @description **功能描述**
+         *
+         *     可按照人脸列表、社区、楼栋、单元的方式，将住户人员权限批量下发到指定设备（包括人脸、指纹、卡号）。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                               | 描述                                                 |
+         *     | ------ | -------------------------------------- | ---------------------------------------------------- |
+         *     | 510001 | 参数错误                               | 必填项为空、参数长度不符合等参数异常情况             |
+         *     | 511000 | 社区不存在                             |                                                      |
+         *     | 511005 | 楼栋不存在                             |                                                      |
+         *     | 511006 | 单元不存在                             |                                                      |
+         *     | 511059 | 租户信息不匹配                         |                                                      |
+         *     | 511148 | 未查到设备信息                         |                                                      |
+         *     | 511194 | 设备不属于当前社区                     |                                                      |
+         *     | 511195 | 社区参数不匹配                         |                                                      |
+         *     | 511196 | 人员列表不能为空                       | 当operationType=0时，personIds参数不能为空           |
+         *     | 511197 | 设备列表不能为空                       |                                                      |
+         *     | 511198 | 设备列表不能大于100                    |                                                      |
+         *     | 511199 | 批量权限下发中，请勿重复操作           | 接口不能频繁调用，调用间隔不能小于10s                |
+         *     | 511200 | 批量权限下发中，请下发完成后再进行下发 | 上次的批量下发任务仍未执行完成，需要执行完后再次操作 |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "operationType": 0,
+                     *       "operationId": "",
+                     *       "personIds": [
+                     *         "564c4ca13ead4df9a823f4ebe624772f",
+                     *         "5649f7c1be2443fb8fbdb807c6affd76",
+                     *         "5649d70aff1d424ab99b5a4adf0a84df",
+                     *         "5646654df8904e20817a49d1097d49d5"
+                     *       ],
+                     *       "deviceIds": [
+                     *         "290e878b630b4ab08b3dab7cea55aa3a",
+                     *         "30f0f335db1b4197b8077e2ab6b6a22c"
+                     *       ],
+                     *       "communityId": "0467c177ffdc4ab3b988474c82287695"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 待下发的设备列表
+                         * @description 待下发的设备列表
+                         */
+                        deviceIds: string[];
+                        /**
+                         * 当operationType=0，表示按照人员列表批量下发，此时personIds生效；当operationType=1，表示下发指定社区的人员权限，此时operationId表示社区id；当operationType=2，表示下发指定楼栋的人员权限，此时operationId表示楼栋id；当operationType=3，表示下发指定单元的人员权限，此时operationId表示单元id；
+                         * @description 当operationType=0，表示按照人员列表批量下发，此时personIds生效；当operationType=1，表示下发指定社区的人员权限，此时operationId表示社区id；当operationType=2，表示下发指定楼栋的人员权限，此时operationId表示楼栋id；当operationType=3，表示下发指定单元的人员权限，此时operationId表示单元id；
+                         */
+                        operationId: string;
+                        /**
+                         * 操作类型，[0]-按住户人员列表下发权限 [1]-按社区下发权限 [2]-按楼栋下发权限 [3]-按单元下发权限
+                         * @description 操作类型，[0]-按住户人员列表下发权限 [1]-按社区下发权限 [2]-按楼栋下发权限 [3]-按单元下发权限
+                         */
+                        operationType: number;
+                        /**
+                         * 住户人员ID列表,当operationType=0时生效
+                         * @description 住户人员ID列表,当operationType=0时生效
+                         */
+                        personIds: string[];
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/permissions/actions/deleteFaceIssued": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 人脸信息删除
+         * @description **功能描述**
+         *
+         *     删除门禁设备上人员的人脸信息。
+         *
+         *     注：6000C场景，该接口不支持指定边缘子设备
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                   | 描述                                     |
+         *     | ------ | -------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511032 | 人员正在下发中，请稍后尝试 |                                          |
+         *     | 511033 | 没有该设备权限             |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "deviceId": "1053359bc54648799daa0fb6f40f3e78"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 设备ID
+                         * @description 设备ID，如果设备ID为空，会默认删除所有设备上的该用户人脸信息
+                         */
+                        deviceId?: string;
+                        /**
+                         * 需要删除的人员ID
+                         * @description 需要删除的人员ID
+                         */
+                        personId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/permissions/actions/dynamicCode": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 动态密码
+         * @description **功能描述**
+         *
+         *     生成临时动态密码，在门禁设备上输入后用于开门。
+         *
+         *     若下发失败将会通过订阅消息进行通知，消息类型为community_message_access_state，消息码为10024。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                           | 描述                                     |
+         *     | ------ | ---------------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511000 | 社区不存在                         |                                          |
+         *     | 511125 | 动态密码失效时间不能早于当前时间   |                                          |
+         *     | 511126 | 动态密码失效时间不能早于生效时间   |                                          |
+         *     | 511127 | 动态密码最大有效时间不能超过24小时 |                                          |
+         *     | 511128 | 动态密码生成失败                   |                                          |
+         *     | 511033 | 没有该设备权限                     |                                          |
+         *     | 511059 | 租户信息不匹配                     | 不能为其他租户生成动态密码               |
+         *     | 511081 | 查询人员信息失败                   |                                          |
+         *     | 511136 | 动态密码失效时间不能等于生效时间   |                                          |
+         *     | 511137 | 未查询到有权限的设备               |                                          |
+         *     | 511138 | 设备列表参数格式错误               |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "personType": 1,
+                     *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "beginTime": "2018-01-01T12:00:00+08:00",
+                     *       "endTime": "2018-01-02T12:00:00+08:00",
+                     *       "deviceIds": "00a795f4a25d4de09edd091f28747eb4,00a795f4a25d4de09edd091f28747eb4"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 动态密码生效时间（UTC+08:00）
+                         * @description 动态密码生效时间（UTC+08:00）
+                         */
+                        beginTime: string;
+                        /**
+                         * 需要动态密码权限的社区id
+                         * @description 需要动态密码权限的社区id
+                         */
+                        communityId: string;
+                        /**
+                         * 指定要下发动态密码的设备列表
+                         * @description 指定要下发动态密码的设备列表，当设备列表为空时，默认为人员(personId)在社区(communityId)下有权限的设备下发动态密码权限。如有多个以英文逗号分隔
+                         */
+                        deviceIds?: string;
+                        /**
+                         * 动态密码失效时间（UTC+08:00）
+                         * @description 动态密码失效时间（UTC+08:00），失效时间和生效时间差最大不能超过24小时，为了社区安全，建议尽量把有效时间放短点
+                         */
+                        endTime: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 开门密码
+                                 * @description 开门密码
+                                 */
+                                dynamicCode: string;
+                                /**
+                                 * 下发到设备的虚拟人员ID（可用于接收下发消息）
+                                 * @description 下发到设备的虚拟人员ID（可用于接收下发消息）
+                                 */
+                                virtualPersonId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/permissions/actions/faceIssued": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 人脸信息下发
+         * @description **功能描述**
+         *
+         *     将人脸信息下发到门禁设备（若无有权限的设备则不下发）。
+         *
+         *     下发结果将通过门禁权限下发状态订阅消息进行通知。
+         *
+         *     图片要求：大小：200k以内；格式：jpg
+         *
+         *     注：6000C场景，该接口不支持指定边缘子设备
+         *
+         *     **接口约束**
+         *
+         *     设置人员所属户室后，若需要调用该接口请延时5秒以上，否则可能出现部分设备人脸权限未下发。
+         *
+         *     建议：在接口【新增人员】添加人脸url,【设置人员所属户室】时人脸权限会自动下发，不需要单独调用该接口。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                 | 描述                                           |
+         *     | ------ | ------------------------ | ---------------------------------------------- |
+         *     | 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况       |
+         *     | 511025 | 参数异常                 | 请求参数包含不合法信息（例如：平台不支持的值） |
+         *     | 511033 | 没有该设备权限           |                                                |
+         *     | 511095 | 人脸URL不合法            |                                                |
+         *     | 511100 | 人脸图片质量不合格       |                                                |
+         *     | 511117 | 人脸评分校验失败         |                                                |
+         *     | 511118 | 人脸特征点置信度校验失败 |                                                |
+         *     | 511119 | 人脸眼间距校验失败       |                                                |
+         *     | 511120 | 人脸俯仰角校验失败       |                                                |
+         *     | 511121 | 人脸左右角校验失败       |                                                |
+         *     | 511122 | 人脸可见性校验失败       |                                                |
+         *     | 511123 | 人脸清晰度校验失败       |                                                |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "personType": 1,
+                     *       "deviceId": "bc92ac2d734246cfb0a9901f3a1bb690",
+                     *       "faceUrl": "https://hik-cloud.com/img1.jpg"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 设备ID
+                         * @description 设备ID，若设备ID为空，则会下发到所有有权限的设备
+                         */
+                        deviceId: string;
+                        /**
+                         * 人脸图片URL
+                         * @description 人脸图片URL
+                         */
+                        faceUrl: string;
+                        /**
+                         * 需要下发的人员ID
+                         * @description 需要下发的人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/permissions/actions/getQRcode": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 我的二维码
+         * @description **功能描述**
+         *
+         *     生成我的二维码信息。需要人员之前已经有卡号并且已经下发到设备，二维码信息有效期默认24小时，在同一设备上，可以刷4次。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511147 | 查询卡信息错误 |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "personType": 1
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 人员ID
+                         * @description 人员ID，人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 加密二维码信息
+                                 * @description 加密二维码信息
+                                 */
+                                qrCode: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/remoteControl/actions/deviceList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 获取人员门禁设备信息
+         * @description **功能描述**
+         *
+         *     查询人员可操控的门禁设备列表。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息 | 描述                                           |
+         *     | ------ | -------- | ---------------------------------------------- |
+         *     | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况       |
+         *     | 511025 | 参数异常 | 请求参数包含不合法信息（例如：平台不支持的值） |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 设备ID
+                                 * @description 设备ID
+                                 */
+                                deviceId: string;
+                                /**
+                                 * 设备名称
+                                 * @description 设备名称
+                                 */
+                                deviceName: string;
+                                /**
+                                 * 户室信息
+                                 * @description 户室信息
+                                 */
+                                roomInfo: string;
+                            }[];
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/remoteControl/actions/elevatorControl": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 呼梯
+         * @description **功能描述**
+         *
+         *     门口机呼梯，通过门口机（门禁设备）进行远程呼梯。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息     | 描述                                     |
+         *     | ------ | ------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511086 | 房间不存在   |                                          |
+         *     | 511167 | 远程呼梯失败 |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "roomId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "deviceId": "1053359bc54648799daa0fb6f40f3e78",
+                     *       "sourceFloor": 1,
+                     *       "targetFloor": 10
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 设备ID
+                         * @description 设备ID，电梯关联的门口机ID
+                         */
+                        deviceId: string;
+                        /**
+                         * 房间ID
+                         * @description 房间ID，目标房间ID
+                         */
+                        roomId: string;
+                        /**
+                         * 起始楼层
+                         * @description 起始楼层，范围区间为-3~100
+                         */
+                        sourceFloor: number;
+                        /**
+                         * 目标楼层
+                         * @description 目标楼层，范围区间为-3~100
+                         */
+                        targetFloor: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/entranceGuard/remoteControl/actions/gateControl": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 远程控门
+         * @description **功能描述**
+         *
+         *     通过手机APP进行远程控门。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                           |
+         *     | ------ | -------------- | ---------------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况       |
+         *     | 511025 | 参数异常       | 请求参数包含不合法信息（例如：平台不支持的值） |
+         *     | 511033 | 没有该设备权限 |                                                |
+         *     | 511035 | 获取信息失败   |                                                |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "deviceId": "1053359bc54648799daa0fb6f40f3e78",
+                     *       "command": "open"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 控制类型
+                         * @description 控制类型，cmd 命令:open-开门
+                         */
+                        command: string;
+                        /**
+                         * 设备ID
+                         * @description 设备ID
+                         */
+                        deviceId: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/publish/actions/deleteProgram": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 删除广告
+         * @description **功能描述**
+         *
+         *     删除设备上的广告信息。
+         *
+         *     注：不支持6000C
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511135 | 设备最多为50台 |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "deviceIds": [
+                     *         "0f8f9ecdbfab7c78238088a4e3c81f31",
+                     *         "4e3c81f310f8b7c78238088af9ecdbfa"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 需要下发的设备ID列表
+                         * @description 需要下发的设备ID列表，每次最大支持50台设备
+                         */
+                        deviceIds: string[];
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 删除失败的设备集合
+                                 * @description 删除失败的设备集合
+                                 */
+                                failureMap?: {
+                                    /**
+                                     * 删除失败的设备ID
+                                     * @description 删除失败的设备ID
+                                     */
+                                    deviceId?: string;
+                                    /**
+                                     * 返回码
+                                     * @description 返回码
+                                     */
+                                    resultCode?: string;
+                                    /**
+                                     * 错误信息
+                                     * @description 错误信息
+                                     */
+                                    resultMessage?: string;
+                                };
+                            }[];
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/publish/actions/publishProgram": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 下发广告
+         * @description **功能描述**
+         *
+         *     往设备上下发广告信息。（下发的结果我们会通过消息订阅进行通知，消息类型为community_message_advert_state，消息码为：10025）
+         *
+         *      图片：请上传分辨率为600*276 ,大小限制1M以内的图片,上传图片数量限制5张以内(只支持jpg格式)。
+         *     视频：请上传大小限制200M以内的视频,上传视频素材数量限制3个以内(只支持mp4格式)。
+         *
+         *     注：不支持6000C
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息         | 描述                                             |
+         *     | ------ | ---------------- | ------------------------------------------------ |
+         *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况         |
+         *     | 511130 | 设备响应超时     |                                                  |
+         *     | 511132 | 素材数量超过限制 | 图片素材数量不能超过5个，视频素材数量不能超过3个 |
+         *     | 511133 | 节目名称过长     |                                                  |
+         *     | 511134 | 备注过长         |                                                  |
+         *     | 511135 | 设备最多为50台   |                                                  |
+         *     | 511142 | 素材过大         | 单个图片不能超过1M，单个视频不能超过200M         |
+         *     | 511148 | 未查到设备信息   | 未查到有效设备信息                               |
+         *     | 511169 | 设备正在发布中   | 部分设备正在下发信息，请稍后再试                 |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "programName": "广告名称",
+                     *       "programRemark": "备注信息",
+                     *       "userId": "b7c78238088a4e3c81f310f8f9ecdbfa",
+                     *       "materialType": 0,
+                     *       "deviceIds": [
+                     *         "0f8f9ecdbfab7c78238088a4e3c81f31",
+                     *         "4e3c81f310f8b7c78238088af9ecdbfa"
+                     *       ],
+                     *       "materials": [
+                     *         {
+                     *           "materialUrl": "https://pbpic.hik-cloud.com/neptune/b7c78238088a4e3c81f310f8f9ecdbfa/publishPicture/jvaglpsddKMKqpB4.jpg",
+                     *           "fileSize": 181963
+                     *         }
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 需要下发的设备ID列表
+                         * @description 需要下发的设备ID列表，每次最大支持50台设备
+                         */
+                        deviceIds: string[];
+                        /**
+                         * 素材类型
+                         * @description 素材类型，[0]图片，[1]视频（为空默认为0-图片）
+                         */
+                        materials?: {
+                            /**
+                             * 图片大小(字节)
+                             * @description 图片大小(字节)
+                             */
+                            fileSize?: number;
+                            /**
+                             * 图片素材URL
+                             * @description 图片素材URL
+                             */
+                            materialUrl: string;
+                        }[];
+                        /**
+                         * 素材列表
+                         * @description 素材列表，详细说明见下方
+                         */
+                        materialType: number;
+                        /**
+                         * 广告名称
+                         * @description 广告名称
+                         */
+                        programName: string;
+                        /**
+                         * 备注信息
+                         * @description 备注信息
+                         */
+                        programRemark?: string;
+                        /**
+                         * 创建人员ID
+                         * @description 创建人员ID
+                         */
+                        userId?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 下发记录ID
+                                 * @description 下发记录ID
+                                 */
+                                publishRecordId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/buildings": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 新增楼栋
+         * @description **功能描述**
+         *
+         *     向社区下添加楼栋。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                     | 描述                                     |
+         *     | ------ | ---------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511000 | 社区不存在                   |                                          |
+         *     | 511001 | 该社区下楼栋已存在，无法添加 |                                          |
+         *     | 511004 | 楼栋编号已经存在             |                                          |
+         *     | 511059 | 租户信息不匹配               | 不能在其他租户的社区下新增房屋           |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "buildingName": "1幢",
+                     *       "buildingNumber": "12",
+                     *       "floorUpCount": "50",
+                     *       "floorDownCount": "2",
+                     *       "floorFamilyCount": "6",
+                     *       "buildingUnitSize": "10",
+                     *       "buildingRemark": "备注信息"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 楼栋名称
+                         * @description 楼栋名称
+                         */
+                        buildingName: string;
+                        /**
+                         * 楼栋编号（1-999之间的整数）
+                         * @description 楼栋编号（1-999之间的整数）
+                         */
+                        buildingNumber: string;
+                        /**
+                         * 备注
+                         * @description 备注
+                         */
+                        buildingRemark: string;
+                        /**
+                         * 楼栋单元数量（每栋最多支持30单元）
+                         * @description 楼栋单元数量（每栋最多支持30单元）
+                         */
+                        buildingUnitSize: string;
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 地下楼层数（最多支持3层）
+                         * @description 地下楼层数（最多支持3层）
+                         */
+                        floorDownCount: string;
+                        /**
+                         * 每层户数（每层最多支持50户）
+                         * @description 每层户数（每层最多支持50户）
+                         */
+                        floorFamilyCount: string;
+                        /**
+                         * 地上楼层数（最多支持100层）
+                         * @description 地上楼层数（最多支持100层）
+                         */
+                        floorUpCount: string;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 楼栋id
+                                 * @description 楼栋id
+                                 */
+                                buildingId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/buildings/{buildingId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 删除楼栋
+         * @description **功能描述**
+         *
+         *     删除社区下的楼栋。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                     | 描述                                     |
+         *     | ------ | ---------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511005 | 楼栋不存在                   |                                          |
+         *     | 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
+         *     | 511008 | 单元编号已经存在             | 单元编号重复                             |
+         *     | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
                     buildingId: string;
-                    /**
-                     * 入住时间
-                     * @description 入住时间
-                     */
-                    checkInDate: string;
-                    /**
-                     * 离开时间
-                     * @description 离开时间
-                     */
-                    checkOutDate?: string;
-                    /**
-                     * 社区ID
-                     * @description 社区ID
-                     */
+                };
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 楼栋ID
+                         * @description 楼栋ID
+                         */
+                        buildingId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/buildings/actions/communityBuildingList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 查询社区下的楼栋
+         * @description **功能描述**
+         *
+         *     查询指定社区下的所有楼栋数据。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 200    | 成功               |                                          |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144 | 超出最大分页量限制 |                                          |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "pageNo": 1,
+                     *       "pageSize": 10
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: number;
+                        /**
+                         * 分页量(最大支持100)
+                         * @description 分页量(最大支持100)
+                         */
+                        pageSize: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 楼栋ID
+                                     * @description 楼栋ID
+                                     */
+                                    buildingId: string;
+                                    /**
+                                     * 楼栋名称
+                                     * @description 楼栋名称
+                                     */
+                                    buildingName: string;
+                                    /**
+                                     * 楼栋编号（1-999之间的整数）
+                                     * @description 楼栋编号（1-999之间的整数）
+                                     */
+                                    buildingNumber: string;
+                                    /**
+                                     * 备注
+                                     * @description 备注
+                                     */
+                                    buildingRemark?: string;
+                                    /**
+                                     * 楼栋单元数量（每栋最多支持30单元）
+                                     * @description 楼栋单元数量（每栋最多支持30单元）
+                                     */
+                                    buildingUnitSize: string;
+                                    /**
+                                     * 创建时间
+                                     * @description 创建时间
+                                     */
+                                    createTime?: string;
+                                    /**
+                                     * 地下楼层数（最多支持3层）
+                                     * @description 地下楼层数（最多支持3层）
+                                     */
+                                    floorDownCount?: string;
+                                    /**
+                                     * 每层户数（每层最多支持50户）
+                                     * @description 每层户数（每层最多支持50户）
+                                     */
+                                    floorFamilyCount: string;
+                                    /**
+                                     * 地上楼层数（最多支持100层）
+                                     * @description 地上楼层数（最多支持100层）
+                                     */
+                                    floorUpCount: string;
+                                    /**
+                                     * 所属路径（社区/楼栋）
+                                     * @description 所属路径（社区/楼栋）
+                                     */
+                                    path: string;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 新增卡片（白卡）
+         * @description **功能描述**
+         *
+         *     添加一张新的空白卡片。
+         *
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "cardNumber": "12345678"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 卡号
+                         * @description 卡号，仅支持数字
+                         */
+                        cardNumber: string;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 卡片ID
+                                 * @description 卡片ID
+                                 */
+                                cardId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards/{cardId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 删除卡片（白卡）
+         * @description **功能描述**
+         *
+         *     删除一张空白卡。
+         *
+         *     注意：已绑定人员的卡片不允许删除，需要先解除绑定再进行删除。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511103 | 只能删除空白卡 |                                          |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
+                    /** @description 要删除的卡片ID */
+                    cardId: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards/actions/cancelLossCard": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 解挂
+         * @description **功能描述**
+         *
+         *     将已挂失的卡片进行解挂（卡片将变为正常卡）。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息             | 描述                                     |
+         *     | ------ | -------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511107 | 卡号不存在           |                                          |
+         *     | 511033 | 没有该设备权限       |                                          |
+         *     | 511111 | 只有挂失的卡才能解挂 | 其他状态的卡片无法解挂，比如正常的卡片   |
+         *     | 511145 | 设备数量超出限制     |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "cardId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "deviceIds": [
+                     *         "0f8f9ecdbfab7c78238088a4e3c81f31",
+                     *         "4e3c81f310f8b7c78238088af9ecdbfa"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 卡片ID
+                         * @description 卡片ID
+                         */
+                        cardId: string;
+                        /**
+                         * 需要下发的设备ID列表
+                         * @description 需要下发的设备ID列表，会将此卡号下发到指定设备，若未传，将下发到所有有权限的设备
+                         */
+                        deviceIds?: string[];
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards/actions/changeCard": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 换卡
+         * @description **功能描述**
+         *
+         *     将已开通的卡片进行替换（旧卡将变为空白卡）。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
+         *     | 511107 | 卡号不存在         | 旧卡不存在                               |
+         *     | 511109 | 只有正常卡才能换卡 | 其他状态的卡片无法换卡，比如挂失的卡片   |
+         *     | 511033 | 没有该设备权限     |                                          |
+         *     | 511113 | 卡号长度超过20     |                                          |
+         *     | 511116 | 卡号只能是数字     |                                          |
+         *     | 511145 | 设备数量超出限制   |                                          |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "cardId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "cardNumber": "12345678",
+                     *       "deviceIds": [
+                     *         "0f8f9ecdbfab7c78238088a4e3c81f31",
+                     *         "4e3c81f310f8b7c78238088af9ecdbfa"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 旧卡片ID
+                         * @description 旧卡片ID
+                         */
+                        cardId: string;
+                        /**
+                         * 新卡号
+                         * @description 新卡号，仅支持数字
+                         */
+                        cardNumber: string;
+                        /**
+                         * 需要下发的设备ID列表
+                         * @description 需要下发的设备ID列表，清除所有的旧卡权限，并将新卡下发到指定设备，若未传，将下发到所有有权限的设备
+                         */
+                        deviceIds: string[];
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 新卡片ID
+                                 * @description 新卡片ID
+                                 */
+                                cardId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards/actions/lossCard": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 挂失
+         * @description **功能描述**
+         *
+         *     将已开通的卡片进行挂失（卡片状态将变为挂失）。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511107 | 卡号不存在         |                                          |
+         *     | 511110 | 只有正常卡才能挂失 | 其他状态的卡片无法挂失，比如空白卡       |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "cardId": "00a795f4a25d4de09edd091f28747eb4"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 卡片ID
+                         * @description 卡片ID
+                         */
+                        cardId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards/actions/openCard": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 开卡
+         * @description **功能描述**
+         *
+         *     给人员开通卡片。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息             | 描述                                     |
+         *     | ------ | -------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511046 | 该人员不存在         |                                          |
+         *     | 511104 | 住户只能有三张卡     |                                          |
+         *     | 511105 | 物业人员只能有一张卡 |                                          |
+         *     | 511106 | 卡号已被使用         | 卡号已绑定人员，空白卡可以使用           |
+         *     | 511033 | 没有该设备权限       |                                          |
+         *     | 511113 | 卡号长度超过20       |                                          |
+         *     | 511114 | 人员类型不合法       |                                          |
+         *     | 511116 | 卡号只能是数字       |                                          |
+         *     | 511145 | 设备数量超出限制     |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "cardNumber": "12345678",
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "personType": 1,
+                     *       "deviceIds": [
+                     *         "0f8f9ecdbfab7c78238088a4e3c81f31",
+                     *         "4e3c81f310f8b7c78238088af9ecdbfa"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 卡号
+                         * @description 卡号，仅支持数字
+                         */
+                        cardNumber: string;
+                        /**
+                         * 需要下发的设备ID列表
+                         * @description 需要下发的设备ID列表，若未传设备ID，将对所有有权限的设备进行下发
+                         */
+                        deviceIds?: string[];
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: number;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 卡片ID
+                                 * @description 卡片ID
+                                 */
+                                cardId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards/actions/refundCard": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 退卡
+         * @description **功能描述**
+         *
+         *     已开通的卡片进行退卡（卡片将变为空白卡）。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511107 | 卡号不存在         |                                          |
+         *     | 511108 | 只有正常卡才能退卡 | 其他状态的卡片无法退卡，比如挂失的卡片   |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "cardId": "00a795f4a25d4de09edd091f28747eb4"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 卡片ID
+                         * @description 卡片ID
+                         */
+                        cardId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/cards/actions/reissueCard": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 补卡
+         * @description **功能描述**
+         *
+         *     补开一张新的卡片，旧卡将被删除。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511106 | 卡号已被使用       | 新卡号已绑定人员无法使用，空白卡可以使用 |
+         *     | 511107 | 卡号不存在         | 旧卡不存在                               |
+         *     | 511033 | 没有该设备权限     |                                          |
+         *     | 511112 | 只有挂失卡才能补卡 | 其他状态的卡片无法补卡，比如正常的卡片   |
+         *     | 511113 | 卡号长度超过20     |                                          |
+         *     | 511116 | 卡号只能是数字     |                                          |
+         *     | 511145 | 设备数量超出限制   |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "cardId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "cardNumber": "12345678",
+                     *       "deviceIds": [
+                     *         "0f8f9ecdbfab7c78238088a4e3c81f31",
+                     *         "4e3c81f310f8b7c78238088af9ecdbfa"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 旧卡片ID
+                         * @description 旧卡片ID
+                         */
+                        cardId: string;
+                        /**
+                         * 新卡号
+                         * @description 新卡号，仅支持数字
+                         */
+                        cardNumber: string;
+                        /**
+                         * 需要下发的设备ID列表
+                         * @description 需要下发的设备ID列表，清除所有的旧卡权限，并将新卡下发到指定设备，若未传，将下发到所有有权限的设备
+                         */
+                        deviceIds?: string[];
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 卡片ID
+                                 * @description 卡片ID
+                                 */
+                                cardId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/communities": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 新增社区
+         * @description **功能描述**
+         *
+         *     在云眸社区租户下新增一个社区。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                                 | 描述                                                 |
+         *     | ------ | ---------------------------------------- | ---------------------------------------------------- |
+         *     | 510001 | 参数错误                                 | 必填项为空、参数长度不符合等参数异常情况             |
+         *     | 511002 | 您所选择的区域已存在子区域，无法添加社区 | 新增社区会在系统默认区域下，若默认区域异常则报此异常 |
+         *     | 511003 | 已存在相同名称的社区， 请修改            |                                                      |
+         *     | 511015 | 手机格式错误                             |                                                      |
+         *     | 511046 | 该人员不存在                             | 社区负责人不存在                                     |
+         *     | 511047 | 社区面积(万㎡) 最多8位整数, 2位小数      |                                                      |
+         *     | 511093 | 省市区县代码错误                         | 省市区县代码包含非法字符                             |
+         *     | 511094 | 经纬度坐标不合法                         |                                                      |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "communityName": "龙湖社区",
+                     *       "provinceCode": "130000",
+                     *       "cityCode": "130300",
+                     *       "countyCode": "130302",
+                     *       "addressDetail": "我是街道详细地址",
+                     *       "communitySquareMeter": "50.22",
+                     *       "longitude": "116.37319",
+                     *       "latitude": "39.93428",
+                     *       "chargePersonId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "phoneNumber": "15200212124",
+                     *       "communityRemark": "备注信息"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 街道详细地址
+                         * @description 街道详细地址
+                         */
+                        addressDetail: string;
+                        /**
+                         * 负责人ID（该社区的物业负责人）
+                         * @description 负责人ID（该社区的物业负责人）
+                         */
+                        chargePersonId?: string;
+                        /**
+                         * 市代号
+                         * @description 市代号
+                         */
+                        cityCode?: string;
+                        /**
+                         * 社区名称
+                         * @description 社区名称
+                         */
+                        communityName: string;
+                        /**
+                         * 备注
+                         * @description 备注
+                         */
+                        communityRemark?: string;
+                        /**
+                         * 社区面积(万㎡) 最多8位整数, 2位小数
+                         * @description 社区面积(万㎡) 最多8位整数, 2位小数
+                         */
+                        communitySquareMeter?: string;
+                        /**
+                         * 区代号
+                         * @description 区代号
+                         */
+                        countyCode?: string;
+                        /**
+                         * 维度坐标值
+                         * @description 维度坐标值
+                         */
+                        latitude?: string;
+                        /**
+                         * 经度坐标值
+                         * @description 经度坐标值
+                         */
+                        longitude?: string;
+                        /**
+                         * 联系方式
+                         * @description 联系方式
+                         */
+                        phoneNumber?: string;
+                        /**
+                         * 省代号
+                         * @description 省代号
+                         */
+                        provinceCode: string;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 社区ID（云眸平台的主键）
+                                 * @description 社区ID（云眸平台的主键）
+                                 */
+                                communityId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/communities/{communityId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 删除社区
+         * @description **功能描述**
+         *
+         *     从云眸社区租户下删除一个社区。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                   | 描述                                     |
+         *     | ------ | -------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511059 | 租户信息不匹配             | 若删除其他租户社区则报此错误             |
+         *     | 511075 | 社区已添加楼栋，不能删除   |                                          |
+         *     | 511079 | 社区已添加设备，不能删除   |                                          |
+         *     | 511080 | 社区已添加停车场，不能删除 |                                          |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
                     communityId: string;
-                    /**
-                     * 身份类型
-                     * @description 身份类型，[1]业主[2]租客[3]家属
-                     */
-                    identityType: number;
-                    /**
-                     * 户室ID
-                     * @description 户室ID
-                     */
+                };
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/communities/actions/list": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 查询社区
+         * @description **功能描述**
+         *
+         *     分页查询云眸社区租户下的社区。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息 | 描述                                     |
+         *     | ------ | -------- | ---------------------------------------- |
+         *     | 200    | 成功     |                                          |
+         *     | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: number;
+                        /**
+                         * 分页量
+                         * @description 分页量
+                         */
+                        pageSize: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 街道详细地址
+                                     * @description 街道详细地址
+                                     */
+                                    addressDetail: string;
+                                    /**
+                                     * 负责人ID（该社区的物业负责人）
+                                     * @description 负责人ID（该社区的物业负责人）
+                                     */
+                                    chargePersonId?: string;
+                                    /**
+                                     * 负责人名字（该社区的物业负责人）
+                                     * @description 负责人名字（该社区的物业负责人）
+                                     */
+                                    chargePersonName?: string;
+                                    /**
+                                     * 市代号
+                                     * @description 市代号
+                                     */
+                                    cityCode?: string;
+                                    /**
+                                     * 地址（省/市/区）
+                                     * @description 地址（省/市/区）
+                                     */
+                                    communityAddress: string;
+                                    /**
+                                     * 云眸平台的社区id
+                                     * @description 云眸平台的社区id
+                                     */
+                                    communityId: string;
+                                    /**
+                                     * 社区名称
+                                     * @description 社区名称
+                                     */
+                                    communityName: string;
+                                    /**
+                                     * 备注
+                                     * @description 备注
+                                     */
+                                    communityRemark?: string;
+                                    /**
+                                     * 社区面积(万㎡) 面积最多8位整数, 2位小数
+                                     * @description 社区面积(万㎡) 面积最多8位整数, 2位小数
+                                     */
+                                    communitySquareMeter?: string;
+                                    /**
+                                     * 区代号
+                                     * @description 区代号
+                                     */
+                                    countyCode?: string;
+                                    /**
+                                     * 维度坐标值
+                                     * @description 维度坐标值
+                                     */
+                                    Latitude?: string;
+                                    /**
+                                     * 经度坐标值
+                                     * @description 经度坐标值
+                                     */
+                                    Longitude?: string;
+                                    /**
+                                     * 联系方式
+                                     * @description 联系方式
+                                     */
+                                    phoneNumber?: string;
+                                    /**
+                                     * 省代号
+                                     * @description 省代号
+                                     */
+                                    provinceCode: string;
+                                    /**
+                                     * 楼栋结构
+                                     * @description 楼栋结构
+                                     */
+                                    structName: string;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/communities/actions/updateCommunity": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 修改社区
+         * @description **功能描述**
+         *
+         *     修改云眸社区租户下的社区基础信息。（全量修改）
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                            | 描述                                     |
+         *     | ------ | ----------------------------------- | ---------------------------------------- |
+         *     | 511000 | 社区不存在                          |                                          |
+         *     | 510001 | 参数错误                            | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511003 | 已存在相同名称的社区，请修改        |                                          |
+         *     | 511015 | 手机格式错误                        |                                          |
+         *     | 511046 | 该人员不存在                        |                                          |
+         *     | 511047 | 社区面积(万㎡) 最多8位整数, 2位小数 |                                          |
+         *     | 511059 | 租户信息不匹配                      | 不能对其他租户的社区进行操作             |
+         *     | 511093 | 省市区县代码错误                    | 省市区县代码包含非法字符                 |
+         *     | 511094 | 经纬度坐标不合法                    |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "communityName": "龙湖社区",
+                     *       "provinceCode": "130000",
+                     *       "cityCode": "130300",
+                     *       "countyCode": "130302",
+                     *       "addressDetail": "街道详细地址",
+                     *       "communitySquareMeter": "50.22",
+                     *       "longitude": "116.37319",
+                     *       "latitude": "39.93428",
+                     *       "chargePersonId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "phoneNumber": "15200212124",
+                     *       "communityRemark": "备注信息"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 街道详细地址
+                         * @description 街道详细地址
+                         */
+                        addressDetail: string;
+                        /**
+                         * 负责人ID（该社区的物业负责人）
+                         * @description 负责人ID（该社区的物业负责人）
+                         */
+                        chargePersonId?: string;
+                        /**
+                         * 市代号
+                         * @description 市代号
+                         */
+                        cityCode?: string;
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 社区名称
+                         * @description 社区名称
+                         */
+                        communityName: string;
+                        /**
+                         * 备注
+                         * @description 备注
+                         */
+                        communityRemark?: string;
+                        /**
+                         * 社区面积(万㎡) 最多8位整数, 2位小数
+                         * @description 社区面积(万㎡) 最多8位整数, 2位小数
+                         */
+                        communitySquareMeter?: string;
+                        /**
+                         * 区代号
+                         * @description 区代号
+                         */
+                        countyCode?: string;
+                        /**
+                         * 维度坐标值
+                         * @description 维度坐标值
+                         */
+                        latitude?: string;
+                        /**
+                         * 经度坐标值
+                         * @description 经度坐标值
+                         */
+                        longitude?: string;
+                        /**
+                         * 联系方式
+                         * @description 联系方式
+                         */
+                        phoneNumber?: string;
+                        /**
+                         * 省代号
+                         * @description 省代号
+                         */
+                        provinceCode: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 方消息
+                             * @description 方消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 新增人员
+         * @description **功能描述**
+         *
+         *     新增住户人员信息。
+         *
+         *     注意：
+         *
+         *     1、本篇住户专指业主、家属、租客三个身份类别的人员。
+         *
+         *     2、“姓名”+“手机号”或者“证件类型”+“证件号码”至少有一组信息完整。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                                                     | 描述                                                         |      |
+         *     | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+         *     | 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况                     |      |
+         *     | 511000 | 社区不存在                                                   |                                                              |      |
+         *     | 511011 | 证件类型为空                                                 |                                                              |      |
+         *     | 511012 | 证件号为空                                                   |                                                              |      |
+         *     | 511013 | 证件格式错误                                                 |                                                              |      |
+         *     | 511015 | 手机格式错误                                                 |                                                              |      |
+         *     | 511016 | 英文名称格式错误                                             |                                                              |      |
+         *     | 511017 | 社区ID不能为空                                               |                                                              |      |
+         *     | 511018 | 身份类型为租客时，离开时间不能为空                           |                                                              |      |
+         *     | 511021 | 姓名和手机号在平台中已存在，请判断证件信息与平台证件信息是否匹配 |                                                              |      |
+         *     | 511025 | 参数不合法                                                   | 一些必填字段为空等参数异常情况，比如楼栋ID、单元ID、户室ID、身份类型为空等现象 |      |
+         *     | 511027 | 该房间没有业主                                               |                                                              |      |
+         *     | 511038 | 证件信息在平台中已存在，请判断姓名与证件信息是否匹配         |                                                              |      |
+         *     | 511040 | 日期格式错误                                                 |                                                              |      |
+         *     | 511053 | 楼栋不存在                                                   |                                                              |      |
+         *     | 511054 | 单元不存在                                                   |                                                              |      |
+         *     | 511056 | 你所添加的房屋已存在业主                                     |                                                              |      |
+         *     | 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                                       |      |
+         *     | 511083 | 社区不包含楼栋                                               |                                                              |      |
+         *     | 511084 | 楼栋不包含单元                                               |                                                              |      |
+         *     | 511086 | 房间不存在                                                   |                                                              |      |
+         *     | 511096 | 没有填写身份信息                                             | 身份信息应至少包含：1、姓名+证件类型+证件号码2、手机号+姓名两组中的一组 |      |
+         *     | 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                                              |      |
+         *     | 511115 | 入住时间为空                                                 |                                                              |      |
+         *     | 511143 | 证件类型错误                                                 |                                                              |      |
+         *     | 511146 | 民族名称填写错误                                             |                                                              |      |
+         *     | 511095 | 人脸URL不合法                                                |                                                              |      |
+         *     | 511100 | 人脸图片质量不合格                                           |                                                              |      |
+         *     | 511117 | 人脸评分校验失败                                             |                                                              |      |
+         *     | 511118 | 人脸特征点置信度校验失败                                     |                                                              |      |
+         *     | 511119 | 人脸眼间距校验失败                                           |                                                              |      |
+         *     | 511120 | 人脸俯仰角校验失败                                           |                                                              |      |
+         *     | 511121 | 人脸左右角校验失败                                           |                                                              |      |
+         *     | 511122 | 人脸可见性校验失败                                           |                                                              |      |
+         *     | 511123 | 人脸清晰度校验失败                                           |                                                              |      |
+         *     | 511189 | 离开时间必须大于入住时间                                     |                                                              |      |
+         *     | 511113 | 卡号长度超过20                                               |                                                              |      |
+         *     | 511116 | 卡号只能是数字和字母                                         |                                                              |      |
+         *     | 511104 | 住户只能有三张卡                                             |                                                              |      |
+         *     | 511106 | 卡号已被使用                                                 |                                                              |      |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "personName": "张三",
+                     *       "gender": 1,
+                     *       "credentialType": 1,
+                     *       "credentialNumber": "522128547844512369",
+                     *       "mobile": "13358745129",
+                     *       "faceUrl": "https://hik-cloud.com/img1.jpg",
+                     *       "birthday": "2001-02-02",
+                     *       "personRemark": "备注信息",
+                     *       "nation": "汉族",
+                     *       "educationalLevel": 3,
+                     *       "workUnit": "海康威视",
+                     *       "position": "研发总监",
+                     *       "religion": 2,
+                     *       "englishName": "Bob",
+                     *       "email": "12345@qq.com",
+                     *       "addressDetail": "北京市天通苑详细地址",
+                     *       "provinceCode": "130000",
+                     *       "cityCode": "130100",
+                     *       "countyCode": "130102",
+                     *       "personCommunityRels": [
+                     *         {
+                     *           "communityId": "c242a6d58bb4485e99cd5c3e8c1cc570",
+                     *           "buildingId": "c242a6d58bb4485e99cd5c3e8c1cc570",
+                     *           "unitId": "fd8fe4f53fa449c4b9e640956030478b",
+                     *           "roomId": "4b7c226f000146189ff76f445a7cc268",
+                     *           "identityType": 2,
+                     *           "checkInDate": "2019-04-07",
+                     *           "checkOutDate": "2029-05-07"
+                     *         }
+                     *       ],
+                     *       "cardNumbers": [
+                     *         "1234567",
+                     *         "2234567"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 详细地址
+                         * @description 详细地址
+                         */
+                        addressDetail?: string;
+                        /**
+                         * 出生日期
+                         * @description 出生日期
+                         */
+                        birthday?: string;
+                        /**
+                         * 卡号列表
+                         * @description 卡号列表
+                         */
+                        cardNumbers?: string[];
+                        /**
+                         * 现户籍地/市编码
+                         * @description 现户籍地/市编码
+                         */
+                        cityCode?: string;
+                        /**
+                         * 现户籍地/区编码
+                         * @description 现户籍地/区编码
+                         */
+                        countyCode?: string;
+                        /**
+                         * 证件号码
+                         * @description 证件号码
+                         */
+                        credentialNumber: string;
+                        /**
+                         * 证件类型
+                         * @description 证件类型，[1]身份证[2护照[3]其他
+                         */
+                        credentialType: number;
+                        /**
+                         * 文化程度
+                         * @description 文化程度，[1]中专;[2]大专;[3]本科;[4]硕士;[5]博士;[6]其他
+                         */
+                        educationalLevel?: number;
+                        /**
+                         * 邮箱
+                         * @description 邮箱
+                         */
+                        email?: string;
+                        /**
+                         * 英文名称
+                         * @description 英文名称
+                         */
+                        englishName?: string;
+                        /**
+                         * 人脸图片URL
+                         * @description 人脸图片URL，图片要求：大小：200k以内；格式：jpg
+                         */
+                        faceUrl?: string;
+                        /**
+                         * 性别
+                         * @description 性别，[-1]无[0]女[1]男
+                         */
+                        gender?: number;
+                        /**
+                         * 手机号
+                         * @description 手机号
+                         */
+                        mobile: string;
+                        /**
+                         * 民族
+                         * @description 民族
+                         */
+                        nation?: string;
+                        /**
+                         * 房屋信息
+                         * @description 房屋信息
+                         */
+                        personCommunityRels?: {
+                            /**
+                             * 楼栋ID
+                             * @description 楼栋ID
+                             */
+                            buildingId: string;
+                            /**
+                             * 入住时间
+                             * @description 入住时间
+                             */
+                            checkInDate: string;
+                            /**
+                             * 离开时间
+                             * @description 离开时间，当身份类型为业主或家属时,无需离开时间
+                             */
+                            checkOutDate?: string;
+                            /**
+                             * 社区ID
+                             * @description 社区ID
+                             */
+                            communityId: string;
+                            /**
+                             * 身份类型
+                             * @description 身份类型，[1]业主[2]租客[3]家属
+                             */
+                            identityType: number;
+                            /**
+                             * 户室ID
+                             * @description 户室ID
+                             */
+                            roomId: string;
+                            /**
+                             * 单元ID
+                             * @description 单元ID
+                             */
+                            unitId: string;
+                        }[];
+                        /**
+                         * 姓名
+                         * @description 姓名
+                         */
+                        personName: string;
+                        /**
+                         * 备注
+                         * @description 备注
+                         */
+                        personRemark?: string;
+                        /**
+                         * 职务
+                         * @description 职务
+                         */
+                        position?: string;
+                        /**
+                         * 现户籍地/省编码
+                         * @description 现户籍地/省编码
+                         */
+                        provinceCode?: string;
+                        /**
+                         * 宗教信仰
+                         * @description 宗教信仰，[1]基督教;[2]伊斯兰教;[3]佛教
+                         */
+                        religion?: number;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                        /**
+                         * 工作单位
+                         * @description 工作单位
+                         */
+                        workUnit?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 卡号id列表
+                                 * @description 卡号id列表
+                                 */
+                                cardIds?: string[];
+                                /**
+                                 * 人员id
+                                 * @description 人员id
+                                 */
+                                personId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/{personId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 删除人员
+         * @description **功能描述**
+         *
+         *     删除住户人员信息。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息     | 描述                                     |
+         *     | ------ | ------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误     | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511046 | 该人员不存在 |                                          |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
+                    /** @description 要删除的人员id */
+                    personId: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": Record<string, never>;
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/addCommunityRelation": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 设置人员所属社区
+         * @description **功能描述**
+         *
+         *     设置住户人员所属社区。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511000 | 社区不存在     |                                          |
+         *     | 511023 | 住户已存在     |                                          |
+         *     | 511046 | 该人员不存在   |                                          |
+         *     | 511059 | 租户信息不匹配 | 不能关联其他租户的社区                   |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
+                     *       "communityId": "0253b3f7daaf48dc9bef267163cd1cd1"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/addLabelAndLicenseRelation": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 设置人员标签和车牌号
+         * @description **功能描述**
+         *
+         *     给社区的人员设置标签和车牌号（注：需先给人员设置所属社区）。
+         *
+         *     **返回码**
+         *
+         *     | **返回码** | **返回消息**             | **描述**                                 |
+         *     | ---------- | ------------------------ | ---------------------------------------- |
+         *     | 200        | 成功                     |                                          |
+         *     | 510001     | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511000     | 社区不存在               | 社区id错误或者跨租户操作                 |
+         *     | 511170     | 车牌数量不能超过三个     | 同一社区，一个人最多设置三个车牌号       |
+         *     | 511171     | 车牌号格式错误           |                                          |
+         *     | 511172     | 用户未入住当前社区       | 用户需先关联社区之后才可以设置标签       |
+         *     | 511173     | 人员标签不存在           | 人员标签id错误                           |
+         *     | 511174     | 车牌号码在当前社区已存在 | 一个车牌号在同一社区只能出现一次         |
+         *     | 511177     | 车牌号不能重复           | 提交数据中有重复车牌号                   |
+         *     | 511178     | 人员标签不能重复         | 提交数据中有重复人员标签                 |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "6514484bc11397508cab7870c633216b",
+                     *       "personId": "6514484bc11397508cab7870c633216b",
+                     *       "labelIds": [
+                     *         "6514484bc11397508cab7870c633216b",
+                     *         "6514484bc11397508cab7870c633216b"
+                     *       ],
+                     *       "licenseNumbers": [
+                     *         "京A66666",
+                     *         "京A88888"
+                     *       ]
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 人员标签ID，为空则清空人员标签
+                         * @description 人员标签ID，为空则清空人员标签
+                         */
+                        labelIds?: string[];
+                        /**
+                         * 车牌号，最多支持三个，为空则清空车牌号
+                         * @description 车牌号，最多支持三个，为空则清空车牌号
+                         */
+                        licenseNumbers?: string[];
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/addRoomRelation": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 设置人员所属户室
+         * @description **功能描述**
+         *
+         *     设置人员所属户室（人员和房屋关联之后，将自动下发权限到设备）。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
+         *
+         *     业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
+         *
+         *     返回码
+         *     返回码 	返回消息 	描述
+         *     510001 	参数错误 	必填项为空、参数长度不符合等参数异常情况
+         *     511018 	身份类型为租客时，离开时间不能为空
+         *     511022 	住户不存在
+         *     511026 	该户室已经关联业主
+         *     511028 	该人员已经入住xxx户室
+         *     511029 	户室信息错误
+         *     511059 	租户信息不匹配 	不能关联其他租户的房屋
+         *     511099 	身份类型为租客时，离开时间必须大于入住时间
+         *     511153 	当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核
+         *     511165 	身份类型错误
+         *     511189 	离开时间必须大于入住时间
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
+                     *       "roomId": "4b7c226f000146189ff76f445a7cc268",
+                     *       "identityType": 2,
+                     *       "checkInDate": "2019-04-07",
+                     *       "checkOutDate": "2029-05-07",
+                     *       "isAudit": 1
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 入住时间
+                         * @description 入住时间
+                         */
+                        checkInDate: string;
+                        /**
+                         * 离开时间
+                         * @description 离开时间，当身份类型为业主或家属时,无需离开时间
+                         */
+                        checkOutDate?: string;
+                        /**
+                         * 身份类型
+                         * @description 身份类型，[1]业主[2]租客[3]家属
+                         */
+                        identityType: number;
+                        /**
+                         * 是否需要审核
+                         * @description 是否需要审核，[0]否[1]是不填或者为空默认不需要审核
+                         */
+                        isAudit?: number;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 户室ID
+                         * @description 户室ID
+                         */
+                        roomId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 审核单ID
+                                 * @description 审核单ID
+                                 */
+                                auditOrderId?: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/deleteCommunityRelation": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 删除人员所属社区
+         * @description **功能描述**
+         *
+         *     删除住户人员与社区的关联关系。
+         *
+         *     若住户在该社区有所属房屋，将同步解除住户与房屋的所属关系。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511022 | 住户不存在     |                                          |
+         *     | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
+                     *       "communityId": "0253b3f7daaf48dc9bef267163cd1cd1"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/deleteRoomRelation": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 删除人员所属户室
+         * @description **功能描述**
+         *
+         *     删除住户人员所属户室（后台将同步删除设备上的权限）。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511029 | 户室信息错误   |                                          |
+         *     | 511059 | 租户信息不匹配 | 不能对其他租户的资料进行操作             |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
+                     *       "roomId": "025d4bbddc4e4eb29cdb5f2617b78f9e"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 户室ID
+                         * @description 户室ID
+                         */
+                        roomId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/labelList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 获取人员标签列表
+         * @description **功能描述**
+         *
+         *     查询当前租户下的人员标签列表。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 200    | 成功               |                                          |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144 | 超出最大分页量限制 |                                          |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 标签名称
+                         * @description 标签名称
+                         */
+                        name?: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: string;
+                        /**
+                         * 分页量（最大支持100）
+                         * @description 分页量（最大支持100）
+                         */
+                        pageSize: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 标签id
+                                     * @description 标签id
+                                     */
+                                    labelId: string;
+                                    /**
+                                     * 标签名称
+                                     * @description 标签名称
+                                     */
+                                    labelName: string;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/personInfoList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 人员查询
+         * @description **功能描述**
+         *
+         *     查询云眸社区指定社区下所有的住户信息。
+         *
+         *     注意：本接口查询内容只包含当前社区的房屋资料，如果住户在其他小区也有房屋，将不会显示。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 200    | 成功               |                                          |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144 | 超出最大分页量限制 |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "6514484bc11397508cab7870c633216b",
+                     *       "pageNo": 1,
+                     *       "pageSize": 10
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: number;
+                        /**
+                         * 分页量（最大支持100）
+                         * @description 分页量（最大支持100）
+                         */
+                        pageSize: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 详细地址
+                                     * @description 详细地址
+                                     */
+                                    addressDetail?: string;
+                                    /**
+                                     * 出生日期
+                                     * @description 出生日期
+                                     */
+                                    birthday?: string;
+                                    /**
+                                     * 现户籍地/市编码
+                                     * @description 现户籍地/市编码
+                                     */
+                                    cityCode?: string;
+                                    /**
+                                     * 现户籍地/区编码
+                                     * @description 现户籍地/区编码
+                                     */
+                                    countyCode?: string;
+                                    /**
+                                     * 创建时间（UTC+08:00）
+                                     * @description 创建时间（UTC+08:00）
+                                     */
+                                    createTime?: string;
+                                    /**
+                                     * 文化程度
+                                     * @description 文化程度，[0]无;[1]中专;[2]大专;[3]本科;[4]硕士;[5]博士;[6]其他
+                                     */
+                                    educationalLevel?: number;
+                                    /**
+                                     * 邮箱
+                                     * @description 邮箱
+                                     */
+                                    email?: string;
+                                    /**
+                                     * 英文名称
+                                     * @description 英文名称
+                                     */
+                                    englishName?: string;
+                                    /**
+                                     * 性别
+                                     * @description 性别，[-1]无[0]女[1]男
+                                     */
+                                    gender: number;
+                                    /**
+                                     * 手机号
+                                     * @description 手机号
+                                     */
+                                    mobile: string;
+                                    /**
+                                     * 民族
+                                     * @description 民族
+                                     */
+                                    nation?: string;
+                                    personCommunityRels?: {
+                                        /**
+                                         * 户室地址
+                                         * @description 户室地址
+                                         */
+                                        address: string;
+                                        /**
+                                         * 楼栋ID
+                                         * @description 楼栋ID
+                                         */
+                                        buildingId: string;
+                                        /**
+                                         * 入住时间
+                                         * @description 入住时间
+                                         */
+                                        checkInDate: string;
+                                        /**
+                                         * 离开时间
+                                         * @description 离开时间
+                                         */
+                                        checkOutDate?: string;
+                                        /**
+                                         * 社区ID
+                                         * @description 社区ID
+                                         */
+                                        communityId: string;
+                                        /**
+                                         * 身份类型
+                                         * @description 身份类型，[1]业主[2]租客[3]家属
+                                         */
+                                        identityType: number;
+                                        /**
+                                         * 户室ID
+                                         * @description 户室ID
+                                         */
+                                        roomId: string;
+                                        /**
+                                         * 单元ID
+                                         * @description 单元ID
+                                         */
+                                        unitId: string;
+                                    }[];
+                                    /**
+                                     * 人员Id
+                                     * @description 人员Id
+                                     */
+                                    personId: string;
+                                    /**
+                                     * 姓名
+                                     * @description 姓名
+                                     */
+                                    personName: string;
+                                    /**
+                                     * 备注
+                                     * @description 备注
+                                     */
+                                    personRemark?: string;
+                                    /**
+                                     * 人员类型
+                                     * @description 人员类型，[0]物业;[1]住户;
+                                     */
+                                    personType: number;
+                                    /**
+                                     * 职务
+                                     * @description 职务
+                                     */
+                                    position?: string;
+                                    /**
+                                     * 现户籍地/省编码
+                                     * @description 现户籍地/省编码
+                                     */
+                                    provinceCode?: string;
+                                    /**
+                                     * 宗教信仰
+                                     * @description 宗教信仰，[0]无;[1]基督教;[2]伊斯兰教;[3]佛教
+                                     */
+                                    religion?: number;
+                                    /**
+                                     * 用户名
+                                     * @description 用户名
+                                     */
+                                    userName?: string;
+                                    /**
+                                     * 工作单位
+                                     * @description 工作单位
+                                     */
+                                    workUnit?: string;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/roomList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 获取人员户室信息
+         * @description **功能描述**
+         *
+         *     查询该人员名下的户室列表。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 511000 | 社区不存在     |                                          |
+         *     | 511059 | 租户信息不匹配 | 不能查询其他租户的资料                   |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: string;
+                        /**
+                         * 分页量
+                         * @description 分页量
+                         */
+                        pageSize: string;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 户室ID
+                                     * @description 户室ID
+                                     */
+                                    roomId: string;
+                                    /**
+                                     * 户室信息
+                                     * @description 户室信息
+                                     */
+                                    roomInfo: string;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/setRoomRelation": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 重置人员所属户室
+         * @description **功能描述**
+         *
+         *     重置人员所属户室，可删除旧的户室关联关系的同时重新关联新的户室。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
+         *     业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                                                     | 描述                                     |
+         *     | ------ | ------------------------------------------------------------ | ---------------------------------------- |
+         *     | 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511018 | 身份类型为租客时，离开时间不能为空                           |                                          |
+         *     | 511022 | 住户不存在                                                   |                                          |
+         *     | 511026 | 该户室已经关联业主                                           |                                          |
+         *     | 511029 | 户室信息错误                                                 |                                          |
+         *     | 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                   |
+         *     | 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                          |
+         *     | 511153 | 当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 |                                          |
+         *     | 511189 | 离开时间必须大于入住时间                                     |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
+                     *       "delRoomId": "4b7c226f000146189ff76f445a7cc268",
+                     *       "addRoomId": "4b7c226f000146189ff76f445a7cc268",
+                     *       "identityType": 2,
+                     *       "checkInDate": "2019-04-07",
+                     *       "checkOutDate": "2029-05-07",
+                     *       "isAudit": 1
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 重新关联新户室ID
+                         * @description 重新关联新户室ID
+                         */
+                        addRoomId: string;
+                        /**
+                         * 入住时间
+                         * @description 入住时间
+                         */
+                        checkInDate: string;
+                        /**
+                         * 离开时间
+                         * @description 离开时间
+                         */
+                        checkOutDate?: string;
+                        /**
+                         * 待删除关联关系的户室id
+                         * @description 待删除关联关系的户室id
+                         */
+                        delRoomId: string;
+                        /**
+                         * 身份类型1：业主 2：租客3：家属
+                         * @description 身份类型1：业主 2：租客3：家属
+                         */
+                        identityType: number;
+                        /**
+                         * 是否需要审核0：否 1：是，默认不需要审核
+                         * @description 是否需要审核0：否 1：是，默认不需要审核
+                         */
+                        isAudit?: number;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 审核单ID
+                                 * @description 审核单ID
+                                 */
+                                auditOrderId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/person/actions/updatePerson": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 修改人员
+         * @description **功能描述**
+         *
+         *     修改住户人员的基础信息。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                 | 描述                                                         |      |
+         *     | ------ | ------------------------ | ------------------------------------------------------------ | ---- |
+         *     | 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况                     |      |
+         *     | 511011 | 证件类型为空             |                                                              |      |
+         *     | 511012 | 证件号为空               |                                                              |      |
+         *     | 511013 | 证件格式错误             |                                                              |      |
+         *     | 511014 | 手机号不能为空           |                                                              |      |
+         *     | 511015 | 手机格式错误             |                                                              |      |
+         *     | 511016 | 英文名称格式错误         |                                                              |      |
+         *     | 511046 | 该人员不存在             |                                                              |      |
+         *     | 511096 | 没有填写身份信息         | 身份信息应至少包含：1、证件类型+证件号码2、手机号+姓名两组中的一组 |      |
+         *     | 511146 | 民族名称填写错误         |                                                              |      |
+         *     | 511095 | 人脸URL不合法            |                                                              |      |
+         *     | 511100 | 人脸图片质量不合格       |                                                              |      |
+         *     | 511117 | 人脸评分校验失败         |                                                              |      |
+         *     | 511118 | 人脸特征点置信度校验失败 |                                                              |      |
+         *     | 511119 | 人脸眼间距校验失败       |                                                              |      |
+         *     | 511120 | 人脸俯仰角校验失败       |                                                              |      |
+         *     | 511121 | 人脸左右角校验失败       |                                                              |      |
+         *     | 511122 | 人脸可见性校验失败       |                                                              |      |
+         *     | 511123 | 人脸清晰度校验失败       |                                                              |      |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "personName": "张三",
+                     *       "gender": 1,
+                     *       "credentialType": 1,
+                     *       "credentialNumber": "522128547844512369",
+                     *       "mobile": "13358745129",
+                     *       "faceUrl": "https://hik-cloud.com/img1.jpg",
+                     *       "birthday": "2001-02-02",
+                     *       "personRemark": "备注信息",
+                     *       "nation": "汉族",
+                     *       "educationalLevel": 3,
+                     *       "workUnit": "海康威视",
+                     *       "position": "研发总监",
+                     *       "religion": 2,
+                     *       "englishName": "Bob",
+                     *       "email": "12345@qq.com",
+                     *       "addressDetail": "北京市天通苑详细地址",
+                     *       "provinceCode": "130000",
+                     *       "citydCode": "130100",
+                     *       "countyCode": "130102"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 详细地址
+                         * @description 详细地址
+                         */
+                        addressDetail?: string;
+                        /**
+                         * 出生日期
+                         * @description 出生日期
+                         */
+                        birthday?: string;
+                        /**
+                         * 现户籍地/市编码
+                         * @description 现户籍地/市编码
+                         */
+                        citydCode?: string;
+                        /**
+                         * 现户籍地/区编码
+                         * @description 现户籍地/区编码
+                         */
+                        countyCode?: string;
+                        /**
+                         * 证件号码
+                         * @description 证件号码
+                         */
+                        credentialNumber: string;
+                        /**
+                         * 证件类型
+                         * @description 证件类型，[1]身份证[2护照[3]其他
+                         */
+                        credentialType: number;
+                        /**
+                         * 文化程度
+                         * @description 文化程度，[1]中专;[2]大专;[3]本科;[4]硕士;[5]博士;[6]其他
+                         */
+                        educationalLevel?: number;
+                        /**
+                         * 邮箱
+                         * @description 邮箱
+                         */
+                        email?: string;
+                        /**
+                         * 英文名称
+                         * @description 英文名称，支持非中文
+                         */
+                        englishName?: string;
+                        /**
+                         * 人脸图片URL
+                         * @description 人脸图片URL，图片要求：大小：200k以内；格式：jpg
+                         */
+                        faceUrl?: string;
+                        /**
+                         * 性别
+                         * @description 性别，[-1]无[0]女[1]男
+                         */
+                        gender?: number;
+                        /**
+                         * 手机号
+                         * @description 手机号
+                         */
+                        mobile: string;
+                        /**
+                         * 民族
+                         * @description 民族
+                         */
+                        nation?: string;
+                        /**
+                         * 人员Id
+                         * @description 人员Id
+                         */
+                        personId: string;
+                        /**
+                         * 姓名
+                         * @description 姓名
+                         */
+                        personName: string;
+                        /**
+                         * 备注
+                         * @description 备注
+                         */
+                        personRemark?: string;
+                        /**
+                         * 职务
+                         * @description 职务
+                         */
+                        position?: string;
+                        /**
+                         * 现户籍地/省编码
+                         * @description 现户籍地/省编码
+                         */
+                        provinceCode?: string;
+                        /**
+                         * 宗教信仰
+                         * @description 宗教信仰，[1]基督教;[2]伊斯兰教;[3]佛教
+                         */
+                        religion?: number;
+                        /**
+                         * 工作单位
+                         * @description 工作单位
+                         */
+                        workUnit?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/property": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 新增物业人员
+         * @description **功能描述**
+         *
+         *     新增物业人员信息。
+         *
+         *     备注：调用物业人员添加接口，就是在云眸平台注册了一个可以登陆的物业人员账号；返回的参数中appId和secret两个参数是在第三方跳转的时候需要用到的参数，具体用法详见：第三方跳转登录云眸社区对接规范。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息               | 描述                                                         |
+         *     | ------ | ---------------------- | ------------------------------------------------------------ |
+         *     | 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
+         *     | 511015 | 手机格式错误           |                                                              |
+         *     | 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
+         *     | 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
+         *     | 511082 | 用户名或手机号已被使用 |                                                              |
+         *     | 511091 | 用户名不合法           | 用户名包含数字字母之外的非法字符                             |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "userName": "zhangsan",
+                     *       "phoneNumber": "15029936331",
+                     *       "communityIds": "00a795f4a25d4de09edd091f28747eb4,e09edd091f28747eb400a795f4a25d4d",
+                     *       "roleKeys": "COMMUNITY_ROLE_A,COMMUNITY_ROLE_B",
+                     *       "personName": "张三"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 管辖社区
+                         * @description 管辖社区，多个社区id之间以逗号相隔；若传值为“0”，则默认管理所有小区
+                         */
+                        communityIds: string;
+                        /**
+                         * 姓名
+                         * @description 姓名
+                         */
+                        personName: string;
+                        /**
+                         * 联系电话
+                         * @description 联系电话
+                         */
+                        phoneNumber: string;
+                        /**
+                         * 角色
+                         * @description 角色，多个角色之间以逗号相隔，角色列表见附录
+                         */
+                        roleKeys: string;
+                        /**
+                         * 账号
+                         * @description 账号，只支持数字和字母，建议不要填写，云眸后台支持自动填充
+                         */
+                        userName?: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 第三方登陆ID
+                                 * @description 第三方登陆ID
+                                 */
+                                appId: string;
+                                /**
+                                 * 人员id
+                                 * @description 人员id
+                                 */
+                                personId: string;
+                                /**
+                                 * 第三方登陆密钥
+                                 * @description 第三方登陆密钥
+                                 */
+                                secret: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/property/{personId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 删除物业人员
+         * @description **功能描述**
+         *
+         *     删除物业人员信息。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息         | 描述                                     |
+         *     | ------ | ---------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511069 | 查询用户信息失败 |                                          |
+         *
+         *     **物业人员角色列表**
+         *
+         *     | 返回码           | 返回消息 | 描述         |
+         *     | ---------------- | -------- | ------------ |
+         *     | COMMUNITY_ROLE_A | 角色A    | 权限1..权限n |
+         *     | COMMUNITY_ROLE_B | 角色B    | 权限1..权限n |
+         *     | COMMUNITY_ROLE_C | 角色C    | 权限1..权限n |
+         *     | COMMUNITY_ROLE_D | 角色D    | 权限1..权限n |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
+                    /** @description 人员id */
+                    personId: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/property/actions/updateProperty": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 修改物业人员
+         * @description **功能描述**
+         *
+         *     编辑物业人员信息。（全量修改）
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息               | 描述                                                         |
+         *     | ------ | ---------------------- | ------------------------------------------------------------ |
+         *     | 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
+         *     | 511015 | 手机格式错误           |                                                              |
+         *     | 511059 | 租户信息不匹配         | 不能对其他租户的物业人员进行操作                             |
+         *     | 511046 | 该人员不存在           |                                                              |
+         *     | 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
+         *     | 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
+         *     | 511082 | 用户名或手机号已被使用 |                                                              |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "phoneNumber": "15029936331",
+                     *       "communityIds": "00a795f4a25d4de09edd091f28747eb4,e09edd091f28747eb400a795f4a25d4d",
+                     *       "roleKeys": "COMMUNITY_ROLE_A,COMMUNITY_ROLE_B",
+                     *       "personName": "张三"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 管辖社区
+                         * @description 管辖社区，多个社区id之间以逗号相隔；若传值为“0”，则默认管理所有小区
+                         */
+                        communityIds: string;
+                        /**
+                         * 人员id
+                         * @description 人员id
+                         */
+                        personId: string;
+                        /**
+                         * 姓名
+                         * @description 姓名
+                         */
+                        personName: string;
+                        /**
+                         * 联系电话
+                         * @description 联系电话
+                         */
+                        phoneNumber: string;
+                        /**
+                         * 角色
+                         * @description 角色，多个角色之间以逗号相隔，角色列表见附录
+                         */
+                        roleKeys: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/rooms": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 新增户室
+         * @description **功能描述**
+         *
+         *     向单元下添加户室。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息             | 描述                                     |
+         *     | ------ | -------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511006 | 单元不存在           |                                          |
+         *     | 511009 | 楼层数不存在         |                                          |
+         *     | 511025 | 参数不合法           | 非法参数，如floorNumber传值为非数字      |
+         *     | 511059 | 租户信息不匹配       |                                          |
+         *     | 511092 | 当前房屋已存在       |                                          |
+         *     | 511124 | 小区户室数量超出限制 |                                          |
+         *     | 511152 | 单元下户室名称已存在 | 单元下户室名称需唯一                     |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "unitId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "floorNumber": "7",
+                     *       "roomNumber": "01",
+                     *       "roomName": "户室名称"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 所在楼层
+                         * @description 所在楼层
+                         */
+                        floorNumber: string;
+                        /**
+                         * 户室名称
+                         * @description 户室名称
+                         */
+                        roomName: string;
+                        /**
+                         * 两位户室编号（不带楼层，如7层01室，传值为01，传值范围01-50）
+                         * @description 两位户室编号（不带楼层，如7层01室，传值为01，传值范围01-50）
+                         */
+                        roomNumber: string;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId?: string;
+                        /**
+                         * 单元ID
+                         * @description 单元ID
+                         */
+                        unitId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 户室id
+                                 * @description 户室id
+                                 */
+                                roomId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/rooms/{roomId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 删除户室
+         * @description **功能描述**
+         *
+         *     删除户室信息。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                | 描述                                     |
+         *     | ------ | ----------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511059 | 租户信息不匹配          | 不能对其他租户的物业人员进行操作         |
+         *     | 511086 | 房间不存在              |                                          |
+         *     | 511087 | 房屋已有人入住,不能删除 |                                          |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
+                    /** @description 户室ID */
                     roomId: string;
-                    /**
-                     * 单元ID
-                     * @description 单元ID
-                     */
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/rooms/actions/communityRoomList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 查询社区下的房屋
+         * @description **功能描述**
+         *
+         *     查询指定社区下的所有房间数据。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 200    | 成功               |                                          |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144 | 超出最大分页量限制 |                                          |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "pageNo": 1,
+                     *       "pageSize": 10
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 社区ID
+                         * @description 社区ID
+                         */
+                        communityId: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: number;
+                        /**
+                         * 分页量(最大支持100)
+                         * @description 分页量(最大支持100)
+                         */
+                        pageSize: number;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 创建时间（UTC+08:00）
+                                     * @description 创建时间（UTC+08:00）
+                                     */
+                                    createTime?: string;
+                                    /**
+                                     * 所在楼层
+                                     * @description 所在楼层
+                                     */
+                                    floorNumber?: string;
+                                    /**
+                                     * 所属路径（社区/楼栋/单元/户室）
+                                     * @description 所属路径（社区/楼栋/单元/户室）
+                                     */
+                                    path?: string;
+                                    /**
+                                     * 房屋id
+                                     * @description 房屋id
+                                     */
+                                    roomId?: string;
+                                    /**
+                                     * 户室名称
+                                     * @description 户室名称
+                                     */
+                                    roomName?: string;
+                                    /**
+                                     * 户室编号
+                                     * @description 户室编号，[1]自住[2]出租[0]空置
+                                     */
+                                    roomNumber?: string;
+                                    /**
+                                     * 房屋状态
+                                     * @description 房屋状态
+                                     */
+                                    roomState?: number;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/rooms/actions/info": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 根据编号查询户室
+         * @description **功能描述**
+         *
+         *     根据楼栋编号、单元编号、户室编号查询户室信息。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息 | 描述                                     |
+         *     | ------ | -------- | ---------------------------------------- |
+         *     | 200    | 成功     |                                          |
+         *     | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 所属楼栋编号（1-999之间的整数）
+                         * @description 所属楼栋编号（1-999之间的整数），例如：1幢就是“1”，708幢就是“708”
+                         */
+                        buildingNumber: string;
+                        /**
+                         * 社区id
+                         * @description 社区id
+                         */
+                        communityId: string;
+                        /**
+                         * 户室编号
+                         * @description 户室编号，规则：后两位是房间号，前面的位数表示所在楼层，例如：1层05号房间就是“105”，100层50号房间就是“10050”；楼层范围1-100，房间号范围01-50
+                         */
+                        roomNumber: string;
+                        /**
+                         * 所属单元编号（1-30之间的整数）
+                         * @description 所属单元编号（1-30之间的整数），例如：1单元就是“1”，15单元就是“15”
+                         */
+                        unitNumber: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 房屋地址
+                                 * @description 房屋地址
+                                 */
+                                address: string;
+                                /**
+                                 * 所属路径
+                                 * @description 所属路径
+                                 */
+                                path: string;
+                                /**
+                                 * 户室id
+                                 * @description 户室id
+                                 */
+                                roomId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/rooms/actions/infoById": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 根据ID查询户室
+         * @description **功能描述**
+         *
+         *     根据户室ID查询社区下的户室信息。（当前仅支持根据关联ID查询）
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511059 | 租户信息不匹配 | 不能对其他租户的物业人员进行操作         |
+         *     | 511086 | 房间不存在     |                                          |
+         */
+        get: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    "application/json": {
+                        /**
+                         * 户室ID
+                         * @description 户室ID
+                         */
+                        roomId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 房屋地址
+                                 * @description 房屋地址
+                                 */
+                                address: string;
+                                /**
+                                 * 所属路径
+                                 * @description 所属路径
+                                 */
+                                path: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/rooms/actions/unitRoomList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 查询单元下的房屋
+         * @description **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 200    | 成功               |                                          |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144 | 超出最大分页量限制 |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unitId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "pageNo": 1,
+                     *       "pageSize": 10
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: number;
+                        /**
+                         * 分页量(最大支持100)
+                         * @description 分页量(最大支持100)
+                         */
+                        pageSize: number;
+                        /**
+                         * 单元ID
+                         * @description 单元ID
+                         */
+                        unitId: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 创建时间（UTC+08:00）
+                                     * @description 创建时间（UTC+08:00）
+                                     */
+                                    createTime?: string;
+                                    /**
+                                     * 房屋状态
+                                     * @description 房屋状态，[1]自住[2]出租[0]空置
+                                     */
+                                    floorNumber: string;
+                                    /**
+                                     * 所属路径（社区/楼栋/单元/户室）
+                                     * @description 所属路径（社区/楼栋/单元/户室）
+                                     */
+                                    path: string;
+                                    /**
+                                     * 房屋id
+                                     * @description 房屋id
+                                     */
+                                    roomId: string;
+                                    /**
+                                     * 户室名称
+                                     * @description 户室名称
+                                     */
+                                    roomName: string;
+                                    /**
+                                     * 所在楼层
+                                     * @description 所在楼层
+                                     */
+                                    roomNumber: string;
+                                    /**
+                                     * 户室编号
+                                     * @description 户室编号
+                                     */
+                                    roomState: number;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/units": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 新增单元
+         * @description **功能描述**
+         *
+         *     向楼栋下添加单元。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                     | 描述                                     |
+         *     | ------ | ---------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511005 | 楼栋不存在                   |                                          |
+         *     | 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
+         *     | 511008 | 单元编号已经存在             | 单元编号重复                             |
+         *     | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
+         *     | 511098 | 超出单元数量                 | 超出楼栋单元数量的限制                   |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "unionId": "",
+                     *       "buildingId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "unitName": "1单元",
+                     *       "unitNumber": "1"
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 楼栋ID
+                         * @description 楼栋ID
+                         */
+                        buildingId: string;
+                        /**
+                         * 关联ID,保留字段
+                         * @description 关联ID,保留字段
+                         */
+                        unionId: string;
+                        /**
+                         * 单元名称
+                         * @description 单元名称
+                         */
+                        unitName: string;
+                        /**
+                         * 单元号（1-30）
+                         * @description 单元号（1-30）
+                         */
+                        unitNumber: string;
+                    };
+                };
+            };
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 单元ID
+                                 * @description 单元ID
+                                 */
+                                unitId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/estate/system/units/{unitId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 删除单元
+         * @description **功能描述**
+         *
+         *     删除社区下的楼栋。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                   | 描述                                     |
+         *     | ------ | -------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511054 | 单元不存在                 |                                          |
+         *     | 511059 | 租户信息不匹配             | 不能对其他租户的单元进行操作             |
+         *     | 511087 | 房屋已有人入住,不能删除    |                                          |
+         *     | 511090 | 该单元下有设备无法对其操作 |                                          |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
+                    /** @description 单元ID */
                     unitId: string;
-                    [key: string]: unknown;
-                  }[];
-                  /**
-                   * 人员Id
-                   * @description 人员Id
-                   */
-                  personId: string;
-                  /**
-                   * 姓名
-                   * @description 姓名
-                   */
-                  personName: string;
-                  /**
-                   * 备注
-                   * @description 备注
-                   */
-                  personRemark?: string;
-                  /**
-                   * 人员类型
-                   * @description 人员类型，[0]物业;[1]住户;
-                   */
-                  personType: number;
-                  /**
-                   * 职务
-                   * @description 职务
-                   */
-                  position?: string;
-                  /**
-                   * 现户籍地/省编码
-                   * @description 现户籍地/省编码
-                   */
-                  provinceCode?: string;
-                  /**
-                   * 宗教信仰
-                   * @description 宗教信仰，[0]无;[1]基督教;[2]伊斯兰教;[3]佛教
-                   */
-                  religion?: number;
-                  /**
-                   * 用户名
-                   * @description 用户名
-                   */
-                  userName?: string;
-                  /**
-                   * 工作单位
-                   * @description 工作单位
-                   */
-                  workUnit?: string;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+                };
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/roomList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 获取人员户室信息
-     * @description **功能描述**
-     *
-     *     查询该人员名下的户室列表。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 511000 | 社区不存在     |                                          |
-     *     | 511059 | 租户信息不匹配 | 不能查询其他租户的资料                   |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: string;
-            /**
-             * 分页量
-             * @description 分页量
-             */
-            pageSize: string;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 户室ID
-                   * @description 户室ID
-                   */
-                  roomId: string;
-                  /**
-                   * 户室信息
-                   * @description 户室信息
-                   */
-                  roomInfo: string;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/setRoomRelation': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 重置人员所属户室
-     * @description **功能描述**
-     *
-     *     重置人员所属户室，可删除旧的户室关联关系的同时重新关联新的户室。支持审核流程，如需修改审核方式，请在社区管理页面进行配置。审核结果将通过消息订阅进行通知，消息类型为community_message_audit_state。
-     *     业主申请的审核方式仅支持物业审核；家属、租客的审核方式现在支持业主审核、物业审核、业主物业依次审核三种方式，可在社区管理页面进行配置。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                                                     | 描述                                     |
-     *     | ------ | ------------------------------------------------------------ | ---------------------------------------- |
-     *     | 510001 | 参数错误                                                     | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511018 | 身份类型为租客时，离开时间不能为空                           |                                          |
-     *     | 511022 | 住户不存在                                                   |                                          |
-     *     | 511026 | 该户室已经关联业主                                           |                                          |
-     *     | 511029 | 户室信息错误                                                 |                                          |
-     *     | 511059 | 租户信息不匹配                                               | 不能关联其他租户的房屋                   |
-     *     | 511099 | 身份类型为租客时，离开时间必须大于入住时间                   |                                          |
-     *     | 511153 | 当前房屋没有业主,请联系物业人员修改人员登记审核方式为物业审核 |                                          |
-     *     | 511189 | 离开时间必须大于入住时间                                     |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/system/units/actions/buildingUnitList": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "01b58e91d18b45cea4de6c43cbd1cef3",
-           *       "delRoomId": "4b7c226f000146189ff76f445a7cc268",
-           *       "addRoomId": "4b7c226f000146189ff76f445a7cc268",
-           *       "identityType": 2,
-           *       "checkInDate": "2019-04-07",
-           *       "checkOutDate": "2029-05-07",
-           *       "isAudit": 1
-           *     } */
-          'application/json': {
-            /**
-             * 重新关联新户室ID
-             * @description 重新关联新户室ID
-             */
-            addRoomId: string;
-            /**
-             * 入住时间
-             * @description 入住时间
-             */
-            checkInDate: string;
-            /**
-             * 离开时间
-             * @description 离开时间
-             */
-            checkOutDate?: string;
-            /**
-             * 待删除关联关系的户室id
-             * @description 待删除关联关系的户室id
-             */
-            delRoomId: string;
-            /**
-             * 身份类型1：业主 2：租客3：家属
-             * @description 身份类型1：业主 2：租客3：家属
-             */
-            identityType: number;
-            /**
-             * 是否需要审核0：否 1：是，默认不需要审核
-             * @description 是否需要审核0：否 1：是，默认不需要审核
-             */
-            isAudit?: number;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 审核单ID
-                 * @description 审核单ID
-                 */
-                auditOrderId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 查询楼栋下的单元
+         * @description **功能描述**
+         *
+         *     查询指定楼栋下的所有单元数据。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息           | 描述                                     |
+         *     | ------ | ------------------ | ---------------------------------------- |
+         *     | 200    | 成功               |                                          |
+         *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511144 | 超出最大分页量限制 |                                          |
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/person/actions/updatePerson': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 修改人员
-     * @description **功能描述**
-     *
-     *     修改住户人员的基础信息。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                 | 描述                                                         |      |
-     *     | ------ | ------------------------ | ------------------------------------------------------------ | ---- |
-     *     | 510001 | 参数错误                 | 必填项为空、参数长度不符合等参数异常情况                     |      |
-     *     | 511011 | 证件类型为空             |                                                              |      |
-     *     | 511012 | 证件号为空               |                                                              |      |
-     *     | 511013 | 证件格式错误             |                                                              |      |
-     *     | 511014 | 手机号不能为空           |                                                              |      |
-     *     | 511015 | 手机格式错误             |                                                              |      |
-     *     | 511016 | 英文名称格式错误         |                                                              |      |
-     *     | 511046 | 该人员不存在             |                                                              |      |
-     *     | 511096 | 没有填写身份信息         | 身份信息应至少包含：1、证件类型+证件号码2、手机号+姓名两组中的一组 |      |
-     *     | 511146 | 民族名称填写错误         |                                                              |      |
-     *     | 511095 | 人脸URL不合法            |                                                              |      |
-     *     | 511100 | 人脸图片质量不合格       |                                                              |      |
-     *     | 511117 | 人脸评分校验失败         |                                                              |      |
-     *     | 511118 | 人脸特征点置信度校验失败 |                                                              |      |
-     *     | 511119 | 人脸眼间距校验失败       |                                                              |      |
-     *     | 511120 | 人脸俯仰角校验失败       |                                                              |      |
-     *     | 511121 | 人脸左右角校验失败       |                                                              |      |
-     *     | 511122 | 人脸可见性校验失败       |                                                              |      |
-     *     | 511123 | 人脸清晰度校验失败       |                                                              |      |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "personName": "张三",
-           *       "gender": 1,
-           *       "credentialType": 1,
-           *       "credentialNumber": "522128547844512369",
-           *       "mobile": "13358745129",
-           *       "faceUrl": "https://hik-cloud.com/img1.jpg",
-           *       "birthday": "2001-02-02",
-           *       "personRemark": "备注信息",
-           *       "nation": "汉族",
-           *       "educationalLevel": 3,
-           *       "workUnit": "海康威视",
-           *       "position": "研发总监",
-           *       "religion": 2,
-           *       "englishName": "Bob",
-           *       "email": "12345@qq.com",
-           *       "addressDetail": "北京市天通苑详细地址",
-           *       "provinceCode": "130000",
-           *       "citydCode": "130100",
-           *       "countyCode": "130102"
-           *     } */
-          'application/json': {
-            /**
-             * 详细地址
-             * @description 详细地址
-             */
-            addressDetail?: string;
-            /**
-             * 出生日期
-             * @description 出生日期
-             */
-            birthday?: string;
-            /**
-             * 现户籍地/市编码
-             * @description 现户籍地/市编码
-             */
-            citydCode?: string;
-            /**
-             * 现户籍地/区编码
-             * @description 现户籍地/区编码
-             */
-            countyCode?: string;
-            /**
-             * 证件号码
-             * @description 证件号码
-             */
-            credentialNumber: string;
-            /**
-             * 证件类型
-             * @description 证件类型，[1]身份证[2护照[3]其他
-             */
-            credentialType: number;
-            /**
-             * 文化程度
-             * @description 文化程度，[1]中专;[2]大专;[3]本科;[4]硕士;[5]博士;[6]其他
-             */
-            educationalLevel?: number;
-            /**
-             * 邮箱
-             * @description 邮箱
-             */
-            email?: string;
-            /**
-             * 英文名称
-             * @description 英文名称，支持非中文
-             */
-            englishName?: string;
-            /**
-             * 人脸图片URL
-             * @description 人脸图片URL，图片要求：大小：200k以内；格式：jpg
-             */
-            faceUrl?: string;
-            /**
-             * 性别
-             * @description 性别，[-1]无[0]女[1]男
-             */
-            gender?: number;
-            /**
-             * 手机号
-             * @description 手机号
-             */
-            mobile: string;
-            /**
-             * 民族
-             * @description 民族
-             */
-            nation?: string;
-            /**
-             * 人员Id
-             * @description 人员Id
-             */
-            personId: string;
-            /**
-             * 姓名
-             * @description 姓名
-             */
-            personName: string;
-            /**
-             * 备注
-             * @description 备注
-             */
-            personRemark?: string;
-            /**
-             * 职务
-             * @description 职务
-             */
-            position?: string;
-            /**
-             * 现户籍地/省编码
-             * @description 现户籍地/省编码
-             */
-            provinceCode?: string;
-            /**
-             * 宗教信仰
-             * @description 宗教信仰，[1]基督教;[2]伊斯兰教;[3]佛教
-             */
-            religion?: number;
-            /**
-             * 工作单位
-             * @description 工作单位
-             */
-            workUnit?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "buildingId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "pageNo": 1,
+                     *       "pageSize": 10
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 楼栋ID
+                         * @description 楼栋ID
+                         */
+                        buildingId: string;
+                        /**
+                         * 当前页数
+                         * @description 当前页数
+                         */
+                        pageNo: number;
+                        /**
+                         * 分页量(最大支持100)
+                         * @description 分页量(最大支持100)
+                         */
+                        pageSize: number;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/property': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 新增物业人员
-     * @description **功能描述**
-     *
-     *     新增物业人员信息。
-     *
-     *     备注：调用物业人员添加接口，就是在云眸平台注册了一个可以登陆的物业人员账号；返回的参数中appId和secret两个参数是在第三方跳转的时候需要用到的参数，具体用法详见：第三方跳转登录云眸社区对接规范。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息               | 描述                                                         |
-     *     | ------ | ---------------------- | ------------------------------------------------------------ |
-     *     | 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
-     *     | 511015 | 手机格式错误           |                                                              |
-     *     | 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
-     *     | 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
-     *     | 511082 | 用户名或手机号已被使用 |                                                              |
-     *     | 511091 | 用户名不合法           | 用户名包含数字字母之外的非法字符                             |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "userName": "zhangsan",
-           *       "phoneNumber": "15029936331",
-           *       "communityIds": "00a795f4a25d4de09edd091f28747eb4,e09edd091f28747eb400a795f4a25d4d",
-           *       "roleKeys": "COMMUNITY_ROLE_A,COMMUNITY_ROLE_B",
-           *       "personName": "张三"
-           *     } */
-          'application/json': {
-            /**
-             * 管辖社区
-             * @description 管辖社区，多个社区id之间以逗号相隔；若传值为“0”，则默认管理所有小区
-             */
-            communityIds: string;
-            /**
-             * 姓名
-             * @description 姓名
-             */
-            personName: string;
-            /**
-             * 联系电话
-             * @description 联系电话
-             */
-            phoneNumber: string;
-            /**
-             * 角色
-             * @description 角色，多个角色之间以逗号相隔，角色列表见附录
-             */
-            roleKeys: string;
-            /**
-             * 账号
-             * @description 账号，只支持数字和字母，建议不要填写，云眸后台支持自动填充
-             */
-            userName?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 第三方登陆ID
-                 * @description 第三方登陆ID
-                 */
-                appId: string;
-                /**
-                 * 人员id
-                 * @description 人员id
-                 */
-                personId: string;
-                /**
-                 * 第三方登陆密钥
-                 * @description 第三方登陆密钥
-                 */
-                secret: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 是否为首页（true：是）
+                                 * @description 是否为首页（true：是）
+                                 */
+                                firstPage: boolean;
+                                /**
+                                 * 是否有下一页（true：是）
+                                 * @description 是否有下一页（true：是）
+                                 */
+                                hasNextPage: boolean;
+                                /**
+                                 * 是否有上一页（true：是）
+                                 * @description 是否有上一页（true：是）
+                                 */
+                                hasPreviousPage: boolean;
+                                /**
+                                 * 是否为尾页（true：是）
+                                 * @description 是否为尾页（true：是）
+                                 */
+                                lastPage: boolean;
+                                /**
+                                 * 当前页数
+                                 * @description 当前页数
+                                 */
+                                pageNo: number;
+                                /**
+                                 * 分页量
+                                 * @description 分页量
+                                 */
+                                pageSize: number;
+                                /**
+                                 * 资源列表（见下方）
+                                 * @description 资源列表（见下方）
+                                 */
+                                rows: {
+                                    /**
+                                     * 创建时间（UTC+08:00）
+                                     * @description 创建时间（UTC+08:00）
+                                     */
+                                    createTime?: string;
+                                    /**
+                                     * 所属路径（社区/楼栋/单元）
+                                     * @description 所属路径（社区/楼栋/单元）
+                                     */
+                                    path?: string;
+                                    /**
+                                     * 单元ID
+                                     * @description 单元ID
+                                     */
+                                    unitId?: string;
+                                    /**
+                                     * 单元名称
+                                     * @description 单元名称
+                                     */
+                                    unitName?: string;
+                                    /**
+                                     * 单元号（1-30）
+                                     * @description 单元号（1-30）
+                                     */
+                                    unitNumber?: string;
+                                }[];
+                                /**
+                                 * 总条数
+                                 * @description 总条数
+                                 */
+                                total: number;
+                                /**
+                                 * 总页数
+                                 * @description 总页数
+                                 */
+                                totalPage: number;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/property/{personId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 删除物业人员
-     * @description **功能描述**
-     *
-     *     删除物业人员信息。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息         | 描述                                     |
-     *     | ------ | ---------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误         | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511069 | 查询用户信息失败 |                                          |
-     *
-     *     **物业人员角色列表**
-     *
-     *     | 返回码           | 返回消息 | 描述         |
-     *     | ---------------- | -------- | ------------ |
-     *     | COMMUNITY_ROLE_A | 角色A    | 权限1..权限n |
-     *     | COMMUNITY_ROLE_B | 角色B    | 权限1..权限n |
-     *     | COMMUNITY_ROLE_C | 角色C    | 权限1..权限n |
-     *     | COMMUNITY_ROLE_D | 角色D    | 权限1..权限n |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/visitors": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path: {
-          /** @description 人员id */
-          personId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 访客登记（预约）
+         * @description **功能描述**
+         *
+         *     社区访客预约登记。
+         *
+         *     若访客权限在设备上下发失败，将通过访客门禁权限下发状态订阅消息进行通知。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息                     | 描述                                     |
+         *     | ------ | ---------------------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511015 | 手机格式错误                 |                                          |
+         *     | 511033 | 没有该设备权限               |                                          |
+         *     | 511036 | 日期校验失败                 | 日期格式不合法                           |
+         *     | 511037 | 请选择您自己的户室           |                                          |
+         *     | 511045 | 所选户室不存在               |                                          |
+         *     | 511049 | 离开时间不能早于当前时间     |                                          |
+         *     | 511050 | 离开时间不能早于来访时间     |                                          |
+         *     | 511051 | 访客预约时长不能超过72小时   |                                          |
+         *     | 511052 | 访客姓名需在2~10个字符间     |                                          |
+         *     | 511058 | 预约人员不存在               |                                          |
+         *     | 511059 | 租户信息不匹配               | 不能预约其他租户的房屋                   |
+         *     | 511081 | 查询人员信息失败             |                                          |
+         *     | 511138 | 设备列表参数格式错误         |                                          |
+         *     | 511150 | 房屋和设备参数不能同时为空   |                                          |
+         *     | 511151 | 不支持一次为多个小区预约访客 |                                          |
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/property/actions/updateProperty': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 修改物业人员
-     * @description **功能描述**
-     *
-     *     编辑物业人员信息。（全量修改）
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息               | 描述                                                         |
-     *     | ------ | ---------------------- | ------------------------------------------------------------ |
-     *     | 510001 | 参数错误               | 必填项为空、参数长度不符合等参数异常情况                     |
-     *     | 511015 | 手机格式错误           |                                                              |
-     *     | 511059 | 租户信息不匹配         | 不能对其他租户的物业人员进行操作                             |
-     *     | 511046 | 该人员不存在           |                                                              |
-     *     | 511061 | 有效社区id不能为空     | 若 communityIds字段为“0”时报错，则是因为本租户未添加社区，请先调用添加社区接口，添加社区；若不为“0”时报错，则是因为根据所传id无法查到社区，请检查数据；若为空，则提示510001 |
-     *     | 511068 | 角色信息不合法         | 角色信息包含不符合约定的信息                                 |
-     *     | 511082 | 用户名或手机号已被使用 |                                                              |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "phoneNumber": "15029936331",
-           *       "communityIds": "00a795f4a25d4de09edd091f28747eb4,e09edd091f28747eb400a795f4a25d4d",
-           *       "roleKeys": "COMMUNITY_ROLE_A,COMMUNITY_ROLE_B",
-           *       "personName": "张三"
-           *     } */
-          'application/json': {
-            /**
-             * 管辖社区
-             * @description 管辖社区，多个社区id之间以逗号相隔；若传值为“0”，则默认管理所有小区
-             */
-            communityIds: string;
-            /**
-             * 人员id
-             * @description 人员id
-             */
-            personId: string;
-            /**
-             * 姓名
-             * @description 姓名
-             */
-            personName: string;
-            /**
-             * 联系电话
-             * @description 联系电话
-             */
-            phoneNumber: string;
-            /**
-             * 角色
-             * @description 角色，多个角色之间以逗号相隔，角色列表见附录
-             */
-            roleKeys: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    /** @example {
+                     *       "personId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "personType": 1,
+                     *       "visitorName": "张三",
+                     *       "gender": 1,
+                     *       "phone": "13325478454",
+                     *       "roomId": "00a795f4a25d4de09edd091f28747eb4",
+                     *       "visitorEffectiveTime": "2018-01-01T12:00:00+08:00",
+                     *       "visitorLeaveTime": "2018-01-02T12:00:00+08:00",
+                     *       "visitReason": "访问故友",
+                     *       "deviceIds": "00a795f4a25d4de09edd091f28747eb4,00a795f4a25d4de09edd091f28747eb4",
+                     *       "openTimes": 1
+                     *     } */
+                    "application/json": {
+                        /**
+                         * 需要下发访客权限的设备列表
+                         * @description 需要下发访客权限的设备列表，指定需要下发访客权限的设备列表,如有多个以英文逗号分隔
+                         */
+                        deviceIds?: string;
+                        /**
+                         * 访客性别
+                         * @description 访客性别，[0]女[1]男
+                         */
+                        gender: number;
+                        /**
+                         * 二维码开门次数
+                         * @description 二维码开门次数，最大支持9次，不填默认可使用4次
+                         */
+                        openTimes?: number;
+                        /**
+                         * 人员ID
+                         * @description 人员ID
+                         */
+                        personId: string;
+                        /**
+                         * 人员类型
+                         * @description 人员类型，[0]物业;[1]住户;
+                         */
+                        personType: number;
+                        /**
+                         * 访客手机号
+                         * @description 访客手机号
+                         */
+                        phone: string;
+                        /**
+                         * 访问的户室ID
+                         * @description 访问的户室ID
+                         */
+                        roomId: string;
+                        /**
+                         * 来访开始时间（UTC+08:00）
+                         * @description 来访开始时间（UTC+08:00）
+                         */
+                        visitorEffectiveTime: string;
+                        /**
+                         * 离开时间（UTC+08:00）
+                         * @description 离开时间（UTC+08:00），离开时间和开始时间差不能超过3天
+                         */
+                        visitorLeaveTime: string;
+                        /**
+                         * 访客姓名
+                         * @description 访客姓名
+                         */
+                        visitorName: string;
+                        /**
+                         * 访问原由
+                         * @description 访问原由
+                         */
+                        visitReason?: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/rooms': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 新增户室
-     * @description **功能描述**
-     *
-     *     向单元下添加户室。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息             | 描述                                     |
-     *     | ------ | -------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误             | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511006 | 单元不存在           |                                          |
-     *     | 511009 | 楼层数不存在         |                                          |
-     *     | 511025 | 参数不合法           | 非法参数，如floorNumber传值为非数字      |
-     *     | 511059 | 租户信息不匹配       |                                          |
-     *     | 511092 | 当前房屋已存在       |                                          |
-     *     | 511124 | 小区户室数量超出限制 |                                          |
-     *     | 511152 | 单元下户室名称已存在 | 单元下户室名称需唯一                     |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "unitId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "floorNumber": "7",
-           *       "roomNumber": "01",
-           *       "roomName": "户室名称"
-           *     } */
-          'application/json': {
-            /**
-             * 所在楼层
-             * @description 所在楼层
-             */
-            floorNumber: string;
-            /**
-             * 户室名称
-             * @description 户室名称
-             */
-            roomName: string;
-            /**
-             * 两位户室编号（不带楼层，如7层01室，传值为01，传值范围01-50）
-             * @description 两位户室编号（不带楼层，如7层01室，传值为01，传值范围01-50）
-             */
-            roomNumber: string;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId?: string;
-            /**
-             * 单元ID
-             * @description 单元ID
-             */
-            unitId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 户室id
-                 * @description 户室id
-                 */
-                roomId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 预约记录id
+                                 * @description 预约记录id
+                                 */
+                                reservationId: string;
+                                /**
+                                 * 加密二维码信息
+                                 * @description 加密二维码信息
+                                 */
+                                visitorCode: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/rooms/{roomId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 删除户室
-     * @description **功能描述**
-     *
-     *     删除户室信息。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                | 描述                                     |
-     *     | ------ | ----------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511059 | 租户信息不匹配          | 不能对其他租户的物业人员进行操作         |
-     *     | 511086 | 房间不存在              |                                          |
-     *     | 511087 | 房屋已有人入住,不能删除 |                                          |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/estate/visitors/{reservationId}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path: {
-          /** @description 户室ID */
-          roomId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        post?: never;
+        /**
+         * 访客删除
+         * @description **功能描述**
+         *
+         *     删除访客预约记录。
+         *
+         *     **返回码**
+         *
+         *     | 返回码 | 返回消息       | 描述                                     |
+         *     | ------ | -------------- | ---------------------------------------- |
+         *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
+         *     | 511059 | 租户信息不匹配 | 不能删除其他租户的预约信息               |
+         */
+        delete: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
+                    /** @description 记录ID */
+                    reservationId: string;
+                };
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/rooms/actions/communityRoomList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 查询社区下的房屋
-     * @description **功能描述**
-     *
-     *     查询指定社区下的所有房间数据。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 200    | 成功               |                                          |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144 | 超出最大分页量限制 |                                          |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "communityId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "pageNo": 1,
-           *       "pageSize": 10
-           *     } */
-          'application/json': {
-            /**
-             * 社区ID
-             * @description 社区ID
-             */
-            communityId: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: number;
-            /**
-             * 分页量(最大支持100)
-             * @description 分页量(最大支持100)
-             */
-            pageSize: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 创建时间（UTC+08:00）
-                   * @description 创建时间（UTC+08:00）
-                   */
-                  createTime?: string;
-                  /**
-                   * 所在楼层
-                   * @description 所在楼层
-                   */
-                  floorNumber?: string;
-                  /**
-                   * 所属路径（社区/楼栋/单元/户室）
-                   * @description 所属路径（社区/楼栋/单元/户室）
-                   */
-                  path?: string;
-                  /**
-                   * 房屋id
-                   * @description 房屋id
-                   */
-                  roomId?: string;
-                  /**
-                   * 户室名称
-                   * @description 户室名称
-                   */
-                  roomName?: string;
-                  /**
-                   * 户室编号
-                   * @description 户室编号，[1]自住[2]出租[0]空置
-                   */
-                  roomNumber?: string;
-                  /**
-                   * 房屋状态
-                   * @description 房屋状态
-                   */
-                  roomState?: number;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/rooms/actions/info': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 根据编号查询户室
-     * @description **功能描述**
-     *
-     *     根据楼栋编号、单元编号、户室编号查询户室信息。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息 | 描述                                     |
-     *     | ------ | -------- | ---------------------------------------- |
-     *     | 200    | 成功     |                                          |
-     *     | 510001 | 参数错误 | 必填项为空、参数长度不符合等参数异常情况 |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/mq/consumer/group1": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 所属楼栋编号（1-999之间的整数）
-             * @description 所属楼栋编号（1-999之间的整数），例如：1幢就是“1”，708幢就是“708”
-             */
-            buildingNumber: string;
-            /**
-             * 社区id
-             * @description 社区id
-             */
-            communityId: string;
-            /**
-             * 户室编号
-             * @description 户室编号，规则：后两位是房间号，前面的位数表示所在楼层，例如：1层05号房间就是“105”，100层50号房间就是“10050”；楼层范围1-100，房间号范围01-50
-             */
-            roomNumber: string;
-            /**
-             * 所属单元编号（1-30之间的整数）
-             * @description 所属单元编号（1-30之间的整数），例如：1单元就是“1”，15单元就是“15”
-             */
-            unitNumber: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 房屋地址
-                 * @description 房屋地址
-                 */
-                address: string;
-                /**
-                 * 所属路径
-                 * @description 所属路径
-                 */
-                path: string;
-                /**
-                 * 户室id
-                 * @description 户室id
-                 */
-                roomId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 创建消费者
+         * @description ## 功能描述
+         *
+         *     1.该接口用于创建消费者ID，最多同时存在五个消费者ID。
+         *
+         *     2.消费者如果5分钟未调用消费消息接口，则消费者ID将被删除。
+         *
+         *     3.不可使用多个消费者ID同时消费消息
+         *
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/rooms/actions/infoById': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 根据ID查询户室
-     * @description **功能描述**
-     *
-     *     根据户室ID查询社区下的户室信息。（当前仅支持根据关联ID查询）
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511059 | 租户信息不匹配 | 不能对其他租户的物业人员进行操作         |
-     *     | 511086 | 房间不存在     |                                          |
-     */
-    get: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/json': {
-            /**
-             * 户室ID
-             * @description 户室ID
-             */
-            roomId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 房屋地址
-                 * @description 房屋地址
-                 */
-                address: string;
-                /**
-                 * 所属路径
-                 * @description 所属路径
-                 */
-                path: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    "application/x-www-form-urlencoded": Record<string, never>;
+                };
             };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/rooms/actions/unitRoomList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 查询单元下的房屋
-     * @description **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 200    | 成功               |                                          |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144 | 超出最大分页量限制 |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unitId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "pageNo": 1,
-           *       "pageSize": 10
-           *     } */
-          'application/json': {
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: number;
-            /**
-             * 分页量(最大支持100)
-             * @description 分页量(最大支持100)
-             */
-            pageSize: number;
-            /**
-             * 单元ID
-             * @description 单元ID
-             */
-            unitId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 创建时间（UTC+08:00）
-                   * @description 创建时间（UTC+08:00）
-                   */
-                  createTime?: string;
-                  /**
-                   * 房屋状态
-                   * @description 房屋状态，[1]自住[2]出租[0]空置
-                   */
-                  floorNumber: string;
-                  /**
-                   * 所属路径（社区/楼栋/单元/户室）
-                   * @description 所属路径（社区/楼栋/单元/户室）
-                   */
-                  path: string;
-                  /**
-                   * 房屋id
-                   * @description 房屋id
-                   */
-                  roomId: string;
-                  /**
-                   * 户室名称
-                   * @description 户室名称
-                   */
-                  roomName: string;
-                  /**
-                   * 所在楼层
-                   * @description 所在楼层
-                   */
-                  roomNumber: string;
-                  /**
-                   * 户室编号
-                   * @description 户室编号
-                   */
-                  roomState: number;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: string;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 消费者ID
+                                 * @description 消费者ID
+                                 */
+                                consumerId: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                            /**
+                             * 是否成功
+                             * @description 是否成功
+                             */
+                            success: boolean;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/units': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 新增单元
-     * @description **功能描述**
-     *
-     *     向楼栋下添加单元。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                     | 描述                                     |
-     *     | ------ | ---------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511005 | 楼栋不存在                   |                                          |
-     *     | 511007 | 该楼栋下单元已存在，无法添加 | 单元名重复                               |
-     *     | 511008 | 单元编号已经存在             | 单元编号重复                             |
-     *     | 511059 | 租户信息不匹配               | 不能在其他租户的楼栋下新增单元           |
-     *     | 511098 | 超出单元数量                 | 超出楼栋单元数量的限制                   |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/mq/consumer/messages": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "unionId": "",
-           *       "buildingId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "unitName": "1单元",
-           *       "unitNumber": "1"
-           *     } */
-          'application/json': {
-            /**
-             * 楼栋ID
-             * @description 楼栋ID
-             */
-            buildingId: string;
-            /**
-             * 关联ID,保留字段
-             * @description 关联ID,保留字段
-             */
-            unionId: string;
-            /**
-             * 单元名称
-             * @description 单元名称
-             */
-            unitName: string;
-            /**
-             * 单元号（1-30）
-             * @description 单元号（1-30）
-             */
-            unitNumber: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 单元ID
-                 * @description 单元ID
-                 */
-                unitId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 消费消息
+         * @description ## 功能描述
+         *
+         *     1.该接口用于拉取消息，消费消息请在单线程中进行消费，禁止使用多线程进行消费。
+         *
+         *     2.消费者创建成功之后，循环调用该接口拉取消息，无需每次拉取消息都创建消费者。
+         *
+         *     3.消费者首次拉取消息时需要与消息通道建立连接，此次调用实际拉到消息列表为空，再次调用即可拉取到消息，30秒内必须再次调用拉取消息接口，否则将断开与消息通道的连接。因此拉取间隔需要在30秒以内，否则每次拉到的消息是空的
+         *
+         *     4.每次拉取到的消息大小上限为1M（500条左右）
+         *
+         *     5.若采用手动提交偏移量消费模式，则正确的消费方式是，单线程内拉取一次消息，判断消息列表不为空，则提交一次偏移量，请注意：提交偏移量和消费消息必须使用同一consumerId。
+         *
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/units/{unitId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 删除单元
-     * @description **功能描述**
-     *
-     *     删除社区下的楼栋。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                   | 描述                                     |
-     *     | ------ | -------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                   | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511054 | 单元不存在                 |                                          |
-     *     | 511059 | 租户信息不匹配             | 不能对其他租户的单元进行操作             |
-     *     | 511087 | 房屋已有人入住,不能删除    |                                          |
-     *     | 511090 | 该单元下有设备无法对其操作 |                                          |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path: {
-          /** @description 单元ID */
-          unitId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    "application/x-www-form-urlencoded": {
+                        /** @description 是否自动提交偏移量，默认false */
+                        autoCommit?: string;
+                        /** @description 消费者ID */
+                        consumerId?: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/system/units/actions/buildingUnitList': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 查询楼栋下的单元
-     * @description **功能描述**
-     *
-     *     查询指定楼栋下的所有单元数据。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息           | 描述                                     |
-     *     | ------ | ------------------ | ---------------------------------------- |
-     *     | 200    | 成功               |                                          |
-     *     | 510001 | 参数错误           | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511144 | 超出最大分页量限制 |                                          |
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "buildingId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "pageNo": 1,
-           *       "pageSize": 10
-           *     } */
-          'application/json': {
-            /**
-             * 楼栋ID
-             * @description 楼栋ID
-             */
-            buildingId: string;
-            /**
-             * 当前页数
-             * @description 当前页数
-             */
-            pageNo: number;
-            /**
-             * 分页量(最大支持100)
-             * @description 分页量(最大支持100)
-             */
-            pageSize: number;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 是否为首页（true：是）
-                 * @description 是否为首页（true：是）
-                 */
-                firstPage: boolean;
-                /**
-                 * 是否有下一页（true：是）
-                 * @description 是否有下一页（true：是）
-                 */
-                hasNextPage: boolean;
-                /**
-                 * 是否有上一页（true：是）
-                 * @description 是否有上一页（true：是）
-                 */
-                hasPreviousPage: boolean;
-                /**
-                 * 是否为尾页（true：是）
-                 * @description 是否为尾页（true：是）
-                 */
-                lastPage: boolean;
-                /**
-                 * 当前页数
-                 * @description 当前页数
-                 */
-                pageNo: number;
-                /**
-                 * 分页量
-                 * @description 分页量
-                 */
-                pageSize: number;
-                /**
-                 * 资源列表（见下方）
-                 * @description 资源列表（见下方）
-                 */
-                rows: {
-                  /**
-                   * 创建时间（UTC+08:00）
-                   * @description 创建时间（UTC+08:00）
-                   */
-                  createTime?: string;
-                  /**
-                   * 所属路径（社区/楼栋/单元）
-                   * @description 所属路径（社区/楼栋/单元）
-                   */
-                  path?: string;
-                  /**
-                   * 单元ID
-                   * @description 单元ID
-                   */
-                  unitId?: string;
-                  /**
-                   * 单元名称
-                   * @description 单元名称
-                   */
-                  unitName?: string;
-                  /**
-                   * 单元号（1-30）
-                   * @description 单元号（1-30）
-                   */
-                  unitNumber?: string;
-                  [key: string]: unknown;
-                }[];
-                /**
-                 * 总条数
-                 * @description 总条数
-                 */
-                total: number;
-                /**
-                 * 总页数
-                 * @description 总页数
-                 */
-                totalPage: number;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: string;
+                            data: {
+                                /**
+                                 * 消息内容
+                                 * @description 消息内容
+                                 */
+                                content: string;
+                                /**
+                                 * 消息ID,每条消息的唯一ID,消费者可根据此ID进行去重处理
+                                 * @description 消息ID,每条消息的唯一ID,消费者可根据此ID进行去重处理
+                                 */
+                                msgId: string;
+                                /**
+                                 * 消息类型
+                                 * @description 消息类型
+                                 */
+                                msgType: string;
+                            }[];
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                            /**
+                             * 消息列表
+                             * @description 消息列表
+                             */
+                            success: boolean;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/visitors': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 访客登记（预约）
-     * @description **功能描述**
-     *
-     *     社区访客预约登记。
-     *
-     *     若访客权限在设备上下发失败，将通过访客门禁权限下发状态订阅消息进行通知。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息                     | 描述                                     |
-     *     | ------ | ---------------------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误                     | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511015 | 手机格式错误                 |                                          |
-     *     | 511033 | 没有该设备权限               |                                          |
-     *     | 511036 | 日期校验失败                 | 日期格式不合法                           |
-     *     | 511037 | 请选择您自己的户室           |                                          |
-     *     | 511045 | 所选户室不存在               |                                          |
-     *     | 511049 | 离开时间不能早于当前时间     |                                          |
-     *     | 511050 | 离开时间不能早于来访时间     |                                          |
-     *     | 511051 | 访客预约时长不能超过72小时   |                                          |
-     *     | 511052 | 访客姓名需在2~10个字符间     |                                          |
-     *     | 511058 | 预约人员不存在               |                                          |
-     *     | 511059 | 租户信息不匹配               | 不能预约其他租户的房屋                   |
-     *     | 511081 | 查询人员信息失败             |                                          |
-     *     | 511138 | 设备列表参数格式错误         |                                          |
-     *     | 511150 | 房屋和设备参数不能同时为空   |                                          |
-     *     | 511151 | 不支持一次为多个小区预约访客 |                                          |
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/api/v1/mq/consumer/offsets": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          /** @example {
-           *       "personId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "personType": 1,
-           *       "visitorName": "张三",
-           *       "gender": 1,
-           *       "phone": "13325478454",
-           *       "roomId": "00a795f4a25d4de09edd091f28747eb4",
-           *       "visitorEffectiveTime": "2018-01-01T12:00:00+08:00",
-           *       "visitorLeaveTime": "2018-01-02T12:00:00+08:00",
-           *       "visitReason": "访问故友",
-           *       "deviceIds": "00a795f4a25d4de09edd091f28747eb4,00a795f4a25d4de09edd091f28747eb4",
-           *       "openTimes": 1
-           *     } */
-          'application/json': {
-            /**
-             * 需要下发访客权限的设备列表
-             * @description 需要下发访客权限的设备列表，指定需要下发访客权限的设备列表,如有多个以英文逗号分隔
-             */
-            deviceIds?: string;
-            /**
-             * 访客性别
-             * @description 访客性别，[0]女[1]男
-             */
-            gender: number;
-            /**
-             * 二维码开门次数
-             * @description 二维码开门次数，最大支持9次，不填默认可使用4次
-             */
-            openTimes?: number;
-            /**
-             * 人员ID
-             * @description 人员ID
-             */
-            personId: string;
-            /**
-             * 人员类型
-             * @description 人员类型，[0]物业;[1]住户;
-             */
-            personType: number;
-            /**
-             * 访客手机号
-             * @description 访客手机号
-             */
-            phone: string;
-            /**
-             * 访问的户室ID
-             * @description 访问的户室ID
-             */
-            roomId: string;
-            /**
-             * 来访开始时间（UTC+08:00）
-             * @description 来访开始时间（UTC+08:00）
-             */
-            visitorEffectiveTime: string;
-            /**
-             * 离开时间（UTC+08:00）
-             * @description 离开时间（UTC+08:00），离开时间和开始时间差不能超过3天
-             */
-            visitorLeaveTime: string;
-            /**
-             * 访客姓名
-             * @description 访客姓名
-             */
-            visitorName: string;
-            /**
-             * 访问原由
-             * @description 访问原由
-             */
-            visitReason?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 预约记录id
-                 * @description 预约记录id
-                 */
-                reservationId: string;
-                /**
-                 * 加密二维码信息
-                 * @description 加密二维码信息
-                 */
-                visitorCode: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 提交偏移量
+         * @description ## 功能描述
+         *
+         *     用于手动提交偏移量，提交上次消费到的消息的偏移量。
+         *
+         *     消费消息和提交偏移量必须使用同一个consumerId，若不使用同一个consumerId进行提交，则会提交失败，消息可能会被重复消费。
+         *
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/estate/visitors/{reservationId}': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    post?: never;
-    /**
-     * 访客删除
-     * @description **功能描述**
-     *
-     *     删除访客预约记录。
-     *
-     *     **返回码**
-     *
-     *     | 返回码 | 返回消息       | 描述                                     |
-     *     | ------ | -------------- | ---------------------------------------- |
-     *     | 510001 | 参数错误       | 必填项为空、参数长度不符合等参数异常情况 |
-     *     | 511059 | 租户信息不匹配 | 不能删除其他租户的预约信息               |
-     */
-    delete: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path: {
-          /** @description 记录ID */
-          reservationId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    "application/x-www-form-urlencoded": {
+                        /** @description 消费者ID */
+                        consumerId: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/mq/consumer/group1': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 创建消费者
-     * @description ## 功能描述
-     *
-     *     1.该接口用于创建消费者ID，最多同时存在五个消费者ID。
-     *
-     *     2.消费者如果5分钟未调用消费消息接口，则消费者ID将被删除。
-     *
-     *     3.不可使用多个消费者ID同时消费消息
-     *
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/x-www-form-urlencoded': Record<string, never>;
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: string;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 消费者ID
-                 * @description 消费者ID
-                 */
-                consumerId: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              /**
-               * 是否成功
-               * @description 是否成功
-               */
-              success: boolean;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: string;
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                            /**
+                             * 消息列表
+                             * @description 消息列表
+                             */
+                            success: boolean;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/mq/consumer/messages': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 消费消息
-     * @description ## 功能描述
-     *
-     *     1.该接口用于拉取消息，消费消息请在单线程中进行消费，禁止使用多线程进行消费。
-     *
-     *     2.消费者创建成功之后，循环调用该接口拉取消息，无需每次拉取消息都创建消费者。
-     *
-     *     3.消费者首次拉取消息时需要与消息通道建立连接，此次调用实际拉到消息列表为空，再次调用即可拉取到消息，30秒内必须再次调用拉取消息接口，否则将断开与消息通道的连接。因此拉取间隔需要在30秒以内，否则每次拉到的消息是空的
-     *
-     *     4.每次拉取到的消息大小上限为1M（500条左右）
-     *
-     *     5.若采用手动提交偏移量消费模式，则正确的消费方式是，单线程内拉取一次消息，判断消息列表不为空，则提交一次偏移量，请注意：提交偏移量和消费消息必须使用同一consumerId。
-     *
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
+    "/oauth/token": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/x-www-form-urlencoded': {
-            /** @description 是否自动提交偏移量，默认false */
-            autoCommit?: string;
-            /** @description 消费者ID */
-            consumerId?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: string;
-              data: {
-                /**
-                 * 消息内容
-                 * @description 消息内容
-                 */
-                content: string;
-                /**
-                 * 消息ID,每条消息的唯一ID,消费者可根据此ID进行去重处理
-                 * @description 消息ID,每条消息的唯一ID,消费者可根据此ID进行去重处理
-                 */
-                msgId: string;
-                /**
-                 * 消息类型
-                 * @description 消息类型
-                 */
-                msgType: string;
-                [key: string]: unknown;
-              }[];
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              /**
-               * 消息列表
-               * @description 消息列表
-               */
-              success: boolean;
-              [key: string]: unknown;
+        get?: never;
+        put?: never;
+        /**
+         * 生成授权凭证
+         * @description 在调用服务端API前，需要先调用获取token接口获取access_token,通过access_token来鉴权调用者身份。
+         *
+         *     ```
+         *              在使用access_token时，请注意：
+         *              access_token的有效期为604800秒（7天），有效期内重复获取返回相同结果，过期后获取会返回新的access_token。
+         *              开发者需要缓存access_token，用于后续接口的调用。当access_token失效或过期时，接口会返回http状态码401，需要重新获取access_token。
+         *              不能频繁调用获取access_token接口，否则会受到接口调用频率拦截。
+         *
+         *     ```
+         *
+         *     ## 准备工作
+         *
+         *     在获取access_token前，需要先获取应用的client_id和client_secret：
+         *     1.登录[海康云眸开发者服务](http://open.hik-cloud.com)
+         *
+         *     2.在**秘钥管理**页面，查看应用的client_id和client_secret。
+         *     ![img](https://pbpic.hik-cloud.com/opencustom/apidoc/pictures/b8287cbd11bf4d108c53183c52b22bc7.png)
+         *
+         *
+         *     其中 “access_token” 字段即为请求 REST API  所需的令牌,access_token生成时有效期为7天，expires_in字段表示剩余有效时间，开发者需要对access_token的有效性进行判断，若调用API时返回Http状态码为401，则说明access_token已失效，重新获取即可。
+         *
+         *     注：在使用postman调试时，注意尽量不要使用浏览器插件版本的postman，使用客户端版本的。因为插件版本的默认会使用浏览器中的cookie和缓存，可能在调用时会出现问题而难以排查。
+         *     ![img](https://pic.hik-cloud.com/opencustom/apidoc/pictures/d8d60985e34a4e40857a98731a3dc85c.jpg)
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/api/v1/mq/consumer/offsets': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 提交偏移量
-     * @description ## 功能描述
-     *
-     *     用于手动提交偏移量，提交上次消费到的消息的偏移量。
-     *
-     *     消费消息和提交偏移量必须使用同一个consumerId，若不使用同一个consumerId进行提交，则会提交失败，消息可能会被重复消费。
-     *
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/x-www-form-urlencoded': {
-            /** @description 消费者ID */
-            consumerId: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: string;
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              /**
-               * 消息列表
-               * @description 消息列表
-               */
-              success: boolean;
-              [key: string]: unknown;
+            requestBody?: {
+                content: {
+                    "application/x-www-form-urlencoded": {
+                        /** @description 客户端ID（使用云眸系统管理员账号登录开放平台门户网站[open2.hik-cloud.com](http://open2.hik-cloud.com/)，进入密钥管理页面查看获取） */
+                        client_id: string;
+                        /** @description 访问密钥（使用云眸账号登录开放平台门户网站[open2.hik-cloud.com](http://open2.hik-cloud.com/)，进入密钥管理页面查看获取） */
+                        client_secret: string;
+                        /** @description 认证模式（目前仅支持client_credentials） */
+                        grant_type: string;
+                        /** @description 权限范围（可选填app） */
+                        scope?: string;
+                    };
+                };
             };
-          };
-        };
-      };
-    };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/oauth/token': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 生成授权凭证
-     * @description 在调用服务端API前，需要先调用获取token接口获取access_token,通过access_token来鉴权调用者身份。
-     *
-     *     ```
-     *              在使用access_token时，请注意：
-     *              access_token的有效期为604800秒（7天），有效期内重复获取返回相同结果，过期后获取会返回新的access_token。
-     *              开发者需要缓存access_token，用于后续接口的调用。当access_token失效或过期时，接口会返回http状态码401，需要重新获取access_token。
-     *              不能频繁调用获取access_token接口，否则会受到接口调用频率拦截。
-     *
-     *     ```
-     *
-     *     ## 准备工作
-     *
-     *     在获取access_token前，需要先获取应用的client_id和client_secret：
-     *     1.登录[海康云眸开发者服务](http://open.hik-cloud.com)
-     *
-     *     2.在**秘钥管理**页面，查看应用的client_id和client_secret。
-     *     ![img](https://pbpic.hik-cloud.com/opencustom/apidoc/pictures/b8287cbd11bf4d108c53183c52b22bc7.png)
-     *
-     *
-     *     其中 “access_token” 字段即为请求 REST API  所需的令牌,access_token生成时有效期为7天，expires_in字段表示剩余有效时间，开发者需要对access_token的有效性进行判断，若调用API时返回Http状态码为401，则说明access_token已失效，重新获取即可。
-     *
-     *     注：在使用postman调试时，注意尽量不要使用浏览器插件版本的postman，使用客户端版本的。因为插件版本的默认会使用浏览器中的cookie和缓存，可能在调用时会出现问题而难以排查。
-     *     ![img](https://pic.hik-cloud.com/opencustom/apidoc/pictures/d8d60985e34a4e40857a98731a3dc85c.jpg)
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: {
-        content: {
-          'application/x-www-form-urlencoded': {
-            /** @description 客户端ID（使用云眸系统管理员账号登录开放平台门户网站[open2.hik-cloud.com](http://open2.hik-cloud.com/)，进入密钥管理页面查看获取） */
-            client_id: string;
-            /** @description 访问密钥（使用云眸账号登录开放平台门户网站[open2.hik-cloud.com](http://open2.hik-cloud.com/)，进入密钥管理页面查看获取） */
-            client_secret: string;
-            /** @description 认证模式（目前仅支持client_credentials） */
-            grant_type: string;
-            /** @description 权限范围（可选填app） */
-            scope?: string;
-            [key: string]: unknown;
-          };
-        };
-      };
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 访问令牌
-               * @description 访问令牌
-               */
-              access_token: string;
-              /**
-               * 过期时间(秒)
-               * @description 过期时间(秒)
-               */
-              expires_in: number;
-              /**
-               * 权限范围
-               * @description 权限范围
-               */
-              scope?: string;
-              /**
-               * 令牌类型
-               * @description 令牌类型
-               */
-              token_type: string;
-              [key: string]: unknown;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 访问令牌
+                             * @description 访问令牌
+                             */
+                            access_token: string;
+                            /**
+                             * 过期时间(秒)
+                             * @description 过期时间(秒)
+                             */
+                            expires_in: number;
+                            /**
+                             * 权限范围
+                             * @description 权限范围
+                             */
+                            scope?: string;
+                            /**
+                             * 令牌类型
+                             * @description 令牌类型
+                             */
+                            token_type: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/v1/carrier/wing/endpoint/confirm/right/autoconfirm': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 自动确权
-     * @description code码描述：
-     *
-     *     | code     | 描述     |
-     *     | -------- | -------- |
-     *     | 0        | 确权成功 |
-     *     | 20002001 | 请求失败 |
-     *     | 20002002 | 确权失败 |
-     */
-    get: {
-      parameters: {
-        query: {
-          /** @description 确权APP网络出口公网IP */
-          clientIP?: string;
-          /**
-           * @description 设备序列号
-           * @example
-           */
-          deviceSerial: string;
-          /** @description 确权APP所在的网络没错（如：TPLINK-xxx） */
-          ssid?: string;
+    "/v1/carrier/wing/endpoint/confirm/right/autoconfirm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              data: null;
-              /**
-               * 响应描述
-               * @description 响应描述
-               */
-              message: string;
-              [key: string]: unknown;
+        /**
+         * 自动确权
+         * @description code码描述：
+         *
+         *     | code     | 描述     |
+         *     | -------- | -------- |
+         *     | 0        | 确权成功 |
+         *     | 20002001 | 请求失败 |
+         *     | 20002002 | 确权失败 |
+         */
+        get: {
+            parameters: {
+                query: {
+                    /** @description 确权APP网络出口公网IP */
+                    clientIP?: string;
+                    /**
+                     * @description 设备序列号
+                     * @example
+                     */
+                    deviceSerial: string;
+                    /** @description 确权APP所在的网络没错（如：TPLINK-xxx） */
+                    ssid?: string;
+                };
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/v1/carrier/wing/endpoint/confirm/right/offlineconfirm': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 下线确认
-     * @description code码描述：
-     *
-     *     | code     | 描述     |
-     *     | -------- | -------- |
-     *     | 0        | 离线成功 |
-     *     | 20002001 | 请求失败 |
-     *     | 20002003 | 离线失败 |
-     */
-    get: {
-      parameters: {
-        query: {
-          /** @description 设备序列号 */
-          deviceSerial: string;
-        };
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              data: null;
-              /**
-               * 响应描述
-               * @description 响应描述
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            data: null;
+                            /**
+                             * 响应描述
+                             * @description 响应描述
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/v1/carrier/wing/endpoint/confirm/right/onlineconfirm': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    /**
-     * 上线确认
-     * @description code码描述：
-     *
-     *     | code     | 描述     |
-     *     | -------- | -------- |
-     *     | 0        | 确权成功 |
-     *     | 20002001 | 请求失败 |
-     *     | 20002004 | 确权失败 |
-     */
-    get: {
-      parameters: {
-        query: {
-          /** @description 设备序列号 */
-          deviceSerial: string;
+    "/v1/carrier/wing/endpoint/confirm/right/offlineconfirm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
         };
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path?: never;
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: number;
-              data: null;
-              /**
-               * 响应描述
-               * @description 响应描述
-               */
-              message: string;
-              [key: string]: unknown;
+        /**
+         * 下线确认
+         * @description code码描述：
+         *
+         *     | code     | 描述     |
+         *     | -------- | -------- |
+         *     | 0        | 离线成功 |
+         *     | 20002001 | 请求失败 |
+         *     | 20002003 | 离线失败 |
+         */
+        get: {
+            parameters: {
+                query: {
+                    /** @description 设备序列号 */
+                    deviceSerial: string;
+                };
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
             };
-          };
-        };
-      };
-    };
-    put?: never;
-    post?: never;
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
-  '/v1/channels/{channelId}/capture': {
-    parameters: {
-      query?: never;
-      header?: never;
-      path?: never;
-      cookie?: never;
-    };
-    get?: never;
-    put?: never;
-    /**
-     * 设备抓图
-     * @description **功能描述**
-     *
-     *     提供设备抓拍当前画面功能。
-     *
-     *     该接口仅适用于IPC或者关联IPC的DVR设备，该接口并非预览时的截图功能。海康型号设备可能不支持萤石协议抓拍功能，使用该接口可能返回不支持或者超时。
-     *
-     *     注意：设备抓图能力有限，请勿频繁调用，频繁调用将会被拉入限制黑名单,建议调用的间隔为4s左右。
-     *
-     *
-     */
-    post: {
-      parameters: {
-        query?: never;
-        header?: {
-          /** @example Bearer {{access_token}} */
-          Authorization?: string;
-        };
-        path: {
-          /** @description 通道ID */
-          channelId: string;
-        };
-        cookie?: never;
-      };
-      requestBody?: never;
-      responses: {
-        /** @description 成功 */
-        200: {
-          headers: {
-            [name: string]: unknown;
-          };
-          content: {
-            'application/json': {
-              /**
-               * 返回码
-               * @description 返回码
-               */
-              code: string;
-              /**
-               * 节点对象
-               * @description 节点对象
-               */
-              data: {
-                /**
-                 * 抓拍图片url，图片保存有效期为2小时
-                 * @description 抓拍图片url，图片保存有效期为2小时
-                 */
-                picUrl: string;
-                [key: string]: unknown;
-              };
-              /**
-               * 返回消息
-               * @description 返回消息
-               */
-              message: string;
-              [key: string]: unknown;
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            data: null;
+                            /**
+                             * 响应描述
+                             * @description 响应描述
+                             */
+                            message: string;
+                        };
+                    };
+                };
             };
-          };
         };
-      };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
     };
-    delete?: never;
-    options?: never;
-    head?: never;
-    patch?: never;
-    trace?: never;
-  };
+    "/v1/carrier/wing/endpoint/confirm/right/onlineconfirm": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        /**
+         * 上线确认
+         * @description code码描述：
+         *
+         *     | code     | 描述     |
+         *     | -------- | -------- |
+         *     | 0        | 确权成功 |
+         *     | 20002001 | 请求失败 |
+         *     | 20002004 | 确权失败 |
+         */
+        get: {
+            parameters: {
+                query: {
+                    /** @description 设备序列号 */
+                    deviceSerial: string;
+                };
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: number;
+                            data: null;
+                            /**
+                             * 响应描述
+                             * @description 响应描述
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/v1/channels/{channelId}/capture": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        /**
+         * 设备抓图
+         * @description **功能描述**
+         *
+         *     提供设备抓拍当前画面功能。
+         *
+         *     该接口仅适用于IPC或者关联IPC的DVR设备，该接口并非预览时的截图功能。海康型号设备可能不支持萤石协议抓拍功能，使用该接口可能返回不支持或者超时。
+         *
+         *     注意：设备抓图能力有限，请勿频繁调用，频繁调用将会被拉入限制黑名单,建议调用的间隔为4s左右。
+         *
+         *
+         */
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    /** @example Bearer {{access_token}} */
+                    Authorization?: string;
+                };
+                path: {
+                    /** @description 通道ID */
+                    channelId: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description 成功 */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": {
+                            /**
+                             * 返回码
+                             * @description 返回码
+                             */
+                            code: string;
+                            /**
+                             * 节点对象
+                             * @description 节点对象
+                             */
+                            data: {
+                                /**
+                                 * 抓拍图片url，图片保存有效期为2小时
+                                 * @description 抓拍图片url，图片保存有效期为2小时
+                                 */
+                                picUrl: string;
+                            };
+                            /**
+                             * 返回消息
+                             * @description 返回消息
+                             */
+                            message: string;
+                        };
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
-  schemas: {
-    SheBeiShuJu: {
-      /** @description 返回码 */
-      code: string;
-      /** @description 节点对象 */
-      data: {
-        hasNextPage: boolean;
-        hasPreviousPage: boolean;
-        isfirstPage: boolean;
-        islastPage: boolean;
-        pageNo: number;
-        pageSize: number;
-        rows: {
-          channelId?: string;
-          channelName?: string;
-          channelNo?: number;
-          channelPicUrl?: string;
-          channelStatus?: string;
-          deviceId?: string;
-          deviceModel?: string;
-          deviceName?: string;
-          deviceSerial?: string;
-          [key: string]: unknown;
-        }[];
-        total: number;
-        totalPage: number;
-        [key: string]: unknown;
-      };
-      /** @description 返回消息 */
-      message: string;
-      [key: string]: unknown;
+    schemas: {
+        SheBeiShuJu: {
+            /** @description 返回码 */
+            code: string;
+            /** @description 节点对象 */
+            data: {
+                hasNextPage: boolean;
+                hasPreviousPage: boolean;
+                isfirstPage: boolean;
+                islastPage: boolean;
+                pageNo: number;
+                pageSize: number;
+                rows: {
+                    channelId?: string;
+                    channelName?: string;
+                    channelNo?: number;
+                    channelPicUrl?: string;
+                    channelStatus?: string;
+                    deviceId?: string;
+                    deviceModel?: string;
+                    deviceName?: string;
+                    deviceSerial?: string;
+                }[];
+                total: number;
+                totalPage: number;
+            };
+            /** @description 返回消息 */
+            message: string;
+        };
+        XueShengGuanLi: {
+            /** @description 居住地 */
+            address?: string;
+            /** @description 出生日期 */
+            birthDate?: string;
+            /** @description 学生卡信息（最多支持5张卡, 以逗号分隔） */
+            card?: string;
+            /** @description 证件号码 */
+            certificateNumber?: string;
+            /** @description 证件类型（1：身份证） */
+            certificateType?: number;
+            /** @description 所属班级ID */
+            classId?: string;
+            /** @description 备注 */
+            comment?: string;
+            /** @description 入学日期 */
+            entryDate?: string;
+            /** @description 面目照片URL（大小不超过200k；仅支持jpg格式且不可直接修改后缀格式；路径需非中文且前缀为https；照片像素480*640或以上） */
+            facePicUrl?: string;
+            /** @description 毕业日期 */
+            graduateDate?: string;
+            /** @description 民族 */
+            nation?: string;
+            /** @description 籍贯 */
+            personNative?: string;
+            /** @description 手机号 */
+            phoneNumber?: string;
+            /** @description 证件照url */
+            picUrl?: string;
+            /** @description 学校ID */
+            schoolId?: string;
+            /** @description 学生姓名 */
+            studentName: string;
+            /** @description 学号（同校中的学号不能重复） */
+            studentNumber: string;
+            /** @description 性别（1: 男、2：女（默认）） */
+            studentSex: number;
+            /** @description 学生类型（0：走读生（默认）、1：住校生） */
+            studentType?: number;
+        };
     };
-    XueShengGuanLi: {
-      /** @description 居住地 */
-      address?: string;
-      /** @description 出生日期 */
-      birthDate?: string;
-      /** @description 学生卡信息（最多支持5张卡, 以逗号分隔） */
-      card?: string;
-      /** @description 证件号码 */
-      certificateNumber?: string;
-      /** @description 证件类型（1：身份证） */
-      certificateType?: number;
-      /** @description 所属班级ID */
-      classId?: string;
-      /** @description 备注 */
-      comment?: string;
-      /** @description 入学日期 */
-      entryDate?: string;
-      /** @description 面目照片URL（大小不超过200k；仅支持jpg格式且不可直接修改后缀格式；路径需非中文且前缀为https；照片像素480*640或以上） */
-      facePicUrl?: string;
-      /** @description 毕业日期 */
-      graduateDate?: string;
-      /** @description 民族 */
-      nation?: string;
-      /** @description 籍贯 */
-      personNative?: string;
-      /** @description 手机号 */
-      phoneNumber?: string;
-      /** @description 证件照url */
-      picUrl?: string;
-      /** @description 学校ID */
-      schoolId?: string;
-      /** @description 学生姓名 */
-      studentName: string;
-      /** @description 学号（同校中的学号不能重复） */
-      studentNumber: string;
-      /** @description 性别（1: 男、2：女（默认）） */
-      studentSex: number;
-      /** @description 学生类型（0：走读生（默认）、1：住校生） */
-      studentType?: number;
-      [key: string]: unknown;
-    };
-  };
-  responses: never;
-  parameters: never;
-  requestBodies: never;
-  headers: never;
-  pathItems: never;
+    responses: never;
+    parameters: never;
+    requestBodies: never;
+    headers: never;
+    pathItems: never;
 }
 export type $defs = Record<string, never>;
 export type operations = Record<string, never>;

@@ -1,15 +1,19 @@
 import { pinyin } from 'pinyin-pro';
 
-export const isObject = (val: unknown): val is Record<any, any> =>
-  val !== null && typeof val === 'object';
+export function isObject(val: unknown): val is Record<any, any> {
+  return val !== null && typeof val === 'object';
+}
 
-//字符串转驼峰
+/**
+ * 字符串转驼峰
+ * @param str
+ * @param format
+ */
 export function strHump(str: string, format: 'upper' | 'lower' = 'upper'): string {
   if (!str) {
     return str;
   }
 
-  //@ts-ignore
   str = str.replaceAll(/(\W|_)(\w)?/g, (_$1, $2, $3) => {
     let res = '';
     if (/\w+/.test($2)) {
@@ -24,9 +28,12 @@ export function strHump(str: string, format: 'upper' | 'lower' = 'upper'): strin
   return $1 + str.slice(1);
 }
 
-//字符串转拼音
-export const strPinyin = (str: string, format: 'upper' | 'lower' = 'upper'): string => {
-  //@ts-ignore
+/**
+ * 字符串转拼音
+ * @param str
+ * @param format
+ */
+export function strPinyin(str: string, format: 'upper' | 'lower' = 'upper'): string {
   const res = str.replaceAll(/(\W|_)(\w)?/g, (_$1, $2, $3) => {
     let py = pinyin($2, {
       pattern: 'pinyin',
@@ -37,4 +44,4 @@ export const strPinyin = (str: string, format: 'upper' | 'lower' = 'upper'): str
     return `${strHump(py) ?? ''}${$3 ?? ''}`;
   });
   return strHump(res, format);
-};
+}

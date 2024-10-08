@@ -1,64 +1,66 @@
 {
   "name": "@xiankq/openapi-typescript-expand",
-  "version": "1.0.6",
   "type": "module",
+  "version": "1.0.6",
+  "author": {
+    "name": "xiankq"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/xiankq/openapi-typescript-expand#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiankq/openapi-typescript-expand.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiankq/openapi-typescript-expand/issues"
+  },
   "keywords": [
     "openapi",
     "swagger",
     "codegen",
     "typescript"
   ],
-  "license": "MIT",
-  "homepage": "https://github.com/xiankq/openapi-typescript-expand#readme",
-  "bugs": {
-    "url": "https://github.com/xiankq/openapi-typescript-expand/issues"
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/xiankq/openapi-typescript-expand.git"
-  },
-  "author": {
-    "name": "Xiankq"
-  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "main": "./dist/index.cjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
-    }
-  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
     "test": "tsx demo/index",
-    "build": "unbuild",
     "bumpp": "bumpp -r",
-    "publish": "pnpm publish",
-    "taze": "taze -w -r major minor patch"
+    "lint": "eslint . --fix",
+    "taze": "taze -w -r major minor patch",
+    "============[CI]==========": "",
+    "prepublish": "tsx ./internals/build",
+    "publish:ci": "pnpm publish -r --no-git-checks --access public"
   },
   "dependencies": {
-    "openapi-typescript": "^7.0.0-next.11",
-    "pinyin-pro": "^3.20.4",
+    "openapi-typescript": "^7.4.1",
+    "pinyin-pro": "^3.25.0",
     "swagger2openapi": "^7.0.8"
   },
   "devDependencies": {
-    "@sxzz/eslint-config": "^3.11.0",
-    "@sxzz/prettier-config": "^2.0.2",
-    "@types/node": "^20.12.10",
+    "@antfu/eslint-config": "^3.7.3",
+    "@types/node": "^22.7.5",
     "@types/swagger2openapi": "^7.0.4",
-    "axios": "^1.6.8",
-    "bumpp": "^9.4.1",
-    "eslint-plugin-simple-import-sort": "^12.1.0",
-    "prettier": "^3.2.5",
-    "taze": "^0.13.8",
-    "tsx": "^4.9.3",
-    "typescript": "^5.4.5",
+    "axios": "^1.7.7",
+    "bumpp": "^9.6.1",
+    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "prettier": "^3.3.3",
+    "taze": "^0.17.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
     "unbuild": "^2.0.0"
   }
 }

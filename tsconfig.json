@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ES2021",
     "jsx": "preserve",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2021", "DOM", "DOM.Iterable"],
     "useDefineForClassFields": true,
     "baseUrl": ".",
     "rootDir": ".",
@@ -13,12 +13,12 @@
     },
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,
-
     "strict": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noEmit": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "skipLibCheck": true
   },

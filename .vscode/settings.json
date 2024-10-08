@@ -1,15 +1,30 @@
 {
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.quickSuggestions": {
-    "strings": true
-  },
+
+  // Disable the default formatter, use eslint instead
+  "prettier.enable": false,
+  "editor.formatOnSave": false,
+
+  // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.stylelint": "always",
-    "source.fixAll.eslint": "always",
-    "source.organizeImports": "never"
+    "source.fixAll.eslint": "always"
   },
-  "eslint.experimental.useFlatConfig": true,
+
+  // Silent the stylistic rules in you IDE, but still auto fix them
+  "eslint.rules.customizations": [
+    { "rule": "style/*", "severity": "off" },
+    { "rule": "format/*", "severity": "off" },
+    { "rule": "*-indent", "severity": "off" },
+    { "rule": "*-spacing", "severity": "off" },
+    { "rule": "*-spaces", "severity": "off" },
+    { "rule": "*-order", "severity": "off" },
+    { "rule": "*-dangle", "severity": "off" },
+    { "rule": "*-newline", "severity": "off" },
+    { "rule": "*quotes", "severity": "off" },
+    { "rule": "*semi", "severity": "off" }
+  ],
+
+  // Enable eslint for all supported languages
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -20,10 +35,16 @@
     "markdown",
     "json",
     "jsonc",
-    "yaml"
-  ],
-  "stylelint.validate": ["vue", "css", "less", "postcss", "scss"],
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "npm.packageManager": "pnpm",
-  "commentTranslate.multiLineMerge": true
+    "yaml",
+    "toml",
+    "xml",
+    "gql",
+    "graphql",
+    "astro",
+    "css",
+    "less",
+    "scss",
+    "pcss",
+    "postcss"
+  ]
 }
