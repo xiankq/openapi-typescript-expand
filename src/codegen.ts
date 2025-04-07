@@ -42,6 +42,7 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
   const output = `${posix.resolve(options.output)}`;
 
   const schema = await resolveOpenapi(source);
+
   const ast = await openapiTS(schema, {
     alphabetize: true,
     additionalProperties: false,
@@ -81,7 +82,7 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
         Object.values(operation.responses ?? {})?.[0],
       ).object;
 
-      const responseType = Object.keys(responses.content ?? {})[0];
+      const responseType = Object.keys(responses?.content ?? {})[0];
       const parameters = operation.parameters?.map(e => resolveObjectOrRef(schema, e).object);
       const hasHeader = !!parameters?.filter(e => e.in === 'header')?.length;
       const hasPath = !!parameters?.filter(e => e.in === 'path')?.length;

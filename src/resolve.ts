@@ -80,14 +80,21 @@ function repair(schema: any) {
 
   refCheck(schema);
 
-  // 修复中文定义
-  const definitions = schema.swagger ? schema.definitions : schema.components.schemas;
-  Object.keys(definitions).forEach((key) => {
-    const resoleKey = strPinyin(key);
-    if (resoleKey !== key) {
-      definitions[resoleKey] = definitions[key];
-      delete definitions[key];
-    }
+  const definitions = [
+    schema.swagger,
+    ...Object.values(schema.components ?? {}),
+  ];
+
+  // 修复中文定义 转换成英文
+
+  definitions.forEach((item) => {
+    Object.keys(item ?? {}).forEach((key) => {
+      const resoleKey = strPinyin(key);
+      if (resoleKey !== key) {
+        item[resoleKey] = item[key];
+        delete item[key];
+      }
+    });
   });
 
   return schema;
