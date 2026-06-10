@@ -1,4 +1,4 @@
-name: NPM Publish
+name: Publish Package
 
 permissions:
   id-token: write
@@ -14,33 +14,40 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 9
+          version: 10
 
-      - name: Use Node.js v20
-        uses: actions/setup-node@v4
+      - name: Use Node.js v24
+        uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 24
           registry-url: https://registry.npmjs.org/
           cache: pnpm
 
       - run: pnpm install
 
-      - run: pnpm run prepublish
+      - run: pnpm run lint
+
+      - run: pnpm run test:unit:coverage
+
+      - run: pnpm run type-check
+
+      - run: pnpm run build:ci
+
+      - name: Publish to NPM
+        run: pnpm run publish:ci
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_CONFIG_PROVENANCE: true
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - run: npx changelogithub --no-group
         continue-on-error: true
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
-      - run: pnpm run publish:ci
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          NPM_CONFIG_PROVENANCE: true
-          NODE_OPTIONS: --max-old-space-size=6144
