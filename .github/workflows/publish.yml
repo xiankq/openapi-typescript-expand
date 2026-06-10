@@ -43,7 +43,6 @@ jobs:
       - name: Publish to NPM
         run: pnpm run publish:ci
         env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
           NPM_CONFIG_PROVENANCE: true
           NODE_OPTIONS: --max-old-space-size=6144
 
