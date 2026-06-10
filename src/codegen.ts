@@ -65,14 +65,14 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
       // 函数注释
       const comment
         = `\n`
-        + `\n/**`
-        + `\n${operation.tags?.map(e => ` * @tag ${e}`).join('\n')}`
-        + `\n * @summary ${operation.summary}`
-        + `\n * @url ${path}`
-        + `\n * @method ${method}`
-        + `\n * @description ${operation.description ?? ''}`
-        + `\n */`
-        + '\n';
+          + `\n/**`
+          + `\n${operation.tags?.map(e => ` * @tag ${e}`).join('\n')}`
+          + `\n * @summary ${operation.summary}`
+          + `\n * @url ${path}`
+          + `\n * @method ${method}`
+          + `\n * @description ${operation.description ?? ''}`
+          + `\n */`
+          + '\n';
 
       const requestBody = resolveObjectOrRef(schema, operation.requestBody).object;
       const contentType = Object.keys(requestBody?.content ?? {})[0];
@@ -127,19 +127,19 @@ export async function openapiTypescriptExpand(source: any, options: OpenapiCodeg
 
       mainCode
         += `${comment}`
-        + `\nexport module ${PATH_NAME_UPPER} {`
-        + `\n` + moduleItem.map(e => `  ${e};`).join('\n')
-        + `\n}`;
+          + `\nexport module ${PATH_NAME_UPPER} {`
+          + `\n` + moduleItem.map(e => `  ${e};`).join('\n')
+          + `\n}`;
 
       mainCode
         += `${comment}`
-        + `\nexport function ${PATH_NAME}(options:${PATH_NAME_UPPER}.Options):Promise<${PATH_NAME_UPPER}.Result> {`
-        + `\n  return ${options.requestName}({`
-        + `\n    url:'${path}',`
-        + `\n    method:'${method}',`
-        + `\n    ...options,`
-        + `\n  });`
-        + `\n}`;
+          + `\nexport function ${PATH_NAME}(options:${PATH_NAME_UPPER}.Options):Promise<${PATH_NAME_UPPER}.Result> {`
+          + `\n  return ${options.requestName}({`
+          + `\n    url:'${path}',`
+          + `\n    method:'${method}',`
+          + `\n    ...options,`
+          + `\n  });`
+          + `\n}`;
     });
   });
 

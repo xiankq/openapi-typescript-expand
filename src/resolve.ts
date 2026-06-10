@@ -100,8 +100,8 @@ function repair(schema: any) {
   return schema;
 }
 
-export type ResolveObjectOrRefReturn<T> =
-  | {
+export type ResolveObjectOrRefReturn<T>
+  = | {
     isRef: true;
     object: T;
     origin: ReferenceObject;
