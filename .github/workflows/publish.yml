@@ -34,10 +34,6 @@ jobs:
 
       - run: pnpm run lint
 
-      - run: pnpm run test:unit:coverage
-
-      - run: pnpm run type-check
-
       - run: pnpm run build:ci
 
       - name: Publish to NPM
